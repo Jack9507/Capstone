@@ -1,0 +1,450 @@
+{% extends "layout.html" %} {% block body %}
+
+<!-- Flashing messages using Flask -->
+{% block content %} {% with messages = get_flashed_messages(with_categories=true) %}
+<!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+{% if messages %} {% for category, msg in messages %} {%if category=='success'%}
+<div class="alert alert-success mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {%if category=='error'%}
+<div class="alert alert-danger mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %} {% endblock %}
+<!-- end of message flashing  -->
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        {% if 'user_id' in session %}
+        <h1>Welcome, {{ user }}<br>Start your Journey Today.</h1>
+        <h2>We help you learn and grow in the best way possible.</h2>
+        <a href="/courses" class="btn-get-started">Get Started</a>
+        {% else %}
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+        <h2>We help you learn and grow in the best way possible.</h2>
+        <a href="/courses" class="btn-get-started">Get Started</a>
+        {% endif %}
+          
+    </div>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>About</h2>
+                <p>About Us</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                    <img src="{{url_for('static', filename='assets/img/about.jpg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                    <h3>Explore more if you want to learn more.This website is designed to help students
+                    learn and grow in the best way possible.</h3>
+                    <p class="font-italic">
+                        One of the most important areas we can develop as professionals is competence in accessing and sharing knowledge.
+                    </p>
+                    <ul>
+                        <li><i class="icofont-check-circled"></i>Courses available for Computer Science Students.</li>
+                        <li><i class="icofont-check-circled"></i>Login and create your account to keep a track of your learning.</li>
+                        <li><i class="icofont-check-circled"></i>E-Learning is changing. And, we will see new models, new technologies and
+                            designs emerge. So, let’s drop the “E” – or at least give it a new and wider definition.</li>
+                    </ul>
+                    <p>
+                        This website was a project from Computer Science Grads. To know more visit our social media links in the footer.
+                    </p>
+                    <a href="about.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+        <div class="container">
+
+            <div class="row counters">
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">1232</span>
+                    <p>Students</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">64</span>
+                    <p>Subjects</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">42</span>
+                    <p>Events</p>
+                </div>
+
+                <div class="col-lg-3 col-6 text-center">
+                    <span data-toggle="counter-up">15</span>
+                    <p>Services</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Counts Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content">
+                        <h3>Why Choose E-Learning?</h3>
+                        <p>
+                            Elearning is often chosen in order to save time. The learning process is generally much quicker too, with learners able to upskill and improve knowledge in a shorter time period than would be involved with a training course split over multiple sessions.  Plus, with today’s mobile and multi-device capability, learners have the freedom to
+                            access learning on-the-go, at any time of day, maximising their work day.
+                        </p>
+                        <div class="text-center">
+                            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-xl-4 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <!-- <i class="bx bx-receipt"></i> -->
+                                    <span class="iconify" data-icon="emojione:money-bag" height=50px  data-inline="false"></span>
+                                    <h4>Save money</h4>
+                                    <p>Save training costs associated with travelling, instructor fees, and the cost of hiring a training venue plus learning
+                                    equipment. Save the cost of printing on endless streams of paper – and the environment too!</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <span class="iconify" data-icon="flat-color-icons:process" height=40px data-inline="false"></span>
+                                    <!-- <i class="bx bx-cube-alt"></i> -->
+                                    <h4>Standardise processes</h4>
+                                    <p>Elearning is useful in helping to standardise processes across a company by allowing identical content to be delivered to all who require it. </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <span class="iconify" data-icon="bi:people-fill" height=40px  data-inline="false"></span>
+                                    <!-- <i class="bx bx-images"></i> -->
+                                    <h4>Personalise the experience</h4>
+                                    <p>With the option for learners to choose what types of learning styles suit them, and the freedom to decide when and where
+                                    to learn, employees will have a more rewarding experience and feel in control of their development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
+             <br>
+            <div class="section-title">
+                <h2>Links</h2>
+                <p>Trending Tech</p>
+            </div>
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:flask" height=33px  data-inline="false"></span>
+                        <h3><a href="/flaskhome"> Flask</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:git-icon" data-inline="false" height=30px></span>
+                        <h3><a href="/git"> Git</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="vscode-icons:file-type-python" height=30px data-inline="false"></span>
+                        <h3><a href="/pythonhome">Python</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:android-icon" height=30px data-inline="false"></span>
+                        <h3><a href="">Android</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:bash-icon" height=30px  data-inline="false"></span>
+                        <h3><a href="">Bash</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:flutter" height=30px data-inline="false"></span>
+                        <h3><a href="">Flutter</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="vscode-icons:file-type-reactjs" height=30px data-inline="false"></span>
+                        <h3><a href="/reactjs">ReactJS</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="vscode-icons:file-type-ai" height=30px data-inline="false"></span>
+                        <h3><a href="">Artificial Intelligence</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:javascript" height=30px data-inline="false"></span>
+                        <h3><a href="">Javascript</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:jquery-mobile" height=30px data-inline="false"></span>
+                        <h3><a href="">jQuerry</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:bootstrap" height=30px data-inline="false"></span>
+                        <h3><a href="">Bootstrap</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:wordpress-icon" height=30px data-inline="false"></span>
+                        <h3><a href="">Wordpress</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:aws" height=30px data-inline="false"></span>
+                        <h3><a href="/awshome">AWS</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:html-5" height=30px data-inline="false"></span>
+                        <h3><a href="">HTML</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:css-3" height=30px data-inline="false"></span>
+                        <h3><a href="">CSS</a></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <span class="iconify" data-icon="logos:angular-icon" height=30px data-inline="false"></span>
+                        <h3><a href="/angular7">Angular-7</a></h3>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Features Section -->
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Courses</h2>
+                <p>Popular Courses</p>
+            </div>
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Web Development</h4>
+                                <p class="price">Free</p>
+                            </div>
+
+                            <h3><a href="https://codewithharry.com/videos/web-development-in-hindi-1" target="_blank">Website Design</a></h3>
+                            <p>Web development is the work involved in developing a Web site for the Internet or an intranet.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-1.jpg')}}" class="img-fluid" alt="">
+                                    <span>Antonio</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;50 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;65
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/android.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Android Development</h4>
+                                <p class="price">Free</p>
+                            </div>
+
+                            <h3><a href="https://codewithharry.com/videos/android-tutorial-in-hindi-with-notes" target="_blank">Full course with video and notes.</a></h3>
+                            <p>Android software development is the process by which applications are created for devices running the Android operating
+                            system. </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-2.jpg')}}" class="img-fluid" alt="">
+                                    <span>Harry</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;35 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;42
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/course-3.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Machine Learning</h4>
+                                <p class="price">Free</p>
+                            </div>
+
+                            <h3><a href="https://codewithharry.com/videos/ml-tutorials-in-hindi-1" target="_blank">Machine Learning in Python</a></h3>
+                            <p>Machine learning is the study of computer algorithms that improve automatically through experience and by the use of
+                            data.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}" class="img-fluid" alt="">
+                                    <span>Brandon</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;20 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Popular Courses Section -->
+
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Trainers</h2>
+                <p>Our Professional Trainers</p>
+            </div>
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="{{url_for('static', filename='assets/img/trainers/trainer-1.jpg')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4>Walter White</h4>
+                            <span>Web Development</span>
+                            <p>
+                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="{{url_for('static', filename='assets/img/trainers/trainer-2.jpg')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4>Sarah Jhinson</h4>
+                            <span>Marketing</span>
+                            <p>
+                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}" class="img-fluid" alt="">
+                        <div class="member-content">
+                            <h4>William Anderson</h4>
+                            <span>Content</span>
+                            <p>
+                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                            </p>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Trainers Section -->
+
+</main>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<!-- End #main -->
+
+{% endblock %}

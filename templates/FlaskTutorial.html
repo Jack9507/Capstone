@@ -1,0 +1,398 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+
+
+<head>
+    <title>Flask Tutorial | Flask Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+<br>
+<br>
+
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+                        <h1 class="h1">Python Flask Tutorial</h1>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-tutorial.png" alt="Flask Tutorial" style="float:right;padding-left:15px" />
+
+                        <p>Flask Tutorial provides the basic and advanced concepts of the Python Flask framework. Our Flask tutorial is designed for beginners and professionals.</p>
+                        <p>Flask is a web framework that provides libraries to build lightweight web applications in python. It is developed by <strong>Armin Ronacher</strong> who leads an international group of python enthusiasts (POCCO).</p>
+
+                        <h2 class="h2">What is Flask?</h2>
+                        <p>Flask is a web framework that provides libraries to build lightweight web applications in python. It is developed by <strong>Armin Ronacher</strong> who leads an international group of python enthusiasts (POCCO). It is based on
+                            WSGI toolkit and jinja2 template engine. Flask is considered as a micro framework. </p>
+                        <h2 class="h3">What is WSGI?</h2>
+                        <p>It is an acronym for web server gateway interface which is a standard for python web application development. It is considered as the specification for the universal interface between the web server and web application.
+                        </p>
+                        <h2 class="h3">What is Jinja2?</h2>
+                        <p>Jinja2 is a web template engine which combines a template with a certain data source to render the dynamic web pages.</p>
+
+                        <h2 class="h2">Flask Environment Setup </h2>
+                        <p>To install flask on the system, we need to have python 2.7 or higher installed on our system. However, we suggest using python 3 for the development in the flask. </p>
+                        <h3 class="h3">Install virtual environment (virtualenv)</h3>
+                        <p>virtualenv is considered as the virtual python environment builder which is used to create the multiple python virtual environment side by side. It can be installed by using the following command. </p>
+                        <div class="codeblock"><textarea name="code" class="python">
+$ pip install virtualenv
+</textarea></div>
+                        <p>Once it is installed, we can create the new virtual environment into a folder as given below. </p>
+                        <div class="codeblock"><textarea name="code" class="python">
+$ mkdir new 
+$ cd new 
+$ virtualenv venv
+</textarea></div>
+                        <p>To activate the corresponding environment, use the following command on the Linux operating system.</p>
+                        <div class="codeblock"><textarea name="code" class="python">
+$ venv/bin/activate 
+</textarea></div>
+                        <p>On windows, use the following command. </p>
+                        <div class="codeblock"><textarea name="code" class="python">
+$ venv\scripts\activate
+</textarea></div>
+                        <p>We can now install the flask by using the following command. </p>
+                        <div class="codeblock"><textarea name="code" class="python">
+$ pip install flask
+</textarea></div>
+                        <p>However, we can install the flask using the above command without creating the virtual environment.</p>
+                        <p>To test the flask installation, open python on the command line and type python to open the python shell. Try to import the package flask. </p>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-introduction.png" alt="Flask Introduction" />
+                        <p>We have successfully installed the flask since we do not get the error in the process. Now, we can continue with the tutorial. </p>
+
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning Flask, you must have the basic knowledge of Python concepts.</p>
+
+                        <h2 class="h2">Audience</h2>
+                        <p>Our Flask tutorial is designed to help beginners and professionals.</p>
+
+                        <h2 class="h2">Problem</h2>
+                        <p>We assure you that you will not find any problem in this Python Flask tutorial. But if there is any mistake, please post the problem in the contact form.</p>
+
+                        <hr/>
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="first-flask-application">First Flask Application</a></span>
+                        </div>
+                        <!--link -- -->
+                        <br/><br/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">First Flask application</h1>
+                        <p>In this section of the tutorial, we will build our first python website built
+                            using the Flask framework. In this process, open any text editor of your choice
+                            as we are using the sublime text editor in this tutorial. </p>
+                        <p>Write the following lines of code and save to a file named as script.py.</p>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import Flask
+    
+    app = Flask(__name__) #creating the Flask class object 
+    
+    @app.route('/') #decorator drfines the 
+    def home():
+    	return "hello, this is our first flask website";
+    
+    if __name__ =='__main__':
+    	app.run(debug = True)
+    </textarea></div>
+                        <p>Let's run this python code on the command line and check the result. </p>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/first-flask-application.png"
+                            alt="First Flask application" />
+                        <br>
+                        <p>Since it is a web application, therefore it is to be run to on the browser at
+                            http://localhost:5000. </p>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/first-flask-application2.png"
+                            alt="First Flask application" />
+                        <br>
+                        <p>To build the python web application, we need to import the Flask module. An
+                            object of the Flask class is considered as the WSGI application.</p>
+                        <p>We need to pass the name of the current module, i.e. __name__ as the argument
+                            into the Flask constructor. </p>
+                        <p>The route() function of the Flask class defines the URL mapping of the associated
+                            function. The syntax is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="python">
+    app.route(rule, options)
+    </textarea></div>
+                        <p>It accepts the following parameters. </p>
+                        <ol class="points">
+                            <li>rule: It represents the URL binding with the function.</li>
+                            <li>options: It represents the list of parameters to be associated with the rule
+                                object</li>
+                        </ol>
+                        <p>As we can see here, the / URL is bound to the main function which is responsible
+                            for returning the server response. It can return a string to be printed on the
+                            browser's window or we can use the HTML template to return the HTML file as a
+                            response from the server.</p>
+                        <p>Finally, the run method of the Flask class is used to run the flask application
+                            on the local development server.</p>
+                        <p>The syntax is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="python">
+    app.run(host, port, debug, options)
+    </textarea></div>
+                        <table class="alt">
+                            <tr>
+                                <th>SN</th>
+                                <th>Option</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>host</td>
+                                <td>The default hostname is 127.0.0.1, i.e. localhost.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>port</td>
+                                <td>The port number to which the server is listening to. The default port
+                                    number is 5000.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>debug</td>
+                                <td>The default is false. It provides debug information if it is set to
+                                    true.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>options</td>
+                                <td>It contains the information to be forwarded to the server.</td>
+                            </tr>
+                        </table>
+    
+                        <hr />
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="flask-app-routing">Flask App Routing</a></span>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Flask App routing</h1>
+                        <p>App routing is used to map the specific URL with the associated function that is
+                            intended to perform some task. It is used to access some particular page like <a
+                                href="flask-tutorial">Flask Tutorial</a> in the web application.</p>
+                        <p>In our first application, the URL ('/') is associated with the home function that
+                            returns a particular string displayed on the web page. </p>
+                        <p>In other words, we can say that if we visit the particular URL mapped to some
+                            particular function, the output of that function is rendered on the browser's
+                            screen.</p>
+                        <p>Consider the following example.</p>
+                        <h3 class="h3">Example </h3>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import Flask
+    app = Flask(__name__)
+    
+    @app.route('/home')
+    def home():
+    	return "hello, welcome to our website";
+    
+    if __name__ =="__main__":
+    	app.run(debug = True)
+    </textarea></div>
+                        <p>Flask facilitates us to add the variable part to the URL by using the <var-name>
+                                section. We can reuse the variable by adding that as a parameter into the
+                                view function. Consider the following example. </p>
+                        <h3 class="h3">Example</h3>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import Flask
+    app = Flask(__name__)
+    
+    @app.route('/home/&lt;name&gt;')
+    def home(name):
+    	return "hello,"+name;
+    
+    if __name__ =="__main__":
+    	app.run(debug = True)
+    </textarea></div>
+                        <p>It will produce the following result on the web browser. </p>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-app-routing.png"
+                            alt="Flask App routing" /><br>
+                        <p>The converter can also be used in the URL to map the specified variable to the
+                            particular data type. For example, we can provide the integers or float like age
+                            or salary respectively. </p>
+                        <p>Consider the following example.</p>
+                        <h3 class="h3">Example</h3>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import Flask
+    app = Flask(__name__)
+    
+    @app.route('/home/<int:age>')
+    def home(age):
+    	return "Age = %d"%age;
+    
+    if __name__ =="__main__":
+    	app.run(debug = True)
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-app-routing2.png"
+                            alt="Flask App routing" />
+                        <br>
+                        <p>The following converters are used to convert the default string type to the
+                            associated data type. </p>
+                        <ol class="points">
+                            <li>string: default</li>
+                            <li>int: used to convert the string to the integer</li>
+                            <li>float: used to convert the string to the float.</li>
+                            <li>path: It can accept the slashes given in the URL. </li>
+                        </ol>
+                        <h2 class="h2">The add_url_rule() function</h2>
+                        <p>There is one more approach to perform routing for the flask web application that
+                            can be done by using the add_url() function of the Flask class. The syntax to
+                            use this function is given below. </p>
+                        <div class="codeblock"><textarea name="code" class="python">
+    add_url_rule(<url rule>, <endpoint>, <view function>)
+    </textarea></div>
+                        <p>This function is mainly used in the case if the view function is not given and we
+                            need to connect a view function to an endpoint externally by using this
+                            function. </p>
+                        <p>Consider the following example.</p>
+                        <h3 class="h3">Example</h3>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import Flask
+    app = Flask(__name__)
+    
+    def about():
+    	return "This is about page";
+    
+    app.add_url_rule("/about","about",about)
+    
+    if __name__ =="__main__":
+    	app.run(debug = True)
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-app-routing3.png"
+                            alt="Flask App routing" />
+    
+                        <hr />
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="flask-url-building">Flask URL Building</a></span>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Flask URL Building</h1>
+                        <p>The url_for() function is used to build a URL to the specific function
+                            dynamically. The first argument is the name of the specified function, and then
+                            we can pass any number of keyword argument corresponding to the variable part of
+                            the URL.</p>
+                        <p>This function is useful in the sense that we can avoid hard-coding the URLs into
+                            the templates by dynamically building them using this function.</p>
+                        <p>Consider the following python flask script.</p>
+                        <h3 class="h3">Example </h3>
+                        <div class="codeblock"><textarea name="code" class="python">
+    from flask import *
+     
+    app = Flask(__name__)
+     
+    @app.route('/admin')
+    def admin():
+        return 'admin'
+     
+    @app.route('/librarion')
+    def librarion():
+        return 'librarion'
+     
+    @app.route('/student')
+    def student():
+        return 'student'
+     
+    @app.route('/user/&lt;name&gt;')
+    def user(name):
+        if name == 'admin':
+            return redirect(url_for('admin'))
+        if name == 'librarion':
+            return redirect(url_for('librarion'))
+        if name == 'student':
+            return redirect(url_for('student'))
+    if __name__ =='__main__':
+        app.run(debug = True)
+    </textarea></div>
+                        <p>The above script simulates the library management system which can be used by the
+                            three types of users, i.e., admin, librarion, and student. There is a specific
+                            function named user() which recognizes the user the redirect the user to the
+                            exact function which contains the implementation for this particular function.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/flask/images/flask-url-building.png"
+                            alt="Flask URL Building" /><br>
+                        <p>For example, the URL http://localhost:5000/user/admin is redirected to the URL
+                            http://localhost:5000/admin, the URL localhost:5000/user/librarion, is
+                            redirected to the URL http://localhost:5000/librarion, the URL
+                            http://localhost:5000/user/student is redirected to the URL
+                            http://localhost/student. </p>
+                        <h2 class="h2">Benefits of the Dynamic URL Building</h2>
+                        <ol class="points">
+                            <li>It avoids hard coding of the URLs. </li>
+                            <li>We can change the URLs dynamically instead of remembering the manually
+                                changed hard-coded URLs.</li>
+                            <li>URL building handles the escaping of special characters and Unicode data
+                                transparently.</li>
+                            <li>The generated paths are always absolute, avoiding unexpected behavior of
+                                relative paths in browsers.</li>
+                            <li>If your application is placed outside the URL root, for example, in
+                                /myapplication instead of /, url_for() properly handles that for you.</li>
+                        </ol>
+    
+                        <hr />
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="flask-http-methods">Flask HTTP Methods</a></span>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+                        
+                        <div id="bottomnextup">
+                            <a class="next" href="cpp-history">next &rarr;</a>
+                            <a class="next" href="cpp-tutorial">&larr; prev</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+{% endblock %}

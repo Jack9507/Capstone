@@ -1,0 +1,546 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>GIT Tutorial | GIT Version Control Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                    <br>
+                    <br>
+                        <h1 class="h1">Git Tutorial</h1>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-tutorial.png" 
+                            alt="Git Tutorial" style="float:right;padding-left:15px" />
+                        <p><strong>Git tutorial</strong> provides basic and advanced concepts of Git and
+                            GitHub. Our Git tutorial is designed for beginners and professionals.</p>
+                        <p>Git is a modern and widely used <strong>distributed version control</strong>
+                            system in the world. It is developed to manage projects with high speed and
+                            efficiency. The version control system allows us to monitor and work together
+                            with our team members at the same workspace.</p>
+                        <p>This tutorial will help you to understand the distributed version control system
+                            Git via the command line as well as with <a
+                                href="https://www.javatpoint.com/what-is-github">GitHub</a>. The examples in
+                            this tutorial are performed on <strong>Windows</strong>, but we can also perform
+                            same operations on other operating systems like <strong>Linux (Ubuntu)</strong>
+                            and <strong>MacOS</strong>.</p>
+                        <h2 class="h2">What is Git?</h2>
+                        <p><strong>Git</strong> is an <strong>open-source distributed version control
+                                system</strong>. It is designed to handle minor to major projects with high
+                            speed and efficiency. It is developed to co-ordinate the work among the
+                            developers. The version control allows us to track and work together with our
+                            team members at the same workspace.</p>
+                        <p>Git is foundation of many services like <strong>GitHub</strong> and
+                            <strong>GitLab</strong>, but we can use Git without using any other Git
+                            services. Git can be used <strong>privately</strong> and
+                            <strong>publicly</strong>.
+                        </p>
+                        <p>Git was created by <strong>Linus Torvalds</strong> in <strong>2005</strong> to
+                            develop Linux Kernel. It is also used as an important distributed
+                            version-control tool for <strong>the DevOps</strong>.</p>
+                        <p>Git is easy to learn, and has fast performance. It is superior to other SCM tools
+                            like Subversion, CVS, Perforce, and ClearCase.</p>
+                        <h2 class="h2">Features of Git</h2>
+                        <p>Some remarkable features of Git are as follows:</p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/features-of-git.jpg"
+                            alt="Features of Git" />
+                        <ul class="points">
+                            <li><strong>Open Source</strong><br>
+                                Git is an <strong>open-source tool</strong>. It is released under the
+                                <strong>GPL</strong> (General Public License) license.
+                            </li>
+                            <li><strong>Scalable</strong><br>
+                                Git is <strong>scalable</strong>, which means when the number of users
+                                increases, the Git can easily handle such situations.</li>
+                            <li><strong>Distributed</strong><br>
+                                One of Git's great features is that it is <strong>distributed</strong>.
+                                Distributed means that instead of switching the project to another machine,
+                                we can create a "clone" of the entire repository. Also, instead of just
+                                having one central repository that you send changes to, every user has their
+                                own repository that contains the entire commit history of the project. We do
+                                not need to connect to the remote repository; the change is just stored on
+                                our local repository. If necessary, we can push these changes to a remote
+                                repository. </li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/features-of-git2.png"
+                            alt="Features of Git" />
+                        <ul class="points">
+                            <li><strong>Security</strong><br>
+                                Git is secure. It uses the <strong>SHA1 (Secure Hash Function)</strong> to
+                                name and identify objects within its repository. Files and commits are
+                                checked and retrieved by its checksum at the time of checkout. It stores its
+                                history in such a way that the ID of particular commits depends upon the
+                                complete development history leading up to that commit. Once it is
+                                published, one cannot make changes to its old version.</li>
+                            <li><strong>Speed</strong><br>
+                                Git is very <strong>fast</strong>, so it can complete all the tasks in a
+                                while. Most of the git operations are done on the local repository, so it
+                                provides a <strong>huge speed</strong>. Also, a centralized version control
+                                system continually communicates with a server somewhere. <br>
+                                Performance tests conducted by Mozilla showed that it was <strong>extremely
+                                    fast compared to other VCSs</strong>. Fetching version history from a
+                                locally stored repository is much faster than fetching it from the remote
+                                server. The <strong>core part of Git </strong>is <strong>written in
+                                    C</strong>, which <strong>ignores</strong> runtime overheads associated
+                                with other high-level languages.<br>
+                                Git was developed to work on the Linux kernel; therefore, it is
+                                <strong>capable</strong> enough to <strong>handle large</strong>
+                                <strong>repositories</strong> effectively. From the beginning,
+                                <strong>speed</strong> and <strong>performance</strong> have been Git's
+                                primary goals.
+                            </li>
+                            <li><strong>Supports non-linear development</strong><br>
+                                Git supports <strong>seamless branching and merging</strong>, which helps in
+                                visualizing and navigating a non-linear development. A branch in Git
+                                represents a single commit. We can construct the full branch structure with
+                                the help of its parental commit.</li>
+                            <li><strong>Branching and Merging</strong><br>
+                                <strong>Branching and merging</strong> are the <strong>great
+                                    feature</strong>s of Git, which makes it different from the other SCM
+                                tools. Git allows the <strong>creation of multiple branches</strong> without
+                                affecting each other. We can perform tasks like <strong>creation</strong>,
+                                <strong>deletion</strong>, and <strong>merging</strong> on branches, and
+                                these tasks take a few seconds only. Below are some features that can be
+                                achieved by branching:
+                                <ul class="points">
+                                    <li>We can <strong>create a separate branch</strong> for a new module of
+                                        the project, commit and delete it whenever we want.</li>
+                                    <li>We can have a <strong>production branch</strong>, which always has
+                                        what goes into production and can be merged for testing in the test
+                                        branch.</li>
+                                    <li>We can create a <strong>demo branch</strong> for the experiment and
+                                        check if it is working. We can also remove it if needed.</li>
+                                    <li>The core benefit of branching is if we want to push something to a
+                                        remote repository, we do not have to push all of our branches. We
+                                        can select a few of our branches, or all of them together.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Data Assurance</strong><br>
+                                The Git data model ensures the <strong>cryptographic integrity</strong> of
+                                every unit of our project. It provides a <strong>unique commit ID</strong>
+                                to every commit through a <strong>SHA algorithm</strong>. We can
+                                <strong>retrieve</strong> and <strong>update</strong> the commit by commit
+                                ID. Most of the centralized version control systems do not provide such
+                                integrity by default.
+                            </li>
+                            <li><strong>Staging Area</strong><br>
+                                The <strong>Staging area</strong> is also a <strong>unique
+                                    functionality</strong> of Git. It can be considered as a <strong>preview
+                                    of our next commit</strong>, moreover, an <strong>intermediate
+                                    area</strong> where commits can be formatted and reviewed before
+                                completion. When you make a commit, Git takes changes that are in the
+                                staging area and make them as a new commit. We are allowed to add and remove
+                                changes from the staging area. The staging area can be considered as a place
+                                where Git stores the changes.<br>
+                                Although, Git doesn't have a dedicated staging directory where it can store
+                                some objects representing file changes (blobs). Instead of this, it uses a
+                                file called index.</li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/features-of-git3.png"
+                            alt="Features of Git" />
+                        <ul class="points">
+                            Another feature of Git that makes it apart from other SCM tools is that
+                            <strong>it is possible to quickly stage some of our files and commit them
+                                without committing other modified files in our working directory.</strong>
+                            <li><strong>Maintain the clean history</strong><br>
+                                Git facilitates with Git Rebase; It is one of the most helpful features of
+                                Git. It fetches the latest commits from the master branch and puts our code
+                                on top of that. Thus, it maintains a clean history of the project.</li>
+                        </ul>
+                        <h2 class="h2">Benefits of Git</h2>
+                        <p>A version control application allows us to <strong>keep track</strong> of all the
+                            changes that we make in the files of our project. Every time we make changes in
+                            files of an existing project, we can push those changes to a repository. Other
+                            developers are allowed to pull your changes from the repository and continue to
+                            work with the updates that you added to the project files.</p>
+                        <p>Some <strong>significant benefits</strong> of using Git are as follows:</p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-benefits.png"
+                            alt="Benefits of Git" />
+                        <ul class="points">
+                            <li><strong>Saves Time</strong><br>
+                                Git is lightning fast technology. Each command takes only a few seconds to
+                                execute so we can save a lot of time as compared to login to a GitHub
+                                account and find out its features.</li>
+                            <li><strong>Offline Working</strong><br>
+                                One of the most important benefits of Git is that it supports
+                                <strong>offline working</strong>. If we are facing internet connectivity
+                                issues, it will not affect our work. In Git, we can do almost everything
+                                locally. Comparatively, other CVS like SVN is limited and prefer the
+                                connection with the central repository.
+                            </li>
+                            <li><strong>Undo Mistakes</strong><br>
+                                One additional benefit of Git is we can <strong>Undo</strong> mistakes.
+                                Sometimes the undo can be a savior option for us. Git provides the undo
+                                option for almost everything.</li>
+                            <li><strong>Track the Changes</strong><br>
+                                Git facilitates with some exciting features such as <strong>Diff,
+                                    Log,</strong> and <strong>Status</strong>, which allows us to track
+                                changes so we can <strong>check the status, compare</strong> our files or
+                                branches.</li>
+                        </ul>
+                        <h2 class="h2">Why Git?</h2>
+                        <p>We have discussed many <strong>features</strong> and <strong>benefits</strong> of
+                            Git that demonstrate the undoubtedly Git as the <strong>leading version control
+                                system</strong>. Now, we will discuss some other points about why should we
+                            choose Git.</p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/why-git.png" alt="Why Git" />
+                        <ul class="points">
+                            <li><strong>Git Integrity</strong><br>
+                                Git is <strong>developed to ensure</strong> the <strong>security</strong>
+                                and <strong>integrity</strong> of content being version controlled. It uses
+                                checksum during transit or tampering with the file system to confirm that
+                                information is not lost. Internally it creates a checksum value from the
+                                contents of the file and then verifies it when transmitting or storing data.
+                            </li>
+                            <li><strong>Trendy Version Control System</strong><br>
+                                Git is the <strong>most widely used version control system</strong>. It has
+                                <strong>maximum projects</strong> among all the version control systems. Due
+                                to its <strong>amazing workflow</strong> and features, it is a preferred
+                                choice of developers.
+                            </li>
+                            <li><strong>Everything is Local</strong><br>
+                                Almost All operations of Git can be performed locally; this is a significant
+                                reason for the use of Git. We will not have to ensure internet connectivity.
+                            </li>
+                            <li><strong>Collaborate to Public Projects</strong><br>
+                                There are many public projects available on the GitHub. We can collaborate
+                                on those projects and show our creativity to the world. Many developers are
+                                collaborating on public projects. The collaboration allows us to stand with
+                                experienced developers and learn a lot from them; thus, it takes our
+                                programming skills to the next level.</li>
+                            <li><strong>Impress Recruiters</strong><br>
+                                We can impress recruiters by mentioning the Git and GitHub on our resume.
+                                Send your GitHub profile link to the HR of the organization you want to
+                                join. Show your skills and influence them through your work. It increases
+                                the chances of getting hired.</li>
+                        </ul>
+                        <h2 class="h2">Prerequisites</h2>
+                        <p>Git is not a programming language, so you should have the basic understanding of
+                            Windows commands only.</p>
+                        <h2 class="h2">Audience</h2>
+                        <p>We have developed this Git tutorial for beginners and professionals both because
+                            we have started this tutorial from scratch. So it will help you to learn Git
+                            quickly. </p>
+                        <h2 class="h2">Problems</h2>
+                        <p>We assure you that you will not find any difficulty in our Git tutorial. But, if
+                            you find any mistake, you can post it in our comment section.</p>
+    
+                        <hr />
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">What is GitHub?</h1>
+                        <p>GitHub is a Git repository hosting service. GitHub also facilitates with many of
+                            its features, such as access control and collaboration. It provides a Web-based
+                            graphical interface.</p>
+                        <p>GitHub is an American company. It hosts source code of your project in the form
+                            of different programming languages and keeps track of the various changes made
+                            by programmers.</p>
+                        <p>It offers both <strong>distributed version control and source code management
+                                (SCM)</strong> functionality of Git. It also facilitates with some
+                            collaboration features such as bug tracking, feature requests, task management
+                            for every project.</p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/what-is-github.png"
+                            alt="What is GitHub" />
+                        <h2 class="h2">Features of GitHub</h2>
+                        <p>GitHub is a place where programmers and designers work together. They
+                            collaborate, contribute, and fix bugs together. It hosts plenty of open source
+                            projects and codes of various programming languages.</p>
+                        <p>Some of its significant features are as follows.</p>
+                        <ul class="points">
+                            <li>Collaboration</li>
+                            <li>Integrated issue and bug tracking</li>
+                            <li>Graphical representation of branches</li>
+                            <li>Git repositories hosting</li>
+                            <li>Project management</li>
+                            <li>Team management</li>
+                            <li>Code hosting</li>
+                            <li>Track and assign tasks</li>
+                            <li>Conversations</li>
+                            <li>Wikisc
+                        </ul>
+                        <h2 class="h2">Benefits of GitHub</h2>
+                        <p>GitHub can be separated as the Git and the Hub. GitHub service includes access
+                            controls as well as collaboration features like task management, repository
+                            hosting, and team management.</p>
+                        <p>The key benefits of GitHub are as follows.</p>
+                        <ul class="points">
+                            <li>It is easy to contribute to open source projects via GitHub.</li>
+                            <li>It helps to create an excellent document.</li>
+                            <li>You can attract recruiter by showing off your work. If you have a profile on
+                                GitHub, you will have a higher chance of being recruited.</li>
+                            <li>It allows your work to get out there in front of the public.</li>
+                            <li>You can track changes in your code across versions.</li>
+                        </ul>
+    
+                        <hr />
+                        <!-- link -->
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Git vs GitHub</h1>
+                        <p><strong>Git is an open-source distributed version control system</strong> which
+                            is available for everyone at zero cost. It is designed to handle minor to major
+                            projects with speed and efficiency. It is developed to co-ordinate the work
+                            among programmers. The version control allows you to track and work together
+                            with your team member at the same workspace. </p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-vs-github.png"
+                            alt="Git vs GitHub" />
+                        <p>While <strong>GitHub is a Git repository hosting service</strong>. It is a
+                            web-based service. GitHub facilitates with all of the features of distributed
+                            version control and source code management (SCM) functionality of Git. It also
+                            supports some of its characteristics in a single software tool.</p>
+                        <p>To better understand the similarities and differences between Git and GitHub,
+                            look at the following points.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Git</th>
+                                <th>GitHub</th>
+                            </tr>
+                            <tr>
+                                <td>Git is a distributed version control tool that can manage a programmer's
+                                    source code history.</td>
+                                <td>GitHub is a cloud-based tool developed around the Git tool.</td>
+                            </tr>
+                            <tr>
+                                <td>A developer installs Git tool locally.</td>
+                                <td>GitHub is an online service to store code and push from the computer
+                                    running the Git tool.</td>
+                            </tr>
+                            <tr>
+                                <td>Git focused on version control and code sharing.</td>
+                                <td>GitHub focused on centralized source code hosting.</td>
+                            </tr>
+                            <tr>
+                                <td>It is a command-line tool.</td>
+                                <td>It is administered through the web.</td>
+                            </tr>
+                            <tr>
+                                <td>It facilitates with a desktop interface called Git Gui.</td>
+                                <td>It also facilitates with a desktop interface called GitHub Gui.</td>
+                            </tr>
+                            <tr>
+                                <td>Git does not provide any user management feature.</td>
+                                <td>GitHub has a built-in user management feature.</td>
+                            </tr>
+                            <tr>
+                                <td>It has minimal tool configuration feature.</td>
+                                <td>It has a market place for tool configuration.</td>
+                            </tr>
+                        </table>
+    
+                        <hr />
+                        <!-- link -->
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Git Version Control System</h1>
+                        <p>A version control system is a software that tracks changes to a file or set of
+                            files over time so that you can recall specific versions later. It also allows
+                            you to work together with other programmers.</p>
+                        <p>The version control system is a collection of software tools that help a team to
+                            manage changes in a source code. It uses a special kind of database to keep
+                            track of every modification to the code.</p>
+                        <p>Developers can compare earlier versions of the code with an older version to fix
+                            the mistakes.</p>
+                        <h2 class="h2">Benefits of the Version Control System</h2>
+                        <p>The Version Control System is very helpful and beneficial in software
+                            development; developing software without using version control is unsafe. It
+                            provides backups for uncertainty. Version control systems offer a speedy
+                            interface to developers. It also allows software teams to preserve efficiency
+                            and agility according to the team scales to include more developers.</p>
+                        <p>Some key benefits of having a version control system are as follows.</p>
+                        <ul class="points">
+                            <li>Complete change history of the file</li>
+                            <li>Simultaneously working</li>
+                            <li>Branching and merging</li>
+                            <li>Traceability</li>
+                        </ul>
+                        <h2 class="h2">Types of Version Control System</h2>
+                        <ul class="points">
+                            <li>Localized version Control System</li>
+                            <li>Centralized version control systems</li>
+                            <li>Distributed version control systems</li>
+                        </ul>
+                        <h3 class="h3">Localized Version Control Systems</h3>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-version-control-system.png"
+                            alt="Git Version Control system" />
+                        <p>The localized version control method is a common approach because of its
+                            simplicity. But this approach leads to a higher chance of error. In this
+                            approach, you may forget which directory you're in and accidentally write to the
+                            wrong file or copy over files you don't want to.</p>
+                        <p>To deal with this issue, programmers developed local VCSs that had a simple
+                            database. Such databases kept all the changes to files under revision control. A
+                            local version control system keeps local copies of the files.</p>
+                        <p>The major drawback of Local VCS is that it has a single point of failure.</p>
+                        <h3 class="h3">Centralized Version Control System</h3>
+                        <p>The developers needed to collaborate with other developers on other systems. The
+                            localized version control system failed in this case. To deal with this problem,
+                            Centralized Version Control Systems were developed. </p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-version-control-system-1.png"
+                            alt="Git Version Control system" />
+                        <p>These systems have a single server that contains the versioned files, and some
+                            clients to check out files from a central place. </p>
+                        <p>Centralized version control systems have many benefits, especially over local
+                            VCSs.</p>
+                        <ul class="points">
+                            <li>Everyone on the system has information about the work what others are doing
+                                on the project.</li>
+                            <li>Administrators have control over other developers.</li>
+                            <li>It is easier to deal with a centralized version control system than a
+                                localized version control system.</li>
+                            <li>A local version control system facilitates with a server software component
+                                which stores and manages the different versions of the files. </li>
+                        </ul>
+                        <p>It also has the same drawback as in local version control system that it also has
+                            a single point of failure.</p>
+                        <h3 class="h3">Distributed Version Control System</h3>
+                        <p>Centralized Version Control System uses a central server to store all the
+                            database and team collaboration. But due to single point failure, which means
+                            the failure of the central server, developers do not prefer it. Next, the
+                            Distributed Version Control System is developed.</p>
+                        <p>In a Distributed Version Control System (such as Git, Mercurial, Bazaar or
+                            Darcs), the user has a local copy of a repository. So, the clients don't just
+                            check out the latest snapshot of the files even they can fully mirror the
+                            repository. The local repository contains all the files and metadata present in
+                            the main repository.</p>
+                        <img src="https://static.javatpoint.com/tutorial/git/images/git-version-control-system-2.png"
+                            alt="Git Version Control system" />
+                        <p>DVCS allows automatic management branching and merging. It speeds up of most
+                            operations except pushing and pulling. DVCS enhances the ability to work offline
+                            and does not rely on a single location for backups. If any server stops and
+                            other systems were collaborating via it, then any of the client repositories
+                            could be restored by that server. Every checkout is a full backup of all the
+                            data.</p>
+                        <p>These systems do not necessarily depend on a central server to store all the
+                            versions of a project file.</p>
+                        <h2 class="h2">Difference between Centralized Version Control System and Distributed
+                            Version Control System</h2>
+                        <!--<h3 class="h3">Centralized vs Distributed Version Control System</h3>-->
+                        <p>Centralized Version Control Systems are systems that use
+                            <strong>client/server</strong> architecture. In a centralized Version Control
+                            System, one or more client systems are directly connected to a central server.
+                            Contrarily the Distributed Version Control Systems are systems that use
+                            <strong>peer-to-peer</strong> architecture.
+                        </p>
+                        <p>There are many benefits and drawbacks of using both the version control systems.
+                            Let's have a look at some significant differences between Centralized and
+                            Distributed version control system.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Centralized Version Control System</th>
+                                <th>Distributed Version Control System</th>
+                            </tr>
+                            <tr>
+                                <td>In CVCS, The repository is placed at one place and delivers information
+                                    to many clients.</td>
+                                <td>In DVCS, Every user has a local copy of the repository in place of the
+                                    central repository on the server-side. </td>
+                            </tr>
+                            <tr>
+                                <td>It is based on the client-server approach.</td>
+                                <td>It is based on the client-server approach.</td>
+                            </tr>
+                            <tr>
+                                <td>It is the most straightforward system based on the concept of the
+                                    central repository. </td>
+                                <td>It is flexible and has emerged with the concept that everyone has their
+                                    repository.</td>
+                            </tr>
+                            <tr>
+                                <td>In CVCS, the server provides the latest code to all the clients across
+                                    the globe.</td>
+                                <td>In DVCS, every user can check out the snapshot of the code, and they can
+                                    fully mirror the central repository.</td>
+                            </tr>
+                            <tr>
+                                <td>CVCS is easy to administrate and has additional control over users and
+                                    access by its server from one place.</td>
+                                <td>DVCS is fast comparing to CVCS as you don't have to interact with the
+                                    central server for every command.</td>
+                            </tr>
+                            <tr>
+                                <td>The popular tools of CVCS are <strong>SVN</strong> (Subversion) and
+                                    <strong>CVS</strong>.
+                                </td>
+                                <td>The popular tools of DVCS are <strong>Git</strong> and
+                                    <strong>Mercurial</strong>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CVCS is easy to understand for beginners. </td>
+                                <td>DVCS has some complex process for beginners.</td>
+                            </tr>
+                            <tr>
+                                <td>If the server fails, No system can access data from another system.</td>
+                                <td>if any server fails and other systems were collaborating via it, that
+                                    server can restore any of the client repositories</td>
+                            </tr>
+                        </table>
+    
+                        <hr />
+
+                        <!-- link -->
+                        <br /><br />
+    
+                        <div id="bottomnextup">
+                            <a class="next" href="cpp-history">next &rarr;</a>
+                            <a class="next" href="cpp-tutorial">&larr; prev</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+{% endblock %}

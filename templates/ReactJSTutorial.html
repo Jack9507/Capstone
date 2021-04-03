@@ -1,0 +1,605 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>ReactJS Tutorial | React JS Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">Learn ReactJS Tutorial</h1>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-tutorial.png"
+                            alt="ReactJS Tutorial" style="float:right;padding-left:15px" />
+    
+                        <p>ReactJS tutorial provides basic and advanced concepts of ReactJS. Currently,
+                            ReactJS is one of the most popular JavaScript front-end libraries which has a
+                            strong foundation and a large community.</p>
+                        <p>ReactJS is a <strong>declarative</strong>, <strong>efficient</strong>, and
+                            flexible <strong>JavaScript library</strong> for building reusable UI
+                            components. It is an open-source, component-based front end library which is
+                            responsible only for the view layer of the application. It was initially
+                            developed and maintained by Facebook and later used in its products like
+                            WhatsApp & Instagram.</p>
+                        <p>Our ReactJS tutorial includes all the topics which help to learn ReactJS. These
+                            are ReactJS Introduction, ReactJS Features, ReactJS Installation, Pros and Cons
+                            of ReactJS, ReactJS JSX, ReactJS Components, ReactJS State, ReactJS Props,
+                            ReactJS Forms, ReactJS Events, ReactJS Animation and many more.</p>
+    
+                        <h2 class="h2">Why we use ReactJS?</h2>
+                        <p>The main objective of ReactJS is to develop User Interfaces (UI) that improves
+                            the speed of the apps. It uses virtual DOM (JavaScript object), which improves
+                            the performance of the app. The JavaScript virtual DOM is faster than the
+                            regular DOM. We can use ReactJS on the client and server-side as well as with
+                            other frameworks. It uses component and data patterns that improve readability
+                            and helps to maintain larger apps.</p>
+    
+                        <hr />
+    
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning ReactJS in-depth, you must have a good knowledge of JavaScript,
+                            HTML5, and CSS. The knowledge of ECMAScript 2015 syntax can also be helpful.</p>
+    
+                        <h2 class="h2">Audience</h2>
+                        <p>We have developed this ReactJS tutorial for beginners and professionals both. We
+                            will try to introduce every concept with simple code examples that you can be
+                            easily understood. After completing all the sections, you can work confidently
+                            with ReactJS.</p>
+    
+                        <h2 class="h2">Problems</h2>
+                        <p>We assure you that you will not find any problem in our ReactJS tutorial. But, if
+                            you find any mistake, you can post it in our comment section.</p>
+    
+                        <hr />
+                        <!-- link -->
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">React Introduction</h1>
+                        <p>ReactJS is a declarative, efficient, and flexible JavaScript library for building
+                            reusable UI components. It is an open-source, component-based front end library
+                            responsible only for the view layer of the application. It was created by
+                            <strong>Jordan Walke,</strong> who was a software engineer at
+                            <strong>Facebook.</strong> It was initially developed and maintained by Facebook
+                            and was later used in its products like <strong>WhatsApp</strong> &
+                            <strong>Instagram.</strong> Facebook developed ReactJS in <strong>2011</strong>
+                            in its newsfeed section, but it was released to the public in the month of
+                            <strong>May 2013.</strong>
+                        </p>
+                        <p>Today, most of the websites are built using MVC (model view controller)
+                            architecture. In MVC architecture, React is the 'V' which stands for view,
+                            whereas the architecture is provided by the Redux or Flux.</p>
+                        <p>A ReactJS application is made up of multiple components, each component
+                            responsible for outputting a small, reusable piece of HTML code. The components
+                            are the heart of all React applications. These Components can be nested with
+                            other components to allow complex applications to be built of simple building
+                            blocks. ReactJS uses virtual DOM based mechanism to fill data in HTML DOM. The
+                            virtual DOM works fast as it only changes individual DOM elements instead of
+                            reloading complete DOM every time.</p>
+                        <p>To create React app, we write React components that correspond to various
+                            elements. We organize these components inside higher level components which
+                            define the application structure. For example, we take a form that consists of
+                            many elements like input fields, labels, or buttons. We can write each element
+                            of the form as React components, and then we combine it into a higher-level
+                            component, i.e., the form component itself. The form components would specify
+                            the structure of the form along with elements inside of it.</p>
+    
+                        <h2 class="h2">Why learn ReactJS?</h2>
+                        <p>Today, many JavaScript frameworks are available in the market(like angular,
+                            node), but still, React came into the market and gained popularity amongst them.
+                            The previous frameworks follow the traditional data flow structure, which uses
+                            the DOM (Document Object Model). DOM is an object which is created by the
+                            browser each time a web page is loaded. It dynamically adds or removes the data
+                            at the back end and when any modifications were done, then each time a new DOM
+                            is created for the same page. This repeated creation of DOM makes unnecessary
+                            memory wastage and reduces the performance of the application.</p>
+                        <p>Therefore, a new technology ReactJS framework invented which remove this
+                            drawback. ReactJS allows you to divide your entire application into various
+                            components. ReactJS still used the same traditional data flow, but it is not
+                            directly operating on the browser's Document Object Model (DOM) immediately;
+                            instead, it operates on a virtual DOM. It means rather than manipulating the
+                            document in a browser after changes to our data, it resolves changes on a DOM
+                            built and run entirely in memory. After the virtual DOM has been updated, React
+                            determines what changes made to the actual browser's DOM. The React Virtual DOM
+                            exists entirely in memory and is a representation of the web browser's DOM. Due
+                            to this, when we write a React component, we did not write directly to the DOM;
+                            instead, we are writing virtual components that react will turn into the DOM.
+                        </p>
+    
+                        <hr />
+                        <!-- link -->
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+
+                        <h1 class="h1">React Environment Setup</h1>
+                        <p>In this section, we will learn how to set up an environment for the successful
+                            development of ReactJS application.</p>
+                        <h2 class="h2">Pre-requisite for ReactJS</h2>
+                        <ol class="points">
+                            <li>NodeJS and NPM</li>
+                            <li>React and React DOM</li>
+                            <li>Webpack</li>
+                            <li>Babel</li>
+                        </ol>
+                        <h2 class="h2">Ways to install ReactJS</h2>
+                        <p>There are two ways to set up an environment for successful ReactJS application.
+                            They are given below.</p>
+                        <ol class="points">
+                            <li>Using the npm command</li>
+                            <li>Using the create-react-app command</li>
+                        </ol>
+    
+                        <h3 class="h3">1. Using the npm command</h3>
+                        <p><strong>Install NodeJS and NPM</strong></p>
+                        <p>NodeJS and NPM are the platforms need to develop any ReactJS application. You can
+                            install NodeJS and NPM package manager by the link given below.</p>
+                        <a
+                            href="install-nodejs-on-linux-ubuntu-centos">https://www.javatpoint.com/install-nodejs-on-linux-ubuntu-centos</a>
+                        <p>To verify NodeJS and NPM, use the command shown in the below image.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup.png"
+                            alt="React Environment Setup" />
+                        <p><strong>Install React and React DOM</strong></p>
+                        <p>Create a <strong>root</strong> folder with the name <strong>reactApp</strong> on
+                            the desktop or where you want. Here, we create it on the desktop. You can create
+                            the folder directly or using the command given below.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup1.png"
+                            alt="React Environment Setup" />
+                        <p>Now, you need to create a <strong>package.json</strong> file. To create any
+                            module, it is required to generate a package.json file in the project folder. To
+                            do this, you need to run the following command as shown in the below image.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt; npm init -y
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup2.png"
+                            alt="React Environment Setup" />
+                        <p>After creating a package.json file, you need to install <strong>react</strong>
+                            and its DOM <strong>packages</strong> using the following npm command in the
+                            terminal window as shown in the below image.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install react react-dom --save
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup3.png"
+                            alt="React Environment Setup" />
+                        <p>You can also use the above command separately which can be shown as below.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install react --save
+    javatpoint@root:~/Desktop/reactApp&gt;npm install react-dom --save
+    </textarea></div>
+                        <p><strong>Install Webpack</strong></p>
+                        <p>Webpack is used for module packaging, development, and production pipeline
+                            automation. We will use <strong>webpack-dev-server</strong> during development,
+                            <strong>webpack</strong> to create production builds, and <strong>webpack
+                                CLI</strong> provides a set of commands. Webpack compiles these into a
+                            single file(bundle). To install webpack use the command shown in the below
+                            image.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install webpack webpack-dev-server webpack-cli --save
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup4.png"
+                            alt="React Environment Setup" />
+                        <p>You can also use the above command separately which can be shown as below.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install webpack --save
+    javatpoint@root:~/Desktop/reactApp&gt;npm install webpack-dev-server --save
+    javatpoint@root:~/Desktop/reactApp&gt;npm install webpack-cli --save
+    </textarea></div>
+                        <p><strong>Install Babel</strong></p>
+                        <p>Babel is a JavaScript compiler and transpiler used to convert one source code to
+                            others. It compiles React JSX and ES6 to ES5 JavaScript which can be run on all
+                            browsers. We need <strong>babel-loader</strong> for JSX file types,
+                            <strong>babel-preset-react</strong> makes your browser update automatically when
+                            any changes occur to your code without losing the current state of the app. ES6
+                            support requires <strong>babel-preset-env</strong> Babel preset. To install
+                            webpack use the following command shown in the below image.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-core babel-loader babel-preset-env babel-preset-react babel-webpack-plugin --save-dev
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup5.png"
+                            alt="React Environment Setup" />
+                        <p>You can also use the above command separately which can be shown as below.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-core --save-dev
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-loader --save-dev
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-preset-env --save-dev
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-preset-react --save-dev
+    javatpoint@root:~/Desktop/reactApp&gt;npm install babel-webpack-plugin --save-dev
+    </textarea></div>
+                        <p><strong>Create Files</strong></p>
+                        <p>To complete the installation process, you need to add the following files in your
+                            project folder. These files are <strong>index.html, App.js, main.js,
+                                webpack.config.js</strong> and, <strong>.babelrc.</strong> You can create
+                            these files by manually, or by using the command prompt.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;touch index.html
+    javatpoint@root:~/Desktop/reactApp&gt;touch App.js
+    javatpoint@root:~/Desktop/reactApp&gt;touch main.js
+    javatpoint@root:~/Desktop/reactApp&gt;touch webpack.config.js
+    javatpoint@root:~/Desktop/reactApp&gt;touch .babelrc
+    </textarea></div>
+                        <h3 class="h3">Set Compiler, Loader, and Server for React Application</h3>
+                        <p><strong>Configure webpack</strong></p>
+                        <p>You can configure webpack in the <strong>webpack.config.js</strong> file by
+                            adding the following code. It defines your app entry point, build output and the
+                            extension which will resolve automatically. It also set the development server
+                            to <strong>8080</strong> port. It defines the loaders for processing various
+                            file types used within your app and wrap up by adding plugins needed during our
+                            development.</p>
+                        <p><strong><em>webpack.config.json</em></strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    
+    module.exports = {
+       entry: './main.js',
+       output: {
+          path: path.join(__dirname, '/bundle'),
+          filename: 'index_bundle.js'
+       },
+       devServer: {
+          inline: true,
+          port: 8080
+       },
+       module: {
+          rules: [
+             {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+    	    use: {
+                  loader: "babel-loader",
+                }
+             }
+          ]
+       },
+       plugins:[
+          new HtmlWebpackPlugin({
+             template: './index.html'
+          })
+       ]
+    }
+    </textarea></div>
+                        <p>Now, open the <strong>package.json</strong> file and delete <strong><em>"test"
+                                    "echo \" Error: no test specified\" && exit 1"</em></strong> inside
+                            <strong><em>"scripts"</em></strong> object, then add the start and build
+                            commands instead. It is because we will not perform any testing in this app.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    {
+      "name": "reactApp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "start": "webpack-dev-server --mode development --open --hot",
+        "build": "webpack --mode production"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "webpack-cli": "^3.3.1",
+        "webpack-dev-server": "^3.3.1"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "@babel/preset-react": "^7.0.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.5",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "html-webpack-plugin": "^3.2.0",
+        "webpack": "^4.30.0"
+      }
+    }
+    </textarea></div>
+                        <p><strong>HTML webpack template for index.html</strong></p>
+                        <p>We can add a custom template to generate <strong>index.html</strong> using the
+                            <strong>HtmlWeb-packPlugin</strong> plugin. This enables us to add a viewport
+                            tag to support mobile responsive scaling of our app. It also set the <strong>div
+                                id = "app"</strong> as a root element for your app and adding the
+                            <strong>index_bundle.js</strong> script, which is our bundled app file.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang = "en"&gt;
+       &lt;head&gt;
+          &lt;meta charset = "UTF-8"&gt;
+          &lt;title&gt;React App&lt;/title&gt;
+       &lt;/head&gt;
+       &lt;body&gt;
+          &lt;div id = "app"&gt;&lt;/div&gt;
+          &lt;script src = 'index_bundle.js'&gt;&lt;/script&gt;
+       &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <p><strong>App.jsx and main.js</strong></p>
+                        <p>This is the first React component, i.e. app entry point. It will render Hello
+                            World.</p>
+                        <p><strong><em>App.js</em></strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    import React, { Component } from 'react';
+    class App extends Component{
+       render(){
+          return(
+             &lt;div&gt;
+                &lt;h1&gt;Hello World&lt;/h1&gt;
+             &lt;/div&gt;
+          );
+       }
+    }
+    export default App;
+    </textarea></div>
+                        <p>Now, import this component and render it to your root App element so that you can
+                            see it in the browser.</p>
+                        <p><strong><em>Main.js</em></strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App.js';
+    
+    ReactDOM.render(&lt;App /&gt;, document.getElementById('app'));
+    </textarea></div>
+                        <h4 class="n">Note: If you want to use something, you need to import it first. To
+                            make the component usable in other parts of the app, you need to export it after
+                            creation and import it in the file where you want to use it.</h4>
+                        <p><strong>Create .babelrc file</strong></p>
+                        <p>Create a file with name <strong>.babelrc</strong> and copy the following code to
+                            it.</p>
+                        <p><strong><em>.babelrc</em></strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    {
+       "presets":[
+      "@babel/preset-env", "@babel/preset-react"]
+    }
+    </textarea></div>
+                        <p><strong>Running the Server</strong></p>
+                        <p>After completing the installation process and setting up the app, you can start
+                            the server by running the following command.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt;npm start
+    </textarea></div>
+                        <p>It will show the port number which we need to open in the browser. After we open
+                            it, you will see the following output.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup6.png"
+                            alt="React Environment Setup" />
+                        <p><strong>Generate the Bundle</strong></p>
+                        <p>Now, generate the bundle for your app. Bundling is the process of following
+                            imported files and merging them into a single file: a <strong>"bundle."</strong>
+                            This bundle can then be included on a webpage to load an entire app at once. To
+                            generate this, you need to run the build command in command prompt which can be
+                            shown below.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop/reactApp&gt; npm run build
+    </textarea></div>
+                        <p>This command will generate the bundle in the current folder(in which your app
+                            belongs) and will be shown as like below image.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup7.png"
+                            alt="React Environment Setup" />
+                        <h2 class="h2">2. Using the create-react-app command</h2>
+                        <p>If you do not want to install react by using webpack and babel, then you can
+                            choose create-react-app to install react. The 'create-react-app' is a tool
+                            maintained by Facebook itself. This is suitable for beginners without manually
+                            having to deal with transpiling tools like webpack and babel. In this section, I
+                            will be showing you how to install React using CRA tool.</p>
+                        <p><strong>Install NodeJS and NPM</strong></p>
+                        <p>NodeJS and NPM are the platforms need to develop any ReactJS application. You can
+                            install NodeJS and NPM package manager by the link given below.</p>
+                        <a
+                            href="https://www.javatpoint.com/install-nodejs-on-linux-ubuntu-centos">https://www.javatpoint.com/install-nodejs-on-linux-ubuntu-centos</a>
+                        <p><strong>Install React</strong></p>
+                        <p>You can install React using npm package manager by using the below command. There
+                            is no need to worry about the complexity of React installation. The
+                            create-react-app npm package will take care of it.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/&gt;npm install -g create-react-app
+    </textarea></div>
+                        <p><strong>Create a new React project</strong></p>
+                        <p>After the installation of React, you can create a new react project using
+                            create-react-app command. Here, I choose <strong>jtp-reactapp</strong> name for
+                            my project.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/&gt;create-react-app jtp-reactapp
+    </textarea></div>
+                        <h4 class="n">NOTE: You can combine the above two steps in a single command using
+                            npx. The npx is a package runner tool that comes with npm 5.2 and above version.
+                        </h4>
+                        <div class="codeblock"><textarea name="code" class="java">
+     javatpoint@root:~/&gt;npx create-react-app jtp-reactapp
+    </textarea></div>
+                        <p>The above command will install the react and create a new project with the name
+                            jtp-reactapp. This app contains the following sub-folders and files by default
+                            which can be shown in the below image.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup8.png"
+                            alt="React Environment Setup" />
+                        <p>Now, to get started, open the <strong>src</strong> folder and make changes in
+                            your desired file. By default, the src folder contain the following files shown
+                            in below image.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup9.png"
+                            alt="React Environment Setup" />
+                        <p>For example, I will open <strong>App.js</strong> and make changes in its code
+                            which are shown below.</p>
+                        <p><strong><em>App.js</em></strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    import React from 'react';
+    import logo from './logo.svg';
+    import './App.css';
+    
+    function App() {
+      return (
+        &lt;div className="App"&gt;
+          &lt;header className="App-header"&gt;
+            &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+            &lt;p&gt;
+              Welcome To JavaTpoint.
+    
+    	  &lt;p&gt;To get started, edit src/App.js and save to reload.&lt;/p&gt;
+            &lt;/p&gt;
+            &lt;a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            &gt;
+              Learn React
+            &lt;/a&gt;
+          &lt;/header&gt;
+        &lt;/div&gt;
+      );
+    }
+    
+    export default App;
+    </textarea></div>
+                        <h4 class="n"><span class="bold">NOTE:</span> You can also choose your own favorite
+                            code editor for editing your project. But in my case, I choose Eclipse. Using
+                            the below link, you can download Eclipse for Ubuntu and install.</h4>
+                        <a class="bold" href="how-to-install-eclipse-in-ubuntu">click Here to download
+                            Eclipse for Ubuntu and install</a>
+                        <p><strong>Running the Server</strong></p>
+                        <p>After completing the installation process, you can start the server by running
+                            the following command.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    javatpoint@root:~/Desktop&gt;cd jtp-reactapp
+    javatpoint@root:~/Desktop/jtp-reactapp&gt;npm start
+    </textarea></div>
+                        <p>It will show the port number which we need to open in the browser. After we open
+                            it, you will see the following output.</p>
+                        <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-environment-setup10.png"
+                            alt="React Environment Setup" />
+    
+                        <hr />
+                        <!-- link -->
+
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+    <div id="city">
+        <table>
+            <tr>
+                <td>
+                    <h1 class="h1">React Features</h1>
+                    <img src="https://static.javatpoint.com/tutorial/reactjs/images/reactjs-features.png"
+                        class="imageright" alt="React Features" />
+                    <p>Currently, ReactJS gaining quick popularity as the best JavaScript framework
+                        among web developers. It is playing an essential role in the front-end
+                        ecosystem. The important features of ReactJS are as following.</p>
+                    <ul class="points">
+                        <li>JSX</li>
+                        <li>Components</li>
+                        <li>One-way Data Binding</li>
+                        <li>Virtual DOM</li>
+                        <li>Simplicity</li>
+                        <li>Performance</li>
+                    </ul>
+                    <hr />
+                    <h3 class="h3">JSX</h3>
+                    <p>JSX stands for JavaScript XML. It is a JavaScript syntax extension. Its an XML or
+                        HTML like syntax used by ReactJS. This syntax is processed into JavaScript calls
+                        of React Framework. It extends the ES6 so that HTML like text can co-exist with
+                        JavaScript react code. It is not necessary to use JSX, but it is recommended to
+                        use in ReactJS.</p>
+                    <h3 class="h3">Components</h3>
+                    <p>ReactJS is all about components. ReactJS application is made up of multiple
+                        components, and each component has its own logic and controls. These components
+                        can be reusable which help you to maintain the code when working on larger scale
+                        projects.</p>
+                    <h3 class="h3">One-way Data Binding</h3>
+                    <p>ReactJS is designed in such a manner that follows unidirectional data flow or
+                        one-way data binding. The benefits of one-way data binding give you better
+                        control throughout the application. If the data flow is in another direction,
+                        then it requires additional features. It is because components are supposed to
+                        be immutable and the data within them cannot be changed. Flux is a pattern that
+                        helps to keep your data unidirectional. This makes the application more flexible
+                        that leads to increase efficiency.</p>
+                    <h3 class="h3">Virtual DOM</h3>
+                    <p>A virtual DOM object is a representation of the original DOM object. It works
+                        like a one-way data binding. Whenever any modifications happen in the web
+                        application, the entire UI is re-rendered in virtual DOM representation. Then it
+                        checks the difference between the previous DOM representation and new DOM. Once
+                        it has done, the real DOM will update only the things that have actually
+                        changed. This makes the application faster, and there is no wastage of memory.
+                    </p>
+                    <h3 class="h3">Simplicity</h3>
+                    <p>ReactJS uses JSX file which makes the application simple and to code as well as
+                        understand. We know that ReactJS is a component-based approach which makes the
+                        code reusable as your need. This makes it simple to use and learn.</p>
+                    <h3 class="h3">Performance</h3>
+                    <p>ReactJS is known to be a great performer. This feature makes it much better than
+                        other frameworks out there today. The reason behind this is that it manages a
+                        virtual DOM. The DOM is a cross-platform and programming API which deals with
+                        HTML, XML or XHTML. The DOM exists entirely in memory. Due to this, when we
+                        create a component, we did not write directly to the DOM. Instead, we are
+                        writing virtual components that will turn into the DOM leading to smoother and
+                        faster performance.</p>
+
+                    <hr />
+                    <!-- link -->
+                    <br /><br />
+                    <div id="bottomnextup">
+                        <a class="next" href="cpp-history">next &rarr;</a>
+                        <a class="next" href="cpp-tutorial">&larr; prev</a>
+                    </div>
+
+                    <br /><br />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
+{% endblock %}

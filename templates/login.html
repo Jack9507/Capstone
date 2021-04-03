@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form </title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='loginassets/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='loginassets/css/style.css')}}">
+    <style>
+        .bg-nav {
+            background: #159957;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #155799, #159957);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #155799, #159957);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+</head>
+
+<!-- Flashing messages using Flask -->
+{% block content %}
+<div class="container">
+    {% for msg in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        {{ msg }}
+    </div>
+    {% endfor %} {% block page_content %} {% endblock %}
+</div>
+{% endblock %}
+<!-- end of message flashing  -->
+
+<body class='bg-nav'>
+
+    <div class="main bg-nav">
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{{url_for('static', filename='loginassets/images/signin-image.jpg')}}" alt="sing up image"></figure>
+                        <a href="/signup" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Login</h2>
+                        <form method="POST" class="register-form" id="login-form" action="/login-validation">
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="your_email" id="email" placeholder="Your Email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{url_for('static', filename='loginassets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='loginassets/js/main.js')}}"></script>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

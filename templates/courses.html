@@ -1,0 +1,210 @@
+{% extends "layout.html" %} {% block body %}
+
+<main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h2>Courses</h2>
+            <p>The most important principle for designing lively eLearning is to see eLearning design not as information design but as
+            designing an experience.</p>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+                <h2>Courses</h2>
+                <p>Popular Courses</p>
+            </div>
+    
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+    
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Web Development</h4>
+                                <p class="price">Free</p>
+                            </div>
+    
+                            <h3><a href="https://codewithharry.com/videos/web-development-in-hindi-1"
+                                    target="_blank">Website Design</a></h3>
+                            <p>Web development is the work involved in developing a Web site for the Internet or an
+                                intranet.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-1.jpg')}}"
+                                        class="img-fluid" alt="">
+                                    <span>Antonio</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;50 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;65
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- End Course Item-->
+    
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/android.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Android Development</h4>
+                                <p class="price">Free</p>
+                            </div>
+    
+                            <h3><a href="https://codewithharry.com/videos/android-tutorial-in-hindi-with-notes"
+                                    target="_blank">Full course with video and notes.</a></h3>
+                            <p>Android software development is the process by which applications are created for devices
+                                running the Android operating
+                                system. </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-2.jpg')}}"
+                                        class="img-fluid" alt="">
+                                    <span>Harry</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;35 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;42
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+    
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/course-3.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Machine Learning</h4>
+                                <p class="price">Free</p>
+                            </div>
+    
+                            <h3><a href="https://codewithharry.com/videos/ml-tutorials-in-hindi-1" target="_blank">Machine
+                                    Learning in Python</a></h3>
+                            <p>Machine learning is the study of computer algorithms that improve automatically through
+                                experience and by the use of
+                                data.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}"
+                                        class="img-fluid" alt="">
+                                    <span>Brandon</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;20 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+                
+                <br><br><br><br><br><br><br>
+
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/git2.png')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Git and Github </h4>
+                                <p class="price">Free</p>
+                            </div>
+                
+                            <h3><a href="https://codewithharry.com/videos/git-tut-beginners-hindi-1" target="_blank">Git & Github Tutorials</a></h3>
+                            <p>Git is an open-source, version control tool created in 2005 by developers working on the Linux operating system; GitHub
+                            is a company founded in 2008 that makes tools which integrate with git.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}" class="img-fluid"
+                                        alt="">
+                                    <span>Harry</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;20 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/python.jpg')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Python</h4>
+                                <p class="price">Free</p>
+                            </div>
+                
+                            <h3><a href="https://codewithharry.com/videos/python-tutorials-for-absolute-beginners-0" target="_blank">Python Tutorials for Beginners.</a></h3>
+                            <p>Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes
+                            code readability with its notable use of significant indentation.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}" class="img-fluid"
+                                        alt="">
+                                    <span>Harry</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;20 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{{url_for('static', filename='assets/img/js.png')}}" class="img-fluid" alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>JavaScript</h4>
+                                <p class="price">Free</p>
+                            </div>
+                
+                            <h3><a href="https://codewithharry.com/videos/javascript-tutorials-in-hindi-1" target="_blank">JavaScript for Beginners.</a></h3>
+                            <p>JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="{{url_for('static', filename='assets/img/trainers/trainer-3.jpg')}}" class="img-fluid"
+                                        alt="">
+                                    <span>Harry</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="bx bx-user"></i>&nbsp;20 &nbsp;&nbsp;
+                                    <i class="bx bx-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+    
+            </div>
+    
+        </div>
+    </section>
+    <!-- End Courses Section -->
+
+</main>
+<!-- End #main -->
+{% endblock %}

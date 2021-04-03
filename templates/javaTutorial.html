@@ -1,0 +1,569 @@
+{% extends "layout.html" %} {% block body %}
+
+
+<html>
+
+
+<head>
+    <title>Java Tutorial | Java Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <br>
+    <br>
+
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+                        <h1 class="h1">Java Tutorial</h1>
+                        <p>Our core Java programming tutorial is designed for students and working professionals. Java is an <a href="java-oops-concepts">object-oriented</a>, class-based, concurrent, secured and general-purpose computer-programming language.
+                            It is a widely used robust technology. </p>
+
+
+                        <h2 id="what-is-java" class="h2">What is Java</h2>
+                        <p>Java is a <strong>programming language</strong> and a <strong>platform</strong>. Java is a high level, robust, object-oriented and secure programming language.</p>
+                        <p>Java was developed by <em>Sun Microsystems</em> (which is now the subsidiary of Oracle) in the year 1995. <em>James Gosling</em> is known as the father of Java. Before Java, its name was <em>Oak</em>. Since Oak was already a registered
+                            company, so James Gosling and his team changed the Oak name to Java.</p>
+                        <p><strong>Platform</strong>: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.</p>
+                        <hr/>
+                        <h2 id="java-example" class="h2">Java Example</h2>
+                        <p>Let's have a quick look at Java programming example. A detailed description of Hello Java example is available in next page.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+class Simple{
+    public static void main(String args[]){
+     System.out.println("Hello Java");
+    }
+}
+</textarea></div>
+                        <span class="testit"><a href="https://compiler.javatpoint.com/opr/test.jsp?filename=Simple" target="_blank">Test it Now</a></span>
+                        <hr/>
+                        <h2 id="wjiu" class="h2">Application</h2>
+                        <p>According to Sun, 3 billion devices run Java. There are many devices where Java is currently used. Some of them are as follows:</p>
+                        <ol class="points">
+                            <li>Desktop Applications such as acrobat reader, media player, antivirus, etc.</li>
+                            <li>Web Applications such as irctc.co.in, javatpoint.com, etc.</li>
+                            <li>Enterprise Applications such as banking applications.</li>
+                            <li>Mobile</li>
+                            <li>Embedded System</li>
+                            <li>Smart Card</li>
+                            <li>Robotics</li>
+                            <li>Games, etc.</li>
+                        </ol>
+
+                        <hr/>
+                        <h2 id="java-applications" class="h2">Types of Java Applications</h2>
+                        <p>There are mainly 4 types of applications that can be created using Java programming:</p>
+                        <h4 class="h4">1) Standalone Application</h4>
+                        <p>Standalone applications are also known as desktop applications or window-based applications. These are traditional software that we need to install on every machine. Examples of standalone application are Media player, antivirus,
+                            etc. AWT and Swing are used in Java for creating standalone applications.</p>
+                        <h4 class="h4">2) Web Application</h4>
+                        <p>An application that runs on the server side and creates a dynamic page is called a web application. Currently, <a href="servlet-tutorial">Servlet</a>, <a href="jsp-tutorial">JSP</a>, <a href="struts-2-tutorial">Struts</a>, <a href="spring-tutorial">Spring</a>,
+                            <a href="hibernate-tutorial">Hibernate</a>, <a href="jsf-tutorial">JSF</a>, etc. technologies are used for creating web applications in Java.</p>
+                        <h4 class="h4">3) Enterprise Application</h4>
+                        <p>An application that is distributed in nature, such as banking applications, etc. is called enterprise application. It has advantages of the high-level security, load balancing, and clustering. In Java, <a href="ejb-tutorial">EJB</a>                            is used for creating enterprise applications.</p>
+                        <h4 class="h4">4) Mobile Application</h4>
+                        <p>An application which is created for mobile devices is called a mobile application. Currently, Android and Java ME are used for creating mobile applications.</p>
+
+                        <h2 id="java-platforms" class="h2">Java Platforms / Editions</h2>
+                        <p>There are 4 platforms or editions of Java:</p>
+
+                        <h4 class="h4">1) Java SE (Java Standard Edition)</h4>
+                        <p>It is a Java programming platform. It includes Java programming APIs such as java.lang, java.io, java.net, java.util, java.sql, java.math etc. It includes core topics like OOPs, <a href="java-string">String</a>, Regex, Exception,
+                            Inner classes, Multithreading, I/O Stream, Networking, AWT, Swing, Reflection, Collection, etc.</p>
+                        <h4 class="h4">2) Java EE (Java Enterprise Edition)</h4>
+                        <p>It is an enterprise platform which is mainly used to develop web and enterprise applications. It is built on the top of the Java SE platform. It includes topics like Servlet, JSP, Web Services, EJB, <a href="jpa-tutorial">JPA</a>,
+                            etc.
+                        </p>
+                        <h4 class="h4">3) Java ME (Java Micro Edition)</h4>
+                        <p>It is a micro platform which is mainly used to develop mobile applications.</p>
+                        <h4 class="h4">4) JavaFX</h4>
+                        <p>It is used to develop rich internet applications. It uses a light-weight user interface API.</p>
+                        <hr/>
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>To learn Java, you must have the basic knowledge of C/C++ programming language.</p>
+
+                        <h2 class="h2">Audience</h2>
+                        <p>Our Java programming tutorial is designed to help beginners and professionals.</p>
+
+                        <h2 class="h2">Problem</h2>
+                        <p>We assure that you will not find any problem in this Java tutorial. However, if there is any mistake, please post the problem in the contact form.</p>
+
+                        <br/><br/>
+                        <hr>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">Features of Java</h1>
+                        <p>The primary objective of <a href="java-tutorial">Java programming</a> language
+                            creation was to make it portable, simple and secure programming language. Apart
+                            from this, there are also some excellent features which play an important role
+                            in the popularity of this language. The features of Java are also known as java
+                            <em>buzzwords</em>.
+                        </p>
+    
+                        <p>A list of most important features of Java language is given below.</p>
+                        <img src="https://static.javatpoint.com/images/core/java-features.png" alt="Java Features"
+                            class="imageright" />
+    
+                        <ol class="points">
+                            <li>Simple</li>
+                            <li>Object-Oriented</li>
+                            <li>Portable</li>
+                            <li>Platform independent</li>
+                            <li>Secured</li>
+                            <li>Robust</li>
+                            <li>Architecture neutral</li>
+                            <li>Interpreted</li>
+                            <li>High Performance</li>
+                            <li>Multithreaded</li>
+                            <li>Distributed</li>
+                            <li>Dynamic</li>
+                        </ol>
+    
+                        <div class="video-responsive">
+                            <iframe width="450" height="300" src="https://www.youtube.com/embed/O5hShUO6wxs" frameborder="0"
+                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <a id="featuressimple"></a>
+    
+                        <h3 class="h3">Simple</h3>
+                        <p>Java is very easy to learn, and its syntax is simple, clean and easy to
+                            understand. According to Sun, Java language is a simple programming language
+                            because:</p>
+                        <ul class="points">
+                            <li>Java syntax is based on C++ (so easier for programmers to learn it after
+                                C++).</li>
+                            <li>Java has removed many complicated and rarely-used features, for example,
+                                explicit pointers, operator overloading, etc.</li>
+                            <li>There is no need to remove unreferenced objects because there is an
+                                Automatic Garbage Collection in Java.</li>
+                        </ul>
+    
+                        <hr>
+                        <a id="featuresobject"></a>
+                        <h3 class="h3">Object-oriented</h3>
+                        <p>Java is an <a href="java-oops-concepts">object-oriented</a> programming language.
+                            Everything in Java is an object. Object-oriented means we organize our software
+                            as a combination of different types of objects that incorporates both data and
+                            behavior.</p>
+                        <p>Object-oriented programming (OOPs) is a methodology that simplifies software
+                            development and maintenance by providing some rules.</p>
+                        <p>Basic concepts of OOPs are:</p>
+                        <ol class="points">
+                            <li><a href="object-and-class-in-java">Object</a></li>
+                            <li>Class</li>
+                            <li><a href="inheritance-in-java">Inheritance</a></li>
+                            <li><a href="runtime-polymorphism-in-java">Polymorphism</a></li>
+                            <li><a href="abstract-class-in-java">Abstraction</a></li>
+                            <li><a href="encapsulation">Encapsulation</a></li>
+                        </ol>
+    
+                        <a id="featuresplateform"></a>
+                        <h3 class="h3">Platform Independent</h3>
+                        <img src="https://static.javatpoint.com/images/core/platform-independent-java.png"
+                            alt="Java is platform independent" style="float:right;padding:5px">
+    
+                        <p>Java is platform independent because it is different from other languages like <a
+                                href="c-programming-language-tutorial">C</a>, <a href="cpp-tutorial">C++</a>, etc. which are
+                            compiled into platform specific
+                            machines while Java is a write once, run anywhere language. A platform is the
+                            hardware or software environment in which a program runs.</p>
+                        <p> There are two types of platforms software-based and hardware-based. Java
+                            provides a software-based platform.</p>
+                        <p>The Java platform differs from most other platforms in the sense that it is a
+                            software-based platform that runs on the top of other hardware-based platforms.
+                            It has two components: </p>
+                        <ol class="points">
+                            <li>Runtime Environment</li>
+                            <li>API(Application Programming Interface)</li>
+                        </ol>
+    
+                        <p>Java code can be run on multiple platforms, for example, Windows, Linux, Sun
+                            Solaris, Mac/OS, etc. Java code is compiled by the compiler and converted into
+                            bytecode. This bytecode is a platform-independent code because it can be run on
+                            multiple platforms, i.e., Write Once and Run Anywhere(WORA).</p>
+    
+                        <hr>
+    
+                        <a id="featuressecured"></a>
+                        <h3 class="h3">Secured</h3>
+                        <p>Java is best known for its security. With Java, we can develop virus-free
+                            systems. Java is secured because:</p>
+                        <ul class="alt">
+                            <li><strong>No explicit pointer</strong></li>
+                            <li><strong>Java Programs run inside a virtual machine sandbox</strong></li>
+                        </ul>
+    
+                        <img src="https://static.javatpoint.com/images/core/java-security.png" alt="how Java is secured">
+    
+    
+                        <ul class="points">
+                            <li><strong>Classloader:</strong> Classloader in Java is a part of the Java
+                                Runtime Environment(JRE) which is used to load Java classes into the Java
+                                Virtual Machine dynamically. It adds security by separating the package for
+                                the classes of the local file system from those that are imported from
+                                network sources.</li>
+                            <li><strong>Bytecode Verifier:</strong> It checks the code fragments for illegal
+                                code that can violate access right to objects.</li>
+                            <li><strong>Security Manager:</strong> It determines what resources a class can
+                                access such as reading and writing to the local disk.</li>
+                        </ul>
+    
+                        <p>Java language provides these securities by default. Some security can also be
+                            provided by an application developer explicitly through SSL, JAAS, Cryptography,
+                            etc.</p>
+    
+                        <hr>
+    
+                        <h3 id="featuresrobust" class="h3">Robust</h3>
+                        <p>Robust simply means strong. Java is robust because:</p>
+                        <ul class="points">
+                            <li>It uses strong memory management.</li>
+                            <li>There is a lack of pointers that avoids security problems.</li>
+                            <li>There is automatic garbage collection in java which runs on the Java Virtual
+                                Machine to get rid of objects which are not being used by a Java application
+                                anymore.</li>
+                            <li>There are exception handling and the type checking mechanism in Java. All
+                                these points make Java robust.</li>
+                        </ul>
+                        <hr>
+    
+                        <h3 id="featuresarchitecture" class="h3">Architecture-neutral</h3>
+                        <p>Java is architecture neutral because there are no implementation dependent
+                            features, for example, the size of primitive types is fixed. </p>
+                        <p>In C programming, int data type occupies 2 bytes of memory for 32-bit
+                            architecture and 4 bytes of memory for 64-bit architecture. However, it occupies
+                            4 bytes of memory for both 32 and 64-bit architectures in Java.</p>
+    
+                        <hr>
+    
+                        <h3 id="featuresportable" class="h3">Portable</h3>
+                        <p>Java is portable because it facilitates you to carry the Java bytecode to any
+                            platform. It doesn't require any implementation.
+                        </p>
+    
+                        <hr>
+    
+                        <h3 id="featureshigh" class="h3">High-performance</h3>
+                        <p>Java is faster than other traditional interpreted programming languages because
+                            Java bytecode is "close" to native code. It is still a little bit slower than a
+                            compiled language (e.g., C++). Java is an interpreted language that is why it is
+                            slower than compiled languages, e.g., C, C++, etc. </p>
+    
+                        <hr>
+    
+                        <a id="featuresdistributed"></a>
+                        <h3 class="h3">Distributed</h3>
+                        <p>Java is distributed because it facilitates users to create distributed
+                            applications in Java. RMI and EJB are used for creating distributed
+                            applications. This feature of Java makes us able to access files by calling the
+                            methods from any machine on the internet. </p>
+    
+                        <hr>
+    
+                        <h3 id="featuresmulti" class="h3">Multi-threaded</h3>
+                        <p>A thread is like a separate program, executing concurrently. We can write Java
+                            programs that deal with many tasks at once by defining multiple threads. The
+                            main advantage of multi-threading is that it doesn't occupy memory for each
+                            thread. It shares a common memory area. Threads are important for multi-media,
+                            Web applications, etc.
+                        </p>
+    
+                        <h3 id="featuresdynamic" class="h3">Dynamic</h3>
+                        <p>Java is a dynamic language. It supports dynamic loading of classes. It means
+                            classes are loaded on demand. It also supports functions from its native
+                            languages, i.e., C and C++. </p>
+                        <p>Java supports dynamic compilation and automatic memory management (garbage
+                            collection).</p>
+    
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="cpp-vs-java">C++ vs Java</a></span>
+                        </div>
+    
+                        <!-- link -->
+                        <br /><br />
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+    
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">First Java Program | Hello World Example</h1>
+    
+                        <div id="upr">
+                            <ol>
+                                <li><a href="#hellojavareq">Software Requirements</a></li>
+                                <li><a href="#hellojavaex">Creating Hello Java Example</a></li>
+                                <li><a href="#hellojavawhatjavacnot">Resolving javac is not recognized</a>
+                                </li>
+                            </ol>
+                        </div>
+    
+                        <p>In this page, we will learn how to write the simple program of java. We can write
+                            a simple hello java program easily after installing the JDK.</p>
+                        <p> To create a simple java program, you need to create a class that contains the
+                            main method. Let's understand the requirement first.
+                        </p>
+    
+                        <span id="hellojavareq"></span>
+    
+                        <h3 class="h3">The requirement for Java Hello World Example</h3>
+                        <table>
+                            <tr>
+                                <td>For executing any java program, you need to
+                                    <ul>
+                                        <li>Install the JDK if you don't have installed it,
+                                            <a target="_blank"
+                                                href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download
+                                                the JDK</a>
+                                            and install it.
+                                        </li>
+                                        <li>Set path of the jdk/bin directory. <a target="_blank"
+                                                href="http://www.javatpoint.com/how-to-set-path-in-java">http://www.javatpoint.com/how-to-set-path-in-java</a>
+                                        </li>
+                                        <li>Create the java program</li>
+                                        <li>Compile and run the java program</li>
+                                    </ul>
+    
+                                </td>
+                            </tr>
+                        </table>
+                        <hr />
+                        <span id="hellojavaex"></span>
+    
+                        <h3 class="h3ex">Creating Hello World Example</h3>
+                        <p>Let's create the hello java program:</p>
+    
+                        <div class="codeblock"><textarea name="code" class="java">
+    class Simple{
+        public static void main(String args[]){
+         System.out.println("Hello Java");
+        }
+    }
+    </textarea></div>
+    
+                        <span class="testit"><a href="http://www.javatpoint.com/opr/test.jsp?filename=Simple"
+                                target="_blank">Test it Now</a></span>
+    
+                        <p>save this file as Simple.java</p>
+    
+                        <table>
+                            <tr>
+                                <td><strong>To compile:</strong></td>
+                                <td>javac Simple.java</td>
+                            </tr>
+                            <tr>
+                                <td><strong>To execute:</strong></td>
+                                <td>java Simple</td>
+                            </tr>
+                        </table>
+    
+                        <div class="codeblock3">
+                            <pre>
+    <strong>Output:</strong>Hello Java
+    </pre>
+                        </div>
+                        <p><strong>Compilation Flow:</strong></p>
+                        <p>When we compile Java program using javac tool, java compiler converts the source
+                            code into byte code.</p>
+                        <img src="https://static.javatpoint.com/images/core/javacodecompile.png"
+                            alt="Java How to Compile" />
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- CM_JTP_WTC_Responsive -->
+                        <ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block"
+                            data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+    
+                        <h2 class="h2">Parameters used in First Java Program</h2>
+                        <p>Let's see what is the meaning of class, public, static, void, main, String[],
+                            System.out.println().
+                        <p>
+                        <ul class="points">
+                            <li><strong>class</strong> keyword is used to declare a class in java.</li>
+                            <li><strong>public</strong> keyword is an access modifier which represents
+                                visibility. It means it is visible to all.</li>
+                            <li><strong>static</strong> is a keyword. If we declare any method as static, it
+                                is known as the static method. The core advantage of the static method is
+                                that there is no need to create an object to invoke the static method. The
+                                main method is executed by the JVM, so it doesn't require to create an
+                                object to invoke the main method. So it saves memory.</li>
+                            <li><strong>void</strong> is the return type of the method. It means it doesn't
+                                return any value.</li>
+                            <li><strong>main</strong> represents the starting point of the program.</li>
+                            <li><strong>String[] args</strong> is used for command line argument. We will
+                                learn it later.</li>
+                            <li><strong>System.out.println()</strong> is used to print statement. Here,
+                                System is a class, out is the object of PrintStream class, println() is the
+                                method of PrintStream class. We will learn about the internal working of
+                                System.out.println statement later.</li>
+                        </ul>
+                        <div class="video-responsive">
+                            <iframe width="450" height="300" src="https://www.youtube.com/embed/FHsq2WSQymM" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+    
+                        <hr />
+                        <p>To write the simple program, you need to open notepad by <b> start menu -&gt; All
+                                Programs -&gt; Accessories -&gt; notepad</b> and write a simple program as
+                            displayed below:</p>
+                        <img src="https://static.javatpoint.com/images/simpleprogram.jpg" alt="The first program of java" />
+                        <br /><br />
+                        <table>
+                            <tr>
+                                <td>As displayed in the above diagram, write the simple program of java in
+                                    notepad and saved it as Simple.java. To compile and run this program,
+                                    you need to open the command prompt by <b> start menu -&gt; All Programs
+                                        -&gt; Accessories -&gt; command prompt</b>.</td>
+                            </tr>
+                        </table>
+                        <br /><br />
+                        <img src="https://static.javatpoint.com/images/simpleprogram2.jpg"
+                            alt="how to compile and run a simple program of java" />
+                        <br /><br /><br />
+                        <table>
+                            <tr>
+                                <td>To compile and run the above program, go to your current directory
+                                    first; my current directory is c:\new. Write here:</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td><strong>To compile:</strong></td>
+                                <td>javac Simple.java</td>
+                            </tr>
+                            <tr>
+                                <td><strong>To execute:</strong></td>
+                                <td>java Simple</td>
+                            </tr>
+                        </table>
+    
+                        <hr />
+                        <h2 class="h2">How many ways can we write a Java program</h2>
+                        <p>There are many ways to write a Java program. The modifications that can be done
+                            in a Java program are given below:</p>
+                        <p><b>1) By changing the sequence of the modifiers, method prototype is not changed
+                                in Java.</b></p>
+                        <p>Let's see the simple code of the main method.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    static public void main(String args[])
+    </textarea></div>
+    
+                        <p><b>2) The subscript notation in Java array can be used after type, before the
+                                variable or after the variable.</b></p>
+                        <p>Let's see the different codes to write the main method.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    public static void main(String[] args)
+    public static void main(String []args)
+    public static void main(String args[])
+    </textarea></div>
+    
+                        <p><b>3) You can provide var-args support to the main method by passing 3 ellipses
+                                (dots)</b></p>
+                        <p>Let's see the simple code of using var-args in the main method. We will learn
+                            about var-args later in Java New Features chapter.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    public static void main(String... args)
+    </textarea></div>
+    
+                        <p><b>4) Having a semicolon at the end of class is optional in Java.</b></p>
+                        <p>Let's see the simple code.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    class A{
+    static public void main(String... args){
+    System.out.println("hello java4");
+    }
+    };
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">Valid java main method signature</h2>
+                        <div class="codeblock"><textarea name="code" class="java">
+    public static void main(String[] args)
+    public static void main(String []args)
+    public static void main(String args[])
+    public static void main(String... args)
+    static public void main(String[] args)
+    public static final void main(String[] args)
+    final public static void main(String[] args)
+    final strictfp public static void main(String[] args)
+    </textarea></div>
+    
+                        <hr />
+                        <h2 class="h2">Invalid java main method signature</h2>
+                        <div class="codeblock"><textarea name="code" class="java">
+    public void main(String[] args)
+    static void main(String[] args)
+    public void static main(String[] args)
+    abstract public static void main(String[] args)
+    </textarea></div>
+    
+                        <hr />
+                        <span id="hellojavawhatjavacnot"></span>
+    
+                        <h3 class="h3">Resolving an error &quot;javac is not recognized as an internal or
+                            external command&quot;?</h3>
+                        <p>If there occurs a problem like displayed in the below figure, you need to set
+                            path. Since DOS doesn't know javac or java, we need to set path. The path is not
+                            required in such a case if you save your program inside the JDK/bin directory.
+                            However, it is an excellent approach to set the path. Click here for <a
+                                href="how-to-set-path-in-java">How to set path in java</a>.</p>
+                        <img src="https://static.javatpoint.com/images/simpleprogram3.jpg"
+                            alt="how to resolve the problem of a hello world program in java" />
+    
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="internal-details-of-hello-java-program">Internal details of Hello
+                                    Java Program</a></span>
+                        </div>
+    
+                        <br />
+                        <!-- link -->
+                        <br /><br />
+                        
+                        <div id="bottomnextup">
+                            <a class="next" href="cpp-history">next &rarr;</a>
+                            <a class="next" href="cpp-tutorial">&larr; prev</a>
+                        </div>
+                    
+                        <br /><br />
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        </div>
+
+        
+
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,412 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>C++ Tutorial | C++ Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+ <br>
+ <br>
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+                        <h1 class="h1">C++ Tutorial</h1>
+                        <p>C++ tutorial provides basic and advanced concepts of C++. Our C++ tutorial is designed for
+                            beginners and professionals.</p>
+                        <p>C++ is an object-oriented programming language. It is an extension to <a
+                                href="c-programming-language-tutorial">C programming</a>.</p>
+                        <p>Our C++ tutorial includes all topics of C++ such as first example, control statements,
+                            objects and classes, <a href="cpp-inheritance">inheritance</a>, <a
+                                href="cpp-constructor">constructor</a>, destructor, this, static, polymorphism,
+                            abstraction, abstract class, interface, namespace, encapsulation, arrays, strings, exception
+                            handling, File IO, etc.</p>
+
+                        <h2 class="h2"> What is C++</h2>
+                        <p>C++ is a general purpose, case-sensitive, free-form programming language that supports
+                            object-oriented, procedural and generic programming.</p>
+                        <p>C++ is a middle-level language, as it encapsulates both high and low level language features.
+                        </p>
+                        <hr />
+                        <h2 class="h2">Object-Oriented Programming (OOPs)</h2>
+                        <p>C++ supports the object-oriented programming, the four major pillar of object-oriented
+                            programming (<a href="cpp-oops-concepts">OOPs</a>) used in C++ are:</p>
+                        <ol class="points">
+                            <li>Inheritance</li>
+                            <li>Polymorphism</li>
+                            <li>Encapsulation</li>
+                            <li>Abstraction</li>
+                        </ol>
+                        <hr />
+                        <h2 class="h2">C++ Standard Libraries</h2>
+                        <p>Standard C++ programming is divided into three important parts:</p>
+                        <ul class="points">
+                            <li>The core library includes the data types, variables and literals, etc.</li>
+                            <li>The standard library includes the set of functions manipulating strings, files, etc.
+                            </li>
+                            <li>The Standard Template Library (STL) includes the set of methods manipulating a data
+                                structure.</li>
+                        </ul>
+                        
+                        <hr />
+                        <h2 class="h2">Usage of C++</h2>
+                        <p>By the help of C++ programming language, we can develop different types of secured and robust
+                            applications:</p>
+                        <ul class="points">
+                            <li>Window application</li>
+                            <li>Client-Server application</li>
+                            <li>Device drivers</li>
+                            <li>Embedded firmware etc</li>
+                        </ul>
+
+                        <h2 class="h2">C++ Program</h2>
+                        <p>In this tutorial, all C++ programs are given with C++ compiler so that you can easily change
+                            the C++ program code.</p>
+                        <p>File: main.cpp</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+#include <iostream>
+using namespace std;
+int main() {
+   cout << "Hello C++ Programming";
+   return 0;
+}
+</textarea></div>
+                        <p>A detailed explanation of first C++ program is given in next chapters.</p>
+
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">C vs. C++</h1>
+                        <h2 class="h2">What is C?</h2>
+                        <p>C is a structural or procedural oriented programming language which is
+                            machine-independent and extensively used in various applications. </p>
+                        <p>C is the basic programming language that can be used to develop from the
+                            operating systems (like Windows) to complex programs like Oracle database, Git,
+                            Python interpreter, and many more. C programming language can be called a god's
+                            programming language as it forms the base for other programming languages. If we
+                            know the C language, then we can easily learn other programming languages. C
+                            language was developed by the great computer scientist Dennis Ritchie at the
+                            Bell Laboratories. It contains some additional features that make it unique from
+                            other programming languages. </p>
+                        <h2 class="h2">What is C++?</h2>
+                        <p>C++ is a special-purpose programming language developed by <strong>Bjarne
+                                Stroustrup</strong> at Bell Labs circa 1980. C++ language is very similar to
+                            C language, and it is so compatible with C that it can run 99% of C programs
+                            without changing any source of code though C++ is an object-oriented programming
+                            language, so it is safer and well-structured programming language than C.</p>
+                        <p class="pq"><strong>Let's understand the differences between C and C++.</strong>
+                        </p>
+                        <img src="https://static.javatpoint.com/cpages/images/c-vs-cpp.png" alt="C vs C++" />
+                        <p><strong>The following are the differences between C and C++:</strong></p>
+                        <ul class="points">
+                            <li><strong>Definition</strong><br>
+                                C is a structural programming language, and it does not support classes and
+                                objects, while C++ is an object-oriented programming language that supports
+                                the concept of classes and objects.</li>
+                            <li><strong>Type of programming language</strong><br>
+                                C supports the structural programming language where the code is checked
+                                line by line, while C++ is an object-oriented programming language that
+                                supports the concept of classes and objects.</li>
+                            <li><strong>Developer of the language</strong><br>
+                                Dennis Ritchie developed C language at Bell Laboratories while Bjarne
+                                Stroustrup developed the C++ language at Bell Labs circa 1980.</li>
+                            <li><strong>Subset</strong><br>
+                                C++ is a superset of C programming language. C++ can run 99% of C code but C
+                                language cannot run C++ code.</li>
+                            <li><strong>Type of approach</strong><br>
+                                C follows the top-down approach, while C++ follows the bottom-up approach.
+                                The top-down approach breaks the main modules into tasks; these tasks are
+                                broken into sub-tasks, and so on. The bottom-down approach develops the
+                                lower level modules first and then the next level modules.</li>
+                            <li><strong>Security</strong><br>
+                                In C, the data can be easily manipulated by the outsiders as it does not
+                                support the encapsulation and information hiding while C++ is a very secure
+                                language, i.e., no outsiders can manipulate its data as it supports both
+                                encapsulation and data hiding. In C language, functions and data are the
+                                free entities, and in C++ language, all the functions and data are
+                                encapsulated in the form of objects.</li>
+                            <li><strong>Function Overloading</strong><br>
+                                Function overloading is a feature that allows you to have more than one
+                                function with the same name but varies in the parameters. C does not support
+                                the function overloading, while C++ supports the function overloading.</li>
+                            <li><strong>Function Overriding</strong><br>
+                                Function overriding is a feature that provides the specific implementation
+                                to the function, which is already defined in the base class. C does not
+                                support the function overriding, while C++ supports the function overriding.
+                            </li>
+                            <li><strong>Reference variables</strong><br>
+                                C does not support the reference variables, while C++ supports the reference
+                                variables.</li>
+                            <li><strong>Keywords</strong><br>
+                                C contains 32 keywords, and C++ supports 52 keywords.</li>
+                            <li><strong>Namespace feature</strong><br>
+                                A namespace is a feature that groups the entities like classes, objects, and
+                                functions under some specific name. C does not contain the namespace
+                                feature, while C++ supports the namespace feature that avoids the name
+                                collisions.</li>
+                            <li><strong>Exception handling</strong><br>
+                                C does not provide direct support to the exception handling; it needs to use
+                                functions that support exception handling. C++ provides direct support to
+                                exception handling by using a try-catch block.</li>
+                            <li><strong>Input/Output functions</strong><br>
+                                In C, scanf and printf functions are used for input and output operations,
+                                respectively, while in C++, cin and cout are used for input and output
+                                operations, respectively.</li>
+                            <li><strong>Memory allocation and de-allocation</strong><br>
+                                C supports calloc() and malloc() functions for the memory allocation, and
+                                free() function for the memory de-allocation. C++ supports a new operator
+                                for the memory allocation and delete operator for the memory de-allocation.
+                            </li>
+                            <li><strong>Inheritance</strong><br>
+                                Inheritance is a feature that allows the child class to reuse the properties
+                                of the parent class. C language does not support the inheritance while C++
+                                supports the inheritance.</li>
+                            <li><strong>Header file</strong><br>
+                                C program uses <strong>&lt;stdio.h&gt;</strong> header file while C++
+                                program uses <strong>&lt;iostream.h&gt;</strong> header file.</li>
+                        </ul>
+                        <p><strong>Let's summarize the above differences in a tabular form.</strong></p>
+                        <table class="alt">
+                            <tr>
+                                <th>No.</th>
+                                <th>C</th>
+                                <th>C++</th>
+                            </tr>
+                            <tr>
+                                <td>1)</td>
+                                <td>C follows the <strong>procedural style programming.</strong></td>
+                                <td>C++ is multi-paradigm. It supports both <strong>procedural and object
+                                        oriented.</strong></td>
+                            </tr>
+                            <tr>
+                                <td>2)</td>
+                                <td>Data is less secured in C.</td>
+                                <td>In C++, you can use modifiers for class members to make it inaccessible
+                                    for outside users.</td>
+                            </tr>
+                            <tr>
+                                <td>3)</td>
+                                <td>C follows the <strong>top-down approach.</strong></td>
+                                <td>C++ follows the <strong>bottom-up approach.</strong></td>
+                            </tr>
+                            <tr>
+                                <td>4)</td>
+                                <td>C does not support function overloading.</td>
+                                <td>C++ supports function overloading.</td>
+                            </tr>
+                            <tr>
+                                <td>5)</td>
+                                <td>In C, you can't use functions in structure.</td>
+                                <td>In C++, you can use functions in structure.</td>
+                            </tr>
+                            <tr>
+                                <td>6)</td>
+                                <td>C does not support reference variables.</td>
+                                <td>C++ supports reference variables.</td>
+                            </tr>
+                            <tr>
+                                <td>7)</td>
+                                <td>In C, <strong>scanf() and printf()</strong> are mainly used for
+                                    input/output.</td>
+                                <td>C++ mainly uses stream <strong>cin and cout</strong> to perform input
+                                    and output operations.</td>
+                            </tr>
+                            <tr>
+                                <td>8)</td>
+                                <td>Operator overloading is not possible in C.</td>
+                                <td>Operator overloading is possible in C++.</td>
+                            </tr>
+                            <tr>
+                                <td>9)</td>
+                                <td>C programs are divided into <strong>procedures and modules</strong></td>
+                                <td>C++ programs are divided into <strong>functions and classes.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10)</td>
+                                <td>C does not provide the feature of namespace.</td>
+                                <td>C++ supports the feature of namespace.</td>
+                            </tr>
+                            <tr>
+                                <td>11)</td>
+                                <td>Exception handling is not easy in C. It has to perform using other
+                                    functions.</td>
+                                <td>C++ provides exception handling using Try and Catch block.</td>
+                            </tr>
+                            <tr>
+                                <td>12)</td>
+                                <td>C does not support the inheritance.</td>
+                                <td>C++ supports inheritance.</td>
+                            </tr>
+                        </table>
+
+                        <hr />
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+
+                        <h1 class="h1">C++ Features</h1>
+                        <p>C++ is object oriented programming language. It provides a lot of
+                            <strong>features</strong> that are given below.
+                        </p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-features1.png" alt="Cpp Features"
+                            style="float:right;margin-left:15px" />
+                        <ol class="points">
+                            <li>Simple</li>
+                            <li>Machine Independent or Portable</li>
+                            <li>Mid-level programming language</li>
+                            <li>Structured programming language</li>
+                            <li>Rich Library</li>
+                            <li>Memory Management</li>
+                            <li>Fast Speed</li>
+                            <li>Pointers</li>
+                            <li>Recursion</li>
+                            <li>Extensible</li>
+                            <li>Object Oriented</li>
+                            <li>Compiler based</li>
+                        </ol>
+                        <hr />
+                        <h3 class="h3">1) Simple</h3>
+                        <p>C++ is a simple language in the sense that it provides structured approach (to
+                            break the problem into parts), rich set of library functions, data types etc.
+                        </p>
+                        <h3 class="h3">2) Machine Independent or Portable</h3>
+                        <p>Unlike assembly language, c programs can be executed in many machines with little
+                            bit or no change. But it is not platform-independent.</p>
+                        <h3 class="h3">3) Mid-level programming language</h3>
+                        <p>C++ is also used to do low level programming. It is used to develop system
+                            applications such as kernel, driver etc. It also supports the feature of high
+                            level language. That is why it is known as mid-level language.</p>
+                        <h3 class="h3">4) Structured programming language</h3>
+                        <p>C++ is a structured programming language in the sense that we can break the
+                            program into parts using functions. So, it is easy to understand and modify.</p>
+
+                        <h3 class="h3">5) Rich Library</h3>
+                        <p>C++ provides a lot of inbuilt functions that makes the development fast.</p>
+                        <h3 class="h3">6) Memory Management</h3>
+                        <p>It supports the feature of dynamic memory allocation. In C++ language, we can
+                            free the allocated memory at any time by calling the free() function.</p>
+                        <h3 class="h3">7) Speed</h3>
+                        <p>The compilation and execution time of C++ language is fast.</p>
+                        <h3 class="h3">8) Pointer</h3>
+                        <p>C++ provides the feature of pointers. We can directly interact with the memory by
+                            using the pointers. We can use pointers for memory, structures, functions, array
+                            etc.</p>
+                        <h3 class="h3">9) Recursion</h3>
+                        <p>In C++, we can call the function within the function. It provides code
+                            reusability for every function.</p>
+                        <h3 class="h3">10) Extensible</h3>
+                        <p>C++ language is extensible because it can easily adopt new features.</p>
+                        <h3 class="h3">11) Object Oriented</h3>
+                        <p>C++ is object oriented programming language. OOPs makes development and
+                            maintenance easier where as in Procedure-oriented programming language it is not
+                            easy to manage if code grows as project size grows.</p>
+                        <h3 class="h3">12) Compiler based</h3>
+                        <p>C++ is a compiler based programming language, it means without compilation no C++
+                            program can be executed. First we need to compile our program using compiler and
+                            then we can execute our program.</p>
+
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">s
+        <div id="city">
+            <table>
+                <tr>
+                    <td>    
+                        <h1 class="h1">C++ Variable</h1>
+                        <p>A variable is a name of memory location. It is used to store data. Its value can
+                            be changed and it can be reused many times.</p>
+                        <p>It is a way to represent memory location through symbol so that it can be easily
+                            identified.</p>
+                        <p>Let's see the syntax to declare a variable:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    type variable_list; 
+    </textarea></div>
+                        <p>The example of declaring variable is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    int x;  
+    float y;  
+    char z;  
+    </textarea></div>
+                        <p>Here, x, y, z are variables and int, float, char are data types.</p>
+                        <p>We can also provide values while declaring the variables as given below:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    int x=5,b=10;  //declaring 2 variable of integer type  
+    float f=30.8;  
+    char c='A';  
+    </textarea></div>
+                        <hr />
+    
+                        <h2 class="h2">Rules for defining variables</h2>
+                        <p>A variable can have alphabets, digits and underscore.</p>
+                        <p>A variable name can start with alphabet and underscore only. It can't start with
+                            digit.</p>
+                        <p>No white space is allowed within variable name.</p>
+                        <p>A variable name must not be any reserved word or keyword e.g. char, float etc.
+                        </p>
+                        <p>Valid variable names:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    int a;  
+    int _ab;  
+    int a30;  
+    </textarea></div>
+                        <p>Invalid variable names:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    int 4;  
+    int x y;  
+    int double;
+    </textarea></div>
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="cpp-data-types">C++ Data Types</a></span>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+    <div id="bottomnextup">
+        <a class="next" href="cpp-history">next &rarr;</a>
+        <a class="next" href="cpp-tutorial">&larr; prev</a>
+    </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+</body>
+
+
+</html>
+
+{% endblock %}

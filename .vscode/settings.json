@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\रोूगल\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+    "python.linting.pylintPath": "${workspaceFolder}\\venv\\Scripts\\pylint.exe",
+}

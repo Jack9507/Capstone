@@ -1,0 +1,1059 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Python Tutorial | Python Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+<body>
+<br>
+<br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+                        <h1 class="h1">Python Tutorial</h1>
+                        <p>Python tutorial provides basic and advanced concepts of Python. Our Python tutorial is designed for beginners and professionals.</p>
+                        <p>Python is a simple, general purpose, high level, and object-oriented programming language.</p>
+                        <p>Python is an interpreted scripting language also. <em>Guido Van Rossum</em> is known as the founder of Python programming.</p>
+                        <p>Our Python tutorial includes all topics of Python Programming such as installation, control statements, <a href="python-strings">Strings</a>, <a href="python-lists">Lists</a>, <a href="python-tuples">Tuples</a>,
+                            <a href="python-dictionary">Dictionary</a>, <a href="python-modules">Modules</a>, <a href="python-exception-handling">Exceptions</a>, Date and Time, File I/O, Programs, etc. There are also given Python interview questions to
+                            help you better understand Python Programming.</p>
+                        <h2 class="h2">What is Python</h2>
+                        <p><strong>Python</strong> is a general purpose, dynamic, <a href="classification-of-programming-languages">high-level</a>, and interpreted programming language. It supports Object Oriented programming approach to develop applications.
+                            It is simple and easy to learn and provides lots of high-level data structures.</p>
+                        <p>Python is <em>easy to learn</em> yet powerful and versatile scripting language, which makes it attractive for Application Development.</p>
+                        <p>Python's syntax and <em>dynamic typing</em> with its interpreted nature make it an ideal language for scripting and rapid application development.</p>
+                        <p>Python supports <em>multiple programming pattern</em>, including object-oriented, imperative, and functional or procedural programming styles.</p>
+                        <p>Python is not intended to work in a particular area, such as web programming. That is why it is known as <em>multipurpose</em> programming language because it can be used with web, enterprise, 3D CAD, etc.</p>
+                        <p>We don't need to use data types to declare variable because it is <em>dynamically typed</em> so we can write a=10 to assign an integer value in an integer variable.</p>
+                        <p>Python makes the development and debugging <em>fast</em> because there is no compilation step included in Python development, and edit-test-debug cycle is very fast.</p>
+                        <h2 class="h2">Python 2 vs. Python 3 </h2>
+                        <p>In most of the programming languages, whenever a new version releases, it supports the features and syntax of the existing version of the language, therefore, it is easier for the projects to switch in the newer version. However,
+                            in the case of Python, the two versions Python 2 and Python 3 are very much different from each other. </p>
+                        <p>A list of differences between Python 2 and Python 3 are given below:</p>
+                        <ol class="points">
+                            <li>Python 2 uses <strong>print</strong> as a statement and used as print "something" to print some string on the console. On the other hand, Python 3 uses <strong>print</strong> as a function and used as print("something") to
+                                print something on the console.</li>
+                            <li>Python 2 uses the function raw_input() to accept the user's input. It returns the string representing the value, which is typed by the user. To convert it into the integer, we need to use the int() function in Python. On the
+                                other hand, Python 3 uses input() function which automatically interpreted the type of input entered by the user. However, we can cast this value to any type by using primitive functions (int(), str(), etc.). </li>
+                            <li>In Python 2, the implicit string type is ASCII, whereas, in Python 3, the implicit string type is Unicode.</li>
+                            <li>Python 3 doesn't contain the xrange() function of Python 2. The xrange() is the variant of range() function which returns a xrange object that works similar to Java iterator. The range() returns a list for example the function
+                                range(0,3) contains 0, 1, 2. </li>
+                            <li>There is also a small change made in Exception handling in Python 3. It defines a keyword <strong>as</strong> which is necessary to be used. We will discuss it in Exception handling section of Python programming tutorial.
+                            </li>
+                        </ol>
+
+                        <h2 class="h2">Python History</h2>
+                        <p>Python was invented by <strong>Guido van Rossum</strong> in 1991 at CWI in Netherland. The idea of Python programming language has taken from the ABC programming language or we can say that ABC is a predecessor of Python language.
+                        </p>
+                        <p>There is also a fact behind the choosing name Python. Guido van Rossum was a fan of the popular BBC comedy show of that time, <strong>"Monty Python's Flying Circus"</strong>. So he decided to pick the name <strong>Python</strong>                            for his newly created programming language.</p>
+                        <p>Python has the vast community across the world and releases its version within the short period.</p>
+                        <h2 class="h2">Why learn Python?</h2>
+                        <p>Python provides many useful features to the programmer. These features make it most popular and widely used language. We have listed below few-essential feature of Python.</p>
+                        <ul class="points">
+                            <li>Easy to use and Learn</li>
+                            <li>Expressive Language</li>
+                            <li>Interpreted Language</li>
+                            <li>Object-Oriented Language</li>
+                            <li>Open Source Language</li>
+                            <li>Extensible</li>
+                            <li>Learn Standard Library</li>
+                            <li>GUI Programming Support</li>
+                            <li>Integrated</li>
+                            <li>Embeddable</li>
+                            <li>Dynamic Memory Allocation</li>
+                            <li>Wide Range of Libraries and Frameworks</li>
+                        </ul>
+                        <h2 class="h2">Where is Python used?</h2>
+                        <p>Python is a general-purpose, popular programming language and it is used in almost every technical field. The various areas of Python use are given below.</p>
+                        <ul class="points">
+                            <li>Data Science</li>
+                            <li>Date Mining</li>
+                            <li>Desktop Applications</li>
+                            <li>Console-based Applications</li>
+                            <li>Mobile Applications</li>
+                            <li>Software Development</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Web Applications</li>
+                            <li>Enterprise Applications</li>
+                            <li>3D CAD Applications</li>
+                            <li>Machine Learning</li>
+                            <li>Computer Vision or Image Processing Applications.</li>
+                            <li>Speech Recognitions</li>
+                        </ul>
+                        <h2 class="h2">Python Basic Syntax</h2>
+                        <p>There is no use of curly braces or semicolon in Python programming language. It is English-like language. But Python uses the indentation to define a block of code. Indentation is nothing but adding whitespace before the statement
+                            when it is needed. <strong>For example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+def func():
+       statement 1
+       statement 2
+       &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+       &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+         statement N
+</textarea></div>
+                        <p>In the above example, the statements that are same level to right belong to the function. Generally, we can use four whitespaces to define indentation.</p>
+                        <h2 class="h2">Python First Program</h2>
+                        <p>Unlike the other programming languages, Python provides the facility to execute the code using few lines. <strong>For example</strong> - Suppose we want to print the <strong>"Hello World"</strong> program in Java; it will take
+                            three lines to print it.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+public class HelloWorld {
+ public static void main(String[] args){
+// Prints "Hello, World" to the terminal window.
+  System.out.println("Hello World");
+ }
+ }
+</textarea></div>
+                        <p>On the other hand, we can do this using one statement in Python.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+print("Hello World")
+</textarea></div>
+                        <p>Both programs will print the same result, but it takes only one statement without using a semicolon or curly braces in Python.</p>
+                        <h2 class="h2">Python Popular Frameworks and Libraries</h2>
+                        <p>Python has wide range of libraries and frameworks widely used in various fields such as machine learning, artificial intelligence, web applications, etc. We define some popular frameworks and libraries of Python as follows.
+                        </p>
+                        <ul class="points">
+                            <li><strong>Web development (Server-side) -</strong> Django Flask, Pyramid, CherryPy</li>
+                            <li><strong>GUIs based applications -</strong> Tk, PyGTK, PyQt, PyJs, etc.</li>
+                            <li><strong>Machine Learning -</strong> TensorFlow, PyTorch, <strong>Scikit-learn</strong>, Matplotlib, Scipy, etc.</li>
+                            <li><strong>Mathematics -</strong> Numpy, Pandas, etc.</li>
+                        </ul>
+                        <h2 class="h2">Python print() Function</h2>
+                        <p>The <strong>print()</strong> function displays the given object to the standard output device (screen) or to the text stream file.</p>
+                        <p>Unlike the other programming languages, Python <strong>print()</strong> function is most unique and versatile function.</p>
+                        <p>The syntax of <strong>print()</strong> function is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+</textarea></div>
+                        <p>Let's explain its parameters one by one.</p>
+                        <ul class="points">
+                            <li><strong>objects -</strong> An object is nothing but a statement that to be printed. The * sign represents that there can be multiple statements.</li>
+                            <li><strong>sep -</strong> The <strong>sep</strong> parameter separates the print values. Default values is ' '.</li>
+                            <li><strong>end -</strong> The <strong>end</strong> is printed at last in the statement.</li>
+                            <li><strong>file -</strong> It must be an object with a write(string) method.</li>
+                            <li><strong>flush -</strong> The stream or file is forcibly flushed if it is true. By default, its value is false.</li>
+                        </ul>
+                        <p>Let's understand the following example.</p>
+                        <h3 class="h3">Example - 1: Return a value</h3>
+                        <div class="codeblock"><textarea name="code" class="java">
+print("Welcome to javaTpoint.")
+
+a = 10
+# Two objects are passed in print() function
+print("a =", a)
+
+b = a
+# Three objects are passed in print function
+print('a =', a, '= b')
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+Welcome to javaTpoint.
+a = 10
+a = 10 = b
+</pre></div>
+                        <p>As we can see in the above output, the multiple objects can be printed in the single <strong>print()</strong> statement. We just need to use comma (,) to separate with each other.</p>
+                        <h3 class="h3">Example - 2: Using sep and end argument</h3>
+                        <div class="codeblock"><textarea name="code" class="java">
+a = 10
+print("a =", a, sep='dddd', end='\n\n\n')
+print("a =", a, sep='0', end='$$$$$')
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+a =dddd10
+
+
+a =010$$$$$
+</pre></div>
+                        <p>In the first <strong>print()</strong> statement, we use the <strong>sep</strong> and <strong>end</strong> arguments. The given object is printed just after the <strong>sep</strong> values. The value of end parameter printed at
+                            the last of given object. As we can see that, the second <strong>print()</strong> function printed the result after the three black lines.</p>
+                        <h2 class="h2">Taking Input to the User</h2>
+                        <p>Python provides the <strong>input()</strong> function which is used to take input from the user. Let's understand the following example.</p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+name = input("Enter a name of student:")
+print("The student name is: ", name)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+Enter a name of student: Devansh
+The student name is:   Devansh
+</pre></div>
+                        <p>By default, the <strong>input()</strong> function takes the string input but what if we want to take other data types as an input.</p>
+                        <p>If we want to take input as an integer number, we need to typecast the <strong>input()</strong> function into an integer.</p>
+                        <p><strong>For example -</strong></p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+a  = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print(a+b)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+Enter first number: 50
+Enter second number: 100
+150
+</pre></div>
+                        <p>We can take any type of values using <strong>input()</strong> function.</p>
+                        <h2 class="h2">Python Operators</h2>
+                        <p>Operators are the symbols which perform various operations on Python objects. Python operators are the most essential to work with the Python data types. In addition, Python also provides identify membership and bitwise operators.
+                            We will learn all these operators with the suitable example in following tutorial.</p>
+                        <ul class="points">
+                            <li><strong>Python Operators</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Conditional Statements</h2>
+                        <p>Conditional statements help us to execute a particular block for a particular condition. In this tutorial, we will learn how to use the conditional expression to execute a different block of statements. Python provides if and else
+                            keywords to set up logical conditions. The elif keyword is also used as conditional statement.</p>
+                        <ul class="points">
+                            <li><strong>Python if..else statement</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Loops</h2>
+                        <p>Sometimes we may need to alter the flow of the program. The execution of a specific code may need to be repeated several numbers of times. For this purpose, the programming languages provide various types of loops capable of repeating
+                            some specific code several times. Consider the following tutorial to understand the statements in detail.</p>
+                        <ul class="points">
+                            <li><strong>Python Loops</strong></li>
+                            <li><strong>Python For Loop</strong></li>
+                            <li><strong>Python While Loop</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Data Structures</h2>
+                        <p>Data structures are referred which can hold some data together or we say that they are used to store the data in organized way. Python provides built-in data structures such as <strong>list, tuple, dictionary, and set</strong>.
+                            We can perform complex tasks using data structures.</p>
+                        <h3 class="h3">Python List</h3>
+                        <p>Python list holds the ordered collection of items. We can store a sequence of items in a list. Python list is mutable which means it can be modified after its creation. The items of lists are enclosed within the square bracket
+                            [] and separated by the comma. Let's see the example of list.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+L1 = ["John", 102, "USA"]    
+L2 = [1, 2, 3, 4, 5, 6]   
+</textarea></div>
+                        <p>If we try to print the type of L1, L2, and L3 using <strong>type()</strong> function then it will come out to be a list.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+print(type(L1))  
+print(type(L2))  
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+&lt;class 'list'&gt;
+&lt;class 'list'&gt;
+</pre></div>
+                        <p>To learn more about list, visit the following tutorial.</p>
+                        <ul class="points">
+                            <li><strong>Python List</strong></li>
+                            <li><strong>Python List Functions</strong></li>
+                        </ul>
+                        <h3 class="h3">Python Tuple</h3>
+                        <p>Python Tuple is used to store the sequence of immutable Python objects. The tuple is similar to lists since the value of the items stored in the list can be changed, whereas the tuple is immutable, and the value of the items stored
+                            in the tuple cannot be changed.</p>
+                        <p>Tuple can be defined as follows</p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+tup = ("Apple", "Mango" , "Orange" , "Banana")
+print(type(tup))
+print(tup)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+&lt;class 'tuple'&gt;
+('Apple', 'Mango', 'Orange', 'Banana')
+</pre></div>
+                        <p>If we try to add new to the tuple, it will throw an error.</p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+tup = ("Apple", "Mango" , "Orange" , "Banana")
+
+tup[2] = "Papaya"
+print(tup)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+Traceback (most recent call last):
+  File "C:/Users/DEVANSH SHARMA/PycharmProjects/Hello/gamewithturtle.py", line 3, in <module>
+    tup[2] = "Papaya"
+TypeError: 'tuple' object does not support item assignment
+</pre></div>
+                        <p>The above program throws an error because tuples are immutable type. To learn more about tuple, visit the Python Tuples.</p>
+                        <ul class="points">
+                            <li><strong>Python Tuple</strong></li>
+                        </ul>
+                        <h3 class="h3">Python String</h3>
+                        <p>Python string is a sequence of characters. It is a collection of the characters surrounded by single quotes, double quotes, or triple quotes. It can also define as collection of the Unicode characters. We can create a string as
+                            follows.
+                        </p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+# Creating string using double quotes
+str1 = "Hi Python"
+print(str1)
+# Creating string using single quotes
+str1 = 'Hi Python'
+print(str1)
+# Creating string using triple quotes
+str1 = '''Hi Python'''
+print(str1)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+Hi Python
+Hi Python
+Hi Python
+</pre></div>
+                        <p>Python doesn't support the character data-type. A single character written as 'p' is treated as a string of length 1.</p>
+                        <p>Stings are also immutable. We can't change after it is declared. To learn more about the string, visit the following tutorial.</p>
+                        <ul class="points">
+                            <li><strong>Python Strings</strong> </li>
+                            <li><strong>Python String Method</strong></li>
+                        </ul>
+                        <h3 class="h3">Dictionaries</h3>
+                        <p>Python Dictionary is a most efficient data structure and used to store the large amount of data. It stores the data in the key-value pair format. Each value is stored corresponding to its key.</p>
+                        <p>Keys must be a unique and value can be any type such as integer, list, tuple, etc.</p>
+                        <p>It is a mutable type; we can reassign after its creation. Below is the example of creating dictionary in Python.</p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+employee = {"Name": "John", "Age": 29, "salary":250000,"Company":"GOOGLE"}    
+print(type(employee))    
+print("printing Employee data .... ")    
+print(employee)
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+&lt;class 'dict'&gt;
+Printing Employee data .... 
+{'Name': 'John', 'Age': 29, 'salary': 250000, 'Company': 'GOOGLE'}
+</pre></div>
+                        <p>The empty curly braces {} are used to create empty dictionary. To learn more, visit the complete tutorial of the dictionary.</p>
+                        <ul class="points">
+                            <li><strong>Python Dictionary</strong></li>
+                            <li><strong>Python Dictionary Methods</strong></li>
+                        </ul>
+                        <h3 class="h3">Python Sets</h3>
+                        <p>A Python set is a collection of unordered elements. Each element in set must be unique and immutable. Sets are mutable which means we can modify anytime throughout the program. Let's understand the example of creating set in Python.</p>
+                        <p><strong>Example -</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+# Creating Set
+Month = {"January", "February", "March", "April", "May", "June", "July"}
+print(Month)
+print(type(Month))
+</textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3"><pre>
+{'March', 'July', 'April', 'May', 'June', 'February', 'January'}
+&lt;class 'set'&gt;
+</pre></div>
+                        <p>To get the more information about sets, visit the following resources.</p>
+                        <ul class="points">
+                            <li><strong>Python Sets</strong></li>
+                            <li><strong>Python Set Methods</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Functional Programming</h2>
+                        <p>This section of Python tutorial defines some important tools related to functional programming such as <strong>lambda and recursive functions</strong>. These functions are very efficient in accomplishing the complex tasks. We define
+                            a few important functions, such as <strong>reduce, map,</strong> and <strong>filter.</strong> Python provides the <strong>functools</strong> module that includes various <strong>functional programming tools</strong>. Visit
+                            the following tutorial to learn more about functional programming.</p>
+                        <ul class="points">
+                            <li>Python Function</li>
+                            <li>Python map() Function</li>
+                            <li>Python filter() Function</li>
+                            <li>Python reduce() Function</li>
+                            <li>Python functool Module</li>
+                            <li>Python Lambda Function</li>
+                        </ul>
+                        <h2 class="h2">Python File I/O</h2>
+                        <p>Files are used to store data in a computer disk. In this tutorial, we explain the built-in file object of Python. We can open a file using Python script and perform various operations such as writing, reading, and appending. There
+                            are various ways of opening a file. We are explained with the relevant example. We will also learn to perform read/write operations on binary files.</p>
+                        <ul class="points">
+                            <li><strong>Python File I/O</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Modules</h2>
+                        <p>Python modules are the program files that contain a Python code or functions. There are two types of module in the Python - User-define modules and built-in modules. A module that the user defines, or we can say that our Python
+                            code saved with <strong>.py</strong> extension, is treated as a user-define module.</p>
+                        <p>Built-in modules are predefined modules of Python. To use the functionality of the modules, we need to import them into our current working program.</p>
+                        <ul class="points">
+                            <li><strong>Python Modules</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Exceptions</h2>
+                        <p>An exception can be defined as an unusual condition in a program resulting in the interruption in the flow of the program.</p>
+                        <p>Whenever an exception occurs, the program stops the execution, and thus the further code is not executed. Therefore, an exception is the run-time errors that are unable to handle to Python script. An exception is a Python object
+                            that represents an error.</p>
+                        <ul class="points">
+                            <li><strong>Python Exceptions</strong></li>
+                        </ul>
+                        <h2 class="h2">Python CSV</h2>
+                        <p>A <strong>csv</strong> stands for "comma separated values", which is defined as a simple file format that uses specific structuring to arrange tabular data. It stores tabular data such as spreadsheet or database in plain text and
+                            has a common format for data interchange. A <strong>csv</strong> file opens into the excel sheet, and the rows and columns data define the standard format. Visit the following tutorial to learn the CSV module in detail.</p>
+                        <ul class="points">
+                            <li><strong>Python Read CSV File</strong></li>
+                            <li><strong>Python Write CSV File</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Sending Mail</h2>
+                        <p>We can send or read a mail using the Python script. Python's standard library modules are useful for handling various protocols such as PoP3 and IMAP. We will learn how to send a mail with the popular email service SMTP from a
+                            Python script.
+                        </p>
+                        <ul class="points">
+                            <li><strong>Python Sending Emails</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Magic Methods</h2>
+                        <p>Python magic method is defined as the special method which adds "magic" to a class. It starts and ends with double underscores, for example, <strong>_init_</strong> or <strong>_str_.</strong></p>
+                        <p>The built-in classes define many magic methods. The <strong>dir()</strong> function can be used to see the number of magic methods inherited by a class. It has two prefixes and suffix underscores in the method name.</p>
+                        <ul class="points">
+                            <li><strong>Python Magic Methods</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Oops Concepts</h2>
+                        <p>Everything in Python is treated as an object including integer values, floats, functions, classes, and none. Apart from that, Python supports all oriented concepts. Below is the brief introduction of oops concepts of Python.
+                        </p>
+                        <ul class="points">
+                            <li><strong>Classes and Objects -</strong> Python classes are the blueprint of the object. An object is a collection of data and method that act on the data.</li>
+                            <li><strong>Inheritance -</strong> An inheritance is a technique where one class inherits the properties of other classes.</li>
+                            <li><strong>Constructor -</strong> Python provides a special method <strong>__init__()</strong> which is known as a constructor. This method is automatically called when an object is instantiated.</li>
+                            <li><strong>Data Member -</strong> A variable that holds data associated with a class and its objects.</li>
+                        </ul>
+                        <p>To read the oops concept in detail, visit the following resources.</p>
+                        <ul class="points">
+                            <li><strong>Python Oops Concepts</strong></li>
+                            <li><strong>Python Object and classes</strong></li>
+                            <li><strong>Python Constructor</strong></li>
+                            <li><strong>Python Inheritance</strong></li>
+                            <li><strong>Python Polymorphism</strong></li>
+                        </ul>
+                        <h2 class="h2">Python Advance Topics</h2>
+                        <p>Python includes many advance and useful concepts that help the programmer to solve the complex tasks. These concepts are given below.</p>
+                        <h3 class="h3">Python Iterator</h3>
+                        <p>An iterator is simply an object that can be iterated upon. It returns one object at a time. It can be implemented using the two special methods, <strong>__iter__() and __next__()</strong>.</p>
+                        <p>To learn more about the iterators visit our <strong>Python Iterators</strong> tutorial.</p>
+                        <h3 class="h3">Python Generators</h3>
+                        <p>The Generators are an easiest way of creating Iterators. To learn more about, visit our <strong>Python Generators</strong> tutorial.</p>
+                        <h3 class="h3">Python Decorators</h3>
+                        <p>These are used to modify the behavior of the function. Decorators provide the flexibility to wrap another function to expand the working of wrapped function, without permanently modifying it.</p>
+                        <p>To learn more about, visit the <strong>Python Decorators</strong> tutorial.</p>
+                        <h2 class="h2">Python Database Connections</h2>
+                        <p>We can use various databases along with Python. You can learn the full tutorial to visit below resources. Python DBI-API acclaims standard sets of functionality to be included in the database connectivity modules for respective
+                            RDBMS products. We explain all important database connectivity using Python DBI-API.</p>
+                        <h3 class="h3">Python MySQL</h3>
+                        <p>Environment Setup</p>
+                        <p>Database Connection</p>
+                        <p>Creating New Database</p>
+                        <p>Creating Tables</p>
+                        <p>Insert Operation</p>
+                        <p>Read Operation</p>
+                        <p>Update Operation</p>
+                        <p>Join Operation</p>
+                        <p>Performing Transactions</p>
+                        <h3 class="h3">Python MongoDB</h3>
+                        <p>Python MongoDB</p>
+                        <h3 class="h3">Python SQLite</h3>
+                        <p>Python SQLite</p>
+                        <h2 class="h2">Python CGI</h2>
+                        <p>Python CGI stands for <strong>"Common Gateway Interface",</strong> which is used to define how to exchange information between the webserver and a custom Python scripts. The <strong>Common Gateway Interface</strong> is a standard
+                            for external gateway programs to interface with the server, such as HTTP Servers. To learn more about Python CGI, visit the following tutorial.</p>
+                        <ul class="points">
+                            <li><strong>Python CGI</strong></li>
+                        </ul>
+
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning Python, you must have the basic knowledge of programming concepts.</p>
+                        <h2 class="h2">Audience</h2>
+                        <p>Our Python tutorial is designed to help beginners and professionals.</p>
+                        <h2 class="h2">Problem</h2>
+                        <p>We assure that you will not find any problem in this Python tutorial. But if there is any mistake, please post the problem in contact form.</p>
+
+                        <hr/>
+                        <!-- link -->
+                        <br/><br/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Python Features</h1>
+                        <p>Python provides many useful features which make it popular and valuable from the
+                            other programming languages. It supports object-oriented programming, procedural
+                            programming approaches and provides dynamic memory allocation. We have listed
+                            below a few essential features.</p>
+                        <h3 class="h3">1) Easy to Learn and Use</h3>
+                        <p>Python is easy to learn as compared to other programming languages. Its syntax is
+                            straightforward and much the same as the English language. There is no use of
+                            the semicolon or curly-bracket, the indentation defines the code block. It is
+                            the recommended programming language for beginners. </p>
+                        <h3 class="h3">2) Expressive Language</h3>
+                        <p>Python can perform complex tasks using a few lines of code. A simple example, the
+                            hello world program you simply type <strong>print("Hello World")</strong>. It
+                            will take only one line to execute, while Java or C takes multiple lines.</p>
+                        <h3 class="h3">3) Interpreted Language</h3>
+                        <p>Python is an interpreted language; it means the Python program is executed one
+                            line at a time. The advantage of being interpreted language, it makes debugging
+                            easy and portable. </p>
+                        <h3 class="h3">4) Cross-platform Language</h3>
+                        <p>Python can run equally on different platforms such as Windows, Linux, UNIX, and
+                            Macintosh, etc. So, we can say that Python is a portable language. It enables
+                            programmers to develop the software for several competing platforms by writing a
+                            program only once. </p>
+                        <h3 class="h3">5) Free and Open Source</h3>
+                        <p>Python is freely available for everyone. It is freely available on its official
+                            website <a href="https://www.python.org/" rel="nofollow" target="blank">www.python.org</a>. It
+                            has a large community across the world
+                            that is dedicatedly working towards make new python modules and functions.
+                            Anyone can contribute to the Python community. The open-source means, "Anyone
+                            can download its source code without paying any penny."</p>
+                        <h3 class="h3">6) Object-Oriented Language</h3>
+                        <p>Python supports object-oriented language and concepts of classes and objects come
+                            into existence. It supports inheritance, polymorphism, and encapsulation, etc.
+                            The object-oriented procedure helps to programmer to write reusable code and
+                            develop applications in less code. </p>
+                        <h3 class="h3">7) Extensible</h3>
+                        <p>It implies that other languages such as C/C++ can be used to compile the code and
+                            thus it can be used further in our Python code. It converts the program into
+                            byte code, and any platform can use that byte code. </p>
+                        <h3 class="h3">8) Large Standard Library</h3>
+                        <p>It provides a vast range of libraries for the various fields such as machine
+                            learning, web developer, and also for the scripting. There are various machine
+                            learning libraries, such as Tensor flow, Pandas, Numpy, Keras, and Pytorch, etc.
+                            Django, flask, pyramids are the popular framework for Python web development.
+                        </p>
+                        <h3 class="h3">9) GUI Programming Support</h3>
+                        <p>Graphical User Interface is used for the developing Desktop application. PyQT5,
+                            Tkinter, Kivy are the libraries which are used for developing the web
+                            application.</p>
+                        <h3 class="h3">10) Integrated</h3>
+                        <p>It can be easily integrated with languages like C, C++, and JAVA, etc. Python
+                            runs code line by line like C,C++ Java. It makes easy to debug the code.</p>
+                        <h3 class="h3">11. Embeddable</h3>
+                        <p>The code of the other programming language can use in the Python source code. We
+                            can use Python source code in another programming language as well. It can embed
+                            other language into our code.</p>
+                        <h3 class="h3">12. Dynamic Memory Allocation</h3>
+                        <p>In Python, we don't need to specify the data-type of the variable. When we assign
+                            some value to the variable, it automatically allocates the memory to the
+                            variable at run time. Suppose we are assigned integer value 15 to
+                            <strong>x,</strong> then we don't need to write <strong>int x = 15.</strong>
+                            Just write x = 15.
+                        </p>
+    
+                        <hr />
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Python History and Versions</h1>
+                        <ul class="points">
+                            <li>Python laid its foundation in the late 1980s.</li>
+                            <li>The implementation of Python was started in December 1989 by <strong>Guido
+                                    Van Rossum</strong> at CWI in Netherland.</li>
+                            <li>In February 1991, <strong>Guido Van Rossum</strong> published the code
+                                (labeled version 0.9.0) to alt.sources.</li>
+                            <li>In 1994, Python 1.0 was released with new features like lambda, map, filter,
+                                and reduce.</li>
+                            <li>Python 2.0 added new features such as list comprehensions, garbage
+                                collection systems.</li>
+                            <li>On December 3, 2008, Python 3.0 (also called "Py3K") was released. It was
+                                designed to rectify the fundamental flaw of the language.</li>
+                            <li><em>ABC programming language</em> is said to be the predecessor of Python
+                                language, which was capable of Exception Handling and interfacing with the
+                                Amoeba Operating System.</li>
+                            <li>The following programming languages influence Python:
+                                <ul class="points">
+                                    <li>ABC language.</li>
+                                    <li>Modula-3</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 class="h2">Why the Name Python?</h2>
+                        <p>There is a fact behind choosing the name <a
+                                href="https://www.javatpoint.com/python-tutorial">Python</a>. <strong>Guido
+                                van Rossum</strong> was reading the script of a popular BBC comedy series
+                            "<strong>Monty Python's Flying Circus</strong>". It was late on-air 1970s.</p>
+                        <p>Van Rossum wanted to select a name which unique, sort, and little-bit mysterious.
+                            So he decided to select naming Python after the <strong>"Monty Python's Flying
+                                Circus"</strong> for their newly created programming language.</p>
+                        <p>The comedy series was creative and well random. It talks about everything. Thus
+                            it is slow and unpredictable, which made it very interesting.</p>
+                        <p>Python is also versatile and widely used in every technical field, such as <a
+                                href="https://www.javatpoint.com/machine-learning">Machine Learning</a>, <a
+                                href="https://www.javatpoint.com/artificial-intelligence-tutorial">Artificial
+                                Intelligence</a>, Web Development, <a
+                                href="javatpoint.com/mobile-application-testing">Mobile Application</a>,
+                            Desktop Application, Scientific Calculation, etc.</p>
+                        <h2 class="h2">Python Version List</h2>
+                        <p>Python programming language is being updated regularly with new features and
+                            supports. There are lots of update in Python versions, started from 1994 to
+                            current release.</p>
+                        <p>A list of Python versions with its released date is given below.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Python Version</th>
+                                <th>Released Date</th>
+                            </tr>
+                            <tr>
+                                <td>Python 1.0</td>
+                                <td>January 1994</td>
+                            </tr>
+                            <tr>
+                                <td>Python 1.5</td>
+                                <td>December 31, 1997</td>
+                            </tr>
+                            <tr>
+                                <td>Python 1.6</td>
+                                <td>September 5, 2000</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.0</td>
+                                <td>October 16, 2000</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.1</td>
+                                <td>April 17, 2001</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.2</td>
+                                <td>December 21, 2001</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.3</td>
+                                <td>July 29, 2003</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.4</td>
+                                <td>November 30, 2004</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.5</td>
+                                <td>September 19, 2006</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.6</td>
+                                <td>October 1, 2008</td>
+                            </tr>
+                            <tr>
+                                <td>Python 2.7</td>
+                                <td>July 3, 2010</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.0</td>
+                                <td>December 3, 2008</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.1</td>
+                                <td>June 27, 2009</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.2</td>
+                                <td>February 20, 2011</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.3</td>
+                                <td>September 29, 2012</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.4</td>
+                                <td>March 16, 2014</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.5</td>
+                                <td>September 13, 2015</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.6</td>
+                                <td>December 23, 2016</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.7</td>
+                                <td>June 27, 2018</td>
+                            </tr>
+                            <tr>
+                                <td>Python 3.8</td>
+                                <td>October 14, 2019</td>
+                            </tr>
+                        </table>
+                        <h2 class="h2">Tips to Keep in Mind While Learning Python</h2>
+                        <p>The most common question asked by the beginners - <strong>"What is the best way
+                                to learn Python"?</strong> It is the initial and relevant question because
+                            first step in learning any programming language is to know how to learn.</p>
+                        <p>The proper way of learning will help us to learn fast and become a good Python
+                            developer.</p>
+                        <p>In this section, we will discuss various tips that we should keep in mind while
+                            learning Python.</p>
+                        <h3 class="h3">1. Make it Clear Why We Want to Learn</h3>
+                        <p>The goal should be clear before learning the Python. Python is an easy, a vast
+                            language as well. It includes numbers of libraries, modules, in-built functions
+                            and data structures. If the goal is unclear then it will be a boring and
+                            monotonous journey of learning Python. Without any clear goal, you perhaps won't
+                            make it done.</p>
+                        <p>So, first figure out the motivation behind learning, which can anything be such
+                            as knowing something new, develop projects using Python, switch to Python, etc.
+                            Below are the general areas where Python is widely used. Pick any of them.</p>
+                        <ul class="points">
+                            <li>Data Analysis and Processing</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Games</li>
+                            <li>Hardware/Sensor/Robots</li>
+                            <li>Desktop Applications</li>
+                        </ul>
+                        <p>Choose any one or two areas according to your interest and start the journey
+                            towards learning Python.</p>
+                        <h3 class="h3">2. Learn the Basic Syntax</h3>
+                        <p>It is the most essential and basic step to learn the syntax of the Python
+                            programming language. We have to learn the basic syntax before dive deeper into
+                            learning it. As we have discussed in our earlier tutorial, Python is easy to
+                            learn and has a simple syntax. It doesn't use semicolon and brackets. Its syntax
+                            is like the English language.</p>
+                        <p>So it will take minimum amount of time to learning its syntax. Once we get its
+                            syntax properly, further learning will be easier and quicker getting to work on
+                            projects.</p>
+                        <h4 class="n">Note - Learn Python 3, not Python 2.7, because the industry no longer
+                            uses it. Our Python tutorial is based on its latest version Python 3.</h4>
+                        <h3 class="h3">3. Write Code by Own</h3>
+                        <p>Writing the code is the most effective and robust way to learn Python. First, try
+                            to write code on paper and run in mind (Dry Run) then move to the system.
+                            Writing code on paper will help us get familiar quickly with the syntax and the
+                            concept store in the deep memory. While writing the code, try to use proper
+                            functions and suitable variables names.</p>
+                        <p>There are many editors available for Python programming which highlights the
+                            syntax related issue automatically. So we don't need to pay lot of attention of
+                            these mistakes.</p>
+                        <h3 class="h3">4. Keep Practicing</h3>
+                        <p>The next important step is to do the practice. It needs to implementing the
+                            Python concepts through the code. We should be consistence to our daily coding
+                            practice.</p>
+                        <p>Consistency is the key of success in any aspect of life not only in programming.
+                            Writing code daily will help to develop muscle memory.</p>
+                        <p>We can do the problem exercise of related concepts or solve at least 2 or 3
+                            problems of Python. It may seem hard but muscle memory plays large part in
+                            programing. It will take us ahead from those who believe only the reading
+                            concept of Python is sufficient.</p>
+                        <h3 class="h3">5. Make Notes as Needed</h3>
+                        <p>Creating notes by own is an excellent method to learn the concepts and syntax of
+                            Python. It will establish stability and focus that helps you become a Python
+                            developer. Make brief and concise notes with relevant information and include
+                            appropriate examples of the subject concerned.</p>
+                        <p>Maintain own notes are also helped to learn fast. A study published in
+                            Psychological Science that -</p>
+                        <blockquote>The students who were taking longhand notes in the studies were forced
+                            to be more selective &mdash; because you can't write as fast as you can type.
+                        </blockquote>
+                        <h3 class="h3">6. Discuss Concepts with Other</h3>
+                        <p>Coding seems to be solitary activity, but we can enhance our skills by
+                            interacting with the others. We should discuss our doubts to the expert or
+                            friends who are learning Python. This habit will help to get additional
+                            information, tips and tricks, and solution of coding problems. One of the best
+                            advantages of Python, it has a great community. Therefore, we can also learn
+                            from passionate Python enthusiasts.</p>
+                        <h3 class="h3">7. Do small Projects</h3>
+                        <p>After understanding Python's basic concept, a beginner should try to work on
+                            small projects. It will help to understand Python more deeply and become more
+                            component in it. Theoretical knowledge is not enough to get command over the
+                            Python language. These projects can be anything as long as they teach you
+                            something. You can start with the small projects such as calculator app, a
+                            tic-toc-toe game, an alarm clock app, a to-do list, student or customer
+                            management system, etc.</p>
+                        <p>Once you get handy with a small project, you can easily shift toward your
+                            interesting domain (Machine Learning, Web Development, etc.).</p>
+                        <h3 class="h3">8. Teach Others</h3>
+                        <p>There is a famous saying that <strong>"If you want to learn something then you
+                                should teach other"</strong>. It is also true in case of learning Python.
+                            Share your information to other students via creating blog posts, recording
+                            videos or taking classes in local training center. It will help us to enhance
+                            the understanding of Python and explore the unseen loopholes in your knowledge.
+                            If you don't want to do all these, join the online forum and post your answers
+                            on Python related questions.</p>
+                        <h3 class="h3">9. Explore Libraries and Frameworks</h3>
+                        <p>Python consists of vast libraries and various frameworks. After getting familiar
+                            with Python's basic concepts, the next step is to explore the Python libraries.
+                            Libraries are essential to work with the domain specific projects. In the
+                            following section, we describe the brief introduction of the main libraries.</p>
+                        <ul class="points">
+                            <li><strong><a href="https://www.javatpoint.com/tensorflow">TensorFlow</a>
+                                    -</strong> It is an artificial intelligence library which allows us to
+                                create large scale AI based projects.</li>
+                            <li><strong><a href="https://www.javatpoint.com/django-tutorial">Django</a>
+                                    -</strong> It is an open source framework that allows us to develop web
+                                applications. It is easy, flexible, and simple to manage.</li>
+                            <li><strong><a href="https://www.javatpoint.com/flask-tutorial">Flask</a>
+                                    -</strong> It is also an open source web framework. It is used to
+                                develop lightweight web applications.</li>
+                            <li><strong><a href="https://www.javatpoint.com/python-pandas">Pandas</a>
+                                    -</strong> It is a Python library which is used to perform scientific
+                                computations.</li>
+                            <li><strong><a href="https://www.javatpoint.com/keras">Keras</a> -</strong> It
+                                is an open source library, which is used to work around the neural network.
+                            </li>
+                        </ul>
+                        <p>There are many libraries in Python. Above, we have mentioned a few of them.</p>
+                        <h3 class="h3">10. Contribute to Open Source</h3>
+                        <p>As we know, Python is an open source language that means it is freely available
+                            for everyone. We can also contribute to Python online community to enhance our
+                            knowledge. Contributing to open source projects is the best way to explore own
+                            knowledge. We also receive the feedback, comments or suggestions for work that
+                            we submitted. The feedback will enable the best practices for Python programming
+                            and help us to become a good Python developer.</p>
+                        <h2 class="h2">Usage of Python</h2>
+                        <p>Python is a general purpose, open source, high-level programming language and
+                            also provides number of libraries and frameworks. Python has gained popularity
+                            because of its simplicity, easy syntax and user-friendly environment. The usage
+                            of Python as follows.</p>
+                        <ul class="points">
+                            <li>Desktop Applications</li>
+                            <li>Web Applications</li>
+                            <li><a href="https://www.javatpoint.com/data-science">Data Science</a></li>
+                            <li><a href="https://www.javatpoint.com/artificial-intelligence-tutorial">Artificial
+                                    Intelligence</a></li>
+                            <li><a href="https://www.javatpoint.com/machine-learning">Machine Learning</a>
+                            </li>
+                            <li>Scientific Computing</li>
+                            <li><a href="https://www.javatpoint.com/robotics-tutorial">Robotics</a></li>
+                            <li><a href="https://www.javatpoint.com/iot-internet-of-things">Internet of
+                                    Things (IoT)</a></li>
+                            <li>Gaming</li>
+                            <li>Mobile Apps</li>
+                            <li>Data Analysis and Preprocessing</li>
+                        </ul>
+                        <p>In the next topic, we will discuss the <a
+                                href="https://www.javatpoint.com/python-applications">Python
+                                Application</a>, where we have defined Python's usage in detail.</p>
+    
+                        <hr />
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        
+                        <h1 class="h1">Python Applications</h1>
+                        <p>Python is known for its general-purpose nature that makes it applicable in almost
+                            every domain of software development. Python makes its presence in every
+                            emerging field. It is the fastest-growing programming language and can develop
+                            any application.</p>
+                        <p>Here, we are specifying application areas where Python can be applied.</p>
+                        <img src="https://static.javatpoint.com/python/images/python-applications.png"
+                            alt="Python Applications" />
+                        <h3 class="h3">1) Web Applications</h3>
+                        <p> We can use Python to develop web applications. It provides libraries to handle
+                            internet protocols such as HTML and XML, JSON, Email processing, request,
+                            beautifulSoup, Feedparser, etc. One of Python web-framework named Django is used
+                            on <strong>Instagram</strong>. Python provides many useful frameworks, and these
+                            are given below:</p>
+                        <ul class="points">
+                            <li>Django and Pyramid framework(Use for heavy applications)</li>
+                            <li>Flask and Bottle (Micro-framework)</li>
+                            <li>Plone and Django CMS (Advance Content management)</li>
+                        </ul>
+                        <h3 class="h3">2) Desktop GUI Applications</h3>
+                        <p>The GUI stands for the Graphical User Interface, which provides a smooth
+                            interaction to any application. Python provides a <strong>Tk GUI
+                                library</strong> to develop a user interface. Some popular GUI libraries are
+                            given below.</p>
+                        <ul class="points">
+                            <li>Tkinter or Tk</li>
+                            <li>wxWidgetM</li>
+                            <li>Kivy (used for writing multitouch applications )</li>
+                            <li>PyQt or Pyside</li>
+                        </ul>
+                        <h3 class="h3">3) Console-based Application</h3>
+                        <p>Console-based applications run from the command-line or shell. These applications
+                            are computer program which are used commands to execute. This kind of
+                            application was more popular in the old generation of computers. Python can
+                            develop this kind of application very effectively. It is famous for having REPL,
+                            which means <strong>the Read-Eval-Print Loop</strong> that makes it the most
+                            suitable language for the command-line applications.</p>
+                        <p>Python provides many free library or module which helps to build the command-line
+                            apps. The necessary <strong>IO</strong> libraries are used to read and write. It
+                            helps to parse argument and create console help text out-of-the-box. There are
+                            also advance libraries that can develop independent console apps.</p>
+                        <h3 class="h3">4) Software Development</h3>
+                        <p>Python is useful for the software development process. It works as a support
+                            language and can be used to build control and management, testing, etc.</p>
+                        <ul class="points">
+                            <li><strong>SCons</strong> is used to build control.</li>
+                            <li><strong>Buildbot</strong> and <strong>Apache</strong> Gumps are used for
+                                automated continuous compilation and testing.
+                            <li><strong>Round</strong> or <strong>Trac</strong> for bug tracking and project
+                                management.
+                        </ul>
+                        <h3 class="h3">5) Scientific and Numeric</h3>
+                        <p>This is the era of Artificial intelligence where the machine can perform the task
+                            the same as the human. Python language is the most suitable language for
+                            Artificial intelligence or machine learning. It consists of many scientific and
+                            mathematical libraries, which makes easy to solve complex calculations.</p>
+                        <p>Implementing machine learning algorithms require complex mathematical
+                            calculation. Python has many libraries for scientific and numeric such as Numpy,
+                            Pandas, Scipy, Scikit-learn, etc. If you have some basic knowledge of Python,
+                            you need to import libraries on the top of the code. Few popular frameworks of
+                            machine libraries are given below.</p>
+                        <ul class="points">
+                            <li>SciPy</li>
+                            <li>Scikit-learn</li>
+                            <li>NumPy</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                        <h3 class="h3">6) Business Applications</h3>
+                        <p>Business Applications differ from standard applications. E-commerce and ERP are
+                            an example of a business application. This kind of application requires
+                            extensively, scalability and readability, and Python provides all these
+                            features.</p>
+                        <p>Oddo is an example of the all-in-one Python-based application which offers a
+                            range of business applications. Python provides a <strong>Tryton</strong>
+                            platform which is used to develop the business application.</p>
+                        <h3 class="h3">7) Audio or Video-based Applications</h3>
+                        <p>Python is flexible to perform multiple tasks and can be used to create multimedia
+                            applications. Some multimedia applications which are made by using Python are
+                            <strong>TimPlayer, cplay,</strong> etc. The few multimedia libraries are given
+                            below.
+                        </p>
+                        <ul class="points">
+                            <li>Gstreamer</li>
+                            <li>Pyglet</li>
+                            <li>QT Phonon</li>
+                        </ul>
+                        <h3 class="h3">8) 3D CAD Applications</h3>
+                        <p>The CAD (Computer-aided design) is used to design engineering related
+                            architecture. It is used to develop the 3D representation of a part of a system.
+                            Python can create a 3D CAD application by using the following functionalities.
+                        </p>
+                        <ul class="points">
+                            <li>Fandango (Popular )</li>
+                            <li>CAMVOX</li>
+                            <li>HeeksCNC</li>
+                            <li>AnyCAD<M /li>
+                            <li>RCAM</li>
+                        </ul>
+                        <h3 class="h3">9) Enterprise Applications</h3>
+                        <p>Python can be used to create applications that can be used within an Enterprise
+                            or an Organization. Some real-time applications are OpenERP, Tryton, Picalo,
+                            etc.</p>
+                        <h3 class="h3">10) Image Processing Application</h3>
+                        <p>Python contains many libraries that are used to work with the image. The image
+                            can be manipulated according to our requirements. Some libraries of image
+                            processing are given below.</p>
+                        <ul class="points">
+                            <li>OpenCV</li>
+                            <li>Pillow</li>
+                            <li>SimpleITK</li>
+                        </ul>
+                        <p>In this topic, we have described all types of applications where Python plays an
+                            essential role in the development of these applications. In the next tutorial,
+                            we will learn more concepts about Python.</p>
+    
+                        <hr />
+                        <!-- link -->
+                        <br /><br />
+                        <div id="bottomnext">
+                            <a style="float:left" class="next" href="python-history">&larr; prev</a>
+                            <a style="float:right" class="next" href="how-to-install-python">next &rarr;</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">How to Install Python (Environment Set-up)</h1>
+                        <p>In order to become Python developer, the first step is to learn how to install or
+                            update Python on a local machine or computer. In this tutorial, we will discuss
+                            the installation of Python on various operating systems. </p>
+                        <h2 class="h2">Installation on Windows</h2>
+                        <p>Visit the link <a href="https://www.python.org/downloads/" target="_blank"
+                                rel="nofollow"><em>https://www.python.org/downloads/</em></a> to download
+                            the latest release of <a href="https://www.javatpoint.com/python-tutorial">Python</a>. In this
+                            process, we will install Python 3.8.6 on our <a
+                                href="https://www.javatpoint.com/windows">Windows operating system</a>. When
+                            we click on the above link, it will bring us the following page.</p>
+                        <p><strong>Step - 1: Select the Python's version to download.</strong></p>
+                        <p>Click on the download button.</p>
+                        <img src="https://static.javatpoint.com/python/images/python-environment-set-up.png"
+                            alt="Python Environment Set-up" />
+                        <p><strong>Step - 2: Click on the Install Now</strong></p>
+                        <p>Double-click the executable file, which is downloaded; the following window will
+                            open. Select Customize installation and proceed. Click on the Add Path check
+                            box, it will set the Python path automatically.</p>
+                        <img src="https://static.javatpoint.com/python/images/python-environment-set-up2.png"
+                            alt="Python Environment Set-up" />
+                        <p>We can also click on the customize installation to choose desired location and
+                            features. Other important thing is install launcher for the all user must be
+                            checked.</p>
+                        <p><strong>Step - 3 Installation in Process</strong></p>
+                        <img src="https://static.javatpoint.com/python/images/python-environment-set-up3.png"
+                            alt="Python Environment Set-up" />
+                        <p>Now, try to run python on the command prompt. Type the command python -version in
+                            case of python3.</p>
+                        <img src="https://static.javatpoint.com/python/images/python-environment-set-up4.png"
+                            alt="Python Environment Set-up" />
+                        <p>We are ready to work with the Python.</p>
+    
+                        <h2 class="h3">Installation on Mac</h2>
+                        <p>To install python3 on MacOS, visit the link <a
+                                href="how-to-install-python-on-mac"><em>https://www.javatpoint.com/how-to-install-python-on-mac</em></a>
+                            and follow the instructions given in the tutorial.</p>
+                        <hr />
+    
+                        <h2 class="h3">Installation on CentOS</h2>
+                        <p>To install Python3 on CentOS, visit the link <a
+                                href="how-to-install-python-on-centos"><em>https://www.javatpoint.com/how-to-install-python-on-centos</em></a>
+                            and follow the instructions given in the tutorial.</p>
+                        <hr />
+    
+                        <h2 class="h3">Installation on Ubuntu</h2>
+                        <p>To install Python3 on Ubuntu, visit the link <a
+                                href="how-to-install-python-in-ubuntu"><em>https://www.javatpoint.com/how-to-install-python-in-ubuntu</em></a>
+                            and follow the instructions given in the tutorial.</p>
+    
+                        <hr />
+                        <!-- link -->
+                        <br /><br />
+                        <div id="bottomnextup">
+                            <a class="next" href="cpp-history">next &rarr;</a>
+                            <a class="next" href="cpp-tutorial">&larr; prev</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+
+    
+
+
+</body>
+
+</html>
+{% endblock %}
