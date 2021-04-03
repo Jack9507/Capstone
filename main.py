@@ -166,8 +166,8 @@ def login_validation():
     else:
         cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(email))
         users=cursor.fetchall()
-        print(type(users))
-        print(users)
+        # print(type(users))
+        # print(users)
         if(len(users)>0):
             hash_from_db=users[0][4]
             # print(hash_from_db)
@@ -233,34 +233,38 @@ def signup_user():
         # return "Your name is {} , email is {}, password is {}, and phone is {}".format(f_name, f_email, f_password, f_phone)  
 
 
+
 @app.route('/contact_validation', methods=['POST', 'GET'])
 def contact_validation():
     # name, email, phone, pass, repass
     if(request.method=='POST'):
-        # ADD entry to database.
-        f_name=request.form.get('name')
-        f_email=request.form.get('email')
-        f_subject=request.form.get('subject')
-        f_message=request.form.get('message')
+        u_name=request.form.get('name')
+        u_email=request.form.get('email')
+        u_subject=request.form.get('subject')
+        u_message=request.form.get('message')
         
-        
-        cursor.execute("""SELECT * FROM `contacts` WHERE `Email` LIKE '{}' """.format(f_email))
-        users=cursor.fetchall()
-        if len(users) >0:
-            flash("  Email already present in contact list.", 'error')
+        if len(u_name)==0 or len(u_email)==0 or len(u_subject)==0 or len(u_message)==0:
+            flash("Please fill all the details.", 'error')
             return redirect('/contact')
         else:
-            cursor.execute("""INSERT INTO `contacts` (`id`, `Name`, `Email`, `Subject`, `Message`) VALUES(NULL, '{}', '{}', '{}', '{}') """.format(f_name,     f_email, f_subject, f_message))
-            conn.commit()
-            mail.send_message("New user filled the contact form. His contact details mail.",
-                                    sender = f_email,
-                                    recipients = ["ptrever781@gmail.com"],
-                                    body = "Details of the user :- " + "\n" + "Name : "+ f_name+ "\n"+ "Email : "+f_email+"\n"+"Subject= "+f_subject+"\n" + "Message= "+ f_message,
-                                 )
-            flash('Your message has been sent. Thank you!', 'success')
-            return redirect('/contact')
-
-
+            # print(u_name)
+            # print(u_email)
+            cursor.execute("""SELECT * FROM `contacts` WHERE `Email` LIKE '{}' """.format(u_email))
+            users=cursor.fetchall()
+            # print(users)
+            if len(users) >0:
+                flash("  Email already present in contact list.", 'error')
+                return redirect('/contact')
+            else:
+                cursor.execute("""INSERT INTO `contacts` (`id`, `Name`, `Email`, `Subject`, `Message`) VALUES(NULL, '{}', '{}', '{}', '{}') """.format(u_name,  u_email, u_subject, u_message))
+                conn.commit()
+                mail.send_message("New user filled the contact form. His contact details mail.",
+                                        sender = u_email,
+                                        recipients = ["ptrever781@gmail.com"],
+                                        body = "Details of the user :- " + "\n" + "Name : "+ u_name+ "\n"+ "Email : "+u_email+"\n"+"Subject : "+u_subject+"\n"  + "Message : "+ u_message,
+                                    )
+                flash('Your message has been sent. Thank you!', 'success')
+                return redirect('/')
 
 
 
