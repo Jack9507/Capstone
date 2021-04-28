@@ -1,0 +1,79 @@
+{% extends "bloglayout.html" %} {% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/static/img/pic2.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your blog post and change them.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Flashing messages using Flask -->
+{% block content %} {% with messages = get_flashed_messages(with_categories=true) %}
+<!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+{% if messages %} {% for category, msg in messages %} {%if category=='success'%}
+<div class="alert alert-success mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {%if category=='error'%}
+<div class="alert alert-danger mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %} {% endblock %}
+<!-- end of message flashing  -->
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h1>Basic Actions</h1>
+
+                <a href="/blogedit/0"><button class="btn btn-primary">Add New Post</button></a>
+                {% if 'user_id' in session %}
+                    <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+                {% else %}
+                    <a href="/login"><button class="btn btn-primary">Login/SignUp</button></a>
+                {% endif %}
+                
+                <hr>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{ post[0] }}</td>
+                            <td>{{ post[1] }}</td>
+                            <td>{{ post[5] }}</td>
+                            <td><a href="/blogedit/{{ post[0] }}"><button class="btn btn-primary">Edit</button></a></td>
+                            <td><a href="/blogdelete/{{ post[0] }}"><button class="btn btn-primary">Delete</button></a></td>
+                        </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</article>
+
+{% endblock %}

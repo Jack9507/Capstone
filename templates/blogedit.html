@@ -1,0 +1,81 @@
+{% extends "bloglayout.html" %} {% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/static/img/pic2.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your blog post and change them.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Flashing messages using Flask -->
+{% block content %} {% with messages = get_flashed_messages(with_categories=true) %}
+<!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+{% if messages %} {% for category, msg in messages %} {%if category=='success'%}
+<div class="alert alert-success mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {%if category=='error'%}
+<div class="alert alert-danger mb-3" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %} {% endblock %}
+<!-- end of message flashing  -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h1>Add/Edit Posts</h1>
+                
+                <form name="sentMessage" id="contactForm" action="/blogedit/{{ sno }}" method="POST">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Title</label>
+                            <input type="text" name="title" value="{{ title }}" class="form-control" placeholder="Title" id="title" required
+                                data-validation-required-message="Please enter your title.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>TagLine</label>
+                            <input type="text" name="tagline" value="{{ tagline }}" class="form-control" placeholder="TagLine" id="tagline" required
+                                data-validation-required-message="Please enter your tagline.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Slug</label>
+                            <input type="text" name="slug" value="{{ slug }}" class="form-control" placeholder="Slug" id="slug" required
+                                data-validation-required-message="Please enter your slug.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Content</label>
+                            <textarea rows="5" name="content" class="form-control" placeholder="Content" id="content" required
+                                data-validation-required-message="Please enter your content.">{{ content }}</textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+{% endblock %}

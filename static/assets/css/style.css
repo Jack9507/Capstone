@@ -8,6 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -29,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   display: none;
@@ -58,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+
 #preloader {
   position: fixed;
   top: 0;
@@ -105,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
@@ -114,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   background: #fff;
   transition: all 0.5s;
@@ -150,18 +155,20 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
+
 .nav-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-menu > ul {
+.nav-menu>ul {
   display: flex;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
@@ -177,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover, .nav-menu .active>a, .nav-menu li:hover>a {
   color: #5fcf80;
 }
 
@@ -196,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-.nav-menu .drop-down:hover > ul {
+.nav-menu .drop-down:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -215,11 +222,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #37423b;
 }
 
-.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active>a, .nav-menu .drop-down ul li:hover>a {
   color: #5fcf80;
 }
 
-.nav-menu .drop-down > a:after {
+.nav-menu .drop-down>a:after {
   content: "\ea99";
   font-family: IcoFont;
   padding-left: 5px;
@@ -230,17 +237,17 @@ h1, h2, h3, h4, h5, h6 {
   left: calc(100% - 30px);
 }
 
-.nav-menu .drop-down .drop-down:hover > ul {
+.nav-menu .drop-down .drop-down:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
 }
 
-.nav-menu .drop-down .drop-down > a {
+.nav-menu .drop-down .drop-down>a {
   padding-right: 35px;
 }
 
-.nav-menu .drop-down .drop-down > a:after {
+.nav-menu .drop-down .drop-down>a:after {
   content: "\eaa0";
   font-family: IcoFont;
   position: absolute;
@@ -251,15 +258,16 @@ h1, h2, h3, h4, h5, h6 {
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
   }
-  .nav-menu .drop-down .drop-down:hover > ul {
+  .nav-menu .drop-down .drop-down:hover>ul {
     left: -100%;
   }
-  .nav-menu .drop-down .drop-down > a:after {
+  .nav-menu .drop-down .drop-down>a:after {
     content: "\ea9d";
   }
 }
 
 /* Get Startet Button */
+
 .get-started-btn {
   margin-left: 22px;
   background: #5fcf80;
@@ -285,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile Navigation */
+
 .mobile-nav-toggle {
   position: fixed;
   top: 17px;
@@ -335,12 +344,12 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover, .mobile-nav .active>a, .mobile-nav li:hover>a {
   color: #5fcf80;
   text-decoration: none;
 }
 
-.mobile-nav .drop-down > a:after {
+.mobile-nav .drop-down>a:after {
   content: "\ea99";
   font-family: IcoFont;
   padding-left: 10px;
@@ -348,11 +357,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
 }
 
-.mobile-nav .active.drop-down > a:after {
+.mobile-nav .active.drop-down>a:after {
   content: "\eaa1";
 }
 
-.mobile-nav .drop-down > a {
+.mobile-nav .drop-down>a {
   padding-right: 35px;
 }
 
@@ -394,10 +403,11 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/pc.jfif") top center;
   background-size: cover;
   position: relative;
 }
@@ -479,6 +489,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -550,6 +561,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -596,6 +608,7 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+
 .counts {
   padding: 30px 0;
 }
@@ -619,6 +632,7 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+
 .why-us .content {
   padding: 30px;
   background: #5fcf80;
@@ -685,6 +699,7 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+
 .features {
   padding-top: 0px;
 }
@@ -727,6 +742,7 @@ section {
 /*--------------------------------------------------------------
 # Courses
 --------------------------------------------------------------*/
+
 .courses .course-item {
   border-radius: 5px;
   border: 1px solid #eef0ef;
@@ -795,6 +811,7 @@ section {
 /*--------------------------------------------------------------
 # Trainers
 --------------------------------------------------------------*/
+
 .trainers .member {
   text-align: center;
   margin-bottom: 20px;
@@ -850,6 +867,7 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+
 .testimonials .testimonial-wrap {
   padding-left: 50px;
 }
@@ -943,6 +961,7 @@ section {
 /*--------------------------------------------------------------
 # Cource Details
 --------------------------------------------------------------*/
+
 .course-details h3 {
   font-size: 24px;
   margin: 30px 0 15px 0;
@@ -998,6 +1017,7 @@ section {
 /*--------------------------------------------------------------
 # Cource Details Tabs
 --------------------------------------------------------------*/
+
 .cource-details-tabs {
   overflow: hidden;
   padding-top: 0;
@@ -1061,6 +1081,7 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
+
 .events .card {
   border: 0;
   padding: 0 30px;
@@ -1133,6 +1154,7 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+
 .pricing .box {
   padding: 20px;
   background: #fff;
@@ -1243,6 +1265,7 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact {
   padding-top: 5px;
 }
@@ -1316,7 +1339,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1401,6 +1424,7 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 #footer {
   color: #37423b;
   font-size: 14px;

@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect, flash, session
 from passlib.hash import pbkdf2_sha256
 from flask_mail import  Mail
+from datetime import datetime
 # from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
 import os
+
 
 
 app = Flask(__name__)
@@ -23,23 +25,16 @@ conn=mysql.connector.connect(host="localhost", user="root", password="", databas
 cursor=conn.cursor()
 
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/capstone'
-# db = SQLAlchemy(app)
-
-# class Signup(db.Model):
-#     # userid name email phone password
-#     userid = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(80),  nullable=False)
-#     email = db.Column(db.String(20), unique=True, nullable=False)
-#     phone = db.Column(db.String(20),  nullable=False)
-#     password = db.Column(db.String(30), nullable=False)
 
 
 param=""
+emailg=""
+passg=""
+user_id=""
 @app.route('/')
 def index():
     if 'user_id' in session:
-        print(param)
+        # print(param)
         return render_template("index.html", user=param)
     else:
         return render_template("index.html")
@@ -73,18 +68,166 @@ def events():
 def notes():
     return render_template("Notes.html")
 
-@app.route('/blogindex')
+@app.route('/blogindex', methods=['GET'])
 def blogindex():
-    return render_template("blogindex.html")
+     cursor.execute("""SELECT * FROM `blogpost` """)
+     users=cursor.fetchall()
+    #  print(users[0][1])
+     return render_template("blogindex.html", posts=users)
+
 @app.route('/blogcontact')
 def blogcontact():
     return render_template("blogcontact.html")
-@app.route('/blogpost')
-def blogpost():
-    return render_template("blogpost.html")
+
+@app.route('/bcvalidation',  methods=['GET', 'POST'])
+def bcvalidation():
+    if(request.method=='POST'):
+        name=request.form.get('name')
+        email=request.form.get('email')
+        phone=request.form.get('phone')
+        msg=request.form.get('msg')
+        
+        date=datetime.now()
+        cursor.execute("""INSERT INTO `blogcontact` (`sno`, `name`, `phone`, `msg`, `date`, `email`) VALUES(NULL, '{}', '{}', '{}', '{}', '{}') """.format(name, phone, msg, date, email))
+        conn.commit()
+        
+        flash('Your message has been sent. Thank you!', 'success')
+        return redirect('/blogcontact')
+
+
+@app.route('/blogdashboard')
+def blogdashboard():
+     cursor.execute("""SELECT * FROM `blogpost` """)
+     users=cursor.fetchall()
+     #  print(users[0][1])
+     return render_template("blogdashboard.html", posts=users)
+
+
+@app.route('/blogedit/<string:sno>', methods=['GET', 'POST'])
+def blogedit(sno):
+    if 'user_id' in session:
+        if(request.method=='POST'):
+            title=request.form.get('title')
+            tagline=request.form.get('tagline')
+            slug=request.form.get('slug')
+            content=request.form.get('content')
+            date=datetime.now()
+            
+            if sno=='0':
+                # Adding new post
+                cursor.execute("""INSERT INTO `blogpost` (`sno`, `title`, `tagline`, `slug`, `content`, `date`) VALUES(NULL, '{}', '{}', '{}', '{}', '{}') """.format(title, tagline, slug, content, date))
+                conn.commit()
+                flash('Add/Edit completed successfully.', 'success')
+                return redirect('/blogdashboard') 
+            else:
+                # Edit the existing post
+                cursor.execute("""SELECT * FROM `blogpost` WHERE `sno` LIKE '{}' """.format(sno))
+                post=cursor.fetchall()
+                cursor.execute("""UPDATE `blogpost` 
+                                      SET `title`='{}',
+                                          `tagline`= '{}',
+                                          `slug`='{}',
+                                          `content`='{}',
+                                          `date`='{}'
+                                      WHERE `sno`='{}' """.format(title, tagline, slug, content, date, sno))
+                conn.commit()
+                flash('Post Updated Successfully.', 'success')
+                return redirect('/blogdashboard')
+
+    
+    if 'user_id' not in session:
+        flash('You need to login first.', 'error') 
+    if sno=='0':
+        post=[('','','','','')] 
+    else:
+        cursor.execute("""SELECT * FROM `blogpost` WHERE `sno` LIKE '{}' """.format(sno))
+        post=cursor.fetchall()          
+    return render_template("blogedit.html", sno=sno, title=post[0][1], tagline=post[0][2], slug=post[0][3], content=post[0][4])
+            
+
+@app.route('/blogdelete/<string:sno>', methods=['GET', 'POST'])
+def blogdelete(sno):
+    if 'user_id' in session:
+        cursor.execute("""DELETE FROM `blogpost` WHERE `sno` LIKE '{}' """.format(sno))
+        flash('Post deleted successfully.', 'success') 
+        return redirect('/blogdashboard')
+
+    if 'user_id' not in session:
+        flash('You need to login first.', 'error') 
+    
+    return redirect('/blogdashboard')
+
+
+
+
+@app.route('/post/<string:post_slug>', methods=['GET', 'POST'])
+def post_route(post_slug):
+    cursor.execute("""SELECT * FROM `blogpost` WHERE `slug` LIKE '{}' """.format(post_slug))
+    users=cursor.fetchall()
+    # print(users)
+    return render_template('blogpost.html',  post=users)
+
 @app.route('/blogabout')
 def blogabout():
     return render_template("blogabout.html")
+
+@app.route('/tos')
+def tos():
+    return render_template("termsofservices.html")
+@app.route('/privacypolicy')
+def privacypolicy():
+    return render_template("privacypolicy.html")
+
+
+
+@app.route('/updateprofile')
+def updateprofile():
+    return render_template("updateprofile.html")
+
+@app.route('/update_validation', methods=['GET', 'POST'])
+def update_validation():
+    if(request.method=='POST'):
+        f2_name=request.form.get('name')
+        f2_email=request.form.get('email')
+        f2_designation=request.form.get('designation')
+        f2_phone=request.form.get('phone')
+        f2_password=request.form.get('pass')
+        f2_re_password=request.form.get('re_pass')
+
+        if len(f2_name)==0 or len(f2_email)==0 or len(f2_designation)==0 or len(f2_phone)==0 or len(f2_password)==0 or len(f2_re_password)==0:
+            flash("Please fill all the details.", 'error')
+            return redirect('/updateprofile')
+        else:
+                if f2_password != f2_re_password:
+                    flash("Passwords do not match.", 'error')
+                    return redirect('/updateprofile')
+                elif len(f2_phone) != 10 or f2_phone.isdigit()==False:
+                    flash(" Phone number is Invalid. ", 'error')
+                    return redirect('/updateprofile')
+                else:
+                    hash_pass=pbkdf2_sha256.hash(f2_password)  #making hash of password for storing in database
+                    cursor.execute("""UPDATE `signup` 
+                                      SET `name`='{}',
+                                          `email`= '{}',
+                                          `designation`='{}',
+                                          `phone`='{}',
+                                          `password`='{}'
+                                      WHERE `userid`='{}' """.format(f2_name, f2_email, f2_designation, f2_phone, hash_pass, user_id))
+                    conn.commit()
+                    flash('Profile Updated Successfully.', 'success')
+                    return redirect('/updateprofile')
+
+
+@app.route('/myprofile')
+def myprofile():
+    if 'user_id' in session:
+        cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(emailg))
+        users=cursor.fetchall()
+        # print(users)
+    return render_template("myprofile.html", id=users[0][0], name=users[0][1], email=users[0][2], designation=users[0][3], phone=users[0][4], password=passg)
+
+
+
 
 # ************************************  Content Pages routes   **************************************************
 
@@ -169,13 +312,19 @@ def login_validation():
         # print(type(users))
         # print(users)
         if(len(users)>0):
-            hash_from_db=users[0][4]
+            hash_from_db=users[0][5]
             # print(hash_from_db)
             if pbkdf2_sha256.verify(password, hash_from_db):
                 session['user_id']=users[0][0]    #session is set
                 flash("Login Successful. !!", 'success')
                 global param
                 param+=str(users[0][1])
+                global emailg
+                emailg+=email
+                global passg
+                passg += password
+                global user_id
+                user_id += str(users[0][0])
                 return redirect('/')
                 # return render_template("index.html", users=users)
             else:
@@ -197,11 +346,12 @@ def signup_user():
         # ADD entry to database.
         f_name=request.form.get('name')
         f_email=request.form.get('email')
+        f_designation=request.form.get('designation')
         f_phone=request.form.get('phone')
         f_password=request.form.get('pass')
         f_re_password=request.form.get('re_pass')
         
-        if len(f_name)==0 or len(f_email)==0 or len(f_phone)==0 or len(f_password)==0 or len(f_re_password)==0:
+        if len(f_name)==0 or len(f_email)==0 or len(f_designation)==0 or len(f_phone)==0 or len(f_password)==0 or len(f_re_password)==0:
             flash("Please fill all the details.", 'error')
             return redirect('/signup')
         else:
@@ -219,12 +369,12 @@ def signup_user():
                     return redirect('/signup')
                 else:
                     hash_pass=pbkdf2_sha256.hash(f_password)  #making hash of password for storing in database
-                    cursor.execute("""INSERT INTO `signup` (`userid`, `name`, `email`, `phone`, `password`) VALUES(NULL, '{}', '{}', '{}', '{}') """.format(f_name,     f_email, f_phone, hash_pass))
+                    cursor.execute("""INSERT INTO `signup` (`userid`, `name`, `email`, `designation`, `phone`, `password`) VALUES(NULL, '{}', '{}', '{}', '{}', '{}') """.format(f_name, f_email, f_designation, f_phone, hash_pass))
                     conn.commit()
                     mail.send_message("New User Signed Up. Flask Mail",
                                         sender = f_email,
                                         recipients = ["ptrever781@gmail.com"],
-                                        body = "Details of the user :- " + "\n" + "Name : "+ f_name+ "\n"+ "Email : "+f_email+"\n"+"Phone no. : "+f_phone+"\n" + "Password_hash= "+ hash_pass,
+                                        body = "Details of the user :- " + "\n" + "Name : "+ f_name+ "\n"+ "Email : "+f_email + "\n" + "Designation : "+f_designation +"\n"+ "Phone no. : "+f_phone+"\n" + "Password_hash= "+ hash_pass,
                                     )
 
                     flash('You are Successfully Registered.', 'success')
@@ -275,6 +425,12 @@ def logout():
     session.pop('user_id')
     global param
     param=""
+    global emailg
+    emailg=""
+    global passg
+    passg=""
+    global user_id
+    user_id=""
     flash("You have been Logged Out. !!!", 'success')
     return redirect('/')
 
@@ -286,5 +442,4 @@ if __name__=='__main__':
 
 
 
-# Domain name : - flexhubspot.com
-# FLEX- Focoused Learning Experience 
+# ENd of COde
