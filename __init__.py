@@ -21,7 +21,7 @@ mail = Mail(app)
 # app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.secret_key=os.urandom(24)        #generated secret key for a session with random func of os module
 
-conn=mysql.connector.connect(host="localhost", user="root", password="", database="capstone")
+conn=mysql.connector.connect(host="localhost", user="root", password="", database="capstone", auth_plugin='mysql_native_password')
 cursor=conn.cursor()
 
 
@@ -224,6 +224,8 @@ def myprofile():
         cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(emailg))
         users=cursor.fetchall()
         # print(users)
+    if 'user_id' not in session:
+        users=[('','','','','')]
     return render_template("myprofile.html", id=users[0][0], name=users[0][1], email=users[0][2], designation=users[0][3], phone=users[0][4], password=passg)
 
 
