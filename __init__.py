@@ -218,15 +218,7 @@ def update_validation():
                     return redirect('/updateprofile')
 
 
-@app.route('/myprofile')
-def myprofile():
-    if 'user_id' in session:
-        cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(emailg))
-        users=cursor.fetchall()
-        # print(users)
-    if 'user_id' not in session:
-        users=[('','','','','')]
-    return render_template("myprofile.html", id=users[0][0], name=users[0][1], email=users[0][2], designation=users[0][3], phone=users[0][4], password=passg)
+
 
 
 
@@ -419,7 +411,15 @@ def contact_validation():
                 return redirect('/')
 
 
-
+@app.route('/myprofile')
+def myprofile():
+    if 'user_id' in session:
+        cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(emailg))
+        users=cursor.fetchall()
+        # print(users)
+    if 'user_id' not in session:
+        users=[('','','','','')]
+    return render_template("myprofile.html", id=users[0][0], name=users[0][1], email=users[0][2], designation=users[0][3], phone=users[0][4], password=passg)
 
 
 @app.route('/logout')
