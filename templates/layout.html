@@ -69,18 +69,8 @@
                             </li>
                         </ul>
                     </li>
-                    {% if 'user_id' in session %}
-                    <li class="drop-down"><a href="">{{user}}</a>
-                        <ul>
-                        <li><a href="/myprofile">My Profile</a></li>
-                        <li><a href="/contact">Contact US</a></li>
-                        <li><a href="/updateprofile">Update Profile</a></li>
-                        </ul>
-                    </li>
-                    {% else %}
-                    <li><a href="/contact">Contact Us</a></li>
-                    {% endif %}
-                    
+        
+                    <li><a href="/contact">Contact Us</a></li>   
 
                 </ul>
             </nav>
@@ -181,8 +171,9 @@
                         <div class="col-lg-4 col-md-6 footer-newsletter">
                             <h4>Join Our Newsletter</h4>
                             <p>Follow, Like and Subscribe for regular Updates.</p>
-                            <form action="" method="post">
-                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            <form action="/newsletter" method="POST">
+                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                                <input type="submit" value="Subscribe">
                             </form>
                         </div>
 

@@ -28,8 +28,6 @@ cursor=conn.cursor()
 
 
 param=""
-emailg=""
-passg=""
 user_id=""
 @app.route('/')
 def index():
@@ -180,44 +178,6 @@ def privacypolicy():
 
 
 
-@app.route('/updateprofile')
-def updateprofile():
-    return render_template("updateprofile.html")
-
-@app.route('/update_validation', methods=['GET', 'POST'])
-def update_validation():
-    if(request.method=='POST'):
-        f2_name=request.form.get('name')
-        f2_email=request.form.get('email')
-        f2_designation=request.form.get('designation')
-        f2_phone=request.form.get('phone')
-        f2_password=request.form.get('pass')
-        f2_re_password=request.form.get('re_pass')
-
-        if len(f2_name)==0 or len(f2_email)==0 or len(f2_designation)==0 or len(f2_phone)==0 or len(f2_password)==0 or len(f2_re_password)==0:
-            flash("Please fill all the details.", 'error')
-            return redirect('/updateprofile')
-        else:
-                if f2_password != f2_re_password:
-                    flash("Passwords do not match.", 'error')
-                    return redirect('/updateprofile')
-                elif len(f2_phone) != 10 or f2_phone.isdigit()==False:
-                    flash(" Phone number is Invalid. ", 'error')
-                    return redirect('/updateprofile')
-                else:
-                    hash_pass=pbkdf2_sha256.hash(f2_password)  #making hash of password for storing in database
-                    cursor.execute("""UPDATE `signup` 
-                                      SET `name`='{}',
-                                          `email`= '{}',
-                                          `designation`='{}',
-                                          `phone`='{}',
-                                          `password`='{}'
-                                      WHERE `userid`='{}' """.format(f2_name, f2_email, f2_designation, f2_phone, hash_pass, user_id))
-                    conn.commit()
-                    flash('Profile Updated Successfully.', 'success')
-                    return redirect('/updateprofile')
-
-
 
 
 
@@ -265,6 +225,7 @@ def blockchain():
 @app.route('/git')
 def git():
     return render_template("GitTutorial.html")
+    #GitTutorial.html
 
 # ************* React JS ****************
 @app.route('/reactjs')
@@ -313,10 +274,6 @@ def login_validation():
                 flash("Login Successful. !!", 'success')
                 global param
                 param+=str(users[0][1])
-                global emailg
-                emailg+=email
-                global passg
-                passg += password
                 global user_id
                 user_id += str(users[0][0])
                 return redirect('/')
@@ -411,26 +368,23 @@ def contact_validation():
                 return redirect('/')
 
 
-@app.route('/myprofile')
-def myprofile():
-    if 'user_id' in session:
-        cursor.execute("""SELECT * FROM `signup` WHERE `email` LIKE '{}' """.format(emailg))
-        users=cursor.fetchall()
-        # print(users)
-    if 'user_id' not in session:
-        users=[('','','','','')]
-    return render_template("myprofile.html", id=users[0][0], name=users[0][1], email=users[0][2], designation=users[0][3], phone=users[0][4], password=passg)
 
+
+@app.route('/newsletter', methods=['POST', 'GET'])
+def newsletter():
+    if(request.method=='POST'):
+        email=request.form.get('email')
+        cursor.execute("""INSERT INTO `newsletter` (`id`, `Email`) VALUES(NULL, '{}') """.format(email))
+        conn.commit()
+        flash('You have joined our newsletter. Thank you!', 'success')
+        return redirect('/')
+    
 
 @app.route('/logout')
 def logout():
     session.pop('user_id')
     global param
     param=""
-    global emailg
-    emailg=""
-    global passg
-    passg=""
     global user_id
     user_id=""
     flash("You have been Logged Out. !!!", 'success')
