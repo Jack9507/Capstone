@@ -1,0 +1,489 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Android Tutorial | Android Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+
+                        <h1 class="h1">Android Studio Tutorial</h1>
+                        <a href="https://training.javatpoint.com/android-training.jsp" target="_blank"><img
+                                src="corebasic/images/android-training.png" style="width:350px" class="imageright"
+                                alt="Android Training" /></a>
+                        <!--<img src="images/android.gif" alt="android image" style="float:right;" />-->
+                        <p>Android tutorial or Android Studio tutorial covers basic and advanced concepts of
+                            android technology. Our Android development tutorial is developed for beginners
+                            and professionals.</p>
+                        <p>
+                            <b>Android</b> is a complete set of software for mobile devices such as tablet
+                            computers, notebooks, smartphones, electronic book readers, set-top boxes etc.
+                        </p>
+                        <p>It contains a <b>linux-based Operating System</b>, <b>middleware</b> and <b>key
+                                mobile applications</b>.</p>
+                        <p>It can be thought of as a mobile operating system. But it is not limited to
+                            mobile only. It is currently used in various devices such as mobiles, tablets,
+                            televisions etc.</p>
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">What is Android</h1>
+                        <img src="https://static.javatpoint.com/images/androidimages/android3.jpg" alt="what is android"
+                            style="margin-left:30;float:right;" />
+                        <p>Before learning all topics of android, it is required to know what is android.
+                        </p>
+                        <p><b>Android</b> is a software package and linux based operating system for mobile
+                            devices such as tablet computers and smartphones.</p>
+                        <p>It is developed by Google and later the OHA (Open Handset Alliance). Java
+                            language is mainly used to write the android code even though other languages
+                            can be used.</p>
+                        <p>The goal of android project is to create a successful real-world product that
+                            improves the mobile experience for end users.</p>
+                        <p>There are many code names of android such as Lollipop, Kitkat, Jelly Bean, Ice
+                            cream Sandwich, Froyo, Ecliar, Donut etc which is covered in next page.</p>
+                        <hr />
+                        <h2 class="h2">What is Open Handset Alliance (OHA)</h2>
+                        <p>It's a consortium of 84 companies such as google, samsung, AKM, synaptics, KDDI,
+                            Garmin, Teleca, Ebay, Intel etc.</p>
+                        <p>It was established on 5th November, 2007, led by Google. It is committed to
+                            advance open standards, provide services and deploy handsets using the Android
+                            Plateform.</p>
+                        <hr />
+    
+    
+                        <h2 class="h2">Features of Android </h2>
+                        <p>After learning what is android, let's see the features of android. The important
+                            features of android are given below:</p>
+                        <p>1) It is open-source.</p>
+                        <p>2) Anyone can customize the Android Platform.</p>
+                        <p>3) There are a lot of mobile applications that can be chosen by the consumer.</p>
+                        <p>4) It provides many interesting features like weather details, opening screen,
+                            live RSS (Really Simple Syndication) feeds etc.</p>
+                        <p>It provides support for messaging services(SMS and MMS), web browser, storage
+                            (SQLite), connectivity (GSM, CDMA, Blue Tooth, Wi-Fi etc.), media, handset
+                            layout etc.</p>
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Android Architecture</h1>
+                        <p><strong>android architecture</strong> or <strong>Android software stack</strong>
+                            is categorized into five parts:</p>
+                        <ol>
+                            <li>linux kernel</li>
+                            <li>native libraries (middleware),</li>
+                            <li>Android Runtime</li>
+                            <li>Application Framework</li>
+                            <li>Applications</li>
+                        </ol>
+                        <p>Let's see the android architecture first.</p>
+                        <img src="https://static.javatpoint.com/images/androidimages/softwarestack.jpg"
+                            alt="android software stack, architecture" />
+    
+    
+                        <h2 class="h2">1) Linux kernel</h2>
+                        <p>It is the heart of android architecture that exists at the root of android
+                            architecture. <b>Linux kernel</b> is responsible for device drivers, power
+                            management, memory management, device management and resource access.</p>
+                        <hr />
+                        <h2 class="h2">2) Native Libraries</h2>
+                        <p>On the top of linux kernel, their are <b>Native libraries</b> such as WebKit,
+                            OpenGL, FreeType, SQLite, Media, C runtime library (libc) etc.</p>
+                        <p>The WebKit library is responsible for browser support, SQLite is for database,
+                            FreeType for font support, Media for playing and recording audio and video
+                            formats.</p>
+                        <hr />
+                        <h2 class="h2">3) Android Runtime</h2>
+                        <p>In android runtime, there are core libraries and DVM (Dalvik Virtual Machine)
+                            which is responsible to run android application. DVM is like JVM but it is
+                            optimized for mobile devices. It consumes less memory and provides fast
+                            performance.</p>
+                        <hr />
+                        <h2 class="h2">4) Android Framework</h2>
+                        <p>On the top of Native libraries and android runtime, there is android framework.
+                            Android framework includes <b>Android API's</b> such as UI (User Interface),
+                            telephony, resources, locations, Content Providers (data) and package managers.
+                            It provides a lot of classes and interfaces for android application development.
+                        </p>
+                        <hr />
+                        <h2 class="h2">5) Applications</h2>
+                        <p>On the top of android framework, there are applications. All applications such as
+                            home, contact, settings, games, browsers are using android framework that uses
+                            android runtime and libraries. Android runtime and native libraries are using
+                            linux kernal.</p>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">Android Core Building Blocks</h1>
+                        <img src="https://static.javatpoint.com/images/androidimages/componentsandroid.jpg"
+                            alt="android components" style="float:right;" />
+    
+                        <p>An android <strong>component</strong> is simply a piece of code that has a well
+                            defined life cycle e.g. Activity, Receiver, Service etc. </p>
+                        <p>The <b>core building blocks</b> or <b>fundamental components</b> of android are
+                            activities, views, intents, services, content providers, fragments and
+                            AndroidManifest.xml.</p>
+    
+    
+                        <h4 class="h4">Activity</h4>
+                        <p>An activity is a class that represents a single screen. It is like a Frame in
+                            AWT.</p>
+    
+                        <h4 class="h4">View</h4>
+                        <p>A view is the UI element such as button, label, text field etc. Anything that you
+                            see is a view.</p>
+    
+                        <h4 class="h4">Intent</h4>
+                        <p>Intent is used to invoke components. It is mainly used to:</p>
+                        <ul class="points">
+                            <li>Start the service</li>
+                            <li>Launch an activity</li>
+                            <li>Display a web page</li>
+                            <li>Display a list of contacts</li>
+                            <li>Broadcast a message</li>
+                            <li>Dial a phone call etc.</li>
+                        </ul>
+    
+                        <p>For example, you may write the following code to view the webpage.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Intent intent=new Intent(Intent.ACTION_VIEW);
+    intent.setData(Uri.parse("http://www.javatpoint.com"));
+    startActivity(intent);
+    </textarea></div>
+    
+    
+    
+                        <hr />
+                        <h4 class="h4">Service</h4>
+                        <p>Service is a background process that can run for a long time. </p>
+                        <p>There are two types of services local and remote. Local service is accessed from
+                            within the application whereas remote service is accessed remotely from other
+                            applications running on the same device.</p>
+    
+                        <hr />
+                        <h4 class="h4">Content Provider</h4>
+                        <p>Content Providers are used to share data between the applications.</p>
+    
+                        <hr />
+                        <h4 class="h4">Fragment</h4>
+                        <p>Fragments are like parts of activity. An activity can display one or more
+                            fragments on the screen at the same time.</p>
+    
+                        <hr />
+                        <h4 class="h4">AndroidManifest.xml</h4>
+                        <p>It contains informations about activities, content providers, permissions etc. It
+                            is like the web.xml file in Java EE.</p>
+    
+                        <hr />
+                        <h4 class="h4">Android Virtual Device (AVD)</h4>
+                        <p>It is used to test the android application without the need for mobile or tablet
+                            etc. It can be created in different configurations to emulate different types of
+                            real devices.</p>
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Android Emulator</h1>
+                        <p>The <strong>Android emulator</strong> is an <strong>Android Virtual Device
+                                (AVD),</strong> which represents a specific Android device. We can use the
+                            Android emulator as a target device to execute and test our Android application
+                            on our PC. The Android emulator provides almost all the functionality of a real
+                            device. We can get the incoming phone calls and text messages. It also gives the
+                            location of the device and simulates different network speeds. Android emulator
+                            simulates rotation and other hardware sensors. It accesses the Google Play
+                            store, and much more</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator.png"
+                            alt="Android Emulator" />
+                        <p>Testing Android applications on emulator are sometimes faster and easier than
+                            doing on a real device. For example, we can transfer data faster to the emulator
+                            than to a real device connected through USB.</p>
+                        <p>The Android emulator comes with predefined configurations for several Android
+                            phones, Wear OS, tablet, Android TV devices.</p>
+                        <h2 class="h2">Requirement and recommendations</h2>
+                        <p>The Android emulator takes additional requirements beyond the basic system
+                            requirement for Android Studio. These requirements are given below:</p>
+                        <ul class="points">
+                            <li>SDK Tools 26.1.1 or higher</li>
+                            <li>64-bit processor</li>
+                            <li>Windows: CPU with UG (unrestricted guest) support</li>
+                            <li>HAXM 6.2.1 or later (recommended HAXM 7.2.0 or later)</li>
+                        </ul>
+                        <h2 class="h2">Install the emulator</h2>
+                        <p>The Android emulator is installed while installing the Android Studio. However
+                            some components of emulator may or may not be installed while installing Android
+                            Studio. To install the emulator component, select the <strong>Android
+                                Emulator</strong> component in the <strong>SDK Tools</strong> tab of the
+                            <strong>SDK Manager.</strong>
+                        </p>
+                        <h2 class="h2">Run an Android app on the Emulator</h2>
+                        <p>We can run an Android app form the Android Studio project, or we can run an app
+                            which is installed on the Android Emulator as we run any app on a device.</p>
+                        <p>To start the Android Emulator and run an application in our project:</p>
+                        <p><strong>1.</strong> In <strong>Android Studio,</strong> we need to create an
+                            Android Virtual Device (AVD) that the emulator can use to install and run your
+                            app. To create a new AVD:-</p>
+                        <p><strong>1.1</strong> Open the AVD Manager by clicking <strong>Tools > AVD
+                                Manager.</strong></p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator2.png"
+                            alt="Android Emulator" />
+                        <p><strong>1.2</strong> Click on Create <strong>Virtual</strong> Device, at the
+                            bottom of the AVD Manager dialog. Then <strong>Select Hardware</strong> page
+                            appears.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator3.png"
+                            alt="Android Emulator" />
+                        <p><strong>1.3</strong> Select a hardware profile and then click
+                            <strong>Next.</strong> If we don?t see the hardware profile we want, then we can
+                            create or import a hardware profile. The <strong>System Image</strong> page
+                            appears.
+                        </p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator4.png"
+                            alt="Android Emulator" />
+                        <p><strong>1.4</strong> Select the system image for the particular API level and
+                            click <strong>Next.</strong> This leads to open a <strong>Verify
+                                Configuration</strong> page.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator5.png"
+                            alt="Android Emulator" />
+                        <p><strong>1.5</strong> Change AVD properties if needed, and then click
+                            <strong>Finish.</strong>
+                        </p>
+                        <p><strong>2.</strong> In the toolbar, choose the AVD, which we want to run our app
+                            from the target device from the drop-down menu.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator6.png"
+                            alt="Android Emulator" />
+                        <p><strong>3.</strong> Click <strong>Run.</strong></p>
+                        <h2 class="h2">Launch the Emulator without first running an app</h2>
+                        <p>To start the emulator:</p>
+                        <ol class="points">
+                            <li>Open the AVD Manager.</li>
+                            <li>Double-click an AVD, or click <strong>Run</strong></li>
+                        </ol>
+                        <p>While the emulator is running, we can run the Android Studio project and select
+                            the emulator as the target device. We can also drag an APKs file to install on
+                            an emulator, and then run them.</p>
+                        <h2 class="h2">Start the emulator from the command line</h2>
+                        <p>The Android SDK includes the Android device emulator. Android emulator lets you
+                            develop and test out the application without using a physical device.</p>
+                        <h3 class="h3">Starting the emulator</h3>
+                        <p>Using the <strong>emulator</strong> command, we will start an emulator. It is an
+                            alternative to run our project or start through the AVD Manager.</p>
+                        <p>Here is the basic command-line syntax for starting a virtual device:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $ emulator -avd avd_name [ {-option [value]} ... ]
+    </textarea></div>
+                        <p>or</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $ emulator @avd_name [ {-option [value]} ... ]
+    </textarea></div>
+                        <p>For example, if we execute the emulator from Android Studio on a Mac, the default
+                            command line will be similar as follows:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $ /Users/user_name/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_23 -netdelay none -netspeed full
+    </textarea></div>
+                        <p>To display the list of AVD names, enter the following command:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $ emulator -list-avds
+    </textarea></div>
+                        <h2 class="h2">Run and stop an emulator, and clear data</h2>
+                        <p>From the Virtual Device page, we can perform the following operation on emulator:
+                        </p>
+                        <img src="https://static.javatpoint.com/androidpages/images/android-emulator7.png"
+                            alt="Android Emulator" />
+                        <ul class="points">
+                            <li>To run an Android emulator that uses an AVD, double-click the AVD, or click
+                                <strong>Launch</strong>
+                            </li>
+                            <li>To stop the running emulator, right-click and select <strong>Stop,</strong>
+                                or click Menu &#9660; and select Stop.</li>
+                            <li>If we want to clear the data from an emulator and return it to the initial
+                                state when it was first defined, then right-click an AVD and select
+                                <strong>Wipe Data.</strong> Or click menu &#9660; and select <strong>Wipe
+                                    Data.</strong>
+                            </li>
+                        </ul>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">How to make android apps</h1>
+                        <p>In this page, you will know how to create the simple hello android application.
+                            We are creating the simple example of android using the Eclipse IDE. For
+                            creating the simple example:</p>
+                        <ol class="points">
+                            <li>Create the new android project</li>
+                            <li>Write the message (optional)</li>
+                            <li>Run the android application</li>
+                        </ol>
+                        <hr />
+                        <h3 class="h2">Hello Android Example</h3>
+                        <p>You need to follow the 3 steps mentioned above for creating the Hello android
+                            application.</p>
+    
+                        <h3 class="h3">1) Create the New Android project</h3>
+                        <p>For creating the new android studio project:</p>
+                        <p>1) Select <em>Start a new Android Studio project</em></p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld1.png"
+                            alt="hello android example" />
+                        <p>2) Provide the following information: Application name, Company domain, Project
+                            location and Package name of application and click next.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld2.png"
+                            alt="hello android example 2" />
+                        <p>3) Select the API level of application and click next.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld3.png"
+                            alt="hello android example 3" />
+                        <p>4) Select the Activity type (Empty Activity).</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld4.png"
+                            alt="hello android example 4" />
+                        <p>5) Provide the Activity Name and click finish.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld5.png"
+                            alt="hello android example 5" />
+    
+                        <p>After finishing the Activity configuration, Android Studio auto generates the
+                            activity class and other required configuration files.</p>
+                        <p>Now an android project has been created. You can explore the android project and
+                            see the simple program, it looks like this:</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld6.png"
+                            alt="hello android example 5" />
+    
+    
+                        <h3 class="h3">2) Write the message</h3>
+    
+                        <p class="filename">File: activity_main.xml</p>
+                        <p>Android studio auto generates code for activity_main.xml file. You may edit this
+                            file according to your requirement.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    <?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="first.javatpoint.com.welcome.MainActivity">
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Android!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+    </android.support.constraint.ConstraintLayout>
+    }
+    </textarea></div>
+    
+                        <p class="filename">File: MainActivity.java</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    package first.javatpoint.com.welcome;
+    
+    import android.support.v7.app.AppCompatActivity;
+    import android.os.Bundle;
+    
+    public class MainActivity extends AppCompatActivity {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+        }
+    }
+    </textarea></div>
+                        <h4 class="n">To understand the first android application, visit the next page
+                            (internal details of hello android example).</h4>
+                        <hr />
+                        <h2 class="h3">3) Run the android application</h2>
+                        <p>To run the android application, click the run icon on the toolbar or simply press
+                            Shift + F10.</p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld7.png"
+                            alt="hello android example 7" />
+                        <p>The android emulator might take 2 or 3 minutes to boot. So please have patience.
+                            After booting the emulator, the android studio installs the application and
+                            launches the activity. You will see something like this:
+                        </p>
+                        <img src="https://static.javatpoint.com/androidpages/images/helloworld8.png"
+                            alt="hello android example 8" />
+    
+                            <div id="bottomnextup">
+                                <a class="next" href="/android2">next &rarr;</a>
+                            </div>
+                        <br /><br />
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

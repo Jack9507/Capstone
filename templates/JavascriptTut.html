@@ -1,0 +1,1190 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Javascript Tutorial | Javascript Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+     
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">Learn JavaScript Tutorial</h1>
+                        <img src="https://static.javatpoint.com/images/javascript/javascript_logo.png" width="200"
+                            height="200" alt="JavaScript Tutorial" class="imageright" />
+                        <p>Our <strong>JavaScript Tutorial</strong> is designed for beginners and
+                            professionals both. JavaScript is used to create client-side dynamic pages. </p>
+                        <p>JavaScript is <em>an object-based scripting language</em> which is lightweight
+                            and cross-platform.</p>
+                        <p>JavaScript is not a compiled language, but it is a translated language. The
+                            JavaScript Translator (embedded in the browser) is responsible for translating
+                            the JavaScript code for the web browser.</p>
+                        <h2 class="h2">What is JavaScript</h2>
+                        <p>JavaScript (js) is a light-weight object-oriented programming language which is
+                            used by several websites for scripting the webpages. It is an interpreted,
+                            full-fledged programming language that enables dynamic interactivity on websites
+                            when applied to an HTML document. It was introduced in the year 1995 for adding
+                            programs to the webpages in the Netscape Navigator browser. Since then, it has
+                            been adopted by all other graphical web browsers. With JavaScript, users can
+                            build modern web applications to interact directly without reloading the page
+                            every time. The traditional website uses js to provide several forms of
+                            interactivity and simplicity.</p>
+                        <p>Although, JavaScript has no connectivity with Java programming language. The name
+                            was suggested and provided in the times when Java was gaining popularity in the
+                            market. In addition to web browsers, databases such as CouchDB and MongoDB uses
+                            JavaScript as their scripting and query language.</p>
+                        <h2 class="h2">Features of JavaScript</h2>
+                        <p>There are following features of JavaScript:</p>
+                        <ol class="points">
+                            <li>All popular web browsers support JavaScript as they provide built-in
+                                execution environments.</li>
+                            <li>JavaScript follows the syntax and structure of the C programming language.
+                                Thus, it is a structured programming language.</li>
+                            <li>JavaScript is a weakly typed language, where certain types are implicitly
+                                cast (depending on the operation).</li>
+                            <li>JavaScript is an object-oriented programming language that uses prototypes
+                                rather than using classes for inheritance.</li>
+                            <li>It is a light-weighted and interpreted language.</li>
+                            <li>It is a case-sensitive language.</li>
+                            <li>JavaScript is supportable in several operating systems including, Windows,
+                                macOS, etc.</li>
+                            <li>It provides good control to the users over the web browsers.</li>
+                        </ol>
+                        <h2 class="h2">History of JavaScript</h2>
+                        <p>In 1993, <strong>Mosaic</strong>, the first popular web browser, came into
+                            existence. In the <strong>year 1994</strong>, <strong>Netscape</strong> was
+                            founded by <strong>Marc Andreessen</strong>. He realized that the web needed to
+                            become more dynamic. Thus, a 'glue language' was believed to be provided to HTML
+                            to make web designing easy for designers and part-time programmers.
+                            Consequently, in 1995, the company recruited <strong>Brendan Eich</strong>
+                            intending to implement and embed Scheme programming language to the browser.
+                            But, before Brendan could start, the company merged with <strong>Sun
+                                Microsystems</strong> for adding Java into its Navigator so that it could
+                            compete with Microsoft over the web technologies and platforms. Now, two
+                            languages were there: Java and the scripting language. Further, Netscape decided
+                            to give a similar name to the scripting language as Java's. It led to
+                            'Javascript'. Finally, in May 1995, Marc Andreessen coined the first code of
+                            Javascript named '<strong>Mocha</strong>'. Later, the marketing team replaced
+                            the name with '<strong>LiveScript</strong>'. But, due to trademark reasons and
+                            certain other reasons, in December 1995, the language was finally renamed to
+                            'JavaScript'. From then, JavaScript came into existence.</p>
+                        <h2 class="h2">Application of JavaScript</h2>
+                        <p>JavaScript is used to create interactive websites. It is mainly used for:</p>
+                        <ul class="points">
+                            <li>Client-side validation,</li>
+                            <li>Dynamic drop-down menus,</li>
+                            <li>Displaying date and time,</li>
+                            <li>Displaying pop-up windows and dialog boxes (like an alert dialog box,
+                                confirm dialog box and prompt dialog box),</li>
+                            <li>Displaying clocks etc.</li>
+                        </ul>
+                        <h3 class="h2">JavaScript Example</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    document.write("Hello JavaScript by JavaScript");
+    &lt;/script&gt;
+    </textarea></div>
+                        <hr />
+    
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning JavaScript in depth, you must have the basic knowledge of HTML.
+                        </p>
+                        <h2 class="h2">Audience</h2>
+                        <p>We have developed this JavaScript tutorial for beginners and professionals both.
+                            There are given a lot of examples with JavaScript editor. So, you can easily
+                            edit your JavaScript code which will help you to learn JavaScript easily. </p>
+                        <h2 class="h2">Problem</h2>
+                        <p>We assure you that you will not find any problem in our JavaScript tutorial. But,
+                            if you find any mistake, you can post it in our comment section.</p>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">JavaScript Variable</h1>
+                        <div id="upr">
+                            <ol>
+                                <li><a href="#">JavaScript variable</a></li>
+                                <li><a href="#local">JavaScript Local variable</a></li>
+                                <li><a href="#gloabl">JavaScript Global variable</a></li>
+                            </ol>
+                        </div>
+    
+                        <p>A <b>JavaScript variable</b> is simply a name of storage location. There are two
+                            types of variables in JavaScript : local variable and global variable.
+                        <p>
+                        <p>There are some rules while declaring a JavaScript variable (also known as
+                            identifiers).</p>
+    
+                        <ol>
+                            <li>Name must start with a letter (a to z or A to Z), underscore( _ ), or
+                                dollar( $ ) sign.</li>
+                            <li>After first letter we can use digits (0 to 9), for example value1.</li>
+                            <li>JavaScript variables are case sensitive, for example x and X are different
+                                variables.</li>
+                        </ol>
+    
+                        <hr />
+    
+                        <h2 class="h4">Correct JavaScript variables</h2>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var x = 10;
+    var _value="sonoo";
+    </textarea></div>
+                        <hr />
+                        <h2 class="h4">Incorrect JavaScript variables</h2>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var  123=30;
+    var *aa=320;
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">Example of JavaScript variable</h2>
+                        <p>Let&rsquo;s see a simple example of JavaScript variable.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var x = 10;
+    var y = 20;
+    var z=x+y;
+    document.write(z);
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jsvariable1"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script type="text/javascript">
+                                var x = 10;
+                                var y = 20;
+                                var z = x + y;
+                                document.write(z);
+                            </script>
+                        </div>
+                        <hr />
+    
+    
+                        <span id="local"></span>
+                        <h2 class="h2">JavaScript local variable</h2>
+                        <p>A JavaScript local variable is declared inside block or function. It is
+                            accessible within the function or block only. For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    function abc(){
+    var x=10;//local variable
+    }
+    &lt;/script&gt;
+    </textarea></div>
+                        <p>Or,</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    If(10<13){
+    var y=20;//JavaScript local variable
+    }
+    &lt;/script&gt;
+    </textarea></div>
+    
+                        <hr />
+                        <span id="global"></span>
+                        <h2 class="h2">JavaScript global variable</h2>
+                        <p>A <b>JavaScript global variable</b> is accessible from any function. A variable
+                            i.e. declared outside the function or declared with window object is known as
+                            global variable. For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var data=200;//gloabal variable
+    function a(){
+    document.writeln(data);
+    }
+    function b(){
+    document.writeln(data);
+    }
+    a();//calling JavaScript function
+    b();
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jsvariable2"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="n">To know more about global variable (e.g. how global variable is
+                            executed by JavaScript execution engine), visit next page.</h4>
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Javascript Data Types</h1>
+                        <p>JavaScript provides different <b>data types</b> to hold different types of
+                            values. There are two types of data types in JavaScript.</p>
+                        <ol>
+                            <li>Primitive data type</li>
+                            <li>Non-primitive (reference) data type</li>
+                        </ol>
+                        <p>JavaScript is a <b>dynamic type language</b>, means you don't need to specify
+                            type of the variable because it is dynamically used by JavaScript engine. You
+                            need to use <b>var</b> here to specify the data type. It can hold any type of
+                            values such as numbers, strings etc. For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var a=40;//holding number
+    var b="Rahul";//holding string
+    </textarea></div>
+    
+                        <h2 class="h2">JavaScript primitive data types</h2>
+                        <p>There are five types of primitive data types in JavaScript. They are as follows:
+                        </p>
+                        <table class="alt">
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>String</td>
+                                <td>represents sequence of characters e.g. "hello"</td>
+                            </tr>
+                            <tr>
+                                <td>Number</td>
+                                <td>represents numeric values e.g. 100</td>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>represents boolean value either false or true</td>
+                            </tr>
+                            <tr>
+                                <td>Undefined</td>
+                                <td>represents undefined value</td>
+                            </tr>
+                            <tr>
+                                <td>Null</td>
+                                <td>represents null i.e. no value at all</td>
+                            </tr>
+                        </table>
+    
+    
+                        <h2 class="h2">JavaScript non-primitive data types</h2>
+                        <p>The non-primitive data types are as follows:</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Object</td>
+                                <td>represents instance through which we can access members</td>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>represents group of similar values</td>
+                            </tr>
+                            <tr>
+                                <td>RegExp</td>
+                                <td>represents regular expression</td>
+                            </tr>
+                        </table>
+                        <p>We will have great discussion on each data type later.</p>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">JavaScript Operators</h1>
+                        <p>JavaScript operators are symbols that are used to perform operations on operands.
+                            For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var sum=10+20;
+    </textarea></div>
+                        <p>Here, + is the arithmetic operator and = is the assignment operator.</p>
+                        <p>There are following types of operators in JavaScript.</p>
+                        <ol>
+                            <li>Arithmetic Operators</li>
+                            <li>Comparison (Relational) Operators</li>
+                            <li>Bitwise Operators</li>
+                            <li>Logical Operators</li>
+                            <li>Assignment Operators</li>
+                            <li>Special Operators</li>
+                        </ol>
+    
+                        <hr />
+                        <h2 class="h2">JavaScript Arithmetic Operators</h2>
+                        <p>Arithmetic operators are used to perform arithmetic operations on the operands.
+                            The following operators are known as JavaScript arithmetic operators.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>+</td>
+                                <td>Addition</td>
+                                <td>10+20 = 30</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Subtraction</td>
+                                <td>20-10 = 10</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Multiplication</td>
+                                <td>10*20 = 200</td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>Division</td>
+                                <td> 20/10 = 2</td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Modulus (Remainder)</td>
+                                <td>20%10 = 0</td>
+                            </tr>
+                            <tr>
+                                <td>++</td>
+                                <td>Increment</td>
+                                <td>var a=10; a++; Now a = 11</td>
+                            </tr>
+                            <tr>
+                                <td>--</td>
+                                <td>Decrement</td>
+                                <td>var a=10; a--; Now a = 9</td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">JavaScript Comparison Operators</h2>
+                        <p>The JavaScript comparison operator compares the two operands. The comparison
+                            operators are as follows:</p>
+    
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>==</td>
+                                <td>Is equal to</td>
+                                <td>10==20 = false</td>
+                            </tr>
+                            <tr>
+                                <td>===</td>
+                                <td>Identical (equal and of same type)</td>
+                                <td>10==20 = false</td>
+                            </tr>
+                            <tr>
+                                <td>!=</td>
+                                <td>Not equal to</td>
+                                <td>10!=20 = true</td>
+                            </tr>
+                            <tr>
+                                <td>!==</td>
+                                <td>Not Identical</td>
+                                <td> 20!==20 = false</td>
+                            </tr>
+                            <tr>
+                                <td>></td>
+                                <td>Greater than</td>
+                                <td>20>10 = true</td>
+                            </tr>
+                            <tr>
+                                <td>>=</td>
+                                <td>Greater than or equal to</td>
+                                <td>20>=10 = true</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    << /td>
+                                <td>Less than</td>
+                                <td>20<10=false< /td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <=< /td>
+                                <td>Less than or equal to</td>
+                                <td>20<=10=false< /td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">JavaScript Bitwise Operators</h2>
+                        <p>The bitwise operators perform bitwise operations on operands. The bitwise
+                            operators are as follows:</p>
+    
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>&</td>
+                                <td>Bitwise AND</td>
+                                <td>(10==20 & 20==33) = false</td>
+                            </tr>
+                            <tr>
+                                <td>|</td>
+                                <td>Bitwise OR</td>
+                                <td>(10==20 | 20==33) = false</td>
+                            </tr>
+                            <tr>
+                                <td>^</td>
+                                <td>Bitwise XOR</td>
+                                <td>(10==20 ^ 20==33) = false</td>
+                            </tr>
+                            <tr>
+                                <td>~</td>
+                                <td>Bitwise NOT</td>
+                                <td> (~10) = -10</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <<< /td>
+                                <td>Bitwise Left Shift</td>
+                                <td>(10<<2)=40< /td>
+                            </tr>
+                            <tr>
+                                <td>>></td>
+                                <td>Bitwise Right Shift</td>
+                                <td>(10>>2) = 2</td>
+                            </tr>
+                            <tr>
+                                <td>>>></td>
+                                <td>Bitwise Right Shift with Zero</td>
+                                <td>(10>>>2) = 2</td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">JavaScript Logical Operators</h2>
+                        <p>The following operators are known as JavaScript logical operators.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>&&</td>
+                                <td>Logical AND</td>
+                                <td>(10==20 && 20==33) = false</td>
+                            </tr>
+                            <tr>
+                                <td>||</td>
+                                <td>Logical OR</td>
+                                <td>(10==20 || 20==33) = false</td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>Logical Not</td>
+                                <td>!(10==20) = true</td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">JavaScript Assignment Operators</h2>
+                        <p>The following operators are known as JavaScript assignment operators.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>=</td>
+                                <td>Assign</td>
+                                <td>10+10 = 20</td>
+                            </tr>
+                            <tr>
+                                <td>+=</td>
+                                <td>Add and assign</td>
+                                <td>var a=10; a+=20; Now a = 30</td>
+                            </tr>
+                            <tr>
+                                <td>-=</td>
+                                <td>Subtract and assign</td>
+                                <td>var a=20; a-=10; Now a = 10</td>
+                            </tr>
+                            <tr>
+                                <td>*=</td>
+                                <td>Multiply and assign</td>
+                                <td>var a=10; a*=20; Now a = 200</td>
+                            </tr>
+                            <tr>
+                                <td>/=</td>
+                                <td>Divide and assign</td>
+                                <td>var a=10; a/=2; Now a = 5</td>
+                            </tr>
+                            <tr>
+                                <td>%=</td>
+                                <td>Modulus and assign</td>
+                                <td>var a=10; a%=2; Now a = 0</td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">JavaScript Special Operators</h2>
+                        <p>The following operators are known as JavaScript special operators.</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>(?:)</td>
+                                <td>Conditional Operator returns value based on the condition. It is like
+                                    if-else.</td>
+                            </tr>
+                            <tr>
+                                <td>,</td>
+                                <td>Comma Operator allows multiple expressions to be evaluated as single
+                                    statement.</td>
+                            </tr>
+                            <tr>
+                                <td>delete</td>
+                                <td>Delete Operator deletes a property from the object.</td>
+                            </tr>
+                            <tr>
+                                <td>in</td>
+                                <td>In Operator checks if object has the given property</td>
+                            </tr>
+                            <tr>
+                                <td>instanceof</td>
+                                <td>checks if the object is an instance of given type</td>
+                            </tr>
+                            <tr>
+                                <td>new</td>
+                                <td>creates an instance (object)</td>
+                            </tr>
+                            <tr>
+                                <td>typeof</td>
+                                <td>checks the type of object.</td>
+                            </tr>
+                            <tr>
+                                <td>void</td>
+                                <td>it discards the expression's return value.</td>
+                            </tr>
+                            <tr>
+                                <td>yield</td>
+                                <td>checks what is returned in a generator by the generator's iterator.</td>
+                            </tr>
+                        </table>
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">JavaScript Objects</h1>
+                        <p>A javaScript object is an entity having state and behavior (properties and
+                            method). For example: car, pen, bike, chair, glass, keyboard, monitor etc.</p>
+                        <p>JavaScript is an object-based language. Everything is an object in JavaScript.
+                        </p>
+                        <p>JavaScript is template based not class based. Here, we don't create class to get
+                            the object. But, we direct create objects.</p>
+                        <hr />
+                        <h2 class="h2">Creating Objects in JavaScript</h2>
+                        <p>There are 3 ways to create objects.</p>
+                        <ol>
+                            <li>By object literal</li>
+                            <li>By creating instance of Object directly (using new keyword)</li>
+                            <li>By using an object constructor (using new keyword)</li>
+                        </ol>
+                        <hr />
+                        <h2 class="h2">1) JavaScript Object by object literal</h2>
+                        <p>The syntax of creating object using object literal is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    object={property1:value1,property2:value2.....propertyN:valueN}
+    </textarea></div>
+                        <p>As you can see, property and value is separated by : (colon).</p>
+                        <p>
+                        <p>Let&rsquo;s see the simple example of creating object in JavaScript.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    emp={id:102,name:"Shyam Kumar",salary:40000}
+    document.write(emp.id+" "+emp.name+" "+emp.salary);
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=object1js"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script>
+                                emp = { id: 102, name: "Shyam Kumar", salary: 40000 }
+                                document.write(emp.id + " " + emp.name + " " + emp.salary);
+                            </script>
+                        </div>
+    
+                        <hr />
+    
+                        <h2 class="h2">2) By creating instance of Object</h2>
+                        <p>The syntax of creating object directly is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var objectname=new Object();
+    </textarea></div>
+                        <p>Here, <b>new keyword</b> is used to create object.</p>
+                        <p>Let&rsquo;s see the example of creating object directly.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var emp=new Object();
+    emp.id=101;
+    emp.name="Ravi Malik";
+    emp.salary=50000;
+    document.write(emp.id+" "+emp.name+" "+emp.salary);
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=object2js"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script>
+                                var emp = new Object();
+                                emp.id = 101;
+                                emp.name = "Ravi";
+                                emp.salary = 50000;
+                                document.write(emp.id + " " + emp.name + " " + emp.salary);
+                            </script>
+                        </div>
+    
+                        <hr />
+                        <h2 class="h2">3) By using an Object constructor</h2>
+                        <p>Here, you need to create function with arguments. Each argument value can be
+                            assigned in the current object by using this keyword.</p>
+                        <p>The <b>this keyword</b> refers to the current object.</p>
+                        <p>The example of creating object by object constructor is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    function emp(id,name,salary){
+    this.id=id;
+    this.name=name;
+    this.salary=salary;
+    }
+    e=new emp(103,"Vimal Jaiswal",30000);
+    
+    document.write(e.id+" "+e.name+" "+e.salary);
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=object3js"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script>
+                                function emp(id, name, salary) {
+                                    this.id = id;
+                                    this.name = name;
+                                    this.salary = salary;
+                                }
+                                e = new emp(103, "Vimal Jaiswal", 30000);
+
+                                document.write(e.id + " " + e.name + " " + e.salary);
+                            </script>
+                        </div>
+    
+                        <hr />
+                        <h2 class="h2">Defining method in JavaScript Object</h2>
+                        <p>We can define method in JavaScript object. But before defining method, we need to
+                            add property in the function with same name as method.</p>
+                        <p>The example of defining method in object is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    function emp(id,name,salary){
+    this.id=id;
+    this.name=name;
+    this.salary=salary;
+    
+    this.changeSalary=changeSalary;
+    function changeSalary(otherSalary){
+    this.salary=otherSalary;
+    }
+    }
+    e=new emp(103,"Sonoo Jaiswal",30000);
+    document.write(e.id+" "+e.name+" "+e.salary);
+    e.changeSalary(45000);
+    document.write("<br>"+e.id+" "+e.name+" "+e.salary);
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=object4js"
+                                target="_blank">Test it Now</a></span>
+    
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script>
+                                function emp(id, name, salary) {
+                                    this.id = id;
+                                    this.name = name;
+                                    this.salary = salary;
+
+                                    this.changeSalary = changeSalary;
+                                    function changeSalary(otherSalary) {
+                                        this.salary = otherSalary;
+                                    }
+                                }
+                                e = new emp(103, "Sonoo Jaiswal", 30000);
+                                document.write(e.id + " " + e.name + " " + e.salary);
+                                e.changeSalary(45000);
+                                document.write("<br>" + e.id + " " + e.name + " " + e.salary);
+                            </script>
+                        </div>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">JavaScript Array</h1>
+                        <p><strong>JavaScript array</strong> is an object that represents a collection of
+                            similar type of elements.</p>
+                        <p>There are 3 ways to construct array in JavaScript</p>
+                        <ol class="points">
+                            <li>By array literal</li>
+                            <li>By creating instance of Array directly (using new keyword)</li>
+                            <li>By using an Array constructor (using new keyword)</li>
+                        </ol>
+                        <h2 class="h2">1) JavaScript array literal</h2>
+                        <p>The syntax of creating array using array literal is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var arrayname=[value1,value2.....valueN];
+    </textarea></div>
+                        <p>As you can see, values are contained inside [ ] and separated by , (comma).</p>
+                        <p>Let's see the simple example of creating and using array in JavaScript.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var emp=["Sonoo","Vimal","Ratan"];
+    for (i=0;i&lt;emp.length;i++){
+    document.write(emp[i] + "&lt;br/&gt;");
+    }
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=array1js"
+                                target="_blank">Test it Now</a></span>
+                        <p>The .length property returns the length of an array.</p>
+                        <p><strong>Output of the above example</strong></p>
+                        <div class="codeblock3">
+                            <pre><script>
+                                var emp = ["Sonoo", "Vimal", "Ratan"];
+                                for (i = 0; i < emp.length; i++) {
+                                    document.write(emp[i] + "<br/>");
+                                }
+                            </script></pre>
+                        </div>
+                        <h2 class="h2">2) JavaScript Array directly (new keyword)</h2>
+                        <p>The syntax of creating array directly is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    var arrayname=new Array();
+    </textarea></div>
+                        <p>Here, <strong>new keyword</strong> is used to create instance of array.</p>
+                        <p>Let's see the example of creating array directly.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var i;
+    var emp = new Array();
+    emp[0] = "Arun";
+    emp[1] = "Varun";
+    emp[2] = "John";
+    
+    for (i=0;i&lt;emp.length;i++){
+    document.write(emp[i] + "&lt;br&gt;");
+    }
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=array2js"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output of the above example</strong></p>
+                        <div class="codeblock3">
+                            <pre><script>
+                                var i;
+                                var emp = new Array();
+                                emp[0] = "Arun";
+                                emp[1] = "Varun";
+                                emp[2] = "John";
+
+                                for (i = 0; i < emp.length; i++) {
+                                    document.write(emp[i] + "<br>");
+                                }
+                            </script></pre>
+                        </div>
+                        <h2 class="h2">3) JavaScript array constructor (new keyword)</h2>
+                        <p>Here, you need to create instance of array by passing arguments in constructor so
+                            that we don't have to provide value explicitly.</p>
+                        <p>The example of creating object by array constructor is given below.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script&gt;
+    var emp=new Array("Jai","Vijay","Smith");
+    for (i=0;i&lt;emp.length;i++){
+    document.write(emp[i] + "&lt;br&gt;");
+    }
+    &lt;/script&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=array3js"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output of the above example</strong></p>
+                        <div class="codeblock3">
+                            <pre><script>
+                                var emp = new Array("Jai", "Vijay", "Smith");
+                                for (i = 0; i < emp.length; i++) {
+                                    document.write(emp[i] + "<br>");
+                                }
+                            </script></pre>
+                        </div>
+                        <hr />
+                        
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">JavaScript Cookies</h1>
+                        <p>A cookie is an amount of information that persists between a server-side and a
+                            client-side. A web browser stores this information at the time of browsing.</p>
+                        <p>A cookie contains the information as a string generally in the form of a
+                            name-value pair separated by semi-colons. It maintains the state of a user and
+                            remembers the user's information among all the web pages.</p>
+                        <h2 class="h2">How Cookies Works?</h2>
+                        <ul class="points">
+                            <li>When a user sends a request to the server, then each of that request is
+                                treated as a new request sent by the different user.</li>
+                            <li>So, to recognize the old user, we need to add the cookie with the response
+                                from the server. </li>
+                            <li>browser at the client-side.</li>
+                            <li>Now, whenever a user sends a request to the server, the cookie is added with
+                                that request automatically. Due to the cookie, the server recognizes the
+                                users.</li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/javascriptpages/images/javascript-cookies.png"
+                            alt="JavaScript Cookies" />
+                        <h2 class="h2">How to create a Cookie in JavaScript?</h2>
+                        <p>In JavaScript, we can create, read, update and delete a cookie by using
+                            <strong>document.cookie</strong> property.
+                        </p>
+                        <p>The following syntax is used to create a cookie:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    document.cookie="name=value";
+    </textarea></div>
+                        <h2 class="h2">JavaScript Cookie Example</h2>
+                        <h3 class="h3">Example 1</h3>
+                        <p>Let's see an example to set and get a cookie.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;input type="button" value="setCookie" onclick="setCookie()"&gt;
+    &lt;input type="button" value="getCookie" onclick="getCookie()"&gt;
+        &lt;script&gt;
+        function setCookie()
+        {
+            document.cookie="username=Duke Martin";
+        }
+        function getCookie()
+        {
+            if(document.cookie.length!=0)
+            {
+            alert(document.cookie);
+            }
+            else
+            {
+            alert("Cookie not available");
+            }
+        }
+        &lt;/script&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <h3 class="h3">Example 2</h3>
+                        <p>Here, we display the cookie's name-value pair separately.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;input type="button" value="setCookie" onclick="setCookie()"&gt;
+    &lt;input type="button" value="getCookie" onclick="getCookie()"&gt;
+        &lt;script&gt;
+        function setCookie()
+        {
+            document.cookie="username=Duke Martin";
+        }
+        function getCookie()
+        {
+            if(document.cookie.length!=0)
+            {
+                var array=document.cookie.split("=");
+            alert("Name="+array[0]+" "+"Value="+array[1]);
+            }
+            else
+            {
+            alert("Cookie not available");
+            }
+        }
+        &lt;/script&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <h3 class="h3">Example 3</h3>
+                        <p>In this example, we provide choices of color and pass the selected color value to
+                            the cookie. Now, cookie stores the last choice of a user in a browser. So, on
+                            reloading the web page, the user's last choice will be shown on the screen.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;select id="color" onchange="display()"&gt;
+                    &lt;option value="Select Color"&gt;Select Color&lt;/option&gt;
+                    &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+                    &lt;option value="green"&gt;Green&lt;/option&gt;
+                    &lt;option value="red"&gt;Red&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;script type="text/javascript"&gt;
+                    function display()
+                    {
+                        var value = document.getElementById("color").value;
+                        if (value != "Select Color")
+                        {
+                            document.bgColor = value;
+                            document.cookie = "color=" + value;
+                        }
+                    }
+                    window.onload = function ()
+                    {
+                        if (document.cookie.length != 0)
+                        {
+                            var array = document.cookie.split("=");
+                            document.getElementById("color").value = array[1];
+                            document.bgColor = array[1];
+                        }
+                    }
+                
+                    
+                &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+    
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">Document Object Model </h1>
+                        <div id="upr">
+                            <ol>
+                                <li><a href="#">Document Object</a></li>
+                                <li><a href="#">Properties of document object</a></li>
+                                <li><a href="#">Methods of document object</a></li>
+                                <li><a href="#">Example of document object</a></li>
+                            </ol>
+                        </div>
+    
+                        <p>The <b>document object</b> represents the whole html document.</p>
+                        <p>When html document is loaded in the browser, it becomes a document object. It is
+                            the <strong>root element</strong> that represents the html document. It has
+                            properties and methods. By the help of document object, we can add dynamic
+                            content to our web page.</p>
+    
+                        <p>As mentioned earlier, it is the object of window. So </p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    window.document
+    </textarea></div>
+                        <p>Is same as</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    document
+    </textarea></div>
+    
+                        <p>According to W3C - <i>&quot;The W3C Document Object Model (DOM) is a platform and
+                                language-neutral interface that allows programs and scripts to dynamically
+                                access and update the content, structure, and style of a document.&quot;</i>
+                        </p>
+    
+                        <hr />
+                        <h2 class="h2">Properties of document object</h2>
+                        <p>Let's see the properties of document object that can be accessed and modified by
+                            the document object.
+                            <img src="https://static.javatpoint.com/images/javascript/dom.jpg"
+                                alt="javascript document object" />
+    
+                            <hr />
+    
+                        <h2 class="h2">Methods of document object</h2>
+                        <p>We can access and change the contents of document by its methods.</p>
+                        <p>The important methods of document object are as follows:</p>
+    
+                        <table class="alt">
+                            <tr>
+                                <th>Method</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>write("string")</td>
+                                <td>writes the given string on the doucment.</td>
+                            </tr>
+                            <tr>
+                                <td>writeln("string")</td>
+                                <td>writes the given string on the doucment with newline character at the
+                                    end.</td>
+                            </tr>
+                            <tr>
+                                <td>getElementById()</td>
+                                <td>returns the element having the given id value.</td>
+                            </tr>
+                            <tr>
+                                <td>getElementsByName()</td>
+                                <td>returns all the elements having the given name value.</td>
+                            </tr>
+                            <tr>
+                                <td>getElementsByTagName()</td>
+                                <td>returns all the elements having the given tag name.</td>
+                            </tr>
+                            <tr>
+                                <td>getElementsByClassName()</td>
+                                <td>returns all the elements having the given class name.</td>
+                            </tr>
+                        </table>
+                        <hr />
+    
+                        <h3 class="h2">Accessing field value by document object</h3>
+                        <p>In this example, we are going to get the value of input text by user. Here, we
+                            are using <b>document.form1.name.value</b> to get the value of name field.</p>
+                        <p>Here, <b>document</b> is the root element that represents the html document.</p>
+                        <p><b>form1</b> is the name of the form.</p>
+                        <p><b>name</b> is the attribute name of the input text.</p>
+                        <p><b>value</b> is the property, that returns the value of the input text.</p>
+    
+                        <p>Let's see the simple example of document object that prints name with welcome
+                            message.</p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script type="text/javascript"&gt;
+    function printvalue(){
+    var name=document.form1.name.value;
+    alert("Welcome: "+name);
+    }
+    &lt;/script&gt;
+    
+    &lt;form name="form1"&gt;
+    Enter Name:&lt;input type="text" name="name"/&gt;
+    &lt;input type="button" onclick="printvalue()" value="print name"/&gt;
+    &lt;/form&gt;
+    
+    </textarea></div>
+                        <hr />
+                        <h4 class="h4">Output of the above example</h4>
+                        <div class="codeblock3">
+                            <script type="text/javascript">
+                                function printvalue() {
+                                    var name = document.form1.name.value;
+                                    alert("Welcome: " + name);
+                                }
+                            </script>
+    
+                            <form name="form1">
+                                Enter Name:<input type="text" name="name" />
+                                <input type="button" onclick="printvalue()" value="print name" />
+                            </form>
+                        </div>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

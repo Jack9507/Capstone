@@ -1,0 +1,869 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Bootstrap Tutorial | Bootstrap Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">Bootstrap Tutorial</h1>
+                        <img src="https://static.javatpoint.com/bootstrappages/images/bootstrap-tutorial.png"
+                            alt="Bootstrap tutorial" style="float:right;padding:15px" />
+                        <p>Bootstrap tutorial provides basic and advanced concepts of Bootstrap. Our
+                            Bootstrap tutorial is designed for beginners and professionals.</p>
+                        <p>Bootstrap is the popular HTML, CSS and JavaScript framework for developing a
+                            responsive and mobile friendly website.</p>
+    
+                        <p>Our Bootstrap tutorial includes all topics of Bootstrap such as jumbotron, table,
+                            button, grid, form, image, alert, wells, container, carousel, panels, glyphicon,
+                            badges, labels, progress bar, pagination, pager, list group, dropdown,
+                            collapse,tabs, pills, navbar, inputs, modals, tooltip, popover and scrollspy.
+                        </p>
+    
+        </div>
+        <h2 class="h2">Prerequisite</h2>
+        <p>Before learning Bootstrap, you must have the basic knowledge of HTML and CSS.</p>
+    
+        <h2 class="h2">Audience</h2>
+        <p>Our Bootstrap tutorial is designed to help beginners and professionals.</p>
+    
+        <h2 class="h2">Problem</h2>
+        <p>We assure that you will not find any problem in this Bootstrap tutorial. But if
+            there is any mistake, please post the problem in contact form.</p>
+    
+        <br /><br />
+    
+    
+        </td>
+        </tr>
+        </table>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">What is Bootstrap</h1>
+                        <ul class="points">
+                            <li>Bootstrap is the most popular HTML, CSS and JavaScript framework for
+                                developing a responsive and mobile friendly website.</li>
+                            <li>It is absolutely free to download and use.</li>
+                            <li>It is a front-end framework used for easier and faster web development.</li>
+                            <li>It includes HTML and CSS based design templates for typography, forms,
+                                buttons, tables, navigation, modals, image carousels and many others.</li>
+                            <li>It can also use JavaScript plug-ins.</li>
+                            <li>It facilitates you to create responsive designs. </li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/bootstrappages/images/bootstrapintroduction.jpg"
+                            alt="What is Bootstrap" />
+                        <hr />
+    
+                        <h3 class="h2">History of Bootstrap</h3>
+                        <p>Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter.It was
+                            released as an open source product in August 2011 on GitHub.</p>
+                        <p>In June 2014 Bootstrap was the No.1 project on GitHub.</p>
+    
+                        <hr />
+    
+                        <h3 class="h2">Why use Bootstrap</h3>
+                        <p>Following are the main advantage of Bootstrap:</p>
+                        <ul class="points">
+                            <li>It is very easy to use. Anybody having basic knowledge of HTML and CSS can
+                                use Bootstrap.</li>
+                            <li>It facilitates users to develop a responsive website.</li>
+                            <li>It is compatible on most of browsers like Chrome, Firefox, Internet
+                                Explorer, Safari and Opera etc.</li>
+    
+                        </ul>
+                        <hr />
+    
+                        <h3 class="h2">What is a responsive website</h3>
+                        <p>A website is called responsive website which can automatically adjust itself to
+                            look good on all devices, from smart phones to desktops etc.</p>
+                        <hr />
+    
+                        <h3 class="h2">What Bootstrap package contains</h3>
+                        <p><strong>Scaffolding:</strong> Bootstrap provides a basic structure with Grid
+                            System, link styles, and background.</p>
+                        <p><strong>CSS:</strong> Bootstrap comes with the feature of global CSS settings,
+                            fundamental HTML elements style and an advanced grid system. </p>
+                        <p><strong>Components:</strong> Bootstrap contains a lot of reusable components
+                            built to provide iconography, dropdowns, navigation, alerts, pop-overs, and much
+                            more.</p>
+                        <p><strong>JavaScript Plugins:</strong> Bootstrap also contains a lot of custom
+                            jQuery plugins. You can easily include them all, or one by one.</p>
+                        <p><strong>Customize:</strong> Bootstrap components are customizable and you can
+                            customize Bootstrap's components, LESS variables, and jQuery plugins to get your
+                            own style.</p>
+                        <hr />
+                        <h2 class="h2">What is Bootstrap 4?</h2>
+                        <p>Bootstrap is the newest and latest version of Bootstrap. It is the most popular
+                            HTML, CSS, JavaScript framework for developing responsive, mobile first
+                            websites. </p>
+                        <hr />
+                        <h2 class="h2">Bootstrap 3 vs. Bootstrap 4</h2>
+                        <p>Bootstrap 4 has some new components, faster stylesheet, more buttons, effects and
+                            more responsiveness. </p>
+                        <p>Bootstrap 4 supports some the latest, stable releases of all major browsers and
+                            platforms. </p>
+                        <h4 class="n">Note: Internet Explorer 9 and down is not supported by Bootstrap 4.
+                            Although Internet Explorer 8-9 supported Bootstrap 3. So, if you have Internet
+                            Explorer 8-9, you should use Bootstrap 3. Bootstrap 3 is the most stable version
+                            of Bootstrap, and it is still supported by the team for critical bugfixes and
+                            documentation changes. </h4>
+                        <hr />
+                        <h2 class="h2">Is Bootstrap Best?</h2>
+                        <p>Bootstrap is more than efficient to create a responsive and mobile first website
+                            but it is not the best in the industry. There is an alternative of Bootstrap
+                            named W3.CSS which is smaller, faster, and easier to use. </p>
+                        <br>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bootstrap Grid</h1>
+    
+                        <p>Wikipedia says:</p>
+                        <p>"In graphic design, a grid is a structure (usually two-dimensional) made up of a
+                            series of intersecting straight (vertical, horizontal) lines used to structure
+                            the content. It is widely used to design layout and content structure in print
+                            design. In web design, it is a very effective method to create a consistent
+                            layout rapidly and effectively using HTML and CSS."</p>
+                        <hr />
+    
+                        <h3 class="h2">Bootstrap Grid System</h3>
+                        <p>The Bootstrap Grid System allows up to 12 columns across the page. You can use
+                            all 12 columns individually or you can groups the columns together to create
+                            wider columns.</p>
+                        <img src="https://static.javatpoint.com/bootstrappages/images/bootstrapgrid.jpg"
+                            alt="bootstrap grid" />
+    
+                        <p>Bootstrap Grid System is responsive and the columns are re-arranged automatically
+                            according to the screen size.</p>
+                        <hr />
+    
+                        <h3 class="h2">Grid Classes:</h3>
+                        <p>There are four classes in Bootstrap Grid System:</p>
+                        <ul class="points">
+                            <li>xs (for phones)</li>
+                            <li>sm (for tablets)</li>
+                            <li>md (for desktops)</li>
+                            <li>lg (for larger desktops)</li>
+                        </ul>
+                        <p>You can combine the above classes to create more dynamic and flexible layouts.
+                        </p>
+                        <hr />
+    
+                        <h3 class="h2">Basic Structure of a Bootstrap Grid:</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <div class="row">
+      <div class="col-*-*"></div>
+    </div>
+    <div class="row">
+      <div class="col-*-*"></div>
+      <div class="col-*-*"></div>
+      <div class="col-*-*"></div>
+    </div>
+    <div class="row">
+      ...
+    </div>
+    </textarea></div>
+                        <hr />
+    
+                        <h3 class="h3">Follow the below instructions while creating a Bootstrap Grid:</h3>
+                        <ul class="points">
+                            <li>Create a row (&lt;div class="row"&gt;).</li>
+                            <li>Add the number of columns, you want in the grid (tags with appropriate
+                                .col-*-* classes). </li>
+                            <li>Note that numbers in .col-*-* should always add up to 12 for each row.</li>
+                        </ul>
+    
+                        <hr />
+    
+                        <h3 class="h2">Bootstrap Grid Example</h3>
+                        <p><strong>For equal columns:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrapgrid1"
+                                target="_blank">Test it Now</a></span>
+    
+                        <hr />
+    
+                        <p><strong>For unequal columns:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrapgrid2"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Bootstrap 4 Grid Classes </h2>
+                        <p>There are 5 classes in Bootstrap 4 grid system.</p>
+                        <ul class="points">
+                            <li><strong>.col-</strong> (extra small devices - screen width less than 576px)
+                            </li>
+                            <li><strong>.col-sm-</strong> (small devices - screen width equal to or greater
+                                than 576px)</li>
+                            <li><strong>.col-md-</strong> (medium devices - screen width equal to or greater
+                                than 768px)</li>
+                            <li><strong>.col-lg-</strong> (large devices - screen width equal to or greater
+                                than 992px)</li>
+                            <li><strong>.col-xl-</strong> (xlarge devices - screen width equal to or greater
+                                than 1200px)</li>
+                        </ul>
+                        <p>You can also combine the above classes to create more dynamic and flexible
+                            layouts. </p>
+                        <h2 class="h2">Structure of Bootstrap 4 Grid </h2>
+                        <p>See the basic structure of Bootstrap 4 grid: </p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!-- Control the column width, and how they should appear on different devices --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-*-*"&gt;&lt;/div&gt;
+      &lt;div class="col-*-*"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-*-*"&gt;&lt;/div&gt;
+      &lt;div class="col-*-*"&gt;&lt;/div&gt;
+      &lt;div class="col-*-*"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Or let Bootstrap automatically handle the layout --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col"&gt;&lt;/div&gt;
+      &lt;div class="col"&gt;&lt;/div&gt;
+      &lt;div class="col"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    </textarea></div>
+                        <p>First create a row (&lt;div class="row"&gt;) then add the desired number of
+                            columns (tags with appropriate .col-*-* classes). </p>
+                        <p>Here: In .col-*-* , the first star (*) represents the responsiveness: sm, md, lg
+                            or xl, while the second star represents a number, which should add up to 12 for
+                            each row.</p>
+                        <hr />
+                        <h2 class="h2">Equal Columns Example</h2>
+                        <p>Let's take an example to see how to create an equal width column on all devices
+                            and screen widths: </p>
+                        <h3 class="h3">Example</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container-fluid"&gt;
+      &lt;h2&gt;Three equal-width columns&lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col" style="background-color:lavender;"&gt;.col&lt;/div&gt;
+        &lt;div class="col" style="background-color:orange;"&gt;.col&lt;/div&gt;
+        &lt;div class="col" style="background-color:lavender;"&gt;.col&lt;/div&gt;
+    
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4grid"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Unequal Column Example</h2>
+                        <p>Let's take an example to see how to create an unequal width column which supports
+                            tablets and scaling to large extra desktops: </p>
+                        <h3 class="h3">Example:</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container-fluid"&gt;
+      &lt;h1&gt;Unequal Columns&lt;/h1&gt;
+      &lt;p&gt;Resize the browser window to see the effect.&lt;/p&gt;
+      &lt;p&gt;The columns will automatically stack on top of each other when the screen is less than 576px wide.&lt;/p&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-4" style="background-color:lavender;"&gt;.col-sm-4&lt;/div&gt;
+        &lt;div class="col-sm-8" style="background-color:lavenderblush;"&gt;.col-sm-8&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+        
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4grid1"
+                                target="_blank">Test it Now</a></span>
+                        <br>
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bootstrap Alerts</h1>
+                        <p>Bootstrap Alerts are used to provide an easy way to create predefined alert
+                            messages. Alert adds a style to your messages to make it more appealing to the
+                            users.</p>
+                        <p>There are four classes that are used within &lt;div&gt; element for alerts.</p>
+                        <ul class="points">
+                            <li>.alert-success</li>
+                            <li>.alert-info</li>
+                            <li>.alert-warning</li>
+                            <li>.alert-danger</li>
+                        </ul>
+    
+                        <h2 class="h2">Bootstrap Alert Example</h2>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    
+    <div class="container">
+      <h2>Alerts</h2>
+      <div class="alert alert-success">
+        <strong>Success!</strong> This alert box indicates a successful or positive action.
+      </div>
+      <div class="alert alert-info">
+        <strong>Info!</strong> This alert box indicates a neutral informative change or action.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> This alert box indicates a warning that might need attention.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Danger!</strong> This alert box indicates a dangerous or potentially negative action.
+    </div>
+    </div>
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrapalert1"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Bootstrap4 Alert</h2>
+                        <p>Bootstrap 4 adds 4 new alerts in Bootstrap Alert defined in Bootstrap 3 tutorial.
+                        </p>
+                        <p>These are:</p>
+                        <ul class="points">
+                            <li><strong>Primary:</strong> This alert box indicates an important action.</li>
+                            <li><strong>Secondary:</strong> This alert box indicates a less important
+                                action.</li>
+                            <li><strong>Dark:</strong> Dark grey alert box. </li>
+                            <li><strong>Light:</strong> Light grey alert box.</li>
+                        </ul>
+                        <p>Alerts are created with the .alert class, followed by one of the contextual
+                            classes.</p>
+                        <p><strong>List of all contextual classes:</strong></p>
+                        <ul class="points">
+                            <li>.alert-success</li>
+                            <li>.alert-info</li>
+                            <li>.alert-warning</li>
+                            <li>.alert-danger</li>
+                            <li>.alert-primary</li>
+                            <li>.alert-secondary</li>
+                            <li>.alert-light</li>
+                            <li>.alert-dark</li>
+                        </ul>
+                        <h3 class="h3">Example</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Alerts&lt;/h2&gt;
+      &lt;div class="alert alert-success"&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt; Used to indicate successful or positive action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-info"&gt;
+        &lt;strong&gt;Info!&lt;/strong&gt; Used to indicate a neutral informative change or action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-warning"&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; Used to indicate a warning that might need attention.
+      &lt;/div&gt;
+      &lt;div class="alert alert-danger"&gt;
+        &lt;strong&gt;Danger!&lt;/strong&gt; Used to indicate a dangerous or potentially negative action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-primary"&gt;
+        &lt;strong&gt;Primary!&lt;/strong&gt; Used to indicate an important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-secondary"&gt;
+        &lt;strong&gt;Secondary!&lt;/strong&gt; Used to indicate a slightly less important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-dark"&gt;
+        &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+      &lt;/div&gt;
+      &lt;div class="alert alert-light"&gt;
+        &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4alert1"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Alert Links</h2>
+                        <p>You have to add the alert-link class to any links inside the alert box to create
+                            "matching colored links":</p>
+                        <h3 class="h3">Example:</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Bootstrap Alert Links&lt;/h2&gt;
+      &lt;div class="alert alert-success"&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-info"&gt;
+        &lt;strong&gt;Info!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-warning"&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-danger"&gt;
+        &lt;strong&gt;Danger!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-primary"&gt;
+        &lt;strong&gt;Primary!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-secondary"&gt;
+        &lt;strong&gt;Secondary!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-dark"&gt;
+        &lt;strong&gt;Dark!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+      &lt;div class="alert alert-light"&gt;
+        &lt;strong&gt;Light!&lt;/strong&gt; You should &lt;a href="#" class="alert-link"&gt;read this message&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4alert2"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Closing Alerts</h2>
+                        <p>If you want to close the alert message, you have to add an .alert-dismissable
+                            class to the alert container. Then add class="close" and data-dismiss="alert" to
+                            a link or a button element (when you click on the close sign, the alert box will
+                            be closed.)</p>
+                        <h3 class="h3">Example:</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Alerts&lt;/h2&gt;
+      &lt;div class="alert alert-success alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt; This alert box could indicate a successful or positive action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-info alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Info!&lt;/strong&gt; This alert box could indicate a neutral informative change or action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-warning alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; This alert box could indicate a warning that might need attention.
+      &lt;/div&gt;
+      &lt;div class="alert alert-danger alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Danger!&lt;/strong&gt; This alert box could indicate a dangerous or potentially negative action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-primary alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Primary!&lt;/strong&gt; Indicates an important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-secondary alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Secondary!&lt;/strong&gt; Indicates a slightly less important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-dark alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+      &lt;/div&gt;
+      &lt;div class="alert alert-light alert-dismissable"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4alert3"
+                                target="_blank">Test it Now</a></span>
+                        <hr />
+                        <h2 class="h2">Animated Alerts</h2>
+                        <p>You can use .fade and .show classes to add a fading effect when closing the alert
+                            message. </p. <h3 class="h3">Example:</h3>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;title&gt;Bootstrap Example&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Animated Alerts Example&lt;/h2&gt;
+      &lt;div class="alert alert-success alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt; This alert box could indicate a successful or positive action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-info alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Info!&lt;/strong&gt; This alert box could indicate a neutral informative change or action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-warning alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; This alert box could indicate a warning that might need attention.
+      &lt;/div&gt;
+      &lt;div class="alert alert-danger alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Danger!&lt;/strong&gt; This alert box could indicate a dangerous or potentially negative action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-primary alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Primary!&lt;/strong&gt; Indicates an important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-secondary alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Secondary!&lt;/strong&gt; Indicates a slightly less important action.
+      &lt;/div&gt;
+      &lt;div class="alert alert-dark alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Dark!&lt;/strong&gt; Dark grey alert.
+      &lt;/div&gt;
+      &lt;div class="alert alert-light alert-dismissable fade show"&gt;
+        &lt;button type="button" class="close" data-dismiss="alert"&gt;×&lt;/button&gt;
+        &lt;strong&gt;Light!&lt;/strong&gt; Light grey alert.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=bootstrap4alert4"
+                                target="_blank">Test it Now</a></span>
+                        <br>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bootstrap carousel</h1>
+                        <p>The Bootstrap carousel is a flexible, responsive way that is used to add a slider
+                            to your webpage. It is very responsive and flexible enough to allow, images,
+                            iframes, videos, or any other type of content that you want to add.</p>
+                        <p><strong>The Carousel Plugin:</strong></p>
+                        <p>The carousel plugin is a component for cycling through element, like a carousel.
+                            If you want to add plugin functionality individually, then you have to use
+                            carousel.js file or all at once (using "bootstrap.js" or "bootstrap.min.js").
+                        </p>
+                    </td>
+    
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">Borders</h1>
+                        <p>Border utility is used to quickly change the border-style and border-radius of an
+                            element. It is mainly used for images, buttons, or any other element.</p>
+                        <p>You can use the border classes to an element to remove all borders or some
+                            borders.</p>
+                        <h3 class="h3">Syntax:</h3>
+                        <p><strong>For no border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;span class="border-0"&gt;&lt;/span&gt;
+    </textarea></div>
+                        <p><strong>To remove top-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;span class="border-top-0"&gt;&lt;/span&gt;
+    </textarea></div>
+                        <p><strong>To remove right-border: </strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;span class="border-right-0"&gt;&lt;/span&gt;
+    </textarea></div>
+                        <p><strong>To remove bottom-border: </strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;span class="border-bottom-0"&gt;&lt;/span&gt;
+    </textarea></div>
+                        <p><strong>To remove left-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;span class="border-left-0"&gt;&lt;/span&gt;
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">Border Radius</h2>
+                        <p>You can make the radius of the border in different shapes. Use the following
+                            classes to an element to easily round its corner. </p>
+                        <h3 class="h3">Syntax:</h3>
+                        <p><strong>To Round complete border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded"&gt; 
+    </textarea></div>
+                        <p><strong>To round top-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-top"&gt;
+    </textarea></div>
+                        <p><strong>To round right-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-right"&gt;
+    </textarea></div>
+                        <p><strong>To round bottom-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-bottom"&gt;
+    </textarea></div>
+                        <p><strong>To round left-border:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-left"&gt;
+    </textarea></div>
+                        <p><strong>To round in circle:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-circle"&gt;
+    </textarea></div>
+                        <p><strong>No round:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="html">
+    &lt;img src="..." alt="..." class="rounded-0"&gt;
+    </textarea></div>
+                        <br>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">Bootstrap CDN</h1>
+                        <p>CDN stands for <strong>Content Delivery Network</strong> or <strong>Content
+                                Distribution Network</strong>. It helps us to improve the rendering time and
+                            website performance.</p>
+                        <p><a href="https://www.javatpoint.com/bootstrap-tutorial">Bootstrap</a> CDN is a
+                            <strong>free content delivery network</strong> that helps us to quickly load
+                            Bootstrap <a href="https://www.javatpoint.com/css-tutorial">CSS</a>, <a
+                                href="https://www.javatpoint.com/javascript-tutorial">Javascript</a>, and <a
+                                href="https://www.javatpoint.com/jquery-tutorial">jQuery</a> libraries on
+                            our projects to make projects responsive, mobile friendly, and attractive.
+                        </p>
+                        <h3 class="h3">Bootstrap CDN Link and scripts</h3>
+                        <p><strong>CSS link</strong></p>
+                        <p>Copy-paste the below CSS link to the <a
+                                href="https://www.javatpoint.com/html-head">&lt;head&gt;</a> section of your
+                            code.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/&gt;  
+    </textarea></div>
+                        <p><strong>JavaScript</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script src =  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;  
+    </textarea></div>
+                        <p><strong>Jquery library</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"&gt;&lt;/script&gt;  
+    </textarea></div>
+                        <h4 class="n">Note: Without an internet connection, we can't use the Bootstrap CDN.
+                        </h4>
+                        <h3 class="h3">How to use Bootstrap CDN</h3>
+                        <p>The below example shows that how we can use Bootstrap CDN on our code.</p>
+                        <p><strong>Code:</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;  
+    &lt;html lang = "en"&gt;  
+    &lt;head&gt;  
+      &lt;title&gt;This is a Bootstrap CDN example&lt;/title&gt;  
+        
+      &lt;meta name = "viewport" content = "width = device-width, initial-scale=1"&gt;  
+      &lt;link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;div class = "container"&gt;  
+      &lt;h1 align = "center"&gt; Welcome to JavaTpoint&lt;/h1&gt;  
+      &lt;p&gt;Write your text here..&lt;/p&gt;   
+    &lt;/div&gt;  
+      
+      &lt;script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"&gt;&lt;/script&gt;  
+      &lt;script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=BootstrapCDN"
+                                target="_blank">Test it Now</a></span>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bootstrap3 Footer</h1>
+                        <p>In this article, we will create a Footer with the help of Bootstrap3 Footer. At
+                            the beginning of this article, we will learn some basics of Bootstrap and
+                            Bootstrap 3. After that, we will understand this concept with the help of
+                            various examples of Bootstrap3 Footer.</p>
+                        <h3 class="h3">What do you mean by Bootstrap3?</h3>
+                        <p>Bootstrap3 is used for adding design in <a
+                                href="https://www.javatpoint.com/html-tutorial">HTML</a> documents similar
+                            to cascading style sheets. In Bootstrap 3, 3 stands for version of <a
+                                href="https://www.javatpoint.com/bootstrap-tutorial">Bootstrap</a>. It is
+                            free to download and use.</p>
+                        <p><strong>The below link is used to add Bootstrap 3 to a template.</strong></p>
+                        <p>&lt;link rel="stylesheet"
+                            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+                            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                            crossorigin="anonymous"&gt;</p>
+                        <h3 class="h3">What do you mean by Bootstrap3 Footer?</h3>
+                        <p>Bootstrap3 footer is an additional navigation method for websites. It can hold
+                            links, buttons, company info, copyrights, forms and many other elements. You can
+                            set the color of the footer by adding one of the classes from our color palette.
+                        </p>
+                        <p><strong>Let's take various examples of Bootstrap3 Footer.</strong></p>
+                        <h3 class="h3">Example 1:</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    
+                        <p><strong>Explanation:</strong></p>
+                        <p>In the above example, we have created a Bootstrap 3 Footer.</p>
+                        <p><strong>Output:</strong></p>
+                        <p>Following is the output of this example:</p>
+                        <img src="https://static.javatpoint.com/bootstrappages/images/bootstrap3-footer.png"
+                            alt="Bootstrap3 Footer" />
+                     
+                        <p><strong>Explanation:</strong></p>
+                        <p>In the above example, we have created a Bootstrap 3 Footer.</p>
+                        <p><strong>Output:</strong></p>
+                        <p>Following is the output of this example:</p>
+                        <img src="https://static.javatpoint.com/bootstrappages/images/bootstrap3-footer2.png"
+                            alt="Bootstrap3 Footer" />
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

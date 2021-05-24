@@ -1,0 +1,678 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>C++ Tutorial | C++ Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+   
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">C++ Functions</h1>
+                        <p>The function in C++ language is also known as procedure or subroutine in other
+                            programming languages.</p>
+                        <p>To perform any task, we can create function. A function can be called many times.
+                            It provides modularity and code reusability.</p>
+                        <hr />
+                        <h2 class="h2">Advantage of functions in C</h2>
+                        <p>There are many advantages of functions.</p>
+                        <p><strong>1) Code Reusability</strong></p>
+                        <p>By creating functions in C++, you can call it many times. So we don't need to
+                            write the same code again and again.</p>
+                        <p><strong>2) Code optimization</strong></p>
+                        <p>It makes the code optimized, we don't need to write much code.</p>
+                        <p>Suppose, you have to check 3 numbers (531, 883 and 781) whether it is prime
+                            number or not. Without using function, you need to write the prime number logic
+                            3 times. So, there is repetition of code.</p>
+                        <p>But if you use functions, you need to write the logic only once and you can reuse
+                            it several times.</p>
+                        <hr />
+                        <h2 class="h2">Types of Functions</h2>
+                        <p>There are two types of functions in C programming:</p>
+                        <p><strong>1. Library Functions:</strong> are the functions which are declared in
+                            the C++ header files such as ceil(x), cos(x), exp(x), etc.</p>
+                        <p><strong>2. User-defined functions:</strong> are the functions which are created
+                            by the C++ programmer, so that he/she can use it many times. It reduces
+                            complexity of a big program and optimizes the code.</p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-functions1.png" alt="CPP Functions 1" />
+    
+    
+                        <h2 class="h2">Declaration of a function</h2>
+                        <p>The syntax of creating function in C++ language is given below:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    return_type function_name(data_type parameter...)
+    {  
+    //code to be executed  
+    }
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">C++ Function Example</h2>
+                        <p>Let's see the simple example of C++ function.</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    void func() {  
+       static int i=0; //static variable  
+       int j=0; //local variable  
+       i++;  
+       j++;  
+       cout&lt;&lt;"i=" &lt;&lt; i&lt;&lt;" and j=" &lt;&lt;j&lt;&lt;endl;  
+    }  
+    int main()
+    {
+     func();  
+     func();  
+     func();  
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    i= 1 and j= 1
+    i= 2 and j= 1
+    i= 3 and j= 1
+    </pre>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Call by value and call by reference in C++</h1>
+                        <p>There are two ways to pass value or data to function in C language: call by value
+                            and call by reference. Original value is not modified in call by value but it is
+                            modified in call by reference.</p>
+                        <img src="https://static.javatpoint.com/cpp/images/call-by-value-and-call-by-reference-in-cpp1.png"
+                            alt="CPP Call by value and call by reference in cpp 1" />
+                        <p>Let's understand call by value and call by reference in C++ language one by one.
+                        </p>
+                        <hr />
+                        <h2 class="h2">Call by value in C++</h2>
+                        <p>In call by value, <strong>original value is not modified.</strong></p>
+                        <p>In call by value, value being passed to the function is locally stored by the
+                            function parameter in stack memory location. If you change the value of function
+                            parameter, it is changed for the current function only. It will not change the
+                            value of variable inside the caller method such as main().</p>
+                        <p>Let's try to understand the concept of call by value in C++ language by the
+                            example given below:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    void change(int data);
+    int main()
+    {
+    int data = 3;
+    change(data);
+    cout &lt;&lt; "Value of the data is: " &lt;&lt; data&lt;&lt; endl;
+    return 0;
+    }
+    void change(int data)
+    {
+    data = 5;
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Value of the data is: 3
+    </pre>
+                        </div>
+    
+    
+    
+                        <h2 class="h2">Call by reference in C++</h2>
+                        <p>In call by reference, original value is modified because we pass reference
+                            (address).</p>
+                        <p>Here, address of the value is passed in the function, so actual and formal
+                            arguments share the same address space. Hence, value changed inside the
+                            function, is reflected inside as well as outside the function.</p>
+                        <p><strong>Note:</strong> To understand the call by reference, you must have the
+                            basic knowledge of pointers.</p>
+                        <p>Let's try to understand the concept of call by reference in C++ language by the
+                            example given below:</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    #include&lt;iostream&gt;
+    using namespace std;  
+    void swap(int *x, int *y)
+    {
+     int swap;
+     swap=*x;
+     *x=*y;
+     *y=swap;
+    }
+    int main() 
+    {  
+     int x=500, y=100;  
+     swap(&x, &y);  // passing value to function
+     cout&lt;&lt;"Value of x is: "&lt;&lt;x&lt;&lt;endl;
+     cout&lt;&lt;"Value of y is: "&lt;&lt;y&lt;&lt;endl;
+     return 0;
+    }  
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Value of x is: 100
+    Value of y is: 500   
+    </pre>
+                        </div>
+                        <hr />
+                        <h2 class="h2">Difference between call by value and call by reference in C++</h2>
+                        <table class="alt">
+                            <tr>
+                                <th>No.</th>
+                                <th>Call by value</th>
+                                <th>Call by reference</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>A copy of value is passed to the function</td>
+                                <td>An address of value is passed to the function</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Changes made inside the function is not reflected on other functions
+                                </td>
+                                <td>Changes made inside the function is reflected outside the function also
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Actual and formal arguments will be created in different memory location
+                                </td>
+                                <td>Actual and formal arguments will be created in same memory location</td>
+                            </tr>
+                        </table>
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">C++ Recursion</h1>
+                        <p>When function is called within the same function, it is known as recursion in
+                            C++. The function which calls the same function, is known as recursive function.
+                        </p>
+                        <p>A function that calls itself, and doesn't perform any task after function call,
+                            is known as tail recursion. In tail recursion, we generally call the same
+                            function with return statement.</p>
+                        <p>Let's see a simple example of recursion.</p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    recursionfunction(){  
+    recursionfunction(); //calling self function  
+    }  
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">C++ Recursion Example</h2>
+                        <p>Let's see an example to print factorial number using recursion in C++ language.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="cpp">
+    #include&lt;iostream&gt;
+    using namespace std;  
+    int main()
+    {
+    int factorial(int);
+    int fact,value;
+    cout&lt;&lt;"Enter any number: ";
+    cin&gt;&gt;value;
+    fact=factorial(value);
+    cout&lt;&lt;"Factorial of a number is: "&lt;&lt;fact&lt;&lt;endl;
+    return 0;
+    }
+    int factorial(int n)
+    {
+    if(n&lt;0)
+    return(-1); /*Wrong value*/  
+    if(n==0)
+    return(1);  /*Terminating condition*/
+    else
+    {
+    return(n*factorial(n-1));    
+    }
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter any number: 5
+    Factorial of a number is: 120
+    </pre>
+                        </div>
+    
+    
+                        <p>We can understand the above program of recursive method call by the figure given
+                            below:</p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-recursion1.png" alt="CPP Recursion 1" />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">C++ Arrays</h1>
+                        <p>Like other programming languages, array in C++ is a group of similar types of
+                            elements that have contiguous memory location.</p>
+                        <p>In C++ <strong>std::array</strong> is a container that encapsulates fixed size
+                            arrays. In C++, array index starts from 0. We can store only fixed set of
+                            elements in C++ array.</p>
+                        <img src="https://static.javatpoint.com/cpp/images/c-array1.png" alt="Java C array 1" />
+                        <hr />
+                        <h2 class="h2">Advantages of C++ Array</h2>
+                        <ul class="points">
+                            <li>Code Optimization (less code)</li>
+                            <li>Random Access</li>
+                            <li>Easy to traverse data</li>
+                            <li>Easy to manipulate data</li>
+                            <li>Easy to sort data etc.</li>
+                        </ul>
+                        <hr />
+                        <h2 class="h2">Disadvantages of C++ Array</h2>
+                        <ul class="points">
+                            <li>Fixed size</li>
+                        </ul>
+                        <hr />
+    
+    
+                        <h2 class="h2">C++ Array Types</h2>
+                        <p>There are 2 types of arrays in C++ programming:</p>
+                        <ol class="points">
+                            <li>Single Dimensional Array</li>
+                            <li>Multidimensional Array</li>
+                        </ol>
+                        <hr />
+                        <h2 class="h2">C++ Single Dimensional Array</h2>
+                        <p>Let's see a simple example of C++ array, where we are going to create, initialize
+                            and traverse array.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+     int arr[5]={10, 0, 20, 0, 30};  //creating and initializing array  
+            //traversing array  
+            for (int i = 0; i < 5; i++)  
+            {  
+                cout&lt;&lt;arr[i]&lt;&lt;"\n";  
+            }  
+    }
+    </textarea></div>
+                        <p>Output:/p>
+                        <div class="codeblock3">
+                            <pre>
+    10
+    0
+    20
+    0
+    30
+    </pre>
+                        </div>
+                        <hr />
+                        <h2 class="h2">C++ Array Example: Traversal using foreach loop</h2>
+                        <p>We can also traverse the array elements using foreach loop. It returns array
+                            element one by one.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+     int arr[5]={10, 0, 20, 0, 30}; //creating and initializing array  
+            //traversing array  
+           for (int i: arr)   
+            {  
+                cout&lt;&lt;i&lt;&lt;"\n";  
+            }  
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    10
+    20
+    30
+    40
+    50
+    </pre>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">C++ Pointers</h1>
+                        <p>The pointer in C++ language is a variable, it is also known as locator or
+                            indicator that points to an address of a value.</p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-pointers1.png" alt="Cpp Pointers 1" />
+                        <p><strong>Advantage of pointer</strong></p>
+                        <p>1) Pointer reduces the code and improves the performance, it is used to
+                            retrieving strings, trees etc. and used with
+                            arrays, structures and functions.</p>
+                        <p>2) We can return multiple values from function using pointer.</p>
+                        <p>3) It makes you able to access any memory location in the computer's memory.</p>
+                        <p><strong>Usage of pointer</strong></p>
+                        <p>There are many usage of pointers in C++ language.</p>
+                        <p><strong>1) Dynamic memory allocation</strong></p>
+                        <p>In c language, we can dynamically allocate memory using malloc() and calloc()
+                            functions where pointer is used.</p>
+                        <p><strong>2) Arrays, Functions and Structures</strong></p>
+                        <p>Pointers in c language are widely used in arrays, functions and structures. It
+                            reduces the code and improves the performance.</p>
+                        <hr />
+    
+                        <h2 class="h2">Symbols used in pointer</h2>
+                        <table class="alt">
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>& (ampersand sign)</td>
+                                <td>Address operator</td>
+                                <td>Determine the address of a variable.</td>
+                            </tr>
+                            <tr>
+                                <td>&lowast; (asterisk sign)</td>
+                                <td>Indirection operator</td>
+                                <td>Access the value of an address.</td>
+                            </tr>
+                        </table>
+                        <h2 class="h2">Declaring a pointer</h2>
+                        <p>The pointer in C++ language can be declared using &lowast; (asterisk symbol).</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    int &lowast;	a; //pointer to int  
+    char &lowast;	c; //pointer to char  
+    </textarea></div>
+                        <h2 class="h2">Pointer Example</h2>
+                        <p>Let's see the simple example of using pointers printing the address and value.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+    int number=30;  
+    int &lowast;	p;    
+    p=&number;//stores the address of number variable  
+    cout&lt;&lt;"Address of number variable is:"&lt;&lt;&number&lt;&lt;endl;  
+    cout&lt;&lt;"Address of p variable is:"&lt;&lt;p&lt;&lt;endl;  
+    cout&lt;&lt;"Value of p variable is:"&lt;&lt;*p&lt;&lt;endl;  
+       return 0;
+    }
+    </textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Address of number variable is:0x7ffccc8724c4
+    Address of p variable is:0x7ffccc8724c4
+    Value of p variable is:30  
+    </pre>
+                        </div>
+                        <hr />
+    
+                        <h2 class="h2">Pointer Program to swap 2 numbers without using 3rd variable</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+    int a=20,b=10,&lowast;p1=&a,&lowast;p2=&b;  
+    cout&lt;&lt;"Before swap: &lowast;p1="&lt;&lt;&lowast;p1&lt;&lt;" &lowast;p2="&lt;&lt;&lowast;p2&lt;&lt;endl;  
+    &lowast;p1=&lowast;p1+&lowast;p2;  
+    &lowast;p2=&lowast;p1-&lowast;p2;  
+    &lowast;p1=&lowast;p1-&lowast;p2;  
+    cout&lt;&lt;"After swap: &lowast;p1="&lt;&lt;&lowast;p1&lt;&lt;" &lowast;p2="&lt;&lt;&lowast;p2&lt;&lt;endl;  
+       return 0;
+    }
+    </textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Before swap: &lowast;p1=20 &lowast;p2=10
+    After swap: &lowast;p1=10 &lowast;p2=20
+    </pre>
+                        </div>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">C++ Array of Pointers</h1>
+                        <p>Array and pointers are closely related to each other. In C++, the name of an
+                            array is considered &agrave;s a pointer, i.e., the name of an array contains the
+                            address of an element. C++ considers the array name as the address of the first
+                            element. For example, if we create an array, i.e., marks which hold the 20
+                            values of integer type, then marks will contain the address of first element,
+                            i.e., marks[0]. Therefore, we can say that array name (marks) is a pointer which
+                            is holding the address of the first element of an array.</p>
+                        <p><strong>Let's understand this scenario through an example.</strong></p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+        int *ptr;  // integer pointer declaration
+        int marks[10]; // marks array declaration
+        std::cout &lt;&lt; "Enter the elements of an array :" &lt;&lt; std::endl;
+        for(int i=0;i&lt;10;i++)
+        {
+            cin&gt;&gt;marks[i];
+        }
+        ptr=marks; // both marks and ptr pointing to the same element..
+        std::cout &lt;&lt; "The value of *ptr is :" &lt;&lt;*ptr&lt;&lt; std::endl;
+        std::cout &lt;&lt; "The value of *marks is :" &lt;&lt;*marks&lt;&lt;std::endl;
+    }
+    </textarea></div>
+                        <p>In the above code, we declare an integer pointer and an array of integer type. We
+                            assign the address of marks to the ptr by using the statement ptr=marks; it
+                            means that both the variables 'marks' and 'ptr' point to the same element, i.e.,
+                            marks[0]. When we try to print the values of *ptr and *marks, then it comes out
+                            to be same. Hence, it is proved that the array name stores the address of the
+                            first element of an array.</p>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-array-of-pointers.png"
+                            alt="C++ Array of Pointers" />
+                        <h3 class="h3">Array of Pointers</h3>
+                        <p>An array of pointers is an array that consists of variables of pointer type,
+                            which means that the variable is a pointer addressing to some other element.
+                            Suppose we create an array of pointer holding 5 integer pointers; then its
+                            declaration would look like:</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    int *ptr[5];         // array of 5 integer pointer. 
+    </textarea></div>
+                        <p>In the above declaration, we declare an array of pointer named as ptr, and it
+                            allocates 5 integer pointers in memory.</p>
+                        <p>The element of an array of a pointer can also be initialized by assigning the
+                            address of some other element. Let's observe this case through an example.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    int a; // variable declaration.
+    ptr[2] = &a;  
+    </textarea></div>
+                        <p>In the above code, we are assigning the address of 'a' variable to the third
+                            element of an array 'ptr'.</p>
+                        <p>We can also retrieve the value of 'a' be dereferencing the pointer.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    *ptr[2];
+    </textarea></div>
+                        <p><strong>Let's understand through an example.</strong></p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+        int ptr1[5]; // integer array declaration
+        int *ptr2[5]; // integer array of pointer declaration
+        std::cout &lt;&lt; "Enter five numbers :" &lt;&lt; std::endl;
+        for(int i=0;i&lt;5;i++)
+        {
+            std::cin &gt;&gt; ptr1[i];
+        }
+        for(int i=0;i&lt;5;i++)
+        {
+            ptr2[i]=&ptr1[i]; 
+        }
+        // printing the values of ptr1 array
+        std::cout &lt;&lt; "The values are" &lt;&lt; std::endl;
+        for(int i=0;i&lt;5;i++)
+        {
+            std::cout &lt;&lt; *ptr2[i] &lt;&lt; std::endl;
+        }
+        }
+    </textarea></div>
+                        <p>In the above code, we declare an array of integer type and an array of integer
+                            pointers. We have defined the 'for' loop, which iterates through the elements of
+                            an array 'ptr1', and on each iteration, the address of element of ptr1 at index
+                            'i' gets stored in the ptr2 at index 'i'.</p>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-array-of-pointers2.png"
+                            alt="C++ Array of Pointers" />
+                        <p>Till now, we have learnt the array of pointers to an integer. Now, we will see
+                            how to create the array of pointers to strings.</p>
+                        <h3 class="h3">Array of Pointer to Strings</h3>
+                        <p>An array of pointer to strings is an array of character pointers that holds the
+                            address of the first character of a string or we can say the base address of a
+                            string.</p>
+                        <p>The following are the differences between an array of pointers to string and
+                            two-dimensional array of characters:</p>
+                        <ul class="points">
+                            <li>An array of pointers to string is more efficient than the two-dimensional
+                                array of characters in case of memory consumption because an array of
+                                pointer to strings consumes less memory than the two-dimensional array of
+                                characters to store the strings.</li>
+                            <li>In an array of pointers, the manipulation of strings is comparatively easier
+                                than in the case of 2d array. We can also easily change the position of the
+                                strings by using the pointers.</li>
+                        </ul>
+                        <p>Let's see how to declare the array of pointers to string.</p>
+                        <p>First, we declare the array of pointer to string:</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    char *names[5] = {"john",
+                      "Peter",
+                      "Marco",
+                      "Devin",
+                      "Ronan"};
+    </textarea></div>
+                        <p>In the above code, we declared an array of pointer names as 'names' of size 5. In
+                            the above case, we have done the initialization at the time of declaration, so
+                            we do not need to mention the size of the array of a pointer. The above code can
+                            be re-written as:</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    char *names[ ] = {"john",
+                      "Peter",
+                      "Marco",
+                      "Devin",
+                      "Ronan"};
+    </textarea></div>
+                        <p>In the above case, each element of the 'names' array is a string literal, and
+                            each string literal would hold the base address of the first character of a
+                            string. For example, names[0] contains the base address of "john", names[1]
+                            contains the base address of "Peter", and so on. It is not guaranteed that all
+                            the string literals will be stored in the contiguous memory location, but the
+                            characters of a string literal are stored in a contiguous memory location.</p>
+                        <p><strong>Let's create a simple example.</strong></p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+      char *names[5] = {"john",
+                        "Peter",
+                        "Marco",
+                        "Devin",
+                        "Ronan"};
+    for(int i=0;i&lt;5;i++)
+        {
+            std::cout &lt;&lt; names[i] &lt;&lt; std::endl;
+        }
+        return 0;
+    }
+    </textarea></div>
+                        <p>In the above code, we have declared an array of char pointer holding 5 string
+                            literals, and the first character of each string is holding the base address of
+                            the string.</p>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-array-of-pointers3.png"
+                            alt="C++ Array of Pointers" />
+    
+                        <hr />
+    
+                        <!-- link -->
+                        <br /><br />
+    
+                        <div id="bottomnextup">
+                            <a class="next" href="/c++page4">next &rarr;</a>
+                            <a class="next" href="/c++page2">prev &larr;</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

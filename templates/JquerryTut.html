@@ -1,0 +1,678 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Jquerry Tutorial | Jquerry Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">jQuery Tutorial</h1>
+                        <img src="https://static.javatpoint.com/jquerypages/images/jquery-tutorial.jpg"
+                            alt="jQuery tutorial" style="float:right;padding:15px" />
+                        <p>jQuery tutorial for beginners and professionals provides deep knowledge of jQuery
+                            technology. Our jQuery tutorial will help you to learn jQuery fundamentals,
+                            example, selectors, events, effects, traversing, CSS and attributes. </p>
+    
+                        <h2 class="h2">What is jQuery</h2>
+                        <ul class="points">
+                            <li>jQuery is a small and lightweight JavaScript library.</li>
+                            <li>jQuery is cross-platform.</li>
+                            <li>jQuery means "write less do more".</li>
+                            <li>jQuery simplifies AJAX call and DOM manipulation.</li>
+                        </ul>
+    
+                        <h2 class="h2">jQuery Example</h2>
+                        <p>In this tutorial, you will get a lot of jQuery examples to understand the topic
+                            well. Let's see a simple jQuery example.</p>
+    
+                        <span class="filename">File: firstjquery.html</span>
+                        <div class="codeblock"><textarea name="code" class="java">
+    <!DOCTYPE html>
+    <html>
+    <head>
+     <title>First jQuery Example</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+     <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("p").css("background-color", "pink");
+        });
+    </script>
+     </head>
+    <body>
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+    <p>This is third paragraph.</p>
+    </body>
+    </html>
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jquerytut1"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="background-color:pink">This is first paragraph.</p>
+                        <p style="background-color:pink">This is second paragraph.</p>
+                        <p style="background-color:pink">This is third paragraph.</p>
+    
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning jQuery, you must have the basic knowledge of JavaScript.</p>
+    
+                        <h2 class="h2">Audience</h2>
+                        <p>Our jQuery tutorial is designed to help beginners and professionals.</p>
+    
+                        <h2 class="h2">Problem</h2>
+                        <p>We assure that you will not find any problem in this jQuery tutorial. But if
+                            there is any mistake, please post the problem in contact form.</p>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery Example</h1>
+                        <p>jQuery is developed by Google. To create the first jQuery example, you need to
+                            use JavaScript file for jQuery. You can download the jQuery file from jquery.com
+                            or use the absolute URL of jQuery file.</p>
+                        <p>In this jQuery example, we are using the absolute URL of jQuery file. The jQuery
+                            example is written inside the script tag.</p>
+                        <p>Let's see a simple example of jQuery.</p>
+    
+                        <span class="filename">File: firstjquery.html</span>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <!DOCTYPE html>
+    <html>
+    <head>
+     <title>First jQuery Example</title>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+     <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("p").css("background-color", "cyan");
+        });
+    </script>
+     </head>
+    <body>
+    <p>The first paragraph is selected.</p>
+    <p>The second paragraph is selected.</p>
+    <p>The third paragraph is selected.</p>
+    </body>
+    </html>
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jqueryexample1"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="background-color:cyan">The first paragraph is selected.</p>
+                        <p style="background-color:cyan">The second paragraph is selected.</p>
+                        <p style="background-color:cyan">The third paragraph is selected.</p>
+    
+                        <h2 class="h2">$(document).ready() and $()</h2>
+                        <p>The code inserted between $(document).ready() is executed only once when page is
+                            ready for JavaScript code to execute.</p>
+                        <p>In place of $(document).ready(), you can use shorthand notation $() only.</p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+     $(document).ready(function() {
+     $("p").css("color", "red");
+     });
+    </textarea></div>
+                        <p>The above code is equivalent to this code.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+     $(function() {
+     $("p").css("color", "red");
+     });
+    </textarea></div>
+    
+                        <p>Let's see the full example of jQuery using shorthand notation $().</p>
+                        <span class="filename">File: shortjquery.html</span>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <!DOCTYPE html>
+    <html>
+    <head>
+     <title>Second jQuery Example</title>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+     <script type="text/javascript" language="javascript">
+        $(function () {
+            $("p").css("color", "red");
+        });
+    </script>
+     </head>
+    <body>
+    <p>The first paragraph is selected.</p>
+    <p>The second paragraph is selected.</p>
+    <p>The third paragraph is selected.</p>
+    </body>
+    </html>
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jqueryexample2"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="color:red">The first paragraph is selected.</p>
+                        <p style="color:red">The second paragraph is selected.</p>
+                        <p style="color:red">The third paragraph is selected.</p>
+    
+                        <hr />
+                        <h2 class="h2">function() { $("p").css("background-color", "cyan"); }</h2>
+                        <p>It changes the background-color of all &lt;p&gt; tag or paragraph to cyan.</p>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery Selectors</h1>
+                        <p>jQuery Selectors are used to select and manipulate HTML elements. They are very
+                            important part of jQuery library. </p>
+                        <p>With jQuery selectors, you can find or select HTML elements based on their id,
+                            classes, attributes, types and much more from a DOM.</p>
+                        <p> In simple words, you can say that selectors are used to select one or more HTML
+                            elements using jQuery and once the element is selected then you can perform
+                            various operation on that.</p>
+                        <p>All jQuery selectors start with a dollor sign and parenthesis e.g. $(). It is
+                            known as the factory function. </p>
+    
+                        <h2 class="h2">The $() factory function</h2>
+                        <p>Every jQuery selector start with thiis sign $(). This sign is known as the
+                            factory function. It uses the three basic building blocks while selecting an
+                            element in a given document. </p>
+                        <table class="alt">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Selector</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>1)</td>
+                                <td>Tag Name:</td>
+                                <td>It represents a tag name available in the DOM.<br /> For example: $('p')
+                                    selects all paragraphs'p'in the document.</td>
+                            </tr>
+                            <tr>
+                                <td>2)</td>
+                                <td>Tag ID:</td>
+                                <td>It represents a tag available with a specific ID in the DOM.<br />For
+                                    example: $('#real-id') selects a specific element in the document that
+                                    has an ID of real-id.</td>
+                            </tr>
+                            <tr>
+                                <td>3)</td>
+                                <td>Tag Class:</td>
+                                <td>It represents a tag available with a specific class in the DOM.<br />For
+                                    example: $('real-class') selects all elements in the document that have
+                                    a class of real-class. </td>
+                            </tr>
+                        </table>
+    
+    
+                        <p>Let's take a simple example to see the use of Tag selector. This would select all
+                            the elements with a tag name
+                        <p> and the background color is set to "pink". </p>
+    
+                        <span class="filename">File: firstjquery.html</span>
+                        <div class="codeblock"><textarea name="code" class="java">
+    <!DOCTYPE html>
+    <html>
+    <head>
+     <title>First jQuery Example</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+     <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("p").css("background-color", "pink");
+        });
+    </script>
+     </head>
+    <body>
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+    <p>This is third paragraph.</p>
+    </body>
+    </html>
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jquerytut1"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="background-color:pink">This is first paragraph.</p>
+                        <p style="background-color:pink">This is second paragraph.</p>
+                        <p style="background-color:pink">This is third paragraph.</p>
+    
+                        <h4 class="n">Note: 1. All of the above discussed selectors can be used alone or
+                            with the combination of other selectors. </h4>
+                        <h4 class="n">Note: 2. If you have any confliction with theuse of dollor sign $ in
+                            any JavaScript library then you can use jQuery() function instead of factory
+                            function $(). The factory function $() and the jQuery function is the same.</h4>
+    
+                        <h2 class="h2">How to use Selectors</h2>
+                        <p>The jQuery selectors can be used single or with the combination of other
+                            selectors. They are required at every steps while using jQuery. They are used to
+                            select the exact element that you want from your HTML document. </p>
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery Effects</h1>
+                        <p>jQuery enables us to add effects on a web page. jQuery effects can be categorized
+                            into fading, sliding, hiding/showing and animation effects.</p>
+                        <img src="https://static.javatpoint.com/jquerypages/images/jquery-effects.png"
+                            alt="jquery effects" />
+                        <p>jQuery provides many methods for effects on a web page. A complete list of jQuery
+                            effect methods are given below:</p>
+                        <table class="alt">
+                            <tr>
+                                <th>No.</th>
+                                <th>Method</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>1)</td>
+                                <td>animate()</td>
+                                <td>performs animation.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>clearQueue()</td>
+                                <td>It is used to remove all remaining queued functions from the selected
+                                    elements.</td>
+                            </tr>
+                            <tr>
+                                <td>3)</td>
+                                <td>delay()</td>
+                                <td>sets delay execution for all the queued functions on the selected
+                                    elements.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>dequeue()</td>
+                                <td>It is used to remove the next function from the queue, and then execute
+                                    the function.</td>
+                            </tr>
+                            <tr>
+                                <td>5)</td>
+                                <td>fadein()</td>
+                                <td>shows the matched elements by fading it to opaque. In other words, it
+                                    fades in the selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>6)</td>
+                                <td>fadeout()</td>
+                                <td>shows the matched elements by fading it to transparent. In other words,
+                                    it fades out the selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>7)</td>
+                                <td>fadeto()</td>
+                                <td>adjusts opacity for the matched element. In other words, it fades in/out
+                                    the selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>8)</td>
+                                <td>fadetoggle()</td>
+                                <td>shows or hides the matched element. In other words, toggles between the
+                                    fadeIn() and fadeOut() methods.</td>
+                            </tr>
+                            <tr>
+                                <td>9)</td>
+                                <td>finish()</td>
+                                <td>It stops, removes and complete all queued animation for the selected
+                                    elements.</td>
+                            </tr>
+                            <tr>
+                                <td>10)</td>
+                                <td>hide()</td>
+                                <td>hides the matched or selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>11)</td>
+                                <td>queue()</td>
+                                <td>shows or manipulates the queue of methods i.e. to be executed on the
+                                    selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>12)</td>
+                                <td>show()</td>
+                                <td>displays or shows the selected elements.</td>
+                            </tr>
+                            <tr>
+                                <td>13)</td>
+                                <td>slidedown()</td>
+                                <td>shows the matched elements with slide.</td>
+                            </tr>
+                            <tr>
+                                <td>14)</td>
+                                <td>slidetoggle()</td>
+                                <td>shows or hides the matched elements with slide. In other words, it is
+                                    used to toggle between the slideUp() and slideDown() methods.</td>
+                            </tr>
+                            <tr>
+                                <td>15)</td>
+                                <td>slideup()</td>
+                                <td>hides the matched elements with slide.</td>
+                            </tr>
+                            <tr>
+                                <td>16)</td>
+                                <td>stop()</td>
+                                <td>stops the animation which is running on the matched elements.</td>
+                            </tr>
+                            <tr>
+                                <td>17)</td>
+                                <td>toggle()</td>
+                                <td>shows or hides the matched elements. In other words, it toggles between
+                                    the hide() and show() methods.</td>
+                            </tr>
+                        </table>
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery serialize()</h1>
+                        <p>jQuery serialize() method is used to create a text string in standard URL-encoded
+                            notation. It is used in form controls like &lt;input&gt;, &lt;textarea&gt;,
+                            &lt;select&gt; etc. It serializes the form values so that its serialized values
+                            can be used in the URL query string while making an AJAX request. </p>
+    
+                        <p><strong>Syntax</strong>: </p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $ (selector).serialize() 
+    </textarea></div>
+    
+                        <h2 class="h2">jQuery serialize() example</h2>
+                        <p>Let's take an example which serializes a form values.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("div").text($("form").serialize());
+        });
+    });
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;form action=""&gt;
+      First name: &lt;input type="text" name="FirstName" value="Sonoo"&gt;&lt;br&gt;
+      Last name: &lt;input type="text" name="LastName" value="Jaiswal"&gt;&lt;br&gt;
+    &lt;/form&gt;
+    &lt;button&gt;Serialize form values&lt;/button&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=jqueryserialize1"
+                                target="_blank">Test it Now</a></span>
+    
+    
+                        <h4 class="n">Note: Only successful controls are serialized to the string. It is not
+                            possible to serialize the form submitted by a submit button unless the form was
+                            submitted using a button. </h4>
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery Events</h1>
+                        <p>jQuery events are the actions that can be detected by your web application. They
+                            are used to create dynamic web pages. An event shows the exact moment when
+                            something happens. </p>
+                        <p>These are some examples of events.</p>
+                        <ul class="points">
+                            <li>A mouse click</li>
+                            <li>An HTML form submission</li>
+                            <li>A web page loading</li>
+                            <li>A keystroke on the keyboard</li>
+                            <li>Scrolling of the web page etc.</li>
+                        </ul>
+                        <p>These events can be categorized on the basis their types:</p>
+    
+                        <h2 class="h2">Mouse Events</h2>
+                        <ul class="points">
+                            <li>click</li>
+                            <li>dblclick</li>
+                            <li>mouseenter</li>
+                            <li>mouseleave</li>
+                        </ul>
+    
+                        <h2 class="h2">Keyboard Events</h2>
+                        <ul class="points">
+                            <li>keyup</li>
+                            <li>keydown</li>
+                            <li>keypress</li>
+                        </ul>
+    
+                        <h2 class="h2">Form Events</h2>
+                        <ul class="points">
+                            <li>submit</li>
+                            <li>change</li>
+                            <li>blur</li>
+                            <li>focus</li>
+                        </ul>
+    
+                        <h2 class="h2">Document/Window Events</h2>
+                        <ul class="points">
+                            <li>load</li>
+                            <li>unload</li>
+                            <li>scroll</li>
+                            <li>resize</li>
+                        </ul>
+    
+                        <h4 class="n">Note: A term "fires" is generally used with events. For example: The
+                            click event fires in the moment you press a key. </h4>
+    
+                        <h2 class="h2">Syntax for event methods</h2>
+                        <p>Most of the DOM events have an equivalent jQuery method. To assign a click events
+                            to all paragraph on a page, do this:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $("p").click ();
+    </textarea></div>
+                        <p>The next step defines what should happen when the event fires. You must pass a
+                            function to the event.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    $("p").click(function(){
+      // action goes here!!
+    });
+    </textarea></div>
+    
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">jQuery v/s AngularJS</h1>
+                        <h2 class="h2">jQuery</h2>
+                        <p>jQuery is a small, light-weight and fast JavaScript library. It was created by
+                            <strong>John Resig</strong> in 2006. It is cross-platform and supports different
+                            types of browsers. The main purpose of jQuery is to provide an easy way to use
+                            JavaScript on your website to make it more interactive and attractive. It is
+                            also used to add animation. It simplifies the DOM manipulation and AJAX call. It
+                            can be used to achieve common tasks such as <a
+                                href="https://www.javatpoint.com/ajax-tutorial">AJAX</a> requests, events,
+                            manipulating events, etc.
+                        </p>
+                        <h2 class="h2">AngularJS</h2>
+                        <p>Angular JS is an open-source JavaScript framework that is used to build web
+                            applications. It is developed by Google. It can be freely used, changed and
+                            shared by anyone. It is an excellent framework for building single-page
+                            applications and lines of business applications. It is mainly used to create
+                            single-page client-side applications.</p>
+                        <p>AngularJS is completely written in <a
+                                href="https://www.javatpoint.com/javascript-tutorial">JavaScript</a>, but it
+                            is different from other web application frameworks like jQuery. It is less
+                            friendly to inexperienced developers.</p>
+                        <p>The basic differences between <strong><a
+                                    href="https://www.javatpoint.com/jquery-tutorial">jQuery</a></strong>
+                            and <strong><a href="https://www.javatpoint.com/angularjs-tutorial">AngularJS</a></strong>
+                            are listed as follows.</p>
+                        <ul class="points">
+                            <li>AngularJS is a framework, whereas jQuery is a library that is used for DOM
+                                manipulation.</li>
+                            <li>On large projects, sometimes jQuery is difficult to maintain, but AngularJS
+                                is manageable with large projects.</li>
+                            <li>Sometimes with jQuery, we require to code more to achieve the same
+                                functionality, but with AngularJS, we have to code less as compared to
+                                jQuery.</li>
+                            <li>jQuery doesn't include a two-way binding feature, whereas AngularJS includes
+                                two-way data binding, directives, MVC, etc. as its key features.</li>
+                            <li>Although jQuery is best for the flexible website, but for the attractive and
+                                best quality single page application for the client, we can choose Angular.
+                            </li>
+                        </ul>
+                        <h2 class="h2">Difference between jQuery and AngularJS</h2>
+                        <p>Now, let's see the comparison between <strong>jQuery</strong> and
+                            <strong>AngularJS</strong>.
+                        </p>
+                        <table class="alt">
+                            <tr>
+                                <th>On the basis of</th>
+                                <th>jQuery</th>
+                                <th>AngularJS</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Developed and Released</strong></td>
+                                <td>It is created by John Resig, and it is released on 26th August 2006.
+                                </td>
+                                <td>It is initially developed by Adam Abrons and Misko Hevery in 2009. </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aim</strong></td>
+                                <td>The main purpose of jQuery is to provide an easy way to use JavaScript
+                                    on your website to make it more interactive and attractive. It provides
+                                    a consistent DOM API that is steady across supported browsers.</td>
+                                <td>It is the best framework to create single phase applications and line of
+                                    business applications using HTML, CSS, and JavaScript.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Learning</strong></td>
+                                <td>jQuery is easy to learn and understand. It is hard to understand.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Features</strong></td>
+                                <td>It has multiple features listed as follows.
+                                    <ul class="points">
+                                        <li>HTML/DOM manipulation</li>
+                                        <li>CSS manipulation</li>
+                                        <li>AJAX support </li>
+                                        <li>JSON parsing</li>
+                                        <li>Effects and animations</li>
+                                        <li>Extensibility through plugins</li>
+                                        <li>Event handling, etc.</li>
+                                    </ul>
+                                </td>
+                                <td>The features list of AngularJS is given as follows.
+                                    <ul class="points">
+                                        <li>Two-way data binding</li>
+                                        <li>MVC (Model view controller)</li>
+                                        <li>Testing</li>
+                                        <li>Modules</li>
+                                        <li>Routes, etc.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>AngularJS can do better the things done by jQuery. Angular is enough to create
+                            complex single-page web applications. AngularJS is a solution to the multiple
+                            problems that are not solved by jQuery. </p>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

@@ -190,10 +190,52 @@ def privacypolicy():
 def awshome():
     return render_template("awsTutorial.html")
 
+# ************ ANDROID ****************
+@app.route('/android1')
+def androidtut1():
+    return render_template("AndroidTut1.html")
+@app.route('/android2')
+def androidtut2():
+    return render_template("AndroidTut2.html")
+
+# ************ BASH ****************
+@app.route('/bash')
+def bash():
+    return render_template("BashTut.html")
+
+# ************ FLUTTER ****************
+@app.route('/flutter')
+def flutter():
+    return render_template("FlutterTut.html")
+
+# ************ AI ****************
+@app.route('/ai')
+def ai():
+    return render_template("AiTut.html")
+
+# ************ JAVACSRIPT ****************
+@app.route('/javascript')
+def javascript():
+    return render_template("JavascriptTut.html")
+
+# ************ Jquerry ****************
+@app.route('/jquerry')
+def jquerry():
+    return render_template("JquerryTut.html")
+
 # ************* C++ ****************
 @app.route('/c++home')
 def chome():
     return render_template("C++Tutorial.html")
+@app.route('/c++page2')
+def chome2():
+    return render_template("C++2.html")
+@app.route('/c++page3')
+def chome3():
+    return render_template("C++3.html")
+@app.route('/c++page4')
+def chome4():
+    return render_template("C++4.html")
 
 # ************* Java ****************
 @app.route('/javahome')
@@ -232,8 +274,25 @@ def git():
 def reactjs():
     return render_template("ReactJSTutorial.html")
 
+# ************* Bootstrap ****************
+@app.route('/bootstrap')
+def bootstrap():
+    return render_template("bootstrapTut.html")
 
+# ************* Wordpress ****************
+@app.route('/wordpress')
+def wordpress():
+    return render_template("wordpressTut.html")
 
+# ************* HTML ****************
+@app.route('/html')
+def htmlfun():
+    return render_template("htmlTut.html")
+
+# ************* Wordpress ****************
+@app.route('/css')
+def cssfun():
+    return render_template("cssTut.html")
     
 
 # *************** Below routes are for Authentication Purposes:------------

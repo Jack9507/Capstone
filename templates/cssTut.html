@@ -1,0 +1,887 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Flutter Tutorial | Flutter Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">CSS Tutorial</h1>
+                        <img src="https://static.javatpoint.com/csspages/images/css-tutorial.png" alt="CSS tutorial"
+                            style="float:right;padding:15px" />
+    
+                        <p><b>CSS tutorial</b> or CSS 3 tutorial provides basic and advanced concepts of CSS
+                            technology. Our CSS tutorial is developed for beginners and professionals. The
+                            major points of CSS are given below:
+                        <p>
+                        <ul class="points">
+                            <li>CSS stands for Cascading Style Sheet.</li>
+                            <li>CSS is used to design HTML tags.</li>
+                            <li>CSS is a widely used language on the web.</li>
+                            <li>HTML, CSS and JavaScript are used for web designing. It helps the web
+                                designers to apply style on HTML tags.</li>
+                        </ul>
+    
+                        <h2 class="h2">CSS Example with CSS Editor</h2>
+                        <p>In this tutorial, you will get a lot of CSS examples, you can edit and run these
+                            examples with our online CSS editor tool.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    h1{
+    color:white;
+    background-color:red;
+    padding:5px;
+    }
+    p{
+    color:blue;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Write Your First CSS Example&lt;/h1&gt;
+    &lt;p&gt;This is Paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=csscss1"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <h2 style="color:white;background-color:red;padding:10px;">Write Your First CSS
+                            Example</h2>
+                        <p style="color:blue;">This is Paragraph.</p>
+    
+                        <hr />
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning CSS, you must have the basic knowledge of HTML.</p>
+    
+                        <h2 class="h2">Audience</h2>
+                        <p>Our CSS tutorial is designed to help beginners and professionals both.</p>
+    
+                        <h2 class="h2">Problem</h2>
+                        <p>If you find any problem or mistake in our CSS tutorial, you can report to us. We
+                            assure, you will not find any problem in CSS tutorial.</p>
+    
+    
+                        <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">CSS Syntax</h1>
+                        <p>A CSS rule set contains a selector and a declaration block. </p>
+                        <img src="https://static.javatpoint.com/csspages/images/css-syntax.png" alt="CSS syntax" />
+    
+                        <p><strong>Selector:</strong> Selector indicates the HTML element you want to style.
+                            It could be any tag like &lt;h1&gt;, &lt;title&gt; etc.</p>
+                        <p><strong>Declaration Block:</strong> The declaration block can contain one or more
+                            declarations separated by a semicolon. For the above example, there are two
+                            declarations:</p>
+                        <ol class="points">
+                            <li>color: yellow;</li>
+                            <li>font-size: 11 px;</li>
+                        </ol>
+    
+                        <p>Each declaration contains a property name and value, separated by a colon. </p>
+                        <p><strong>Property:</strong> A Property is a type of attribute of HTML element. It
+                            could be color, border etc. </p>
+                        <p><strong>Value:</strong> Values are assigned to CSS properties. In the above
+                            example, value "yellow" is assigned to color property. </p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    Selector{Property1: value1; Property2: value2; ..........;}
+    </textarea></div>
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">CSS Selector</h1>
+                        <p><strong>CSS selectors</strong> are used <em>to select the content you want to
+                                style</em>. Selectors are the part of CSS rule set. CSS selectors select
+                            HTML elements according to its id, class, type, attribute etc. </p>
+    
+                        <p>There are several different types of selectors in CSS.</p>
+                        <ol class="points">
+                            <li>CSS Element Selector</li>
+                            <li>CSS Id Selector</li>
+                            <li>CSS Class Selector</li>
+                            <li>CSS Universal Selector</li>
+                            <li>CSS Group Selector</li>
+                        </ol>
+    
+                        <h2 class="h2">1) CSS Element Selector</h2>
+                        <p>The element selector selects the HTML element by name.</p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p{
+        text-align: center;
+        color: blue;
+    } 
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;This style will be applied on every paragraph.&lt;/p&gt;
+    &lt;p id="para1"&gt;Me too!&lt;/p&gt;
+    &lt;p&gt;And me!&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector1"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="text-align: center;color: blue">This style will be applied on every
+                            paragraph.</p>
+                        <p style="text-align: center;color: blue">Me too!</p>
+                        <p style="text-align: center;color: blue">And me!</p>
+                        <hr />
+                        <h2 class="h2">2) CSS Id Selector</h2>
+                        <p>The id selector selects the id attribute of an HTML element to select a specific
+                            element. An id is always unique within the page so it is chosen to select a
+                            single, unique element. </p>
+                        <p>It is written with the hash character (#), followed by the id of the element.</p>
+                        <p>Let?s take an example with the id "para1".</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    #para1 {
+        text-align: center;
+        color: blue;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p id="para1"&gt;Hello Javatpoint.com&lt;/p&gt;
+    &lt;p&gt;This paragraph will not be affected.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector2"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <p style="text-align: center;color: blue">Hello Javatpoint.com</p>
+                        <p>This paragraph will not be affected.</p>
+                        <hr />
+                        <h2 class="h2">3) CSS Class Selector</h2>
+                        <p>The class selector selects HTML elements with a specific class attribute. It is
+                            used with a period character . (full stop symbol) followed by the class name.
+                        </p>
+                        <h4 class="n">Note: A class name should not be started with a number.</h4>
+                        <p>Let's take an example with a class "center".</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    .center {
+        text-align: center;
+        color: blue;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1 class="center"&gt;This heading is blue and center-aligned.&lt;/h1&gt;
+    &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt; 
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector3"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <h2 style="text-align: center;color: blue;">This heading is blue and center-aligned.
+                        </h2>
+                        <p style="text-align: center;color: blue;">This paragraph is blue and
+                            center-aligned.</p>
+                        <hr />
+                        <h2 class="h3">CSS Class Selector for specific element</h2>
+                        <p> If you want to specify that only one specific HTML element should be affected
+                            then you should use the element name with class selector. </p>
+                        <p>Let's see an example.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p.center {
+        text-align: center;
+        color: blue;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1 class="center"&gt;This heading is not affected&lt;/h1&gt;
+    &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt; 
+    &lt;/body&gt;
+    &lt;/html&gt; 
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector32"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <h2>This heading is not affected</h2>
+                        <p style="text-align: center;color: blue;">This paragraph is blue and
+                            center-aligned.</p>
+    
+                        <hr />
+                        <h2 class="h2">4) CSS Universal Selector</h2>
+                        <p>The universal selector is used as a wildcard character. It selects all the
+                            elements on the pages. </p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    * {
+       color: green;
+       font-size: 20px;
+    } 
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h2&gt;This is heading&lt;/h2&gt;
+    &lt;p&gt;This style will be applied on every paragraph.&lt;/p&gt;
+    &lt;p id="para1"&gt;Me too!&lt;/p&gt;
+    &lt;p&gt;And me!&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector4"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <h2 style="color: green;font-size: 20px;">This is heading</h2>
+                        <p style="color: green;font-size: 20px;">This style will be applied on every
+                            paragraph.</p>
+                        <p style="color: green;font-size: 20px;">Me too!</p>
+                        <p style="color: green;font-size: 20px;">And me!</p>
+                        <hr />
+                        <h2 class="h2">5) CSS Group Selector</h2>
+                        <p>The grouping selector is used to select all the elements with the same style
+                            definitions. </p>
+                        <p>Grouping selector is used to minimize the code. Commas are used to separate each
+                            selector in grouping.</p>
+                        <p>Let's see the CSS code without group selector.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+    h2 {
+        text-align: center;
+        color: blue;
+    }
+    p {
+        text-align: center;
+        color: blue;
+    }
+    </textarea></div>
+                        <p>As you can see, you need to define CSS properties for all the elements. It can be
+                            grouped in following ways:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    h1,h2,p {
+        text-align: center;
+        color: blue;
+    }
+    </textarea></div>
+                        <p>Let's see the full example of CSS group selector.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    h1, h2, p {
+        text-align: center;
+        color: blue;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Hello Javatpoint.com&lt;/h1&gt;
+    &lt;h2&gt;Hello Javatpoint.com (In smaller font)&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="http://www.javatpoint.com/oprweb/test.jsp?filename=cssselector5"
+                                target="_blank">Test it Now</a></span>
+                        <p>Output:</p>
+                        <h2 style="text-align: center;color: blue;">Hello Javatpoint.com</h2>
+                        <h3 style="text-align: center;color: blue;">Hello Javatpoint.com (In smaller font)
+                        </h3>
+                        <p style="text-align: center;color: blue;">This is a paragraph.</p>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">How to add CSS</h1>
+                        <p>CSS is added to HTML pages to format the document according to information in the
+                            style sheet. There are three ways to insert CSS in HTML documents.
+                        <p>
+                        <ol class="points">
+                            <li>Inline CSS</li>
+                            <li>Internal CSS</li>
+                            <li>External CSS</li>
+                        </ol>
+                        <hr />
+                        <h2 class="h2">1) Inline CSS</h2>
+                        <p>Inline CSS is used to apply CSS on a single line or element.</p>
+                        <p>For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <p style="color:blue">Hello CSS</p>
+    </textarea></div>
+                        <p>For more visit here: <a href="inline-css">Inline CSS</a>
+                            <hr />
+                        <h2 class="h2">2) Internal CSS</h2>
+                        <p>Internal CSS is used to apply CSS on a single document or page. It can affect all
+                            the elements of the page. It is written inside the style tag within head section
+                            of html.</p>
+                        <p>For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <style>
+    p{color:blue}
+    </style>
+    </textarea></div>
+                        <p>For more visit here: <a href="internal-css">Internal CSS</a>
+                            <hr />
+                        <h2 class="h2">3) External CSS</h2>
+                        <p>External CSS is used to apply CSS on multiple pages or all pages. Here, we write
+                            all the CSS code in a css file. Its extension must be .css for example
+                            style.css.</p>
+                        <p>For example:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    p{color:blue}
+    </textarea></div>
+                        <p>You need to link this style.css file to your html pages like this:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </textarea></div>
+                        <p>The link tag must be used inside head section of html.</p>
+                        <p>For more visit here: <a href="external-css">External CSS</a>
+    
+                            <br /><br />
+    
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">CSS Display</h1>
+    
+                        <p>CSS display is the most important property of CSS which is used to control the
+                            layout of the element. It specifies how the element is displayed.</p>
+                        <p>Every element has a default display value according to its nature. Every element
+                            on the webpage is a rectangular box and the <a
+                                href="https://www.javatpoint.com/css-tutorial">CSS</a> property defines the
+                            behavior of that rectangular box. </p>
+    
+                        <h2 class="h2">CSS Display default properties</h2>
+                        <table class="alt">
+                            <tr>
+                                <td>default value</td>
+                                <td>inline</td>
+                            </tr>
+                            <tr>
+                                <td>inherited</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>animation supporting</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>version</td>
+                                <td>css1</td>
+                            </tr>
+                            <tr>
+                                <td>javascript syntax</td>
+                                <td>object.style.display="none"</td>
+                            </tr>
+                        </table>
+    
+                        <h2 class="h2">Syntax</h2>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    display:value;
+    </textarea></div>
+    
+                        <h2 class="h2"> CSS display values</h2>
+                        <p>There are following CSS display values which are commonly used. </p>
+                        <ol class="points">
+                            <li>display: inline;</li>
+                            <li>display: inline-block;</li>
+                            <li>display: block;</li>
+                            <li>display: run-in;</li>
+                            <li>display: none;</li>
+                        </ol>
+                        <hr />
+                        <h2 class="h3">1) CSS display inline</h2>
+                        <p>The inline element takes the required width only. It doesn't force the line break
+                            so the flow of text doesn't break in inline example. </p>
+                        <p>The inline elements are:</p>
+                        <ul class="points">
+                            <li>&lt;span&gt;</li>
+                            <li>&lt;a&gt;</li>
+                            <li>&lt;em&gt;</li>
+                            <li>&lt;b&gt; etc.</li>
+                        </ul>
+                        <p>Let's see an example of CSS display inline.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p {
+    display: inline; 
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;Hello Javatpoint.com&lt;/p&gt;
+    &lt;p&gt;Java Tutorial.&lt;/p&gt;
+    &lt;p&gt;SQL Tutorial.&lt;/p&gt;
+    &lt;p&gt;HTML Tutorial.&lt;/p&gt;
+    &lt;p&gt;CSS Tutorial.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt; 
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssdisplay1"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output:</strong></p>
+                        <p>Hello Javatpoint.com Java Tutorial. SQL Tutorial. HTML Tutorial. CSS Tutorial.
+                        </p>
+                        <hr />
+                        <h2 class="h3">2) CSS display inline-block</h2>
+                        <p>The CSS display inline-block element is very similar to inline element but the
+                            difference is that you are able to set the width and height. </p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p {
+    display: inline-block; 
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;Hello Javatpoint.com&lt;/p&gt;
+    &lt;p&gt;Java Tutorial.&lt;/p&gt;
+    &lt;p&gt;SQL Tutorial.&lt;/p&gt;
+    &lt;p&gt;HTML Tutorial.&lt;/p&gt;
+    &lt;p&gt;CSS Tutorial.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssdisplay2"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output:</strong></p>
+                        <p>Hello Javatpoint.com <a href="https://www.javatpoint.com/java-tutorial">Java
+                                Tutorial</a>. <a href="https://www.javatpoint.com/sql-tutorial">SQL
+                                Tutorial</a>. <a href="https://www.javatpoint.com/html-tutorial">HTML
+                                Tutorial</a>. CSS Tutorial.</p>
+                        <hr />
+                        <h2 class="h3">3) CSS display block</h2>
+                        <p>The CSS display block element takes as much as horizontal space as they can.
+                            Means the block element takes the full available width. They make a line break
+                            before and after them. </p>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p {
+    display: block; 
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;Hello Javatpoint.com&lt;/p&gt;
+    &lt;p&gt;Java Tutorial.&lt;/p&gt;
+    &lt;p&gt;SQL Tutorial.&lt;/p&gt;
+    &lt;p&gt;HTML Tutorial.&lt;/p&gt;
+    &lt;p&gt;CSS Tutorial.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssdisplay3"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output:</strong></p>
+                        <p>Hello Javatpoint.com</p>
+                        <p>Java Tutorial.</p>
+                        <p>SQL Tutorial.</p>
+                        <p>HTML Tutorial.</p>
+                        <p>CSS Tutorial.</p>
+                        <hr />
+                        <h2 class="h3">4) CSS display run-in</h2>
+                        <p>This property doesn't work in <a href="https://www.javatpoint.com/mozilla-firefox">Mozilla
+                                Firefox</a>. These
+                            elements don't produce a specific box by themselves. </p>
+    
+                        <ul class="points">
+                            <li>If the run-in box contains a bock box, it will be same as block.</li>
+                            <li>If the block box follows the run-in box, the run-in box becomes the first
+                                inline box of the block box. </li>
+                            <li>If the inline box follows the run-in box, the run-in box becomes a block
+                                box. </li>
+                        </ul>
+    
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    p {
+    display: run-in; 
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;Hello Javatpoint.com&lt;/p&gt;
+    &lt;p&gt;Java Tutorial.&lt;/p&gt;
+    &lt;p&gt;SQL Tutorial.&lt;/p&gt;
+    &lt;p&gt;HTML Tutorial.&lt;/p&gt;
+    &lt;p&gt;CSS Tutorial.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssdisplay4"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output:</strong></p>
+                        <p>Hello Javatpoint.com</p>
+                        <p>Java Tutorial.</p>
+                        <p>SQL Tutorial.</p>
+                        <p>HTML Tutorial.</p>
+                        <p>CSS Tutorial.</p>
+                        <hr />
+                        <h2 class="h3">5) CSS display none</h2>
+                        <p>The "none" value totally removes the element from the page. It will not take any
+                            space.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    h1.hidden {
+        display: none;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;This heading is visible.&lt;/h1&gt;
+    &lt;h1 class="hidden"&gt;This is not visible.&lt;/h1&gt;
+    &lt;p&gt;You can see that the hidden heading does not contain any space.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssdisplay5"
+                                target="_blank">Test it Now</a></span>
+                        <p><strong>Output:</strong></p>
+                        <h2>This heading is visible.</h2>
+                        <p>You can see that the hidden heading does not contain any space.</p>
+    
+                        <hr />
+                        <h2 class="h2">Other CSS display values</h2>
+    
+                        <table class="alt">
+                            <tr>
+                                <th>Property-value</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>flex</td>
+                                <td>It is used to display an element as an block-level flex container. It is
+                                    new in css3.</td>
+                            </tr>
+                            <tr>
+                                <td>inline-flex</td>
+                                <td>It is used to display an element as an inline-level flex container. It
+                                    is new in css3.</td>
+                            </tr>
+                            <tr>
+                                <td>inline-table</td>
+                                <td>It displays an element as an inline-level table.</td>
+                            </tr>
+                            <tr>
+                                <td>list-Item</td>
+                                <td>It makes the element behave like a &lt;li&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table</td>
+                                <td>It makes the element behave like a &lt;table&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-caption</td>
+                                <td>It makes the element behave like a &lt;caption&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-column-group</td>
+                                <td>It makes the element behave like a &lt;colgroup&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-header-group</td>
+                                <td>It makes the element behave like a &lt;thead&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-footer-group</td>
+                                <td>It makes the element behave like a &lt;tfoot&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-row-group</td>
+                                <td>It makes the element behave like a &lt;tbody&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-cell</td>
+                                <td>It makes the element behave like a &lt;td&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-row</td>
+                                <td>It makes the element behave like a &lt;tr&gt; element.</td>
+                            </tr>
+                            <tr>
+                                <td>table-column</td>
+                                <td>It makes the element behave like a &lt;col&gt; element.</td>
+                            </tr>
+                        </table>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">CSS Animation</h1>
+                        <p><strong>CSS Animation property</strong> is used <em>to create animation on the
+                                webpage</em>. It can be used as a replacement of animation created by Flash
+                            and <a href="https://javatpoint.com/javascript-tutorial">JavaScript</a>.
+                        <p>
+                        <h2 class="h3">CSS3 @keyframes Rule</h2>
+                        <p>The animation is created in the @keyframe rule. It is used to control the
+                            intermediate steps in a <a href="https://javatpoint.com/css-tutorial">CSS</a>
+                            animation sequence. </p>
+                        <h2 class="h3">What animation does</h2>
+                        <p>An animation <em>makes an element change gradually</em> from one style to
+                            another. You can add as many as properties you want to add. You can also specify
+                            the changes in percentage.0% specify the start of the animation and 100% specify
+                            its completion.</p>
+                        <h2 class="h3">How CSS animation works</h2>
+                        <p>When the animation is created in the <a
+                                href="https://www.javatpoint.com/css-keyframes-rule">@keyframe rule</a>, it
+                            must be bound with selector; otherwise the animation will have no effect. </p>
+                        <p>The animation could be bound to the selector by specifying at least these two
+                            properties:</p>
+                        <ul class="points">
+                            <li>The name of the animation</li>
+                            <li>The duration of the animation</li>
+                        </ul>
+                        <h2 class="h2">CSS animation properties</h2>
+                        <table class="alt">
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>@keyframes</td>
+                                <td>It is used to specify the animation.</td>
+                            </tr>
+                            <tr>
+                                <td>animation</td>
+                                <td>This is a shorthand property, used for setting all the properties,
+                                    except the animation-play-state and the animation-fill- mode property.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>animation-delay</td>
+                                <td>It specifies when the animation will start.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-direction</td>
+                                <td>It specifies if or not the animation should play in reserve on alternate
+                                    cycle.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-duration</td>
+                                <td>It specifies the time duration taken by the animation to complete one
+                                    cycle.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-fill-mode</td>
+                                <td>it specifies the static style of the element. (when the animation is not
+                                    playing)</td>
+                            </tr>
+                            <tr>
+                                <td>animation-iteration-count</td>
+                                <td>It specifies the number of times the animation should be played.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-play-state</td>
+                                <td>It specifies if the animation is running or paused.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-name</td>
+                                <td>It specifies the name of @keyframes animation.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-timing-function</td>
+                                <td>It specifies the speed curve of the animation.</td>
+                            </tr>
+                        </table>
+                        <h2 class="h3">CSS animation example: changing background color</h2>
+                        <p>Let's see a simple CSS animation example that changes background color of
+                            rectangle from RED to BLACK.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt; 
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */
+        animation: myfirst 5s;
+    }
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+        from {background: red;}
+        to {background: green;}
+    }
+    /* Standard syntax */
+    @keyframes myfirst {
+        from {background: red;}
+        to {background: green;}
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The IE 9 and earlier versions don't support CSS3 animation property. &lt;/p&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssanimation1"
+                                target="_blank">Test it Now</a></span>
+                        <h2 class="h3">CSS animation example: Moving Rectangle</h2>
+                        <p>Let's take another example to display animation with percentage value. </p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt; 
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+        animation: myfirst 5s;
+    }
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+        0%   {background:red; left:0px; top:0px;}
+        25%  {background:yellow; left:300px; top:0px;}
+        50%  {background:blue; left:200px; top:300px;}
+        75%  {background:green; left:0px; top:200px;}
+        100% {background:red; left:0px; top:0px;}
+    }
+    /* Standard syntax */
+    @keyframes myfirst {
+        0%   {background:red; left:0px; top:0px;}
+        25%  {background:yellow; left:300px; top:0px;}
+        50%  {background:blue; left:300px; top:200px;}
+        75%  {background:green; left:0px; top:200px;}
+        100% {background:red; left:0px; top:0px;}
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The Internet Explorer 9 and its earlier versions don't support this example.&lt;/p&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </textarea></div>
+                        <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssanimation2"
+                                target="_blank">Test it Now</a></span>
+                        <br>
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+{% endblock %}

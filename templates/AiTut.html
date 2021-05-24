@@ -1,0 +1,1172 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>AI Tutorial | AI Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">Artificial Intelligence Tutorial</h1>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/ai-tutorial.png"
+                            alt="Artificial Intelligence Tutorial | AI Tutorial" style="float:right;padding-left:15px" />
+    
+                        <p>The Artificial Intelligence tutorial provides an introduction to AI which will
+                            help you to understand the concepts behind <a
+                                href="https://www.tutorialandexample.com/artificial-intelligence-tutorial/"
+                                target="_blank">Artificial Intelligence</a>. In this tutorial, we have also
+                            discussed various popular topics such as History of AI, applications of AI, deep
+                            learning, machine learning, natural language processing, Reinforcement learning,
+                            Q-learning, Intelligent agents, Various search algorithms, etc.</p>
+                        <p>Our AI tutorial is prepared from an elementary level so you can easily understand
+                            the complete tutorial from basic concepts to the high-level concepts.</p>
+    
+                        <h2 class="h2">What is Artificial Intelligence?</h2>
+                        <p>In today's world, technology is growing very fast, and we are getting in touch
+                            with different new technologies day by day.</p>
+                        <p>Here, one of the booming technologies of computer science is Artificial
+                            Intelligence which is ready to create a new revolution in the world by making
+                            intelligent machines.The Artificial Intelligence is now all around us. It is
+                            currently working with a variety of subfields, ranging from general to specific,
+                            such as self-driving cars, playing chess, proving theorems, playing music,
+                            Painting, etc.</p>
+                        <p>AI is one of the fascinating and universal fields of Computer science which has a
+                            great scope in future. AI holds a tendency to cause a machine to work as a
+                            human.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/introduction-to-artificial-intelligence.png"
+                            alt="Introduction to AI" />
+                        <br>
+                        <p>Artificial Intelligence is composed of two words <strong>Artificial</strong> and
+                            <strong>Intelligence</strong>, where Artificial defines <em>"man-made,"</em> and
+                            intelligence defines <em>"thinking power"</em>, hence AI means <em>"a man-made
+                                thinking power."</em>
+                        </p>
+                        <p>So, we can define AI as:</p>
+                        <blockquote>
+                            "It is a branch of computer science by which we can create intelligent machines
+                            which can behave like a human, think like humans, and able to make decisions."
+                        </blockquote>
+                        <p>Artificial Intelligence exists when a machine can have human based skills such as
+                            learning, reasoning, and solving problems</p>
+                        <p>With Artificial Intelligence you do not need to preprogram a machine to do some
+                            work, despite that you can create a machine with programmed algorithms which can
+                            work with own intelligence, and that is the awesomeness of AI.</p>
+                        <p>It is believed that AI is not a new technology, and some people says that as per
+                            Greek myth, there were Mechanical men in early days which can work and behave
+                            like humans.</p>
+                        <h2 class="h2">Why Artificial Intelligence?</h2>
+                        <p>Before Learning about Artificial Intelligence, we should know that what is the
+                            importance of AI and why should we learn it. Following are some main reasons to
+                            learn about AI:</p>
+                        <ul class="points">
+                            <li>With the help of AI, you can create such software or devices which can solve
+                                real-world problems very easily and with accuracy such as health issues,
+                                marketing, traffic issues, etc.</li>
+                            <li>With the help of AI, you can create your personal virtual Assistant, such as
+                                Cortana, Google Assistant, Siri, etc.</li>
+                            <li>With the help of AI, you can build such Robots which can work in an
+                                environment where survival of humans can be at risk.</li>
+                            <li>AI opens a path for other new technologies, new devices, and new
+                                Opportunities.</li>
+                        </ul>
+                        <h2 class="h2">Goals of Artificial Intelligence</h2>
+                        <p>Following are the main goals of Artificial Intelligence:</p>
+                        <ol class="points">
+                            <li>Replicate human intelligence</li>
+                            <li>Solve Knowledge-intensive tasks</li>
+                            <li>An intelligent connection of perception and action</li>
+                            <li>Building a machine which can perform tasks that requires human intelligence
+                                such as:
+                                <ul class="points">
+                                    <li>Proving a theorem</li>
+                                    <li>Playing chess</li>
+                                    <li>Plan some surgical operation</li>
+                                    <li>Driving a car in traffic</li>
+                                </ul>
+                            </li>
+                            <li>Creating some system which can exhibit intelligent behavior, learn new
+                                things by itself, demonstrate, explain, and can advise to its user. </li>
+                        </ol>
+    
+                        <h2 class="h2">What Comprises to Artificial Intelligence? </h2>
+                        <p>Artificial Intelligence is not just a part of computer science even it's so vast
+                            and requires lots of other factors which can contribute to it. To create the AI
+                            first we should know that how intelligence is composed, so the Intelligence is
+                            an intangible part of our brain which is a combination of <strong>Reasoning,
+                                learning, problem-solving perception, language understanding, etc</strong>.
+                        </p>
+                        <p>To achieve the above factors for a machine or software Artificial Intelligence
+                            requires the following discipline:</p>
+                        <ul class="points">
+                            <li>Mathematics</li>
+                            <li>Biology</li>
+                            <li>Psychology</li>
+                            <li>Sociology </li>
+                            <li>Computer Science</li>
+                            <li>Neurons Study</li>
+                            <li>Statistics</li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/artificial-intelligence.png"
+                            alt="Introduction to AI" />
+                        <h2 class="h2">Advantages of Artificial Intelligence</h2>
+                        <p>Following are some main advantages of Artificial Intelligence:</p>
+                        <ul class="points">
+                            <li><strong>High Accuracy with less errors:</strong> AI machines or systems are
+                                prone to less errors and high accuracy as it takes decisions as per
+                                pre-experience or information.</li>
+                            <li><strong>High-Speed:</strong> AI systems can be of very high-speed and
+                                fast-decision making, because of that AI systems can beat a chess champion
+                                in the Chess game.</li>
+                            <li><strong>High reliability:</strong> AI machines are highly reliable and can
+                                perform the same action multiple times with high accuracy.</li>
+                            <li><strong>Useful for risky areas:</strong> AI machines can be helpful in
+                                situations such as defusing a bomb, exploring the ocean floor, where to
+                                employ a human can be risky.</li>
+                            <li><strong>Digital Assistant:</strong> AI can be very useful to provide digital
+                                assistant to the users such as AI technology is currently used by various
+                                E-commerce websites to show the products as per customer requirement. </li>
+                            <li><strong>Useful as a public utility:</strong> AI can be very useful for
+                                public utilities such as a self-driving car which can make our journey safer
+                                and hassle-free, facial recognition for security purpose, Natural language
+                                processing to communicate with the human in human-language, etc.</li>
+                        </ul>
+                        <h2 class="h2">Disadvantages of Artificial Intelligence</h2>
+                        <p>Every technology has some disadvantages, and thesame goes for Artificial
+                            intelligence. Being so advantageous technology still, it has some disadvantages
+                            which we need to keep in our mind while creating an AI system. Following are the
+                            disadvantages of AI: </p>
+                        <ul class="points">
+                            <li><strong>High Cost:</strong> The hardware and software requirement of AI is
+                                very costly as it requires lots of maintenance to meet current world
+                                requirements.</li>
+                            <li><strong>Can't think out of the box:</strong> Even we are making smarter
+                                machines with AI, but still they cannot work out of the box, as the robot
+                                will only do that work for which they are trained, or programmed.</li>
+                            <li><strong>No feelings and emotions:</strong> AI machines can be an outstanding
+                                performer, but still it does not have the feeling so it cannot make any kind
+                                of emotional attachment with human, and may sometime be harmful for users if
+                                the proper care is not taken.</li>
+                            <li><strong>Increase dependency on machines:</strong> With the increment of
+                                technology, people are getting more dependent on devices and hence they are
+                                losing their mental capabilities.</li>
+                            <li><strong>No Original Creativity:</strong> As humans are so creative and can
+                                imagine some new ideas but still AI machines cannot beat this power of human
+                                intelligence and cannot be creative and imaginative.</li>
+                        </ul>
+    
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning about Artificial Intelligence, you must have the fundamental
+                            knowledge of following so that you can understand the concepts easily:</p>
+                        <ul class="points">
+                            <li>Any computer language such as C, C++, Java, Python, etc.(knowledge of Python
+                                will be an advantage)</li>
+                            <li>Knowledge of essential Mathematics such as derivatives, probability theory,
+                                etc.</li>
+                        </ul>
+    
+                        <h2 class="h2">Audience</h2>
+                        <p>Our AI tutorial is designed specifically for beginners and also included some
+                            high-level concepts for professionals. </p>
+    
+                        <h2 class="h2">Problems</h2>
+                        <p>We assure you that you will not find any difficulty while learning our AI
+                            tutorial. But if there any mistake, kindly post the problem in the contact form.
+                        </p>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Application of AI</h1>
+                        <p>Artificial Intelligence has various applications in today's society. It is
+                            becoming essential for today's time because it can solve complex problems with
+                            an efficient way in multiple industries, such as Healthcare, entertainment,
+                            finance, education, etc. AI is making our daily life more comfortable and fast.
+                        </p>
+                        <p>Following are some sectors which have the application of Artificial Intelligence:
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/application-of-ai.png"
+                            alt="Application of AI" />
+                        <h3 class="h3">1. AI in Astronomy</h3>
+                        <ul class="points">
+                            <li>Artificial Intelligence can be very useful to solve complex universe
+                                problems. AI technology can be helpful for understanding the universe such
+                                as how it works, origin, etc.</li>
+                        </ul>
+                        <h3 class="h3">2. AI in Healthcare</h3>
+                        <ul class="points">
+                            <li>In the last, five to ten years, AI becoming more advantageous for the
+                                healthcare industry and going to have a significant impact on this industry.
+                            </li>
+                            <li>Healthcare Industries are applying AI to make a better and faster diagnosis
+                                than humans. AI can help doctors with diagnoses and can inform when patients
+                                are worsening so that medical help can reach to the patient before
+                                hospitalization.</li>
+                        </ul>
+                        <h3 class="h3">3. AI in Gaming</h3>
+                        <ul class="points">
+                            <li>AI can be used for gaming purpose. The AI machines can play strategic games
+                                like chess, where the machine needs to think of a large number of possible
+                                places.</li>
+                        </ul>
+                        <h3 class="h3">4. AI in Finance</h3>
+                        <ul class="points">
+                            <li>AI and finance industries are the best matches for each other. The finance
+                                industry is implementing automation, chatbot, adaptive intelligence,
+                                algorithm trading, and machine learning into financial processes.</li>
+                        </ul>
+                        <h3 class="h3">5. AI in Data Security</h3>
+                        <ul class="points">
+                            <li>The security of data is crucial for every company and cyber-attacks are
+                                growing very rapidly in the digital world. AI can be used to make your data
+                                more safe and secure. Some examples such as AEG bot, AI2 Platform,are used
+                                to determine software bug and cyber-attacks in a better way.</li>
+                        </ul>
+                        <h3 class="h3">6. AI in Social Media</h3>
+                        <ul class="points">
+                            <li>Social Media sites such as Facebook, Twitter, and Snapchat contain billions
+                                of user profiles, which need to be stored and managed in a very efficient
+                                way. AI can organize and manage massive amounts of data. AI can analyze lots
+                                of data to identify the latest trends, hashtag, and requirement of different
+                                users.</li>
+                        </ul>
+                        <h3 class="h3">7. AI in Travel & Transport</h3>
+                        <ul class="points">
+                            <li>AI is becoming highly demanding for travel industries. AI is capable of
+                                doing various travel related works such as from making travel arrangement to
+                                suggesting the hotels, flights, and best routes to the customers. Travel
+                                industries are using AI-powered chatbots which can make human-like
+                                interaction with customers for better and fast response.</li>
+                        </ul>
+                        <h3 class="h3">8. AI in Automotive Industry</h3>
+                        <ul class="points">
+                            <li>Some Automotive industries are using AI to provide virtual assistant to
+                                their user for better performance. Such as Tesla has introduced TeslaBot, an
+                                intelligent virtual assistant.</li>
+                            <li>Various Industries are currently working for developing self-driven cars
+                                which can make your journey more safe and secure.</li>
+                        </ul>
+                        <h3 class="h3">9. AI in Robotics:</h3>
+                        <ul class="points">
+                            <li>Artificial Intelligence has a remarkable role in Robotics. Usually, general
+                                robots are programmed such that they can perform some repetitive task, but
+                                with the help of AI, we can create intelligent robots which can perform
+                                tasks with their own experiences without pre-programmed.</li>
+                            <li>Humanoid Robots are best examples for AI in robotics, recently the
+                                intelligent Humanoid robot named as Erica and Sophia has been developed
+                                which can talk and behave like humans.</li>
+                        </ul>
+                        <h3 class="h3">10. AI in Entertainment</h3>
+                        <ul class="points">
+                            <li>We are currently using some AI based applications in our daily life with
+                                some entertainment services such as Netflix or Amazon. With the help of
+                                ML/AI algorithms, these services show the recommendations for programs or
+                                shows.</li>
+                        </ul>
+                        <h3 class="h3">11. AI in Agriculture</h3>
+                        <ul class="points">
+                            <li>Agriculture is an area which requires various resources, labor, money, and
+                                time for best result. Now a day's agriculture is becoming digital, and AI is
+                                emerging in this field. Agriculture is applying AI as agriculture robotics,
+                                solid and crop monitoring, predictive analysis. AI in agriculture can be
+                                very helpful for farmers.</li>
+                        </ul>
+                        <h3 class="h3">12. AI in E-commerce</h3>
+                        <ul class="points">
+                            <li>AI is providing a competitive edge to the e-commerce industry, and it is
+                                becoming more demanding in the e-commerce business. AI is helping shoppers
+                                to discover associated products with recommended size, color, or even brand.
+                            </li>
+                        </ul>
+                        <h3 class="h3">13. AI in education:</h3>
+                        <ul class="points">
+                            <li>AI can automate grading so that the tutor can have more time to teach. AI
+                                chatbot can communicate with students as a teaching assistant.</li>
+                            <li>AI in the future can be work as a personal virtual tutor for students, which
+                                will be accessible easily at any time and any place.</li>
+                        </ul>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Types of Artificial Intelligence:</h1>
+                        <p>Artificial Intelligence can be divided in various types, there are mainly two
+                            types of main categorization which are based on capabilities and based on
+                            functionally of AI. Following is flow diagram which explain the types of AI.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/types-of-artificial-intelligence.png"
+                            alt="Types of Artificial Intelligence" />
+                        <h2 class="h2">AI type-1: Based on Capabilities</h2>
+                        <h3 class="h3">1. Weak AI or Narrow AI:</h3>
+                        <ul class="points">
+                            <li>Narrow AI is a type of AI which is able to perform a dedicated task with
+                                intelligence.The most common and currently available AI is Narrow AI in the
+                                world of Artificial Intelligence.</li>
+                            <li>Narrow AI cannot perform beyond its field or limitations, as it is only
+                                trained for one specific task. Hence it is also termed as weak AI. Narrow AI
+                                can fail in unpredictable ways if it goes beyond its limits.</li>
+                            <li>Apple Siriis a good example of Narrow AI, but it operates with a limited
+                                pre-defined range of functions.</li>
+                            <li>IBM's Watson supercomputer also comes under Narrow AI, as it uses an Expert
+                                system approach combined with Machine learning and natural language
+                                processing.</li>
+                            <li>Some Examples of Narrow AI are playing chess, purchasing suggestions on
+                                e-commerce site, self-driving cars, speech recognition, and image
+                                recognition. </li>
+                        </ul>
+                        <h3 class="h3">2. General AI:</h3>
+                        <ul class="points">
+                            <li>General AI is a type of intelligence which could perform any intellectual
+                                task with efficiency like a human.</li>
+                            <li>The idea behind the general AI to make such a system which could be smarter
+                                and think like a human by its own.</li>
+                            <li>Currently, there is no such system exist which could come under general AI
+                                and can perform any task as perfect as a human.</li>
+                            <li>The worldwide researchers are now focused on developing machines with
+                                General AI.</li>
+                            <li>As systems with general AI are still under research, and it will take lots
+                                of efforts and time to develop such systems. </li>
+                        </ul>
+                        <h3 class="h3">3. Super AI:</h3>
+                        <ul class="points">
+                            <li>Super AI is a level of Intelligence of Systems at which machines could
+                                surpass human intelligence, and can perform any task better than human with
+                                cognitive properties. It is an outcome of general AI.</li>
+                            <li>Some key characteristics of strong AI include capability include the ability
+                                to think, to reason,solve the puzzle, make judgments, plan, learn, and
+                                communicate by its own.</li>
+                            <li>Super AI is still a hypothetical concept of Artificial Intelligence.
+                                Development of such systems in real is still world changing task. </li>
+                        </ul>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/types-of-artificial-intelligence2.png"
+                            alt="Types of Artificial Intelligence" />
+                        <h2 class="h2">Artificial Intelligence type-2: Based on functionality</h2>
+                        <h3 class="h3">1. Reactive Machines</h3>
+                        <ul class="points">
+                            <li>Purely reactive machines are the most basic types of Artificial
+                                Intelligence.</li>
+                            <li>Such AI systems do not store memories or past experiences for future
+                                actions.</li>
+                            <li>These machines only focus on current scenarios and react on it as per
+                                possible best action.</li>
+                            <li>IBM's Deep Blue system is an example of reactive machines.</li>
+                            <li>Google's AlphaGo is also an example of reactive machines. </li>
+                        </ul>
+                        <h3 class="h3">2. Limited Memory</h3>
+                        <ul class="points">
+                            <li>Limited memory machines can store past experiences or some data for a short
+                                period of time.</li>
+                            <li>These machines can use stored data for a limited time period only.</li>
+                            <li>Self-driving cars are one of the best examples of Limited Memory systems.
+                                These cars can store recent speed of nearby cars, the distance of other
+                                cars, speed limit, and other information to navigate the road. </li>
+                        </ul>
+                        <h3 class="h3">3. Theory of Mind</h3>
+                        <ul class="points">
+                            <li>Theory of Mind AI should understand the human emotions, people, beliefs, and
+                                be able to interact socially like humans.</li>
+                            <li>This type of AI machines are still not developed, but researchers are making
+                                lots of efforts and improvement for developing such AI machines. </li>
+                        </ul>
+                        <h3 class="h3">4. Self-Awareness</h3>
+                        <ul class="points">
+                            <li>Self-awareness AI is the future of Artificial Intelligence. These machines
+                                will be super intelligent, and will have their own consciousness,
+                                sentiments, and self-awareness.</li>
+                            <li>These machines will be smarter than human mind. </li>
+                            <li>Self-Awareness AI does not exist in reality still and it is a hypothetical
+                                concept. </li>
+                        </ul>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Turing Test in AI</h1>
+                        <p>In 1950, Alan Turing introduced a test to check whether a machine can think like
+                            a human or not, this test is known as the Turing Test. In this test, Turing
+                            proposed that the computer can be said to be an intelligent if it can mimic
+                            human response under specific conditions.</p>
+                        <p>Turing Test was introduced by Turing in his 1950 paper, "Computing Machinery and
+                            Intelligence," which considered the question, "Can Machine think?"</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/turing-test-in-ai.png"
+                            alt="Turing Test in AI" /><br>
+                        <p>The Turing test is based on a party game "Imitation game," with some
+                            modifications. This game involves three players in which one player is Computer,
+                            another player is human responder, and the third player is a human Interrogator,
+                            who is isolated from other two players and his job is to find that which player
+                            is machine among two of them.</p>
+                        <p>Consider, Player A is a computer, Player B is human, and Player C is an
+                            interrogator. Interrogator is aware that one of them is machine, but he needs to
+                            identify this on the basis of questions and their responses.</p>
+                        <p>The conversation between all players is via keyboard and screen so the result
+                            would not depend on the machine's ability to convert words as speech.</p>
+                        <p>The test result does not depend on each correct answer, but only how closely its
+                            responses like a human answer. The computer is permitted to do everything
+                            possible to force a wrong identification by the interrogator.</p>
+                        <p>The questions and answers can be like:</p>
+                        <p><strong>Interrogator:</strong> Are you a computer?</p>
+                        <p><strong>PlayerA (Computer):</strong> No</p>
+                        <p><strong>Interrogator:</strong> Multiply two large numbers such as
+                            (256896489*456725896)</p>
+                        <p><strong>Player A:</strong> Long pause and give the wrong answer.</p>
+                        <p>In this game, if an interrogator would not be able to identify which is a machine
+                            and which is human, then the computer passes the test successfully, and the
+                            machine is said to be intelligent and can think like a human.</p>
+                        <p>"In 1991, the New York businessman Hugh Loebner announces the prize competition,
+                            offering a $100,000 prize for the first computer to pass the Turing test.
+                            However, no AI program to till date, come close to passing an undiluted Turing
+                            test".</p>
+                        <h2 class="h2">Chatbots to attempt the Turing test:</h2>
+                        <p><strong>ELIZA:</strong> ELIZA was a Natural language processing computer program
+                            created by Joseph Weizenbaum. It was created to demonstrate the ability of
+                            communication between machine and humans. It was one of the first chatterbots,
+                            which has attempted the Turing Test.</p>
+                        <p><strong>Parry:</strong> Parry was a chatterbot created by Kenneth Colby in 1972.
+                            Parry was designed to simulate a person with <strong>Paranoid
+                                schizophrenia</strong>(most common chronic mental disorder). Parry was
+                            described as "ELIZA with attitude." Parry was tested using a variation of the
+                            Turing Test in the early 1970s.</p>
+                        <p><strong>Eugene Goostman:</strong> Eugene Goostman was a chatbot developed in
+                            Saint Petersburg in 2001. This bot has competed in the various number of Turing
+                            Test. In June 2012, at an event, Goostman won the competition promoted as
+                            largest-ever Turing test content, in which it has convinced 29% of judges that
+                            it was a human.Goostman resembled as a 13-year old virtual boy.</p>
+                        <h2 class="h2">The Chinese Room Argument:</h2>
+                        <p>There were many philosophers who really disagreed with the complete concept of
+                            Artificial Intelligence. The most famous argument in this list was
+                            "<strong>Chinese Room</strong>."</p>
+                        <p>In the year <strong>1980, John Searle</strong> presented "<strong>Chinese
+                                Room</strong>" thought experiment, in his paper "<strong>Mind, Brains, and
+                                Program</strong>," which was against the validity of Turing's Test.
+                            According to his argument, "<strong>Programming a computer may make it to
+                                understand a language, but it will not produce a real understanding of
+                                language or consciousness in a computer</strong>."</p>
+                        <p>He argued that Machine such as ELIZA and Parry could easily pass the Turing test
+                            by manipulating keywords and symbol, but they had no real understanding of
+                            language. So it cannot be described as "thinking" capability of a machine such
+                            as a human.</p>
+                        <h2 class="h2">Features required for a machine to pass the Turing test:</h2>
+                        <ul class="points">
+                            <li><strong>Natural language processing:</strong> NLP is required to communicate
+                                with Interrogator in general human language like English.</li>
+                            <li><strong>Knowledge representation:</strong> To store and retrieve information
+                                during the test.</li>
+                            <li><strong>Automated reasoning:</strong> To use the previously stored
+                                information for answering the questions.</li>
+                            <li><strong>Machine learning:</strong> To adapt new changes and can detect
+                                generalized patterns.</li>
+                            <li><strong>Vision (For total Turing test):</strong> To recognize the
+                                interrogator actions and other objects during a test.</li>
+                            <li><strong>Motor Control (For total Turing test):</strong> To act upon objects
+                                if requested.</li>
+                        </ul>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Search Algorithms in Artificial Intelligence</h1>
+                        <p>Search algorithms are one of the most important areas of Artificial Intelligence.
+                            This topic will explain all about the search algorithms in AI.</p>
+                        <h3 class="h3">Problem-solving agents: </h3>
+                        <p>In Artificial Intelligence, Search techniques are universal problem-solving
+                            methods. <strong>Rational agents</strong> or <strong>Problem-solving
+                                agents</strong> in AI mostly used these search strategies or algorithms to
+                            solve a specific problem and provide the best result. Problem-solving agents are
+                            the goal-based agents and use atomic representation. In this topic, we will
+                            learn various problem-solving search algorithms. </p>
+                        <h2 class="h2">Search Algorithm Terminologies: </h2>
+                        <ul class="points">
+                            <li><strong>Search:</strong> Searchingis a step by step procedure to solve a
+                                search-problem in a given search space. A search problem can have three main
+                                factors:
+                                <ol class="pointsa">
+                                    <li><strong>Search Space:</strong> Search space represents a set of
+                                        possible solutions, which a system may have.</li>
+                                    <li><strong>Start State:</strong> It is a state from where agent begins
+                                        <strong>the search</strong>.
+                                    </li>
+                                    <li><strong>Goal test:</strong> It is a function which observe the
+                                        current state and returns whether the goal state is achieved or not.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li><strong>Search tree:</strong> A tree representation of search problem is
+                                called Search tree. The root of the search tree is the root node which is
+                                corresponding to the initial state.</li>
+                            <li><strong>Actions:</strong> It gives the description of all the available
+                                actions to the agent.</li>
+                            <li><strong>Transition model:</strong> A description of what each action do, can
+                                be represented as a transition model.</li>
+                            <li><strong>Path Cost:</strong> It is a function which assigns a numeric cost to
+                                each path.</li>
+                            <li><strong>Solution:</strong> It is an action sequence which leads from the
+                                start node to the goal node.</li>
+                            <li><strong>Optimal Solution:</strong> If a solution has the lowest cost among
+                                all solutions.</li>
+                        </ul>
+                        <h2 class="h2">Properties of Search Algorithms:</h2>
+                        <p>Following are the four essential properties of search algorithms to compare the
+                            efficiency of these algorithms:</p>
+                        <p><strong>Completeness:</strong> A search algorithm is said to be complete if it
+                            guarantees to return a solution if at least any solution exists for any random
+                            input.</p>
+                        <p><strong>Optimality:</strong> If a solution found for an algorithm is guaranteed
+                            to be the best solution (lowest path cost) among all other solutions, then such
+                            a solution for is said to be an optimal solution.</p>
+                        <p><strong>Time Complexity:</strong> Time complexity is a measure of time for an
+                            algorithm to complete its task.</p>
+                        <p><strong>Space Complexity:</strong> It is the maximum storage space required at
+                            any point during the search, as the complexity of the problem.</p>
+                        <h2 class="h2">Types of search algorithms</h2>
+                        <p><strong>Based on the search problems we can classify the search algorithms into
+                                uninformed (Blind search) search and informed search (Heuristic search)
+                                algorithms. </strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/types-of-search-algorithms.png"
+                            alt="Search Algorithms in Artificial Intelligence" />
+                        <h3 class="h3">Uninformed/Blind Search:</h3>
+                        <p>The uninformed search does not contain any domain knowledge such as closeness,
+                            the location of the goal. It operates in a brute-force way as it only includes
+                            information about how to traverse the tree and how to identify leaf and goal
+                            nodes. Uninformed search applies a way in which search tree is searched without
+                            any information about the search space like initial state operators and test for
+                            the goal, so it is also called blind search.It examines each node of the tree
+                            until it achieves the goal node.</p>
+                        <p><strong>It can be divided into five main types:</strong></p>
+                        <ul class="points">
+                            <li>Breadth-first search</li>
+                            <li>Uniform cost search</li>
+                            <li>Depth-first search</li>
+                            <li>Iterative deepening depth-first search</li>
+                            <li>Bidirectional Search</li>
+                        </ul>
+                        <h3 class="h3">Informed Search</h3>
+                        <p>Informed search algorithms use domain knowledge. In an informed search, problem
+                            information is available which can guide the search. Informed search strategies
+                            can find a solution more efficiently than an uninformed search strategy.
+                            Informed search is also called a Heuristic search.</p>
+                        <p>A heuristic is a way which might not always be guaranteed for best solutions but
+                            guaranteed to find a good solution in reasonable time.</p>
+                        <p>Informed search can solve much complex problem which could not be solved in
+                            another way.</p>
+                        <p>An example of informed search algorithms is a traveling salesman problem.</p>
+                        <ol class="points">
+                            <li>Greedy Search</li>
+                            <li>A* Search</li>
+                        </ol>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Probabilistic reasoning in Artificial intelligence</h1>
+                        <h2 class="h2">Uncertainty:</h2>
+                        <p>Till now, we have learned knowledge representation using first-order logic and
+                            propositional logic with certainty, which means we were sure about the
+                            predicates. With this knowledge representation, we might write A&#8594;B, which
+                            means if A is true then B is true, but consider a situation where we are not
+                            sure about whether A is true or not then we cannot express this statement, this
+                            situation is called uncertainty. </p>
+                        <p>So to represent uncertain knowledge, where we are not sure about the predicates,
+                            we need uncertain reasoning or probabilistic reasoning. </p>
+                        <h2 class="h3">Causes of uncertainty:</h2>
+                        <p>Following are some leading causes of uncertainty to occur in the real world.</p>
+                        <ol class="points">
+                            <li>Information occurred from unreliable sources. </li>
+                            <li>Experimental Errors</li>
+                            <li>Equipment fault</li>
+                            <li>Temperature variation</li>
+                            <li>Climate change. </li>
+                        </ol>
+    
+                        <h2 class="h2">Probabilistic reasoning:</h2>
+                        <p>Probabilistic reasoning is a way of knowledge representation where we apply the
+                            concept of probability to indicate the uncertainty in knowledge. In
+                            probabilistic reasoning, we combine probability theory with logic to handle the
+                            uncertainty.</p>
+                        <p>We use probability in probabilistic reasoning because it provides a way to handle
+                            the uncertainty that is the result of someone's laziness and ignorance. </p>
+                        <p>In the real world, there are lots of scenarios, where the certainty of something
+                            is not confirmed, such as "It will rain today," "behavior of someone for some
+                            situations," "A match between two teams or two players." These are probable
+                            sentences for which we can assume that it will happen but not sure about it, so
+                            here we use probabilistic reasoning. </p>
+                        <p><strong>Need of probabilistic reasoning in AI:</strong></p>
+                        <ul class="points">
+                            <li>When there are unpredictable outcomes. </li>
+                            <li>When specifications or possibilities of predicates becomes too large to
+                                handle.</li>
+                            <li>When an unknown error occurs during an experiment.</li>
+                        </ul>
+                        <p>In probabilistic reasoning, there are two ways to solve problems with uncertain
+                            knowledge:</p>
+                        <ul class="points">
+                            <li><strong>Bayes' rule</strong></li>
+                            <li><strong>Bayesian Statistics</strong></li>
+                        </ul>
+                        <h4 class="n">Note: We will learn the above two rules in later chapters. </h4>
+                        <p>As probabilistic reasoning uses probability and related terms, so before
+                            understanding probabilistic reasoning, let's understand some common terms:</p>
+                        <p><strong>Probability:</strong> Probability can be defined as a chance that an
+                            uncertain event will occur. It is the numerical measure of the likelihood that
+                            an event will occur. The value of probability always remains between 0 and 1
+                            that represent ideal uncertainties.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    0 &#8804; P(A) &#8804; 1,   where P(A) is the probability of an event A.
+    </textarea></div>
+                        <div class="codeblock"><textarea name="code" class="java">
+    P(A) = 0,  indicates total uncertainty in an event A. 
+    </textarea></div>
+                        <div class="codeblock"><textarea name="code" class="java">
+    P(A) =1, indicates total certainty in an event A.  
+    </textarea></div>
+                        <p>We can find the probability of an uncertain event by using the below formula.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/probabilistic.png"
+                            alt="Probabilistic reasoning in Artificial intelligence" />
+                        <ul class="points">
+                            <li>P(&not;A) = probability of a not happening event. </li>
+                            <li>P(&not;A) + P(A) = 1.</li>
+                        </ul>
+                        <p><strong>Event:</strong> Each possible outcome of a variable is called an event.
+                        </p>
+                        <p><strong>Sample space:</strong> The collection of all possible events is called
+                            sample space. </p>
+                        <p><strong>Random variables:</strong> Random variables are used to represent the
+                            events and objects in the real world. </p>
+                        <p><strong>Prior probability:</strong> The prior probability of an event is
+                            probability computed before observing new information.</p>
+                        <p><strong>Posterior Probability:</strong> The probability that is calculated after
+                            all evidence or information has taken into account. It is a combination of prior
+                            probability and new information. </p>
+    
+                        <h2 class="h3">Conditional probability:</h2>
+                        <p>Conditional probability is a probability of occurring an event when another event
+                            has already happened. </p>
+                        <p>Let's suppose, we want to calculate the event A when event B has already
+                            occurred, "the probability of A under the conditions of B", it can be written
+                            as:</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/probabilistic2.png"
+                            alt="Probabilistic reasoning in Artificial intelligence" />
+                        <p><strong>Where P(<em>A</em>&#8896;<em>B</em>)= Joint probability of a and
+                                B</strong></p>
+                        <p><strong>P(B)= Marginal probability of B. </strong>
+                        <p>If the probability of A is given and we need to find the probability of B, then
+                            it will be given as:</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/probabilistic3.png"
+                            alt="Probabilistic reasoning in Artificial intelligence" />
+                        <p>It can be explained by using the below Venn diagram, where B is occurred event,
+                            so sample space will be reduced to set B, and now we can only calculate event A
+                            when event B is already occurred by dividing the probability of
+                            <strong>P(A&#8896;<em>B</em>) by P( B )</strong>.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/probabilistic4.png"
+                            alt="Probabilistic reasoning in Artificial intelligence" />
+                        <p><strong>Example:</strong></p>
+                        <p>In a class, there are 70% of the students who like English and 40% of the
+                            students who likes English and mathematics, and then what is the percent of
+                            students those who like English also like mathematics?</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Let, A is an event that a student likes Mathematics</p>
+                        <p>B is an event that a student likes English. </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/probabilistic5.png"
+                            alt="Probabilistic reasoning in Artificial intelligence" />
+                        <p><strong>Hence, 57% are the students who like English also like Mathematics.
+                            </strong></p>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Examples of AI-Artificial Intelligence</h1>
+                        <h2 class="h2">What is AI-Artificial Intelligence?</h2>
+                        <p>The term "<strong><em>Artificial Intelligence</em></strong>" refers to the
+                            simulation of human intelligence processes by machines, especially
+                            <strong>computer systems</strong>. It also includes <strong>Expert systems,
+                                voice recognition, machine vision,</strong> and <strong>natural language
+                                processing (NLP).</strong>
+                        </p>
+                        <p>AI programming focuses on three cognitive aspects, such as learning, reasoning,
+                            and self-correction.</p>
+                        <ul class="points">
+                            <li>Learning Processes</li>
+                            <li>Reasoning Processes</li>
+                            <li>Self-correction Processes</li>
+                        </ul>
+                        <h3 class="h3">Learning Processes</h3>
+                        <p>This part of AI programming is concerned with gathering data and creating rules
+                            for transforming it into useful information. The rules, which are also called
+                            algorithms, offer computing devices with step-by-step instructions for
+                            accomplishing a particular job.</p>
+                        <h3 class="h3">Reasoning Processes</h3>
+                        <p>This part of AI programming is concerned with selecting the best algorithm to
+                            achieve the desired result.</p>
+                        <h3 class="h3">Self-Correction Processes</h3>
+                        <p>This part of AI programming aims to fine-tune algorithms regularly in order to
+                            ensure that they offer the most reliable results possible.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai.png"
+                            alt="Examples of AI" />
+                        <p><a href="https://www.javatpoint.com/artificial-intelligence-tutorial">Artificial
+                                Intelligence</a> is an extensive field of computer science which focuses on
+                            developing intelligent machines capable of doing activities that would normally
+                            require human intelligence. While AI is a multidisciplinary science with
+                            numerous methodologies, advances in deep learning and machine learning create a
+                            paradigm shift in almost every aspect of technology.</p>
+                        <h2 class="h2">Examples of AI-Artificial Intelligence</h2>
+                        <p>The following are the examples of AI-Artificial Intelligence:</p>
+                        <ol class="points">
+                            <li>Google Maps and Ride-Hailing Applications</li>
+                            <li>Face Detection and recognition</li>
+                            <li>Text Editors and Autocorrect</li>
+                            <li>Chatbots</li>
+                            <li>E-Payments</li>
+                            <li>Search and Recommendation algorithms</li>
+                            <li>Digital Assistant</li>
+                            <li>Social media</li>
+                            <li>Healthcare</li>
+                            <li>Gaming</li>
+                            <li>Online Ads-Network</li>
+                            <li>Banking and Finance</li>
+                            <li>Smart Home devices</li>
+                            <li>Security and Surveillance</li>
+                            <li>Smart Keyboard App</li>
+                            <li>Smart Speaker</li>
+                            <li>E-Commerce</li>
+                            <li>Smart Email Apps</li>
+                            <li>Music and Media Streaming Service</li>
+                            <li>Space Exploration</li>
+                        </ol>
+                        <p>Let's discuss the above examples in detail.</p>
+                        <h3 class="h3">1. Google Maps and Ride-Hailing Applications</h3>
+                        <p>Travelling to a new destination does not require much thought any longer. Rather
+                            than relying on confusing address directions, we can now easily open our phone's
+                            map app and type in our destination.</p>
+                        <p>So how does the app know about the appropriate directions, best way, and even the
+                            presence of roadblocks and traffic jams? A few years ago, only <a
+                                href="https://www.javatpoint.com/gps-full-form"><strong>GPS</strong></a>
+                            (satellite-based navigation) was used as a navigation guide. However, artificial
+                            intelligence (AI) now provides users with a much better experience in their
+                            unique surroundings.</p>
+                        <p>The app algorithm uses machine learning to recall the building's edges that are
+                            supplied into the system after the person has manually acknowledged them. This
+                            enables the map to provide simple visuals of buildings. Another feature is
+                            identifying and understanding handwritten house numbers, which assists travelers
+                            in finding the exact house they need. Their outline or handwritten label can
+                            also recognize locations that lack formal street signs.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai1.png"
+                            alt="Examples of AI" />
+                        <p>The application has been trained to recognize and understand traffic. As a
+                            result, it suggests the best way to avoid traffic congestion and bottlenecks.
+                            The AI-based algorithm also informs users about the precise distance and time it
+                            will take them to arrive at their destination. It has been trained to calculate
+                            this based on the traffic situations. Several ride-hailing applications have
+                            emerged as a result of the use of similar AI technology. So, whenever you need
+                            to book a cab via an app by putting your location on a map, this is how it
+                            works.</p>
+                        <h3 class="h3">2. Face Detection and Recognition</h3>
+                        <p>Utilizing face ID for unlocking our phones and using virtual filters on our faces
+                            while taking pictures are two uses of AI that are presently essential for our
+                            day-by-day lives.</p>
+                        <p>Face recognition is used in the former, which means that every human face can be
+                            recognized. Face recognition is used in the above, which recognizes a particular
+                            face.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai2.png"
+                            alt="Examples of AI" />
+                        <p><strong>How does it work?</strong></p>
+                        <p>Intelligent machines often match-and some cases, even exceed human performance! -
+                            Human potential. Human babies begin to identifying facial features such as eyes,
+                            lips, nose, and face shapes. A face, though, is more than just that. A number of
+                            characteristics distinguish human faces. Smart machines are trained in order to
+                            recognize facial coordinates (x, y, w, and h; which form a square around the
+                            face as an area of interest), landmarks (nose, eyes, etc.), and alignment
+                            (geometric structures). This improves the human ability to identify faces by
+                            several factors. Face recognition is also used by government facilities or at
+                            the airport for <strong>monitoring</strong>, and <strong>security</strong>.</p>
+                        <h3 class="h3">3. Text Editors or Autocorrect</h3>
+                        <p>When typing a document, there are inbuilt or downloadable auto-correcting tools
+                            for editors of spelling errors, readability, mistakes, and plagiarism based on
+                            their difficulty level.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai3.png"
+                            alt="Examples of AI" />
+                        <p>It should have taken a long time for us to master our language and become fluent
+                            in it. Artificially intelligent algorithms often used <strong>deep learning,
+                                machine learning,</strong> and <strong>natural language</strong> in order to
+                            detect inappropriate language use and recommend improvements. Linguists and
+                            computer scientists collaborate in teaching machines grammar in the same way
+                            that we learned it in school. Machines are fed large volumes of high-quality
+                            data that has been structured in a way that machines can understand. Thus, when
+                            we misspell a single comma, the editor will highlight it in red and offer
+                            suggestions.</p>
+                        <h3 class="h3">4. Chatbots</h3>
+                        <p>Answering a customer's inquiries can take a long time. The use of algorithms to
+                            train machines to meet customer needs through chatbots is an artificially
+                            intelligent solution to this problem. This allows machines to answer as well as
+                            take and track orders.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai4.png"
+                            alt="Examples of AI" />
+                        <p>We used Natural Language Processing (<strong>NLP</strong>) to train chatbots to
+                            impersonate customer service agents' conversational approaches. Advanced
+                            chatbots do not require complex input formats (such as yes/o questions). They
+                            are capable of responding to complex questions that necessitate comprehensive
+                            answers. They will appear to be a customer representative, in fact, another
+                            example of artificial intelligence (AI). If you give a negative rating to a
+                            response, the bot will figure out what went wrong and fix it the next time,
+                            ensuring that you get the best possible service.</p>
+                        <h3 class="h3">5. Online-Payments</h3>
+                        <p>It can be a time-consuming errand to rush to the bank for any transaction. Good
+                            news! Artificial Intelligence is now being used by banks to support customers by
+                            simplifying the process of payment.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai5.png"
+                            alt="Examples of AI" />
+                        <p>Artificial intelligence has enabled you to deposit checks from the convenience of
+                            our own home. Since AI is capable of deciphering handwriting and making online
+                            cheque processing practicable. Artificial Intelligence can potentially be
+                            utilized to detect fraud by observing consumers' credit card spending patterns.
+                            For example, the algorithms are aware of what items User X purchases, when and
+                            where they are purchased, and in what price range they are purchased. If there
+                            is some suspicious behaviour that does not match the user's profile, then the
+                            system immediately signals user X.</p>
+                        <h3 class="h3">6. Search and Recommendation Algorithms</h3>
+                        <p>When we wish to listen to our favorite songs or watch our favorite movie or shop
+                            online, we have ever found that the things recommended to us perfectly match our
+                            interests? This is the beauty of artificial intelligence.</p>
+                        <p>These intelligent recommendation systems analyze our online activity and
+                            preferences to provide us with similar content. Continuous training allows us to
+                            have a customized experience. The data is obtained from the front-end, saved as
+                            <strong>big data</strong>, and analysed using machine learning and deep
+                            learning. Then it can predict your preferences and make suggestions to keep you
+                            amused without having to look for something else. Artificial intelligence can
+                            also be utilized to improve the user experience of a search engine. Generally,
+                            the answer we are searching for is found in the top search results. What cause
+                            this?
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai6.png"
+                            alt="Examples of AI" />
+                        <p>Data is fed into a quality control algorithm to identify high-quality content
+                            from <strong>SEO-spammed, low-quality content</strong>. This aids in creating an
+                            ascending order of search results on the basis of the quality for the greatest
+                            user experience. Since search engines are made up of codes, natural language
+                            processing technology aids in understanding humans by these applications. In
+                            reality, they can predict what a person wants to ask by compiling top-ranked
+                            searches and guessing their questions when they begin to type.</p>
+                        <p>Machines are constantly being updated with new features such as image search and
+                            voice search. If we need to find out a song that is playing at a mall, all we
+                            have to do is hold the phone up to it, and a music-identifying app will tell us
+                            what it is within a few seconds. The machine will also offer you song details
+                            after searching through an extensive collection of tunes.</p>
+                        <h3 class="h3">7. Digital Assistants</h3>
+                        <p>When our hands are full, we often enlist the help of digital assistants to
+                            complete tasks on our behalf. We might ask the assistant to call our father
+                            while we are driving with a cup of tea in one hand. For instance, Siri would
+                            look at our contacts, recognize the word "father," and dial the number.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai7.png"
+                            alt="Examples of AI" />
+                        <p>Siri is an example of a <strong>lower-tier model</strong> which can only respond
+                            to voice commands and cannot deliver complex responses. The new digital
+                            assistant is fluent in human language and uses advanced NLP (Natural Language
+                            Processing) and ML (Machine Learning) techniques. They are capable of
+                            understanding complex command inputs and providing acceptable results. They have
+                            adaptive abilities which can examine <strong>preferences, habits,</strong> and
+                            <strong>schedules</strong>. It enables them to use <strong>prompts,
+                                schedules,</strong> and <strong>reminders</strong> to help us systemize,
+                            coordinate, and plan things.
+                        </p>
+                        <h3 class="h3">8. Social Media</h3>
+                        <p>The advent of social media gave the world a new narrative with immense freedom of
+                            speech. Although, it brought certain social ills like cyberbullying, cybercrime,
+                            and abuse of language. Several social media apps are using AI to help solve
+                            these issues while also providing users with other enjoyable features.</p>
+                        <p>AI algorithms are much quicker than humans at detecting and removing hate
+                            speech-containing messages. It is made possible by their ability to recognize
+                            hostile terms, keywords, and symbols in a variety of languages. These have been
+                            entered into the system, which can also contribute neologisms to its dictionary.
+                            Deep learning's neural network architecture is a vital part of the process.</p>
+                        <p>Emojis have become the most common way to express a wide range of emotions. This
+                            digital language is also understood by AI technology because it can understand
+                            the meaning of a certain piece of text and guess the exact emoji.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai8.png"
+                            alt="Examples of AI" />
+                        <p>Social networking, a perfect example of artificial intelligence, may even figure
+                            out what kind of content a user likes and recommends similar content. Facial
+                            recognition is also used in social media profiles, assisting users in tagging
+                            their friends via automatic suggestions. Smart filters can recognize spam and
+                            undesirable messages and automatically filter them out. Users may also take
+                            advantage of smart answers.</p>
+                        <p>The social media sector could use artificial intelligence to detect mental health
+                            issues such as suicidal thoughts by analyzing the information published and
+                            consumed. This information can be shared with mental health professionals.</p>
+                        <h3 class="h3">9. Healthcare</h3>
+                        <p><strong>Infervision</strong> is using artificial intelligence and deep learning
+                            to save lives. In China, where there are insufficient radiologists to keep up
+                            with the demand for checking 1.4 billion CT scans each year for early symptoms
+                            of lung cancer. Radiologists essential to review many scans every day, which
+                            isn't just dreary, yet human weariness can prompt errors. Infervision trained
+                            and instructed algorithms to expand the work of radiologists in order to permit
+                            them to diagnose cancer more proficiently and correctly.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai9.png"
+                            alt="Examples of AI" />
+                        <p>The inspiration and foundation for Google's DeepMind are Neuroscience, which aims
+                            to create a machine that can replicate the thinking processes in our own brains.
+                            While DeepMind has effectively beaten people at games, what are truly
+                            captivating are the opportunities for medical care applications. For example,
+                            lessening the time it takes to plan treatments and utilizing machines to help
+                            diagnose ailments.</p>
+                        <h3 class="h3">10. Gaming</h3>
+                        <p>Artificial Intelligence has been an important part of the gaming industry in
+                            recent years. In reality, one of AI's most significant achievements is in the
+                            gaming industry.</p>
+                        <p>One of the most important achievements in the field of AI is DeepMind's AI-based
+                            AlphaGo software, which is famous for defeating Lee Sedol, the world champion in
+                            the game of GO. Shortly after the win, DeepMind released
+                            <strong>AlphaGo</strong>, which trounced its predecessor in an AI-AI face off.
+                            The advanced machine, AlphaGo Zero, taught itself to master the game, unlike the
+                            original AlphaGo, which DeepMind learned over time using a vast amount of data
+                            and supervision.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai10.png"
+                            alt="Examples of AI" />
+                        <p>Not at all like the first AlphaGo, which DeepMind prepared over the long run by
+                            utilizing a lot of information and oversight, the high-level framework, AlphaGo
+                            Zero instructed itself to dominate the game. Another example of Artificial
+                            Intelligence in gaming comprises the First Encounter Assault Recon, also known
+                            as F.E.A.R that is the first-person shooter video game.</p>
+                        <h3 class="h3">11. Online Ads Network</h3>
+                        <p>The online advertising industry is the most significant user of artificial
+                            intelligence that uses AI (<strong>Artificial Intelligence</strong>) to not only
+                            monitor user statistics but also to advertise us on the basis of the statistics.
+                            The online advertising industry will struggle if AI is not implemented, as users
+                            will be shown random advertisements that have no relation to their interests.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai11.png"
+                            alt="Examples of AI" />
+                        <p>Since AI has been so good at determining our preferences and serving us ads, the
+                            worldwide digital ad industry has crossed 250 billion US dollars, with the
+                            business projected to cross the 300 billion mark in 2019. So, the next time
+                            remembers that AI is changing your life while you browse the internet and
+                            encounter adverts or product recommendations.</p>
+                        <h3 class="h3">12. Banking and Finance</h3>
+                        <p>The banking and finance industry has a major impact on our daily lives which
+                            means the world runs on liquidity, and banks are the gatekeepers who control the
+                            flow. Did you know that artificial intelligence is heavily used in the banking
+                            and finance industry for things such as customer service, investment, fraud
+                            protection, and so on? The automatic emails we get from banks if we make an
+                            ordinary transaction, are a simple example. That's AI keeping an eye on our
+                            account and trying to alert us regarding any potential fraud. AI is now being
+                            trained to examine vast samples of fraud data in order to identify patterns so
+                            that we can be alerted before it happens to us. If we run into a snag and
+                            contact our bank's customer service, we are probably speaking with an AI bot.
+                            Even the largest financial industry use AI to analyse data in order to find the
+                            best ways to invest capital in order to maximize returns while minimizing risk.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai12.png"
+                            alt="Examples of AI" />
+                        <p>Not only that, but AI is set to play an even larger role in the industry, with
+                            major banks around the world investing billions of dollars in AI technology, and
+                            we will be able to see the results sooner rather than later.</p>
+                        <h3 class="h3">13. Smart Home Devices</h3>
+                        <p>Another popular example of AI (Artificial Intelligence) is smart home devices.
+                            Artificial intelligence is even being welcomed into our homes. Most of the smart
+                            home gadgets we purchase use artificial intelligence to learn our habits and
+                            automatically change settings to make our experience as seamless as possible.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai13.png"
+                            alt="Examples of AI" />
+                        <p>We have effectively examined how we utilize savvy voice assistants to control
+                            these smart home gadgets. We probably are aware that it is a great example of
+                            AI's impact on our lives. That is to say, there are smart thermostats that
+                            change the temperature-dependent on our preferences, smart lights which change
+                            the colour and intensity of lights dependent on time, and much more. This will
+                            not happen when our primary interaction with all our smart home devices is only
+                            through AI.</p>
+                        <h3 class="h3">14. curity and Surveillance</h3>
+                        <p>Although we all can debate about the ethics of using a large surveillance system,
+                            there's no denying that it's being used, and AI is playing a significant role in
+                            it. It isn't workable for people to keep monitoring many monitors
+                            simultaneously, and thus, utilizing AI makes well. With technologies such as
+                            <strong>facial recognition</strong> and <strong>object recognition</strong>
+                            improving every day, it won't be long when all the security camera deals with
+                            are being checked by an AI and not a human. Right now, before AI can be
+                            completely implemented, this is going to be our future.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai14.png"
+                            alt="Examples of AI" />
+                        <h3 class="h3">15. Smart Keyboard Apps</h3>
+                        <p>Smart keyboard apps are another example of AI (Artificial Intelligence). In all
+                            actuality, not every person loves managing on-screen keyboards. Although, they
+                            have become far more intuitive, permitting clients to type comfortably and
+                            quickly. What has likely ended up being a catalyst for them is the integration
+                            of AI. The smart keyboard applications keep a tab on the composing style of a
+                            client and predict words and emojis based on that. Consequently, typing on the
+                            touchscreen has gotten quicker and more advantageous. Not to mention that
+                            artificial intelligence is crucial in detecting misspellings and typos.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai15.png"
+                            alt="Examples of AI" />
+                        <h3 class="h3">16. Smart Speakers</h3>
+                        <p>Not in vain, many thinks that smart speakers are good to go for a major blast in
+                            technology. Besides controlling smart home gadgets, they are likewise capable of
+                            various things like sending fast messages, setting updates, checking the
+                            climate, and getting the most recent news.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai16.png"
+                            alt="Examples of AI" />
+                        <p>Also, it's this flexibility that is ending up being a conclusive factor for them.
+                            Driven by the hugely popular Amazon Echo series, the worldwide brilliant speaker
+                            market arrived at an exceptional high in 2019 with sales of 149.9 million units,
+                            which is a huge increment of 70% in 2018. Additionally, the sales in Q4 2019
+                            also saw another record with an incredible 55.7 million units. Smart speakers
+                            are likely the most unmistakable instances of the utilization of AI in our
+                            reality.</p>
+                        <h3 class="h3">17. E-Commerce</h3>
+                        <p>Artificial intelligence algorithms have given the necessary vital impulse to
+                            web-based businesses to give a more customized insight. According to many
+                            sources, its use has significantly improved sales and has also aided in
+                            developing long-term consumer relationships. Thus, organizations take advantage
+                            of AI to deploy chatbots to gather urgent information and predict purchases to
+                            make a client-centric experience.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai17.png"
+                            alt="Examples of AI" />
+                        <p>On the way across this shift of technique? Simply invest some time on websites
+                            such as Amazon, and eBay and we will soon see how quickly the scene around you
+                            is improving rapidly!</p>
+                        <h3 class="h3">18. Smart Email Apps</h3>
+                        <p>In the event that you actually find your inbox cluttered with an excessive number
+                            of undesirable messages, the possibility is quite high that we can yet stay with
+                            an old-fashioned email application.</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai18.png"
+                            alt="Examples of AI" />
+                        <p>Present-day email applications such as <strong>Spark</strong> make several AI to
+                            filter out spam messages and furthermore arrange messages so you can rapidly get
+                            to the significant ones. Likewise, it additionally provides smart answers
+                            dependent on the messages we get to help us answer to any email rapidly. The
+                            "Smart Reply" highlight of Gmail is an extraordinary illustration of this. It
+                            utilizes AI to filter the content of the email and gives you context-oriented
+                            answers.</p>
+                        <h3 class="h3">19. Music and Media Streaming Service</h3>
+                        <p>Another amazing illustration of how AI affects our lives is the music and media
+                            streaming features that we utilize reliably. Whether or not you are utilizing
+                            <strong>Spotify, Netflix,</strong> or <strong>YouTube</strong>, AI is making the
+                            decisions for you.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai19.png"
+                            alt="Examples of AI" />
+                        <p>All things considered as everything, once in a while is great and some of the
+                            time is awful. For instance, I enjoy Spotify's Discover Weekly playlist since it
+                            has acquainted me with a few new artists who I would not have known about if it
+                            weren't for Spotify's AI divine beings.</p>
+                        <p>Then again, I additionally remember going down the YouTube rabbit hole, wasting
+                            uncountable hours simply watching the suggested videos. That suggested videos
+                            section has become so great at knowing my taste that it's alarming. Thus, keep
+                            in mind that AI is at work whenever you are watching a suggested video on
+                            YouTube, viewing a suggested show on Netflix, listening to a pre-made playlist
+                            on Spotify, or using any other media and music streaming service.</p>
+                        <h3 class="h3">20. Space Exploration</h3>
+                        <p>Space expeditions and discoveries consistently require investigating immense
+                            measures of information. Artificial Intelligence and Machine learning are the
+                            best approach for dealing with and measure information on this scale. After
+                            thorough astronomers, and research utilized Artificial Intelligence to filter
+                            through long periods of information got by the Kepler telescope to distinguish
+                            an inaccessible eight-planet solar system.'</p>
+                        <img src="https://static.javatpoint.com/tutorial/ai/images/examples-of-ai20.png"
+                            alt="Examples of AI" />
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

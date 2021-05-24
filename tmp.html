@@ -1,28 +1,168 @@
-{% extends "bloglayout.html" %} {% block body %}
-<!-- Page Header -->
-<header class="masthead" style="background-image: url('/static/img/pic2.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h1>Admin Panel</h1>
-                    <span class="subheading">Manage your blog post and change them.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<div class="onlycontentinner">
+                    <div id="city">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h1 class="h1">CSS Animation</h1>
+                                    <p><strong>CSS Animation property</strong> is used <em>to create animation on the
+                                            webpage</em>. It can be used as a replacement of animation created by Flash
+                                        and <a href="https://javatpoint.com/javascript-tutorial">JavaScript</a>.
+                                    <p>
+                                    <h2 class="h3">CSS3 @keyframes Rule</h2>
+                                    <p>The animation is created in the @keyframe rule. It is used to control the
+                                        intermediate steps in a <a href="https://javatpoint.com/css-tutorial">CSS</a>
+                                        animation sequence. </p>
+                                    <h2 class="h3">What animation does</h2>
+                                    <p>An animation <em>makes an element change gradually</em> from one style to
+                                        another. You can add as many as properties you want to add. You can also specify
+                                        the changes in percentage.0% specify the start of the animation and 100% specify
+                                        its completion.</p>
+                                    <h2 class="h3">How CSS animation works</h2>
+                                    <p>When the animation is created in the <a
+                                            href="https://www.javatpoint.com/css-keyframes-rule">@keyframe rule</a>, it
+                                        must be bound with selector; otherwise the animation will have no effect. </p>
+                                    <p>The animation could be bound to the selector by specifying at least these two
+                                        properties:</p>
+                                    <ul class="points">
+                                        <li>The name of the animation</li>
+                                        <li>The duration of the animation</li>
+                                    </ul>
+                                    <h2 class="h2">CSS animation properties</h2>
+                                    <table class="alt">
+                                        <tr>
+                                            <th>Property</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>@keyframes</td>
+                                            <td>It is used to specify the animation.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation</td>
+                                            <td>This is a shorthand property, used for setting all the properties,
+                                                except the animation-play-state and the animation-fill- mode property.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-delay</td>
+                                            <td>It specifies when the animation will start.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-direction</td>
+                                            <td>It specifies if or not the animation should play in reserve on alternate
+                                                cycle.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-duration</td>
+                                            <td>It specifies the time duration taken by the animation to complete one
+                                                cycle.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-fill-mode</td>
+                                            <td>it specifies the static style of the element. (when the animation is not
+                                                playing)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-iteration-count</td>
+                                            <td>It specifies the number of times the animation should be played.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-play-state</td>
+                                            <td>It specifies if the animation is running or paused.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-name</td>
+                                            <td>It specifies the name of @keyframes animation.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>animation-timing-function</td>
+                                            <td>It specifies the speed curve of the animation.</td>
+                                        </tr>
+                                    </table>
+                                    <h2 class="h3">CSS animation example: changing background color</h2>
+                                    <p>Let's see a simple CSS animation example that changes background color of
+                                        rectangle from RED to BLACK.</p>
+                                    <div class="codeblock"><textarea name="code" class="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt; 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */
+    animation: myfirst 5s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {background: red;}
+    to {background: green;}
+}
+/* Standard syntax */
+@keyframes myfirst {
+    from {background: red;}
+    to {background: green;}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The IE 9 and earlier versions don't support CSS3 animation property. &lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+                                    <span class="testit"><a
+                                            href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssanimation1"
+                                            target="_blank">Test it Now</a></span>
+                                    <h2 class="h3">CSS animation example: Moving Rectangle</h2>
+                                    <p>Let's take another example to display animation with percentage value. </p>
+                                    <div class="codeblock"><textarea name="code" class="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt; 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+    animation: myfirst 5s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:300px; top:0px;}
+    50%  {background:blue; left:200px; top:300px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:300px; top:0px;}
+    50%  {background:blue; left:300px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The Internet Explorer 9 and its earlier versions don't support this example.&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea></div>
+                                    <span class="testit"><a
+                                            href="https://www.javatpoint.com/oprweb/test.jsp?filename=cssanimation2"
+                                            target="_blank">Test it Now</a></span>
+                                    <br>
+                                    <hr />
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                Add content here
-            </div>
-        </div>
-    </div>
-</article>
-
-{% endblock %}
+                                    <br /><br />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+</div>

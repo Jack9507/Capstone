@@ -1,0 +1,589 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>C++ Tutorial | C++ Tutorial - E-Learning</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+ <br>
+ <br>
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+                        <h1 class="h1">C++ if-else</h1>
+                        <p>In C++ programming, if statement is used to test the condition. There are various
+                            types of if statements in C++.</p>
+                        <ul class="points">
+                            <li>if statement</li>
+                            <li>if-else statement</li>
+                            <li>nested if statement</li>
+                            <li>if-else-if ladder</li>
+                        </ul>
+                        <hr />
+                        <h2 class="h2">C++ IF Statement</h2>
+                        <p>The C++ if statement tests the condition. It is executed if condition is true.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    if(condition){  
+    //code to be executed  
+    }
+    </textarea></div>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-if-else1.png" alt="Cpp If else 1" />
+                        <hr />
+                        <h2 class="h2">C++ If Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+     
+    int main () {
+       int num = 10;  
+                if (num % 2 == 0)  
+                {  
+                    cout&lt;&lt;"It is even number";  
+                } 
+       return 0;
+    }
+    </textarea></div>
+                        <p>Output:/p>
+                        <div class="codeblock3">
+                            <pre>
+    It is even number
+    </pre>
+                        </div>
+                        <hr />
+    
+                        <h2 class="h2">C++ IF-else Statement</h2>
+                        <p>The C++ if-else statement also tests the condition. It executes if block if
+                            condition is true otherwise else block is executed.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    if(condition){  
+    //code if condition is true  
+    }else{  
+    //code if condition is false  
+    }  
+    </textarea></div>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-if-else2.png" alt="Cpp If else 2" />
+                        <hr />
+                        <h2 class="h2">C++ If-else Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main () {
+       int num = 11;  
+                if (num % 2 == 0)  
+                {  
+                    cout&lt;&lt;"It is even number";  
+                } 
+                else
+                {  
+                    cout&lt;&lt;"It is odd number";  
+                }
+       return 0;
+    }
+    </textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    It is odd number
+    </pre>
+                        </div>
+                        <hr />
+                        <h2 class="h2">C++ If-else Example: with input from user</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include <iostream>
+    using namespace std;
+    int main () {
+        int num;
+        cout&lt;&lt;"Enter a Number: ";
+        cin>>num;
+                if (num % 2 == 0)  
+                {  
+                    cout&lt;&lt;"It is even number"&lt;&lt;endl;  
+                } 
+                else
+                {  
+                    cout&lt;&lt;"It is odd number"&lt;&lt;endl;  
+                }
+       return 0;
+    }
+    </textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number:11
+    It is odd number
+    </pre>
+                        </div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number:12
+    It is even number
+    </pre>
+                        </div>
+                        <hr />
+                        <h2 class="h2">C++ IF-else-if ladder Statement</h2>
+                        <p>The C++ if-else-if ladder statement executes one condition from multiple
+                            statements.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    if(condition1){  
+    //code to be executed if condition1 is true  
+    }else if(condition2){  
+    //code to be executed if condition2 is true  
+    }  
+    else if(condition3){  
+    //code to be executed if condition3 is true  
+    }  
+    ...  
+    else{  
+    //code to be executed if all the conditions are false  
+    }  
+    </textarea></div>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-if-else3.png" alt="Cpp If else 3" />
+                        <hr />
+                        <h2 class="h2">C++ If else-if Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main () {
+           int num;
+           cout&lt;&lt;"Enter a number to check grade:";  
+           cin&gt;&gt;num;
+                if (num <0 || num >100)  
+                {  
+                    cout&lt;&lt;"wrong number";  
+                }  
+                else if(num &gt;= 0 && num &lt; 50){  
+                    cout&lt;&lt;"Fail";  
+                }  
+                else if (num &gt;= 50 && num &lt; 60)  
+                {  
+                    cout&lt;&lt;"D Grade";  
+                }  
+                else if (num &gt;= 60 && num &lt; 70)  
+                {  
+                    cout&lt;&lt;"C Grade";  
+                }  
+                else if (num &gt;= 70 && num &lt; 80)  
+                {  
+                    cout&lt;&lt;"B Grade";  
+                }  
+                else if (num &gt;= 80 && num &lt; 90)  
+                {  
+                    cout&lt;&lt;"A Grade";  
+                }  
+                else if (num &gt;= 90 && num &lt;= 100)  
+                {  
+                    cout&lt;&lt;"A+ Grade";
+                }  
+        }  
+    
+    </textarea></div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number to check grade:66
+    C Grade
+    </pre>
+                        </div>
+                        <p><strong>Output:</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number to check grade:-2
+    wrong number
+    </pre>
+                        </div>
+    
+                        <hr />
+                        <div class="nexttopicdiv">
+                            <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                    href="cpp-switch">C++ switch</a></span>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+    
+    
+    
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">C++ switch</h1>
+                        <p>The C++ switch statement executes one statement from multiple conditions. It is
+                            like if-else-if ladder statement in C++.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    switch(expression){    
+    case value1:    
+     //code to be executed;    
+     break;  
+    case value2:    
+     //code to be executed;    
+     break;  
+    ......    
+        
+    default:     
+     //code to be executed if all cases are not matched;    
+     break;  
+    }  
+    </textarea></div>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-switch1.png" alt="Cpp Switch 1" />
+                        <hr />
+                        <h2 class="h2">C++ Switch Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main () {
+           int num;
+           cout&lt;&lt;"Enter a number to check grade:";  
+           cin&gt;&gt;num;
+               switch (num)  
+              {  
+                  case 10: cout<<"It is 10"; break;  
+                  case 20: cout<<"It is 20"; break;  
+                  case 30: cout<<"It is 30"; break;  
+                  default: cout<<"Not 10, 20 or 30"; break;  
+              }  
+        }  
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number:
+    10
+    It is 10
+    </pre>
+                        </div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Enter a number:
+    55
+    Not 10, 20 or 30
+    </pre>
+                        </div>
+                
+                        <!-- link -->
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">C++ For Loop</h1>
+                        <p>The C++ for loop is used to iterate a part of the program several times. If the
+                            number of iteration is fixed, it is recommended to use for loop than while or
+                            do-while loops.</p>
+                        <p>The C++ for loop is same as C/C#. We can initialize variable, check condition and
+                            increment/decrement value.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    for(initialization; condition; incr/decr){  
+    //code to be executed  
+    }  
+    </textarea></div>
+                        <p><strong>Flowchart:</strong></p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-for-loop1.png" alt="Cpp For loop 1" />
+                        <hr />
+                        <h2 class="h2">C++ For Loop Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+             for(int i=1;i<=10;i++){    
+                cout&lt;&lt;i &lt;&lt;"\n";    
+              }     
+        } 
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    </pre>
+                        </div>
+                        
+    
+                        <h2 class="h2">C++ Nested For Loop</h2>
+                        <p>In C++, we can use for loop inside another for loop, it is known as nested for
+                            loop. The inner loop is executed fully when outer loop is executed one time. So
+                            if outer loop and inner loop are executed 4 times, inner loop will be executed 4
+                            times for each outer loop i.e. total 16 times.</p>
+                        <hr />
+                        <h2 class="h2">C++ Nested For Loop Example</h2>
+                        <p>Let's see a simple example of nested for loop in C++.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+     
+    int main () {
+            for(int i=1;i<=3;i++){    
+                 for(int j=1;j<=3;j++){    
+                cout&lt;&lt;i&lt;&lt;" "&lt;&lt;j&lt;&lt;"\n";    
+              }   
+            }
+        }  
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    1 1
+    1 2
+    1 3
+    2 1
+    2 2 
+    2 3
+    3 1
+    3 2
+    3 3
+    </pre>
+                        </div>
+                        <hr />
+                        <h2 class="h2">C++ Infinite For Loop</h2>
+                        <p>If we use double semicolon in for loop, it will be executed infinite times. Let's
+                            see a simple example of infinite for loop in C++.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include <iostream>
+    using namespace std;
+     
+    int main () {
+            for (; ;)  
+              {  
+                      cout<<"Infinitive For Loop";  
+              }  
+        }  
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Infinitive For Loop
+    Infinitive For Loop
+    Infinitive For Loop
+    Infinitive For Loop
+    Infinitive For Loop
+    ctrl+c
+    </pre>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="h1">C++ Break Statement</h1>
+                        <p>The C++ break is used to break loop or switch statement. It breaks the current
+                            flow of the program at the given condition. In case of inner loop, it breaks
+                            only inner loop.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    jump-statement;    
+    break;
+    </textarea></div>
+                        <p><strong>Flowchart:</strong></p>
+                        <img src="https://static.javatpoint.com/cpp/images/cpp-break-statement1.png"
+                            alt="Cpp Break statement 1" />
+                        <hr />
+                        <h2 class="h2">C++ Break Statement Example</h2>
+                        <p>Let's see a simple example of C++ break statement which is used inside the loop.
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+          for (int i = 1; i &lt;= 10; i++)  
+              {  
+                  if (i == 5)  
+                  {  
+                      break;  
+                  }  
+            cout&lt;&lt;i&lt;&lt;"\n";  
+              }  
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="Codeblock3">
+                            <pre>
+    1
+    2
+    3
+    4
+    </pre>
+                        </div>
+                        <h2 class="h2">C++ Break Statement with Inner Loop</h2>
+                        <p>The C++ break statement breaks inner loop only if you use break statement inside
+                            the inner loop.</p>
+                        <p>Let's see the example code:</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+        for(int i=1;i&lt;=3;i++){      
+                for(int j=1;j&lt;=3;j++){      
+                    if(i==2&&j==2){      
+                        break;      
+                            }      
+                        cout&lt;&lt;i&lt;&lt;" "&lt;&lt;j&lt;&lt;"\n";           
+                        }      
+              }  
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    1 1
+    1 2
+    1 3
+    2 1
+    3 1
+    3 2
+    3 3
+    </pre>
+                        </div>
+                       
+                        <!-- link -->
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+    
+                        <h1 class="h1">C++ Continue Statement</h1>
+                        <p>The C++ continue statement is used to continue loop. It continues the current
+                            flow of the program and skips the remaining code at specified condition. In case
+                            of inner loop, it continues only inner loop.</p>
+                        <div class="codeblock"><textarea name="code" class="Java">
+    jump-statement;    
+    continue;   
+    </textarea></div>
+                        <hr />
+                        <h2 class="h2">C++ Continue Statement Example</h2>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+         for(int i=1;i&lt;=10;i++){    
+                if(i==5){    
+                    continue;    
+                }    
+                cout&lt;&lt;i&lt;&lt;"\n";    
+            }      
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    1
+    2
+    3
+    4
+    6
+    7
+    8
+    9
+    10
+    </pre>
+                        </div>
+                        <hr />
+    
+                        <h2 class="h2">C++ Continue Statement with Inner Loop</h2>
+                        <p>C++ Continue Statement continues inner loop only if you use continue statement
+                            inside the inner loop.</p>
+                        <div class="codeblock"><textarea name="code" class="Cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main()
+    {
+     for(int i=1;i&lt;=3;i++){      
+                for(int j=1;j&lt;=3;j++){      
+                 if(i==2&&j==2){      
+                    continue;      
+                            }      
+                    cout&lt;&lt;i&lt;&lt;" "&lt;&lt;j&lt;&lt;"\n";                
+                        }      
+                }          
+    }
+    </textarea></div>
+                        <p>Output:</p>
+                        <div class="codeblock3">
+                            <pre>
+    1 1
+    1 2
+    1 3
+    2 1
+    2 3
+    3 1
+    3 2
+    3 3
+    </pre>
+                        </div>
+                        <!-- link -->
+                        <br /><br />
+    
+                        <div id="bottomnextup">
+                            <a class="next" href="/c++page3">next &rarr;</a>
+                            <a class="next" href="/c++home">&larr; prev</a>
+                        </div>
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}

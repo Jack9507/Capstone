@@ -1,0 +1,1540 @@
+{% extends "layout.html" %} {% block body %}
+
+<html>
+
+<head>
+    <title>Bash Tutorial | Bash Tutorial - Greplearn</title>
+    <link href="{{url_for('static', filename='ContentAsset/new.css')}}" rel="stylesheet">
+</head>
+
+
+<body>
+    <br>
+    <br>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+                        <br>
+                        <br>
+    
+                        <h1 class="h1">Bash Scripting Tutorial</h1>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash.png" alt="Bash"
+                            class="imageright" />
+                        <p>Bash Scripting Tutorial provides core and advanced concepts of Bash Shell
+                            scripting. Our Bash tutorial is designed for beginners and working
+                            professionals.</p>
+                        <p>Bash (Bourne Again Shell) is a shell program. It was written by Brian Fox as an
+                            enhanced version of the Bourne Shell program 'sh'. It is an open source GNU
+                            project. It provides functional improvements over Bourne Shell for both
+                            programming and interactive use.</p>
+                        <p>Our Bash Shell tutorial includes all the Bash topics such as Bash Scripting,
+                            variables, loops, conditional statements, positional parameters, arithmetics,
+                            functions, strings, etc.</p>
+    
+                        <h2 class="h2">Prerequisite</h2>
+                        <p>Before learning Bash Shell, you must have the basic knowledge of the Linux
+                            Operating System and any programming language.</p>
+    
+                        <h2 class="h2">Audience</h2>
+                        <p>Our Bash Scripting tutorial is designed to help beginners and professionals.</p>
+    
+                        <h2 class="h2">Problems</h2>
+                        <p>We assure you that you will not find any problem in this tutorial. But if you
+                            find any mistake, please post the problem in the contact form. </p>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Features of Bash</h1>
+                        <ol class="points">
+                            <li>Bash is <strong>sh-compatible</strong> as it derived from the original UNIX
+                                Bourne Shell. It is incorporated with the best and useful features of the
+                                Korn and C shell like directory manipulation, job control, aliases, etc.
+                            </li>
+                            <li>Bash can be <strong>invoked by</strong> single-character command line
+                                options (<strong>-a, -b, -c, -i, -l, -r, etc. </strong>) as well as by
+                                multi-character command line options also like --debugger, --help, --login,
+                                etc.</li>
+                            <li>Bash <strong>Start-up files</strong> are the scripts that Bash reads and
+                                executes when it starts. Each file has its specific use, and the collection
+                                of these files is used to help create an environment.</li>
+                            <li>Bash consists of <strong>Key bindings</strong> by which one can set up
+                                customized editing key sequences.</li>
+                            <li>Bash contains <strong>one-dimensional arrays</strong> using which you can
+                                easily reference and manipulate the lists of data.</li>
+                            <li>Bash comprised of <strong>Control Structures</strong> like the
+                                <strong>select construct</strong> that specially used for menu generation.
+                            </li>
+                            <li>Directory Stack in Bash specifies the history of recently-visited
+                                directories within a list. Example: <strong>pushd</strong> builtin is used
+                                to add the directory to the stack, <strong>popd</strong> is to remove
+                                directory from the stack and <strong>dirs</strong> builtin is to display
+                                content of the directory stack.</li>
+                            <li>Bash also comprised of restricted mode for the environment security. A shell
+                                gets restricted if bash starts with name <strong>rbash</strong>, or the bash
+                                --restricted, or bash -r option passed at invocation. </li>
+                        </ol>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Hello World! Bash Script</h1>
+                        <p>As per the discussion in previous topics, let's move to create a first and basic
+                            Bash Script by using the given steps: </p>
+                        <p><strong>Step 1:</strong> Open the terminal. Navigate the desktop folder or
+                            directory using the cd command.</p>
+                        <p><strong>Step 2:</strong> Create an empty file as a shell script using touch
+                            command and name it as bash_script.sh to execute. In the below image, you can
+                            see the created file with all the permission attributes in the darkened row.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/hello-world-bash-script.png"
+                            alt="Hello World! Bash Script" />
+                        <p><strong>Step 3:</strong> Open the file using any editor or visual studio. For
+                            using editor gedit, type</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    gedit bash_script.sh/ 
+    </textarea></div>
+                        <p><strong>Step 4:</strong>Now Code for the intended script, i.e., Hello World! </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #! /bin/bash
+    
+    # This is the basic bash script
+    
+    echo " Hello World! "
+    </textarea></div>
+                        <p>Where, Line 1 represents #! (shebang) and specifies the bash shell location.</p>
+                        <p>Line 2 represents the commented line.</p>
+                        <p>Line 3 represents echo command to print the output.</p>
+                        <p><strong>Step 5:</strong>Execute the Script prefixing with ./. </p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/hello-world-bash-script2.png"
+                            alt="Hello World! Bash Script" />
+                        <p>It will throw the Permission denied error. Because the file has only read and
+                            write permissions but not execute permission, you can see it below:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/hello-world-bash-script3.png"
+                            alt="Hello World! Bash Script" />
+                        <p>So we add the execute permission to the file using <strong>chmod</strong>command
+                            with <strong>+x</strong> option as</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    chmod +x bash_script.sh 
+    </textarea></div>
+                        <p>and finally, execute the script.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/hello-world-bash-script4.png"
+                            alt="Hello World! Bash Script" />
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bash Variables</h1>
+                        <p>Variables are the essential part of programming, or we can say that they are the
+                            spirit of a programming language. Variables specify the memory location through
+                            characters, numeric, and alphanumeric. They are used to be referenced and
+                            manipulated in a computer program.</p>
+                        <h2 class="h2">What are the variables?</h2>
+                        <p>Variables are the containers which store data or a useful piece of information as
+                            the value inside them. Below is the syntax for a variable:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Variable_name =value 
+    </textarea></div>
+                        <p>A Variable is a combined form of two words, i.e., vary + able, which means its
+                            value can be changed, and it can be used for multiple times.</p>
+                        <p>Variable is known as the temporary storage for any kind of data like integer,
+                            float, char, etc. A variable name can include <strong>alphabets, digits, and
+                                underscore</strong>, and its name can be started with alphabets and
+                            underscore only. </p>
+                        <h4 class="n">Note: We cannot define a variable name starting with any digit. </h4>
+                        <h2 class="h2">What are Bash Variables?</h2>
+                        <p>We cannot use bash variables without having the proper information
+                            (<strong>syntax, data types, types, working</strong>) about it, so, let's go
+                            throughout this brief tutorial for having the appropriate overview of Bash
+                            Variables. </p>
+                        <p>At first, know the syntax.</p>
+                        <h3 class="h3">Syntax:</h3>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Variable_name=value
+    </textarea></div>
+                        <h2 class="h3">Rules Set for Defining Bash Variables:</h2>
+                        <ol class="points">
+                            <li>Prefix the variable name with dollar ($) sign while reading or printing a
+                                variable.</li>
+                            <li>Leave off the dollar sign ($) while setting a variable with any value.</li>
+                            <li>A variable name may be alphanumeric, or it may be written with an underscore
+                                (_).</li>
+                            <li>A variable name is case-sensitive: x and X are considered as two different
+                                variables.</li>
+                            <li> variable name can be written either in UPPER_CASE or LOWER_CASE letters or
+                                mixture of both as you want.</li>
+                            <li>A variable can be placed at anywhere in a Bash Script or on the command
+                                line, because on runtime, Bash will replace it with its assigned value. It
+                                became possible because of doing substitution before running the command.
+                            </li>
+                            <li>There should not be whitespace on either side of the equal sign (=) between
+                                the variable name and its value. Following are some example of
+                                <strong>Invalid Variables</strong> having whitespaces (denoted by dots ...)
+                                between them as given below:<br>
+                                var1=...variable1<br>
+                                var2...=variable2<br>
+                                var3...=...variable3
+                            </li>
+                            <li>There is no need of using any quotes, either single or double, to define a
+                                variable with single character value such as <strong>var1=variable</strong>.
+                                To input multiple words or String as a single item in a variable, then make
+                                use of quotes for enclosing your content in that variable.
+                                <ul class="points">
+                                    <li>Single Quote ('') helps to treat every character.</li>
+                                    <li>Double Quote ("") helps to do the substitution.</li>
+                                </ul>
+                            </li>
+                        </ol>
+    
+                        <h2 class="h2">Data Types</h2>
+                        <p>In the formal programming languages, you have to define the data type of any
+                            variable at the time of variable declaration. For example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    int year=2012
+    char comp_name='jtp'
+    </textarea></div>
+                        <p>But in case of Bash, you don't have to define the data type of any variable at
+                            the time of variable declaration. Bash variables are <strong>untyped</strong>,
+                            which means just type the variable name by assigning its value, and it will
+                            automatically consider that data type. </p>
+                        <p>Such that if you assign any numeric value to the variable, it will work as
+                            integer and if you assign a character value to the variable, then it will be
+                            String.</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    year=2012
+    comp_name=jtp
+    </textarea></div>
+                        <p>using echo command, read them by assigning $ sign before their name such as </p>
+                        <p>echo $year<br>
+                            echo $name </p>
+                        <h2 class="h2">Types of Bash Variables</h2>
+                        <p>There are two types of variables in a shell or any UNIX system.</p>
+                        <ol class="points">
+                            <li>System-Defined Variables</li>
+                            <li>User-Defined Variables</li>
+                        </ol>
+                        <p><strong>1. System-Defined Variables:</strong> These are the pre-defined variables
+                            as they are created and maintained by the LINUX operating system itself. Their
+                            standard convention is that generally they are defined in capital letters, i.e.,
+                            UPPER_CASE. So whenever you see a variable defined in upper cases, most likely,
+                            they are the system-defined variables. </p>
+                        <p>These are the following System-defined variables as given below:</p>
+                        <p><strong>1. BASH</strong> represents the Shell Name.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    BASH=/usr/bin/bash
+    </textarea></div>
+                        <p><strong>2. BASH_VERSION</strong> specifies the shell version which the Bash
+                            holds.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    BASH_VERSION=4.2.46(2)
+    </textarea></div>
+                        <p><strong>3. COLUMNS</strong> specify the no. of columns for our screen.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    COLUMNS=80
+    </textarea></div>
+                        <p><strong>4. HOME</strong> specifies the home directory for the user.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    HOME=/home/jatpoint
+    </textarea></div>
+                        <p><strong>5. LOGNAME</strong> specifies the logging user name.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    LOGNAME=javatpoint
+    </textarea></div>
+                        <p><strong>6. OSTYPE</strong> tells the type of OS.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    OSTYPE=linux-gnu
+    </textarea></div>
+                        <p><strong>7. PWD</strong> represents the current working directory.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    PWD=/home/javatpoint
+    </textarea></div>
+                        <p><strong>8. USERNAME</strong> specifies the name of currently logged in user.</p>
+                        <p>Example:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    USERNAME=javatpoint
+    </textarea></div>
+                        <p>To know the list of these variables in your system, type the commands
+                            <strong>set, env</strong>, and <strong>printenv</strong> on the command line
+                            terminal as follows:
+                        </p>
+                        <p>1. Typing the <strong>set</strong> command. </p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable.png"
+                            alt="Bash Variables" />
+                        <p>2. Typing the <strong>env</strong> command</p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable1.png"
+                            alt="Bash Variables" />
+                        <p>3. Typing the printenv command</p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable2.png"
+                            alt="Bash Variables" />
+                        <p>Let's call these variables through Bash Shell. Following are the given steps:</p>
+                        <p><strong>Step 1:</strong> Create a script named by Bash_sdvar and type the
+                            following code on the Bash Console as follows: </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #! /bin/bash
+    # Bash System-defined Variables
+    echo $HOME # Home Directory
+    echo $PWD # current working directory
+    echo $BASH # Bash shell name
+    echo $BASH_VERSION # Bash shell Version
+    echo $LOGNAME # Name of the Login User
+    echo $OSTYPE # Type of OS
+    </textarea></div>
+                        <p><strong>Step 2.</strong> Look at the Bash Console given below:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable3.png"
+                            alt="Bash Variables" />
+                        <p><strong>Step 3.</strong> Save and execute the script. It will show the output as
+                            you can see in the figure given below.</p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable4.png"
+                            alt="Bash Variables" />
+                        <p><strong>2. User-defined Variables:</strong> These variables are created and
+                            maintained by the user. Generally, these types of variables are defined in
+                            LOWER_CASES. There is not any strict rule to write these variables in
+                            lower-cases. We can write them in upper-cases also.</p>
+                        <p>Let's create a Bash Script to define these variables. Follow the given steps
+                            given below: </p>
+                        <p><strong>Step 1.</strong> Create a script named by <strong>Bash_udvar</strong> and
+                            type the following code on Bash Console:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #! /bin/bash
+    # User-Defined Variables 
+    name=Peter
+    ROLL_NO=5245325
+    echo "The student name is $name and his Roll number is $ROLL_NO."
+    </textarea></div>
+                        <p><strong>Step 2.</strong> See the code on Bash Console.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable5.png"
+                            alt="Bash Variables" />
+                        <p><strong>Step 3.</strong> Save and execute the Script.</p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable6.png"
+                            alt="Bash Variables" />
+    
+                        <h2 class="h2">Working of Bash Variables</h2>
+                        <p>After having a basic demonstration of variables, let's move to know how do they
+                            work? </p>
+                        <p>There are two actions we usually perform for a variable in Bash as given below:
+                        </p>
+                        <ul class="points">
+                            <li><em><strong>setting a value</strong></em> for a Variable</li>
+                            <li><em><strong>reading the value</strong></em> for it.</li>
+                        </ul>
+                        <p>A variable value can be set in different ways in which the most common way is to
+                            set the value directly. To read a variable, we can place its name (prefixing
+                            with $ sign) anywhere in the script. </p>
+                        <p>Bash first checks all the variable names as if they are present in the script.
+                            Then it interprets every line of our script. After identifying every variable,
+                            it replaces a variable name with its assigned value. After all, it
+                            interprets/runs that line of code and continues this process for every coded
+                            line of our script.</p>
+                        <h4 class="n">NOTE: Both the kinds of variables in Bash (we discussed) work on the
+                            terminal as well as on Bash script. Let see their working on terminal and Bash
+                            through a straightforward example:</h4>
+                        <p><strong><em>Example:</em></strong> Call a user name by XYZ, his location at which
+                            he is currently working, and the version of Bash Shell he is using for Bash
+                            Scripting. </p>
+                        <h3 class="h3">1. Working On Terminal</h3>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable7.png"
+                            alt="Bash Variables" />
+                        <h3 class="h3">2. Working on Bash Shell</h3>
+                        <p>See the script named by Bash_Var given below:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable8.png"
+                            alt="Bash Variables" />
+                        <p><strong>In the 3<sup>rd</sup> line of the script</strong>, we declared a variable
+                            <strong>USER_NAME</strong> to store the user name <strong>XYZ</strong> as its
+                            value.
+                        </p>
+                        <p><strong>In the last two lines</strong>, we have printed the intended message by
+                            using the <strong>echo</strong> command.</p>
+                        <p>There are two variables and one command in this message. Each one of them is
+                            preceded by the dollar ($) sign where:</p>
+                        <ul class="points">
+                            <li><strong>USER_NAME</strong> is a user-defined variable to call the user name,
+                            </li>
+                            <li><strong>BASH_VERSION</strong> is system-defined variable, which shell calls
+                                itself. It is used to print the version of Bash Shell, </li>
+                            <li><strong>PWD</strong> command is used to print the current location of the
+                                user.</li>
+                        </ul>
+                        <p>For better understanding, create this script by following the given code:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #! /bin/bash
+    #Bash Variables
+    USER_NAME=XYZ
+    echo Hey there! $USER_NAME is any user currently working on the directory $PWD with Bash Shell Version $BASH_VERSION.
+    </textarea></div>
+                        <p>It will show the output as you can see in the following image:</p>
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable9.png"
+                            alt="Bash Variables" />
+                        <p>There are some more examples for practicing variables on both terminal and Bash
+                            Shell. By following the <strong>rule set</strong> (discussed before) have a
+                            practice on variables as follows:</p>
+                        <p class="pq"><strong>A. Using Command Line Terminal </strong></p>
+                        <p><strong>1. Setting the variables</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable10.png"
+                            alt="Bash Variables" />
+                        <p><strong>2. Reading and referencing the variables</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable11.png"
+                            alt="Bash Variables" />
+                        <p><strong>3. Invalid Variables</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable12.png"
+                            alt="Bash Variables" />
+                        <p><strong>4. Combining two string variables</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable13.png"
+                            alt="Bash Variables" />
+                        <p><strong>5. Concatenating Strings with variables</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable14.png"
+                            alt="Bash Variables" />
+                        <h4 class="n">NOTE: Don't use single quotes for combining two variables and also for
+                            concatenation of Strings with variables. Such that if you concatenate Strings by
+                            enclosing them in single quotes, then it will be a failure to read them as you
+                            can see in the image given below:</h4>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable15.png"
+                            alt="Bash Variables" />
+                        <p class="pq"><strong>B. Using Bash Script:</strong></p>
+                        <p>It is an example of <strong>combining the String variables.</strong>
+                        <p>
+                            <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable16.png"
+                                alt="Bash Variables" />
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable17.png"
+                            alt="Bash Variables" />
+                        <h2 class="h2">Command line Arguments</h2>
+                        <p>Command Line Arguments are used to make a script more dynamic by passing input to
+                            the code. We pass these arguments at the runtime of the script as the following
+                            form:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    ./script_name arg1 arg2 arg3.....
+    </textarea></div>
+                        <p>There should be no space between the script name and all the passing arguments.
+                        </p>
+                        <h3 class="h3">How to use command line arguments?</h3>
+                        <p>In a Bash Shell, they are used with the reference of the following
+                            default-parameters or the special variables.</p>
+                        <ul class="points">
+                            <li><strong>$0</strong> specifies the name of the script to be invoked.</li>
+                            <li><strong>$1-$9</strong> stores the names of the first 9 arguments or can be
+                                used as the arguments' positions.</li>
+                            <li><strong>$#</strong> specifies the total number (count) of arguments passed
+                                to the script.</li>
+                            <li><strong>$*</strong> stores all the command line arguments by joining them
+                                together.</li>
+                            <li><strong>$@</strong> stores the list of arguments as an array.</li>
+                            <li><strong>$?</strong> specifies the process ID of the current script.</li>
+                            <li><strong>$$</strong> specifies the exit status of the last command or the
+                                most recent execution process.</li>
+                            <li><strong>$!</strong> shows ID of the last background job.</li>
+                        </ul>
+                        <p>Following are the two methods we use for passing command line arguments:</p>
+                        <p class="pq"><strong>Method 1: Using Position number</strong></p>
+                        <p>It is the first way of accessing the arguments by using the default parameters
+                            ($1...$9). Below image explains it:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable18.png"
+                            alt="Bash Variables" />
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable19.png"
+                            alt="Bash Variables" />
+                        <p class="pq"><strong>Method 2: Using Array.</strong></p>
+                        <p>It is the second way of passing the arguments as an Array. Follow the given
+                            algorithm to apply this method.</p>
+                        <p><strong>Step 1:</strong> Create a Bash Script. </p>
+                        <p><strong>Step 2:</strong> Declare any variable name and assign its value as
+                            <strong>$a</strong> in the following form:
+                        </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    variable_name=("$@")
+    </textarea></div>
+                        <p>Where <strong>$@</strong> is the default argument which is used to store the
+                            arguments (we pass) as an array.</p>
+                        <p><strong>Step 3:</strong> Display the arguments by defining their array index in
+                            the following form:</p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    ${variable_name[i]}
+    </textarea></div>
+                        <p><strong>Step 4:</strong> Save and close the Script.</p>
+                        <p><strong>Step 5:</strong> Execute the Script by passing the arguments.</p>
+                        <p>See the following program:</p>
+                        <h3 class="h3">Program:</h3>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #!/bin/bash
+    
+    args=("$@")
+    
+    echo ${args[0]} ${args[1]} ${args[2]} ${args[3]}
+    </textarea></div>
+                        <p>On Bash Console:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable20.png"
+                            alt="Bash Variables" />
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable21.png"
+                            alt="Bash Variables" />
+                        <h2 class="h2">Command Substitution</h2>
+                        <p>According to the Bash Official Documentation</p>
+                        <p><em>"Command Substitution allows the output of a command to replace the command
+                                itself. Bash performs the expansion by executing the command in a subshell
+                                environment and replacing the command substitution with the standard output
+                                of the command, with any trailing newlines deleted. Embedded newlines are
+                                not deleted, but they may be removed during word splitting."</em></p>
+                        <p>Command substitution refers to an expansion which Bash performs for us. It takes
+                            the output of the Bash command, stores in a variable (generally), and display
+                            back with echo.</p>
+                        <p><strong>Command Substitution</strong> offers data flexibility in regards to
+                            scripting and variable assignment. It is simple and easy for having the single
+                            command line output. In case, the output goes over a few lines, then the newly
+                            trailing lines are removed, and the full content of output ends up on a single
+                            line.</p>
+                        <p>See the syntax for use:</p>
+                        <h3 class="h3">Syntax</h3>
+                        <p>The classic form of substituting commands in a variable or command substitution
+                            is using backquotes (`...`), as given below: </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    variable_name=`command_name`
+    variable_name=`command_name [option...] argument1 argument2...`
+    variable_name=`/path/to/command`
+    </textarea></div>
+                        <p>Now, we do command substitution by enclosing the commands within brackets
+                            (preceded by the dollar sign ($)). Have a look: </p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    variable_name=$(command_name)
+    variable_name=$(command_name [option...] argument1 argument2...)
+    variable_name=$(path/to/command)
+    </textarea></div>
+                        <p>So, let's do command substitution with an example as per the discussion. </p>
+                        <p>In this example, we are substituting single command ls in a variable. See the
+                            terminal.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable22.png"
+                            alt="Bash Variables" />
+                        <p><strong>Line 1:</strong> Without command substitution, the output is expanded in
+                            multiple lines.</p>
+                        <p><strong>Line 2 and 3:</strong> With command substitution, the output is ended on
+                            a single line (saved space by removing newly trailed lines).</p>
+                        <p>Following is the Bash Script to test the command substitution. </p>
+                        <h3 class="h3">Program:</h3>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #! /bin/bash
+    
+    # command substitution
+    
+    lsResult=$(ls)
+    echo "My files are:" $lsResult
+    </textarea></div>
+                        <p>See the Bash Console:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable23.png"
+                            alt="Bash Variables" />
+                        <p><strong>Output:</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-variable24.png"
+                            alt="Bash Variables" />
+    
+                        <hr />
+    
+                        <br /><br />
+    
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bash Arithmetic Operators</h1>
+                        <p>In this topic, we will understand how to use arithmetic operators in Bash.</p>
+                        <p>Depending on what type of result we want through our scripts, we may need to
+                            apply arithmetic operators at some point. Like variables, they are reasonably
+                            easy to apply. In the bash script, we can perform arithmetic operations on
+                            numeric values to get the desired result.</p>
+                        <p>There are 11 arithmetic operators which are supported by Bash Shell.</p>
+                        <p>Look at the following table demonstrating the syntax, description and examples
+                            for each of the arithmetic operators:</p>
+                        <table class="alt">
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                                <th>Examples</th>
+                            </tr>
+                            <tr>
+                                <td>+</td>
+                                <td>Addition, measures addition of numbers (operands)</td>
+                                <td>
+                                    <pre>$(( 10 + 3 )), result=13</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Substraction, measures subtraction of second operand from first</td>
+                                <td>
+                                    <pre>$(( 10 - 3 )), result=7</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Multiplication, measures the multiplication of operands.</td>
+                                <td>
+                                    <pre>$(( 10 * 3 )), result=30</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>Division, measures the division of first operand by second operand and
+                                    and return quotient.</td>
+                                <td>
+                                    <pre>$(( 10 / 3 )), result=3</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>**</td>
+                                <td>Exponentiation, measures the result of second operand raised to the
+                                    power of first operand.</td>
+                                <td>
+                                    <pre>$((  10 ** 3 )), result=1000</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Modulo, measures remainder when the first operand is divided by second
+                                    operand.</td>
+                                <td>
+                                    <pre>$(( 10 % 3 )), result=1</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>+=</td>
+                                <td>Increment Variable by Constant- used to increment the value of first
+                                    operand by the constant provided.</td>
+                                <td>
+                                    <pre>x=10
+    let "x += 3"
+    echo $x
+    result=13</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>-=</td>
+                                <td>Decrement Variable by Constant- used to decrement the value of first
+                                    operand by the constant provided.</td>
+                                <td>
+                                    <pre>x=10
+    let "x -= 3"
+    echo $x
+    result=7</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>*=</td>
+                                <td>Multiply Variable by Constant- used to multiply the value of the first
+                                    operand by the constant provided.</td>
+                                <td>
+                                    <pre>x=10
+    let "x *= 3"
+    echo $x
+    result=30</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>/=</td>
+                                <td>Divide Variable by Constant- used to calculate the value of (variable /
+                                    constant) and store the result back to variable.</td>
+                                <td>
+                                    <pre>x=10
+    let "10 /= 3"
+    echo $x
+    result=3</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>%=</td>
+                                <td>Remainder of Dividing Variable by Constant- used to calculate the value
+                                    of (variable % constant) and store the result back to variable.</td>
+                                <td>
+                                    <pre>x=10
+    let "10 %= 3"
+    echo $x
+    result=1</pre>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2 class="h2">Performing Arithmetic Operations in Bash</h2>
+                        <p>There are many options to perform arithmetic operations on the bash shell. Some
+                            of the options are given below that we can adopt to perform arithmetic
+                            operations:</p>
+                        <h3 class="h3">Double Parentheses</h3>
+                        <p>Double parentheses is the easiest mechanism to perform basic arithmetic
+                            operations in the Bash shell. We can use this method by using double brackets
+                            with or without a leading $.</p>
+                        <p><strong>Syntax</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    ((expression))
+    </textarea></div>
+                        <p>We can apply four different ways to achieve the required objectives. Look at the
+                            methods given below to understand how the double parentheses mechanism can be
+                            used (<strong>Assuming that we want to add the numbers 10 and 3</strong>) :</p>
+                        <p><strong>Method 1</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Sum=$((10+3))
+    echo "Sum = $Sum"
+    </textarea></div>
+                        <p><strong>Method 2</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    ((Sum=10+3))
+    echo "Sum = $Sum"
+    </textarea></div>
+                        <p><strong>Method 3</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Num1=10
+    Num2=3
+    ((Sum=Num1+Num2))
+    echo "Sum = $Sum"
+    </textarea></div>
+                        <p><strong>Method 4</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    Num1=10
+    Num2=3
+    Sum=$((Num1+Num2))
+    echo "Sum = $Sum"
+    </textarea></div>
+                        <p>All of these methods will provide the same output as:</p>
+                        <div class="codeblock3">
+                            <pre>
+    Sum = 13
+    </pre>
+                        </div>
+                        <p>Following is an example demonstrating the use of double parentheses for
+                            arithmetic operations in a Bash shell script:</p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #!/bin/bash
+    
+    x=8
+    y=2
+    echo "x=8, y=2"
+    echo "Addition of x & y"
+    echo $(( $x + $y ))
+    echo "Subtraction of x & y"
+    echo $(( $x - $y ))
+    echo "Multiplication of x & y"
+    echo $(( $x * $y ))
+    echo "Division of x by y"
+    echo $(( $x / $y ))
+    echo "Exponentiation of x,y"
+    echo $(( $x ** $y ))
+    echo "Modular Division of x,y"
+    echo $(( $x % $y ))
+    echo "Incrementing x by 5, then x= "
+    (( x += 5 )) 
+    echo $x
+    echo "Decrementing x by 5, then x= "
+    (( x -= 5 ))
+    echo $x
+    echo "Multiply of x by 5, then x="
+    (( x *= 5 ))
+    echo $x
+    echo "Dividing x by 5, x= "
+    (( x /= 5 ))
+    echo $x
+    echo "Remainder of Dividing x by 5, x="
+    (( x %= 5 ))
+    echo $x
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-arithmetic-operators-output1.png"
+                            alt="Bash Arithmetic Operators" />
+                        <h3 class="h3">Let Construction</h3>
+                        <p>Let is a built-in command of Bash that allows us to perform arithmetic
+                            operations. It follows the basic format:</p>
+                        <p><strong>Syntax</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    let &lt;arithmetic expression&gt;
+    </textarea></div>
+                        <p>An example is given below explaining how to use let command in a Bash script:</p>
+                        <p><strong>Bash script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #!/bin/bash
+    
+    x=10
+    y=6
+    z=0
+    echo "Addition"
+    let "z = $(( x + y ))"
+    echo "z= $z"
+    
+    echo "Substraction"
+    let "z = $((x - y ))"
+    echo "z= $z"
+    
+    echo "Multiplication"
+    let "z = $(( x * y ))"
+    echo "z = $z"
+    
+    echo "Division"
+    let "z = $(( x / y ))"
+    echo "z = $z"
+    
+    echo "Exponentiation"
+    let "z = $(( x ** y ))"
+    echo "z = $z"
+    
+    echo "Modular Division"
+    let "z = $(( x % y ))"
+    echo "z = $z"
+    
+    let "x += 5"
+    echo "Incrementing x by 5, then x= "
+    echo $x
+    
+    let "x -= 5"
+    echo "Decrementing x by 5, then x= "
+    echo $x
+    
+    let "x *=5"
+    echo "Multiply of x by 5, then x="
+    echo $x
+    
+    let "x /= 5"
+    echo "Dividing x by 5, x= "
+    echo $x
+    
+    let "x %= 5"
+    echo "Remainder of Dividing x by 5, x="
+    echo $x
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-arithmetic-operators-output2.png"
+                            alt="Bash Arithmetic Operators" />
+                        <h3 class="h3">Backticks</h3>
+                        <p>In bash scripting, an arithmetic expansion can also be performed using
+                            <strong>backticks</strong> and expr (known as all-purpose expression evaluator).
+                            The `expr` is similar to 'let,' but it does not save the result to a variable.
+                            It directly prints the result. Unlike let, we don't need to enclose the
+                            expression within the quotes. We are required to use spaces between the items of
+                            the expression. It is important to note that we should use 'expr` within command
+                            substitution to save the output to a variable.
+                        </p>
+                        <p>We can also use `expr` without 'backticks'.</p>
+                        <p><strong>Syntax</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    `expr item1 operator item2`
+    or
+    expr item1 operator item2
+    </textarea></div>
+                        <p>An example is given below explaining how to use backticks and expr in a Bash
+                            script:</p>
+                        <p><strong>Bash Script Program</strong></p>
+                        <div class="codeblock"><textarea name="code" class="java">
+    #!/bin/bash
+    #Basic arithmetic using expr
+    
+    echo "a=10, b=3"
+    echo "c is the value of addition c=a+b"
+    a=10
+    b=3
+    echo "c= `expr $a + $b`"
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-arithmetic-operators-output3.png"
+                            alt="Bash Arithmetic Operators" />
+    
+                        <h2 class="h3">Conclusion</h2>
+                        <p>In this topic, we discussed how to use arithmetic operators to perform arithmetic
+                            operations.</p>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bash String</h1>
+                        <p>In this topic, we have demonstrated about bash string and its operators.</p>
+                        <p>Like other programming languages, Bash String is a data type such as as an
+                            integer or floating-point unit. It is used to represent text rather than
+                            numbers. It is a combination of a set of characters that may also contain
+                            numbers.</p>
+                        <p><strong>For example,</strong> the word "javatpoint" and the phrase "Welcome to
+                            javatpoint" are the strings. Even "01234" could be considered as a string, if
+                            specified correctly. Programmers are required to enclose strings in quotation
+                            marks for the data to be considered as a string and not a number, variable name
+                            or array, etc.</p>
+                        <p>Bash consists of multiple ways to perform string operations and manipulate them.
+                        </p>
+                        <p>Following are some operators in Shell Script used to perform string operations:
+                        </p>
+                        <h2 class="h2">Equal Operator</h2>
+                        <p>An equal operator (=) is used to check whether two strings are equal. </p>
+                        <p class="pq"><strong>Syntax</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    Operand1 = Operand2
+    </textarea></div>
+                        <p class="pq"><strong>Example</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    #Script to check whether two strings are equal.
+    
+    str1="WelcometoJavatpoint."
+    str2="javatpoint"
+    
+    if [ $str1 = $str2 ];
+    then
+    echo "Both the strings are equal."
+    else
+    echo "Strings are not equal."
+    fi
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Strings are not equal.
+    </pre>
+                        </div>
+                        <h2 class="h2">Not Equal Operator</h2>
+                        <p>Not equal operator (!=) is used to define that strings are not equal.</p>
+                        <p class="pq"><strong>Syntax</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    Operand1 != Operand2
+    </textarea></div>
+                        <p class="pq"><strong>Example</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    #Script to check whether two strings are equal.
+    
+    str1="WelcometoJavatpoint."
+    str2="javatpoint"
+    
+    if [[ $str1 != $str2 ]];
+    then
+    echo "Strings are not equal."
+    else
+    echo "Strings are equal."
+    fi
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Strings are not equal.
+    </pre>
+                        </div>
+                        <h2 class="h2">Less than Operator</h2>
+                        <p>The 'less than operator (\<)' is a conditional operator which is used to check if string1 is less
+                                than string2.</p>
+                                <p class="pq"><strong>Syntax</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    Operand1 \< Operand2
+    </textarea></div>
+                                <p class="pq"><strong>Example</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/sh 
+    
+    str1="WelcometoJavatpoint"
+    str2="Javatpoint"
+    if [ $str1 \< $str2 ];
+    then 
+    	echo "$str1 is less then $str2"
+    else
+    	echo "$str1 is not less then $str2"
+    fi
+    </textarea></div>
+                                <p><strong>Output</strong></p>
+                                <div class="codeblock3">
+                                    <pre>
+    WelcometoJavatpoint is not less then Javatpoint
+    </pre>
+                                </div>
+                                <h2 class="h2">Greater than Operator</h2>
+                                <p>The 'greater than operator (\>)` is used to check if string1 is greater
+                                    than string2.</p>
+                                <p class="pq"><strong>Syntax</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    Operand1 \> Operand2
+    </textarea></div>
+                                <p class="pq"><strong>Example</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/sh 
+    
+    str1="WelcometoJavatpoint"
+    str2="Javatpoint"
+    if [ $str1 \> $str2 ];
+    then 
+    	echo "$str1 is greater then $str2"
+    else
+    	echo "$str1 is less then $str2"
+    fi
+    </textarea></div>
+                                <p><strong>Output</strong></p>
+                                <div class="codeblock3">
+                                    <pre>
+    WelcometoJavatpoint is greater then Javatpoint
+    </pre>
+                                </div>
+                                <h2 class="h2">To check if the string length is greater than Zero:</h2>
+                                <p>This operator is used to check if the string is zero or greater than
+                                    zero.</p>
+                                <p class="pq"><strong>Syntax</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    [ -n Operand ]
+    </textarea></div>
+                                <p class="pq"><strong>Example</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/sh 
+    
+    str="WelcometoJavatpoint"
+    
+    if [ -n $str ];
+    then 
+    	echo "String is not empty"
+    else
+    	echo "String is empty"
+    fi 
+    </textarea></div>
+                                <p><strong>Output</strong></p>
+                                <div class="codeblock3">
+                                    <pre>
+    String is not empty
+    </pre>
+                                </div>
+                                <h2 class="h2">To check if the string length is equal to Zero</h2>
+                                <p>This operator is used to check if the string is empty or equal to zero.
+                                </p>
+                                <p class="pq"><strong>Syntax</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    [ -z Operand ]
+    </textarea></div>
+                                <p class="pq"><strong>Example</strong></p>
+                                <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/sh 
+    
+    str=""
+    
+    if [ -z $str ];
+    then 
+    	echo "String is empty."
+    else
+    	echo "String is non-empty."
+    fi 
+    </textarea></div>
+                                <p><strong>Output</strong></p>
+                                <div class="codeblock3">
+                                    <pre>
+    String is empty
+    </pre>
+                                </div>
+                                <h2 class="h3">Conclusion</h2>
+                                <p>In this topic, we have learned about the syntax of different operators in
+                                    bash scripting with example scripts.</p>
+    
+                                <hr />
+    
+    
+                                <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bash Functions</h1>
+                        <p>In this topic, we have demonstrated the basics of bash functions and how they
+                            work in bash shell scripting.</p>
+                        <p>Functions in bash scripting are a great option to reuse code. A Bash function can
+                            be defined as a set of commands which can be called several times within bash
+                            script. The purpose of function in bash is to help you make your scripts more
+                            readable and avoid writing the same code again and again. It also allows the
+                            developers to break a complicated and lengthy code to small parts which can be
+                            called whenever required. Functions can be called anytime and repeatedly, which
+                            will enable us to reuse, optimize, and minimize the code.</p>
+                        <p>Following are some key points about bash functions:</p>
+                        <ul class="points">
+                            <li>A function has to be declared in the shell script before we can use it.</li>
+                            <li>Arguments can be passed to the functions and accessed inside the function as
+                                $1, $2, etc.</li>
+                            <li>Local variables can be assigned within the function, and the scope of such
+                                variables will only be that particular function.</li>
+                            <li>Built-in commands of Bash shell can be overridden using functions.</li>
+                        </ul>
+                        <h3 class="h3">Syntax</h3>
+                        <p>The syntax for declaring a bash function can be defined in two formats:</p>
+                        <p>1. The first method starts with the function name, followed by parentheses. It is
+                            the most preferred and commonly used method:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    function_name () {
+    commands
+    }
+    </textarea></div>
+                        <p>Single line version can be mentioned as below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    function_name () { commands; }
+    </textarea></div>
+                        <p>2. The second method starts with the function reserved word, followed by the
+                            function name:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    function function_name {
+    commands
+    }
+    </textarea></div>
+                        <p>Single line version can be mentioned as below:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    function function_name { commands; }
+    </textarea></div>
+                        <p>Compared to most of the programming languages, Bash functions are somewhat
+                            limited. Let?s understand the concept with the help of some examples:</p>
+                        <h3 class="h3">Example: Method 1</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    
+    JTP () {
+    	echo 'Welcome to Javatpoint.'
+    }
+    
+    JTP
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Welcome to Javatpoint.
+    </pre>
+                        </div>
+                        <h3 class="h3">Example: Method 2</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    
+    function JTP {
+    	echo 'Welcome to Javatpoint.'
+    }
+    
+    JTP
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Welcome to Javatpoint.
+    </pre>
+                        </div>
+                        <h2 class="h2">Passing Arguments</h2>
+                        <p>Like most of the programming languages, we can also pass the arguments and
+                            process the data in bash functions. We can insert the data to the function in a
+                            similar way as passing-command line arguments to a bash script.</p>
+                        <p>To pass any number of arguments to the bash function, we are required to insert
+                            them just after the function's name. We must apply spaces between function name
+                            and arguments. It will also be a great choice to use double quotes around the
+                            arguments to prevent misparsing of the arguments with spaces in it.</p>
+                        <p>Following are some key points about passing arguments to the bash functions:</p>
+                        <ul class="points">
+                            <li>The given arguments are accessed as $1, $2, $3 ... $n, corresponding to the
+                                position of the arguments after the function's name.</li>
+                            <li>The $0 variable is kept reserved for the function's name.</li>
+                            <li>The $# variable is used to hold the number of positional argument/ parameter
+                                given to the function.</li>
+                            <li>The $* and $@ variables are used to hold all the arguments/ parameters given
+                                to the function.
+                                <ul class="points">
+                                    <li>When $* is used with double quotes (i.e., "$*" ), it expands to a
+                                        single string separated by the space. For example, "$1 $2 $n etc".
+                                    </li>
+                                    <li>When $@ is used with double quotes (i.e., "$@" ), it expands to the
+                                        separate string. For example, "$1" "$2" "$n" etc.</li>
+                                    <li>When $* and $# are not used with the double quotes, they both are
+                                        the same.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>Following isthe code that illustrates the procedure on how to pass arguments to
+                            functions, and access the arguments inside the function.</p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    #Script to pass and access arguments
+    
+    function_arguments()
+    	{
+    	echo $1
+    	echo $2
+    	echo $3
+    	echo $4
+    	echo $5
+    	}
+    
+    #Calling function_arguments
+    function_arguments "We""welcome""you""on""Javatpoint."
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-functions1.png"
+                            alt="Bash Functions" />
+                        <p>In this script, we have added the values "We", "welcome", "you", "on" and
+                            "Javatpoint" after we have called the function_arguments. Those values are
+                            passed to the <strong>function_arguments</strong> as parameters and stored in a
+                            local variable. However, unlike other languages, the interpreter stores the
+                            passed values into predefined variables, which are then named according to the
+                            sequence of passing parameters.</p>
+                        <p><strong>For example,</strong></p>
+                        <p><strong>"We"</strong> word is stored to the variable <strong>1</strong>.<br>
+                            <strong>"welcome"</strong> word is stored to the variable
+                            <strong>2</strong>.<br>
+                            <strong>"you"</strong> word is stored to the variable <strong>3</strong>.<br>
+                            <strong>"on"</strong> word is stored to the variable <strong>4</strong>.<br>
+                            <strong>"Javatpoint"</strong> word is stored to the variable <strong>5</strong>.
+                        </p>
+                        <h2 class="h2">Variable Scope</h2>
+                        <p>Global variables are defined as the variables which can be accessed anywhere
+                            within the script regardless of the scope. By default, all the variables are
+                            defined as global variables, even if they are declared inside the function. We
+                            can also create variables as a local variable. Local variables can be declared
+                            within the function body with the ?local? keyword when they are assigned for
+                            first time. They are only accessible inside that function. We can create local
+                            variables with the same name in different functions. To add a local variable, we
+                            can use the following syntax:</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    local var_name=<var_value>
+    </textarea></div>
+                        <p>To better understand how variables scope works in Bash Scripting, check out the
+                            following example:</p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    
+    v1='A'
+    v2='B'
+    
+    my_var () {
+    local v1='C'
+    v2='D'
+    echo "Inside Function"
+    echo "v1 is $v1."
+    echo "v2 is $v2."
+    }
+    
+    echo "Before Executing the Function"
+    echo "v1 is $v1."
+    echo "v2 is $v2."
+    
+    my_var
+    echo "After Executing the Function"
+    echo "v1 is $v1."
+    echo "v2 is $v2."
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-functions2.png"
+                            alt="Bash Functions" />
+                        <p>As per output, if we set a local variable within the function body with the same
+                            name as an existing global variable, then it will have precedence over the
+                            global variable. Global variables can be modified within the function.</p>
+                        <h2 class="h2">Return Values</h2>
+                        <p>Most of the programming languages have the concept of returning a value for the
+                            functions. It means that the function has to send the data back to the original
+                            calling location. Unlike functions in 'real' programming languages, Bash
+                            function doesn't provide support to return a value when it is called. However,
+                            they allow us to set a return status which is similar to how a program or
+                            command exits with an exit status. When a bash function completes, its return
+                            value is the status of the last executed statement in the function. It returns 0
+                            for the success status and non-zero decimal number in the 1-255 range for
+                            failure.</p>
+                        <p>The return status can be indicated by using the 'return' keyword, and it is
+                            assigned to the variable $?. The return statement terminates the function and
+                            works as the function's exit status.</p>
+                        <p><strong>For example,</strong> consider the following code:</p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    #Setting up a return status for a function
+    
+    print_it () {
+    	echo Hello $1
+    	return 5
+    }
+    
+    print_it User
+    print_it Reader
+    echo The previous function returned a value of $?
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-functions3.png"
+                            alt="Bash Functions" />
+                        <p>Another better option to return a value from a function is to send the value to
+                            <strong>stdout</strong> using <strong>echo</strong> or <strong>printf</strong>
+                            commands, as shown below:
+                        </p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    
+    print_it () {
+    	local my_greet="Welcome to Javatpoint."
+    	echo "$my_greet"
+    }
+    
+    my_greet="$(print_it)"
+    echo $my_greet
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <div class="codeblock3">
+                            <pre>
+    Welcome to Javatpoint.
+    </pre>
+                        </div>
+                        <h2 class="h2">Overriding Commands</h2>
+                        <p>We have an option to override the bash commands by creating a function with the
+                            same name as the command that we are going to override. For example, if we want
+                            to override the 'echo' command, then we have to create a function with the name
+                            'echo'.</p>
+                        <p>This concept of overriding the bash commands may be helpful in some scenarios
+                            like when we want to use a command with specific options. Also, when we do not
+                            like to provide the whole command with options for several times within the
+                            script. In such cases, we can override the in-built bash command for command
+                            with options. Now, let's understand the concept of overriding the commands in
+                            Bash Shell Scripting with the help of some examples:</p>
+                        <h3 class="h3">Example</h3>
+                        <p>In this example, we have overridden the 'echo' command and added the time stamp
+                            in the form of the argument to the 'echo' command.</p>
+                        <p><strong>Bash Script</strong></p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    #!/bin/bash
+    #Script to override command using function
+    
+    echo () {
+    	builtin echo -n `date +"[%m-%d %H:%M:%S]"` ": "
+    	builtin echo $1
+    }
+    
+    echo "Welcome to Javatpoint."
+    </textarea></div>
+                        <p><strong>Output</strong></p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-functions4.png"
+                            alt="Bash Functions" />
+                        <h2 class="h3">Conclusion</h2>
+                        <p>In this topic, we demonstrated about Bash Function. A Bash function is considered
+                            as a block of reusable code developed to perform a specific operation. Once it
+                            is defined, it can be called several times within a script.</p>
+    
+                        <hr />
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="onlycontentinner">
+        <div id="city">
+            <table>
+                <tr>
+                    <td>
+    
+                        <h1 class="h1">Bash Hash Command</h1>
+                        <p>On UNIX-like operating systems, a <strong>hash</strong> is a
+                            <strong>built-in</strong> command of the bash shell, which is used to list a
+                            hash table of recently executed commands. It is used for views, resets, or
+                            manually changes within the bash path hash. It keeps the locations of recently
+                            executed programs and shows them whenever we want to see it. It provides a
+                            complete pathname of each command name.
+                        </p>
+                        <p>In other words, when any command is executed without naming its path, the shell
+                            starts searching for that command within the directories, which are listed in
+                            the path variable. When the Bash gets that command, it keeps the location in a
+                            hash table so that it can remember the location of the command. After that, Bash
+                            starts checking the table to find the location of the command instead of looking
+                            for the command again. It makes the command run faster. However, if the command
+                            is moved after recording its location in a table, the shell will not be able to
+                            find the command. In this case, a full search of the directories in the path is
+                            performed to get the command data.</p>
+                        <p>The built-in 'hash' command is responsible for maintaining the hash table.
+                            Without any switches, hash lists the previously used commands, their locations,
+                            and the number of times they have been executed during the session.</p>
+                        <h3 class="h3">Syntax</h3>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    hash [-l] [-r] [-p pathname] [-d] [-t] [command_name . . .]
+    </textarea></div>
+                        <p>The syntax above is used to determine and remember the full pathname of each
+                            command_name. If there are no arguments, it displays the information about
+                            previously used commands and their locations.</p>
+                        <h2 class="h3">Options</h2>
+                        <table class="alt">
+                            <tr>
+                                <td><strong>-d</strong></td>
+                                <td>Forget the remembered locations of command_name.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-l</strong></td>
+                                <td>Display the information that can be used again as an input for another
+                                    program.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-p</strong></td>
+                                <td>Use pathname as the full path of command_name.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-r</strong></td>
+                                <td>Forget all the remembered locations.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-t</strong></td>
+                                <td>Print the remembered location of each command_name. If multiple
+                                    command_names are given there, precede each location with corresponding
+                                    command_name</td>
+                            </tr>
+                            <tr>
+                                <td><strong>command_name</strong></td>
+                                <td>Each command_name specified is searched for in the path environment
+                                    variable, and if found, is added to the list of remembered commands.
+                                </td>
+                            </tr>
+                        </table>
+                        <h2 class="h3">Exit Status</h2>
+                        <p>The hash command returns '0' for success. Value other than zero refers that the
+                            command_name is not found, or an invalid option is given.</p>
+                        <h2 class="h3">Listing Bash Hash Table</h2>
+                        We can display the hash table for the current session by invoking hash without any
+                        argument.</p>
+                        <div class="codeblock"><textarea name="code" class="xml">
+    hash
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command.png"
+                            alt="Hash Command" />
+                        <p>Here, the hash command displays the number of hits (calls for that command) and
+                            the command with its path during the session. The sum of all the hits is
+                            considered as the number of saved searches through the path.</p>
+                        <h4 class="n"><span class="bold">Note-</span> If a new session is opened where no
+                            command has been executed, then there will be no hash table for that session.
+                            The output will look like this:</h4>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command2.png"
+                            alt="Hash Command" />
+                        <p>If we use the <strong>-l option</strong>, then it will display a hash table in a
+                            format that can be used as an input, i.e.,
+                        <div class="codeblock"><textarea name="code" class="xml">
+    hash -l
+    </textarea></div>
+                        <br>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command3.png"
+                            alt="Hash Command" />
+                        <p>We can also print the remembered locations of commands which are used during the
+                            session by using the <strong>-t</strong> option.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command4.png"
+                            alt="Hash Command" />
+                        <p>We can also print the locations of multiple commands separated by spaces, i.e.,
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command5.png"
+                            alt="Hash Command" />
+                        <h2 class="h2">Adding a Command Path and Name to the Bash Hash Table</h2>
+                        <p>We can add items to the hash table that can be used again in the shell. It should
+                            be remembered that the hash table only exists in the current live session of the
+                            shell. If we open a new shell, the bash will create a new hash table according
+                            to the executed commands of that shell.</p>
+                        <p>As soon as we start running the first command, bash starts creating a hash table.
+                            To add a command to the hash table, we can use the -p option followed by the
+                            path and then the name. In this way, we can use the hash table as similar to an
+                            alias. Following is an example where we have added the
+                            <strong>/home/bash.sh</strong> script to the hash table with the name
+                            '<strong>bash</strong>'.
+                        </p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command6.png"
+                            alt="Hash Command" />
+                        <p>After adding the /home/bash.sh to the hash table with a mapped name 'bash', we
+                            can directly invoke it by the name 'bash':</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command7.png"
+                            alt="Hash Command" />
+                        <p>Bash checks the hash table for the command name to find the executable.
+                            Generally, there is no need to put the script in the path unless we want it to
+                            be available in a new shell.</p>
+                        <h2 class="h3">Deleting an Item from the Hash Table</h2>
+                        <p>We also have an option to delete or forget a remembered location of commands in
+                            hash bash. We can simply use the <strong>-d</strong> option followed by the name
+                            to perform this task:</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command8.png"
+                            alt="Hash Command" />
+                        <p>Here, we have deleted the <strong>/home/bash.sh</strong> from the hash table,
+                            which was mapped with a name '<strong>bash</strong>'.</p>
+                        <h2 class="h3">Clearing the Hash Table</h2>
+                        <p>To clear the hash table, we can use the <strong>-r</strong> option.</p>
+                        <img src="https://static.javatpoint.com/tutorial/bash/images/bash-hash-command9.png"
+                            alt="Hash Command" />
+                        <p>Here, it can be seen that the hash table is cleared successfully by using the -r
+                            option.</p>
+    
+                        <hr />
+    
+    
+                        <br /><br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
+
+{% endblock %}
