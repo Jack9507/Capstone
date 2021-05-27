@@ -66,7 +66,7 @@ def events():
 def notes():
     return render_template("Notes.html")
 
-@app.route('/blogindex', methods=['GET'])
+@app.route('/blogindex', methods=['GET', 'POST'])
 def blogindex():
      cursor.execute("""SELECT * FROM `blogpost` """)
      users=cursor.fetchall()
