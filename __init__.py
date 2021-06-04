@@ -21,7 +21,7 @@ mail = Mail(app)
 # app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.secret_key=os.urandom(24)        #generated secret key for a session with random func of os module
 
-conn=mysql.connector.connect(host="localhost", user="root", password="", database="capstone", auth_plugin='mysql_native_password')
+conn=mysql.connector.connect(host="localhost", user="root", password="Jerry#8090", database="capstone", auth_plugin='mysql_native_password')
 cursor=conn.cursor()
 
 
@@ -448,12 +448,6 @@ def logout():
     user_id=""
     flash("You have been Logged Out. !!!", 'success')
     return redirect('/')
-
-
-if __name__=='__main__':
-    app.run(debug=True)
-
-
 
 
 
